@@ -1,0 +1,24 @@
+{
+  "name": "Crostic Scholar • Educational Word Puzzle",
+  "short_name": "Crostic",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#EBF3F8",
+  "theme_color": "#0284C7",
+  "orientation": "portrait",
+  "description": "Educational Crostic & Cryptogram Word Puzzle Game for under-matric students in Pakistan, India, Bangladesh, and Sri Lanka.",
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

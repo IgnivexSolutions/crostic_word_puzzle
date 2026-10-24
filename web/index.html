@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Crostic Cryptogram • Educational Scholar Edition</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0284C7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body {
+      background-color: #E8F1F5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #0F172A;
+    }
+    #phone-container {
+      width: 100%;
+      max-width: 440px;
+      height: 100vh;
+      max-height: 920px;
+      background: #EBF3F8;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @media (max-width: 480px) {
+      #phone-container {
+        max-height: 100vh;
+        border-radius: 0;
+      }
+    }
+    /* Top Header */
+    .top-header {
+      padding: 10px 16px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      border-radius: 50%;
+      transition: background 0.15s;
+    }
+    .icon-btn:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    .header-title-box {
+      text-align: center;
+    }
+    .header-category {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #475569;
+    }
+    .header-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #94A3B8;
+    }
+
+    /* Top Quote Matrix Card */
+    .quote-card {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 14px 6px;
+      padding: 12px 10px;
+      border-radius: 16px;
+      border: 1.2px solid #CDE1EC;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      min-height: 110px;
+    }
+    .quote-word {
+      display: inline-flex;
+      gap: 3px;
+    }
+
+    /* Tiles */
+    .letter-tile {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+    }
+    .tile-box {
+      width: 38px;
+      height: 38px;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 8px;
+      box-shadow: 0 2px 0 #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1E293B;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .tile-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748B;
+      margin-top: 2px;
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+    /* Tile States matching screenshot */
+    .letter-tile.selected .tile-box {
+      background: #FEF3C7;
+      border-color: #D97706;
+      border-width: 2.2px;
+      box-shadow: 0 2px 0 #B45309, 0 0 10px rgba(217, 119, 6, 0.35);
+      color: #78350F;
+    }
+    .letter-tile.selected .tile-num {
+      color: #B45309;
+      background: #FEF3C7;
+      font-weight: 800;
+    }
+    .letter-tile.linked .tile-box {
+      background: #FFFBEB;
+      border-color: #F59E0B;
+      border-width: 2px;
+      box-shadow: 0 2px 0 #D97706;
+      color: #92400E;
+    }
+    .letter-tile.linked .tile-num {
+      color: #D97706;
+      background: #FFFBEB;
+      font-weight: 800;
+    }
+    .letter-tile.solved .tile-box {
+      background: #ECFDF5;
+      border-color: #A7F3D0;
+      color: #065F46;
+    }
+    .cursor-bar {
+      width: 2px;
+      height: 20px;
+      background-color: #D97706;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    /* Clues Section */
+    .clues-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 4px 14px;
+      display: flex;
+      flex-direction: column;
+    }
+    .clue-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 6px;
+      border-bottom: 1px solid #E2E8F0;
+      gap: 8px;
+    }
+    .clue-text {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1E293B;
+      line-height: 1.25;
+    }
+    .clue-text.completed {
+      color: #64748B;
+    }
+    .clue-tiles {
+      display: flex;
+      gap: 3px;
+      overflow-x: auto;
+    }
+
+    /* Floating buttons */
+    .floating-tools {
+      position: absolute;
+      bottom: 195px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 20;
+    }
+    .tool-btn {
+      pointer-events: auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: none;
+      transition: transform 0.1s;
+    }
+    .tool-btn:active {
+      transform: scale(0.94);
+    }
+    .shop-btn {
+      background: #FB923C;
+      color: white;
+      font-size: 24px;
+    }
+    .hint-btn {
+      background: #FBBF24;
+      color: white;
+      font-size: 26px;
+    }
+    .badge-count {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      background: #EA580C;
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 10px;
+      border: 1.5px solid white;
+    }
+
+    /* Keyboard */
+    .keyboard-container {
+      background: #CBD5E1;
+      padding: 5px 4px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 10;
+    }
+    .keyboard-row {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+    .key-btn {
+      flex: 1;
+      height: 48px;
+      max-width: 40px;
+      background: #FFFFFF;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 0 #94A3B8;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F172A;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.08s;
+    }
+    .key-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 #94A3B8;
+    }
+    .key-btn.backspace {
+      max-width: 58px;
+      background: #E2E8F0;
+      font-size: 20px;
+    }
+    .key-btn.disabled {
+      background: #E2E8F0;
+      color: #94A3B8;
+      box-shadow: none;
+      cursor: default;
+    }
+
+    /* Modal / Dialog */
+    .modal-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 16px;
+    }
+    .modal-card {
+      background: white;
+      width: 100%;
+      max-width: 380px;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+    .modal-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .primary-btn {
+      width: 100%;
+      background: #0284C7;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="phone-container">
+  <!-- Top Header -->
+  <div class="top-header">
+    <button class="icon-btn" onclick="openHome()"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></button>
+    <div class="header-title-box">
+      <div class="header-category" id="cat-title">General Science</div>
+      <div class="header-sub" id="level-sub">Level 1 • Plant Photosynthesis</div>
+    </div>
+    <button class="icon-btn" onclick="openSettings()"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
+  </div>
+
+  <!-- Quote Matrix Section -->
+  <div class="quote-card" id="quote-board">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- Clues List Section -->
+  <div class="clues-container" id="clues-list">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- Floating Tools (Shop & Hint) -->
+  <div class="floating-tools">
+    <button class="tool-btn shop-btn" onclick="openShop()">
+      🛍️
+      <div class="badge-count">1</div>
+    </button>
+    <button class="tool-btn hint-btn" onclick="useHint()">
+      💡
+      <div class="badge-count" id="hint-badge">Ad</div>
+    </button>
+  </div>
+
+  <!-- QWERTY Virtual Keyboard -->
+  <div class="keyboard-container" id="virtual-keyboard">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- Victory Dialog Modal -->
+  <div class="modal-overlay" id="victory-modal">
+    <div class="modal-card">
+      <div style="font-size: 48px; text-align: center; margin-bottom: 4px;">🏆</div>
+      <div class="modal-title">PUZZLE SOLVED!</div>
+      <div style="text-align: center; color: #F59E0B; font-size: 24px; margin-bottom: 12px;">★★★</div>
+      <div id="quote-reveal" style="font-family: 'Space Grotesk'; font-weight: 700; font-size: 15px; font-style: italic; background: #F8FAFC; padding: 10px; border-radius: 10px; text-align: center; border: 1px solid #E2E8F0;">
+        "GREEN PLANTS PRODUCE FOOD"
+      </div>
+      <div id="author-reveal" style="font-size: 12px; font-weight: 600; color: #64748B; text-align: center; margin: 4px 0 12px;">
+        — Class 6-9 General Science (Biology)
+      </div>
+      <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Educational Historical Insight:</div>
+      <p id="fact-reveal" style="font-size: 12px; line-height: 1.4; color: #475569; margin-bottom: 12px;"></p>
+      <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Vocabulary Added to Student Book:</div>
+      <div id="vocab-reveal" style="font-size: 12px; background: #F1F5F9; padding: 8px; border-radius: 8px; margin-bottom: 12px;"></div>
+      <button class="primary-btn" onclick="nextLevel()">Next Level ➔</button>
+      <button style="width: 100%; background: none; border: none; padding: 10px; color: #64748B; font-weight: 700; cursor: pointer;" onclick="closeModal()">Review Board</button>
+    </div>
+  </div>
+
+  <!-- Settings & Device Sync Modal -->
+  <div class="modal-overlay" id="settings-modal">
+    <div class="modal-card">
+      <div class="modal-title">Game Settings & Device Sync</div>
+      <div style="margin: 14px 0;">
+        <label style="font-weight: 700; font-size: 13px;">Your Cross-Device Sync Code:</label>
+        <div style="display: flex; gap: 8px; margin-top: 4px;">
+          <input type="text" id="sync-code-display" readonly value="CR-9041" style="flex: 1; padding: 10px; font-family: 'JetBrains Mono'; font-weight: 800; font-size: 18px; color: #0284C7; text-align: center; border: 1px solid #CBD5E1; border-radius: 8px;">
+          <button onclick="copyCode()" style="padding: 0 12px; background: #0284C7; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Copy</button>
+        </div>
+        <p style="font-size: 11px; color: #64748B; margin-top: 4px;">Enter this code on another device to seamlessly sync your progress, vocabulary, and stars.</p>
+      </div>
+
+      <div style="margin: 14px 0;">
+        <label style="font-weight: 700; font-size: 13px;">Pair With Other Device:</label>
+        <div style="display: flex; gap: 8px; margin-top: 4px;">
+          <input type="text" id="sync-input" placeholder="e.g. CR-8192" style="flex: 1; padding: 8px; border: 1px solid #CBD5E1; border-radius: 8px;">
+          <button onclick="pairDevice()" style="padding: 0 12px; background: #059669; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Pair</button>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0;">
+        <span style="font-weight: 600; font-size: 14px;">Background Music</span>
+        <input type="checkbox" id="bgm-toggle" checked onchange="toggleBgm(this.checked)">
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0;">
+        <span style="font-weight: 600; font-size: 14px;">Sound Effects</span>
+        <input type="checkbox" id="sfx-toggle" checked>
+      </div>
+
+      <button class="primary-btn" onclick="closeSettings()">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Complete Verified Levels Dataset (Under-Matric Curriculum: Science, Maths, Computer, Geography)
+  const GAME_LEVELS = [
+    {
+      id: 1,
+      category: 'General Science',
+      title: 'Plant Photosynthesis',
+      quoteWords: [
+        { word: 'GREEN', nums: [13, 5, 2, 2, 15] },
+        { word: 'PLANTS', nums: [14, 1, 3, 15, 7, 8] },
+        { word: 'PRODUCE', nums: [14, 5, 6, 10, 12, 11, 2] },
+        { word: 'FOOD', nums: [4, 6, 6, 10] }
+      ],
+      clues: [
+        { id: 'c1', text: 'Green food-producing factory of a plant', word: 'LEAF', nums: [1, 2, 3, 4] },
+        { id: 'c2', text: 'Underground organ absorbing water and minerals', word: 'ROOT', nums: [5, 6, 6, 7] },
+        { id: 'c3', text: 'Plant axis supporting leaves and flowers', word: 'STEM', nums: [8, 7, 2, 9] },
+        { id: 'c4', text: 'Embryonic plant enclosed in a protective coat', word: 'SEED', nums: [8, 2, 2, 10] },
+        { id: 'c5', text: 'Microscopic building block of all living cells', word: 'CELL', nums: [11, 2, 1, 1] },
+        { id: 'c6', text: 'Sweet soluble carbohydrate produced during photosynthesis', word: 'SUGAR', nums: [8, 12, 13, 3, 5] },
+        { id: 'c7', text: 'Small body of still water supporting aquatic ecosystem', word: 'POND', nums: [14, 6, 15, 10] },
+        { id: 'c8', text: 'Upper fertile layer of earth where roots grow', word: 'SOIL', nums: [8, 6, 16, 1] }
+      ],
+      fact: {
+        author: 'Class 6-9 General Science (Biology)',
+        year: 'Plant Biology Unit',
+        context: 'Plants absorb carbon dioxide from air and water from soil, using sunlight trapped by green chlorophyll to create glucose and release vital oxygen.'
+      },
+      vocab: [
+        { word: 'PHOTOSYNTHESIS', def: 'The biological process by which autotrophic plants synthesize food from CO2 and water using solar light.' },
+        { word: 'CHLOROPHYLL', def: 'The vital green pigment in plants that absorbs sunlight.' },
+        { word: 'STOMATA', def: 'Microscopic pores on leaf surfaces that regulate gas exchange.' }
+      ]
+    },
+    {
+      id: 2,
+      category: 'Computer Science',
+      title: 'Computer Architecture',
+      quoteWords: [
+        { word: 'CPU', nums: [6, 14, 3] },
+        { word: 'IS', nums: [13, 4] },
+        { word: 'THE', nums: [11, 12, 5] },
+        { word: 'BRAIN', nums: [9, 7, 16, 13, 8] },
+        { word: 'OF', nums: [2, 15] },
+        { word: 'COMPUTER', nums: [6, 2, 1, 14, 3, 11, 5, 7] }
+      ],
+      clues: [
+        { id: 'c1', text: 'Handheld pointing device used to click on monitor', word: 'MOUSE', nums: [1, 2, 3, 4, 5] },
+        { id: 'c2', text: 'Display monitor showing visual output to user', word: 'SCREEN', nums: [4, 6, 7, 5, 5, 8] },
+        { id: 'c3', text: 'Group of eight bits representing a character', word: 'BYTE', nums: [9, 10, 11, 5] },
+        { id: 'c4', text: 'Tiny silicon wafer containing electronic microcircuits', word: 'CHIP', nums: [6, 12, 13, 14] },
+        { id: 'c5', text: 'Style and design of typographic text characters', word: 'FONT', nums: [15, 2, 8, 11] },
+        { id: 'c6', text: 'Produce physical hard copy of digital documents on paper', word: 'PRINT', nums: [14, 7, 13, 8, 11] },
+        { id: 'c7', text: 'Fast primary memory storing running programs temporarily', word: 'RAM', nums: [7, 16, 1] },
+        { id: 'c8', text: 'Data or instructions entered into a computer system', word: 'INPUT', nums: [13, 8, 14, 3, 11] }
+      ],
+      fact: {
+        author: 'Class 6-10 Computer Studies',
+        year: 'IT Fundamentals',
+        context: 'The Central Processing Unit (CPU) executes calculations and controls all input, output, and memory storage devices.'
+      },
+      vocab: [
+        { word: 'HARDWARE', def: 'Physical and electronic machinery composing a computer.' },
+        { word: 'ALGORITHM', def: 'Step-by-step sequence of instructions designed to solve a problem.' },
+        { word: 'BINARY', def: 'Base-two numerical system using 0s and 1s used by microprocessors.' }
+      ]
+    },
+    {
+      id: 3,
+      category: 'Mathematics',
+      title: 'Geometry & Shapes',
+      quoteWords: [
+        { word: 'SUM', nums: [10, 9, 15] },
+        { word: 'OF', nums: [14, 11] },
+        { word: 'TRIANGLE', nums: [13, 6, 8, 1, 2, 3, 4, 5] },
+        { word: 'ANGLES', nums: [1, 2, 3, 4, 5, 10] },
+        { word: 'IS', nums: [8, 10] },
+        { word: 'FIXED', nums: [11, 8, 18, 5, 7] }
+      ],
+      clues: [
+        { id: 'c1', text: 'Geometric figure formed by two rays sharing a vertex', word: 'ANGLE', nums: [1, 2, 3, 4, 5] },
+        { id: 'c2', text: 'Distance from center of circle to its boundary edge', word: 'RADIUS', nums: [6, 1, 7, 8, 9, 10] },
+        { id: 'c3', text: 'Part of a whole represented as numerator over denominator', word: 'FRACTION', nums: [11, 6, 1, 12, 13, 8, 14, 2] },
+        { id: 'c4', text: 'Mathematical symbol denoting operation of subtraction', word: 'MINUS', nums: [15, 8, 2, 9, 10] },
+        { id: 'c5', text: 'Visual chart representing equations or statistical data', word: 'GRAPH', nums: [3, 6, 1, 16, 17] },
+        { id: 'c6', text: 'Exact dimensionless location in space having no length', word: 'POINT', nums: [16, 14, 8, 2, 13] },
+        { id: 'c7', text: 'Reference line on a Cartesian coordinate plane', word: 'AXIS', nums: [1, 18, 8, 10] },
+        { id: 'c8', text: 'Any individual numeral from zero through nine', word: 'DIGIT', nums: [7, 8, 3, 8, 13] }
+      ],
+      fact: {
+        author: 'Class 6-9 General Mathematics',
+        year: 'Euclidean Geometry',
+        context: 'On a flat plane, the three interior angles of any triangle always add up to exactly 180 degrees (two right angles).'
+      },
+      vocab: [
+        { word: 'HYPOTENUSE', def: 'The longest side of a right-angled triangle, opposite the right angle.' },
+        { word: 'PERIMETER', def: 'The continuous distance around the outer boundary of a polygon.' },
+        { word: 'POLYGON', def: 'A closed plane figure bounded by three or more straight lines.' }
+      ]
+    },
+    {
+      id: 4,
+      category: 'Physics & Chemistry',
+      title: 'States of Matter',
+      quoteWords: [
+        { word: 'MATTER', nums: [4, 1, 2, 2, 10, 13] },
+        { word: 'HAS', nums: [9, 1, 5] },
+        { word: 'MASS', nums: [4, 1, 5, 5] },
+        { word: 'AND', nums: [1, 14, 8] },
+        { word: 'VOLUME', nums: [11, 3, 6, 16, 4, 10] }
+      ],
+      clues: [
+        { id: 'c1', text: 'Smallest fundamental particle of a chemical element', word: 'ATOM', nums: [1, 2, 3, 4] },
+        { id: 'c2', text: 'State of matter having rigid definite shape and volume', word: 'SOLID', nums: [5, 3, 6, 7, 8] },
+        { id: 'c3', text: 'Form of thermal energy that raises temperature', word: 'HEAT', nums: [9, 10, 1, 2] },
+        { id: 'c4', text: 'Gaseous state of water produced by boiling or evaporation', word: 'VAPOR', nums: [11, 1, 12, 3, 13] },
+        { id: 'c5', text: 'Transparent curved optical glass that refracts light', word: 'LENS', nums: [6, 10, 14, 5] },
+        { id: 'c6', text: 'Substance such as liquid or gas that flows smoothly', word: 'FLUID', nums: [15, 6, 16, 7, 8] },
+        { id: 'c7', text: 'Mechanical vibration propagating as acoustic pressure waves', word: 'SOUND', nums: [5, 3, 16, 14, 8] },
+        { id: 'c8', text: 'Shiny element that conducts electricity and heat efficiently', word: 'METAL', nums: [4, 10, 2, 1, 6] }
+      ],
+      fact: {
+        author: 'Class 7-9 Physical Sciences',
+        year: 'Properties of Matter',
+        context: 'Matter is anything that occupies space and has mass, existing predominantly in solid, liquid, or gaseous phases.'
+      },
+      vocab: [
+        { word: 'DENSITY', def: 'Mass per unit volume of a substance (mass divided by volume).' },
+        { word: 'CONDUCTOR', def: 'A substance permitting easy flow of heat or electricity.' },
+        { word: 'EVAPORATION', def: 'Phase transformation of liquid into vapor at its surface below boiling.' }
+      ]
+    },
+    {
+      id: 5,
+      category: 'Geography & Social Studies',
+      title: 'Rivers & Climate of South Asia',
+      quoteWords: [
+        { word: 'MONSOON', nums: [11, 14, 2, 5, 14, 14, 2] },
+        { word: 'RAIN', nums: [15, 9, 1, 2] },
+        { word: 'FEEDS', nums: [13, 6, 6, 3, 5] },
+        { word: 'SOUTH', nums: [5, 14, 4, 8, 10] },
+        { word: 'ASIA', nums: [9, 5, 1, 9] }
+      ],
+      clues: [
+        { id: 'c1', text: 'Mighty river flowing from Himalayas through Pakistan to Arabian Sea', word: 'INDUS', nums: [1, 2, 3, 4, 5] },
+        { id: 'c2', text: 'Fertile triangular landform formed by sediment at river mouth', word: 'DELTA', nums: [3, 6, 7, 8, 9] },
+        { id: 'c3', text: 'Landmass completely encircled by water, like Sri Lanka', word: 'ISLAND', nums: [1, 5, 7, 9, 2, 3] },
+        { id: 'c4', text: 'Majestic mountain range featuring Mount Everest and K2', word: 'HIMALAYA', nums: [10, 1, 11, 9, 7, 9, 12, 9] },
+        { id: 'c5', text: 'Lush woodland ecosystem like Bengal Sundarbans mangrove', word: 'FOREST', nums: [13, 14, 15, 6, 5, 8] },
+        { id: 'c6', text: 'Expansive saltwater body south of subcontinent (Indian Ocean)', word: 'OCEAN', nums: [14, 16, 6, 9, 2] },
+        { id: 'c7', text: 'Arid sandy geographic region like Thar and Cholistan', word: 'DESERT', nums: [3, 6, 5, 6, 15, 8] },
+        { id: 'c8', text: 'Freshwater stream flowing continuously down to the sea', word: 'RIVER', nums: [15, 1, 17, 6, 15] }
+      ],
+      fact: {
+        author: 'Class 6-10 Social Studies & Geography',
+        year: 'South Asian Geography',
+        context: 'Monsoon winds bring rainfall across Pakistan, India, Bangladesh, and Sri Lanka, recharging the Indus, Ganges, Brahmaputra, and Mahaweli river basins.'
+      },
+      vocab: [
+        { word: 'TRIBUTARY', def: 'A freshwater river or stream that flows into a larger river.' },
+        { word: 'ALLUVIAL', def: 'Relating to fertile soil deposited by flowing river waters.' },
+        { word: 'MANGROVE', def: 'Coastal salt-tolerant tidal wetland forest, like the Sundarbans.' }
+      ]
+    },
+    {
+      id: 6,
+      category: 'Astronomy & Space',
+      title: 'The Solar System',
+      quoteWords: [
+        { word: 'EARTH', nums: [5, 3, 9, 6, 15] },
+        { word: 'REVOLVES', nums: [9, 5, 16, 8, 2, 16, 5, 7] },
+        { word: 'AROUND', nums: [3, 9, 8, 14, 4, 13] },
+        { word: 'SUN', nums: [7, 14, 4] }
+      ],
+      clues: [
+        { id: 'c1', text: 'Large celestial body orbiting a star in clear path', word: 'PLANET', nums: [1, 2, 3, 4, 5, 6] },
+        { id: 'c2', text: 'Radiant light and heat energy emitted by our Sun', word: 'SOLAR', nums: [7, 8, 2, 3, 9] },
+        { id: 'c3', text: 'Earth\'s natural celestial satellite causing ocean tides', word: 'MOON', nums: [10, 8, 8, 4] },
+        { id: 'c4', text: 'Curved gravitational trajectory of a planet or satellite', word: 'ORBIT', nums: [8, 9, 11, 12, 6] },
+        { id: 'c5', text: 'Microscopic cosmic matter floating between planets in space', word: 'DUST', nums: [13, 14, 7, 6] },
+        { id: 'c6', text: 'Sky and celestial sphere visible from Earth surface', word: 'HEAVEN', nums: [15, 5, 3, 16, 5, 4] },
+        { id: 'c7', text: 'Massive glowing sphere of plasma held together by gravity', word: 'STAR', nums: [7, 6, 3, 9] },
+        { id: 'c8', text: 'Second planet from Sun known as the brilliant evening star', word: 'VENUS', nums: [16, 5, 4, 14, 7] }
+      ],
+      fact: {
+        author: 'Class 6-8 General Science',
+        year: 'Astronomy Unit',
+        context: 'Earth revolves around the Sun in an elliptical orbit every 365.25 days while rotating on its axis every 24 hours.'
+      },
+      vocab: [
+        { word: 'ECLIPSE', def: 'The obscuring of light from one celestial body by another.' },
+        { word: 'GRAVITATION', def: 'The universal fundamental force of attraction between all masses.' },
+        { word: 'SATELLITE', def: 'A body in space orbiting around a larger planetary body.' }
+      ]
+    }
+  ];
+
+  let currentLevelIdx = 0;
+  let activeLevel = GAME_LEVELS[currentLevelIdx];
+  let guessed = {}; // number -> char
+  let selectedNumber = null;
+  let sfxEnabled = true;
+
+  // Synthesized Web Audio Engine
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  function playBeep(freq, type, dur, gain) {
+    if (!sfxEnabled) return;
+    try {
+      const osc = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      g.gain.setValueAtTime(gain, audioCtx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+      osc.connect(g);
+      g.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + dur);
+    } catch(e){}
+  }
+
+  function soundKey() { playBeep(650, 'sine', 0.05, 0.2); }
+  function soundReveal() { playBeep(880, 'sine', 0.18, 0.35); }
+  function soundWord() {
+    playBeep(523, 'sine', 0.12, 0.3);
+    setTimeout(() => playBeep(659, 'sine', 0.12, 0.3), 100);
+    setTimeout(() => playBeep(784, 'sine', 0.2, 0.4), 200);
+  }
+  function soundVictory() {
+    [523, 659, 784, 1046].forEach((f, i) => {
+      setTimeout(() => playBeep(f, 'triangle', 0.28, 0.4), i * 140);
+    });
+  }
+
+  function renderQuote() {
+    const board = document.getElementById('quote-board');
+    board.innerHTML = '';
+    activeLevel.quoteWords.forEach((qw) => {
+      const wordDiv = document.createElement('div');
+      wordDiv.className = 'quote-word';
+      qw.word.split('').forEach((char, idx) => {
+        const num = qw.nums[idx];
+        const tile = createTile(num, char);
+        wordDiv.appendChild(tile);
+      });
+      board.appendChild(wordDiv);
+    });
+  }
+
+  function renderClues() {
+    const list = document.getElementById('clues-list');
+    list.innerHTML = '';
+    activeLevel.clues.forEach((c) => {
+      const row = document.createElement('div');
+      row.className = 'clue-row';
+
+      // Check if clue is solved
+      const isComplete = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
+
+      const text = document.createElement('div');
+      text.className = 'clue-text' + (isComplete ? ' completed' : '');
+      text.innerHTML = (isComplete ? '✓ ' : '') + c.text;
+
+      const tiles = document.createElement('div');
+      tiles.className = 'clue-tiles';
+      c.word.split('').forEach((ch, i) => {
+        const num = c.nums[i];
+        tiles.appendChild(createTile(num, ch));
+      });
+
+      row.appendChild(text);
+      row.appendChild(tiles);
+      list.appendChild(row);
+    });
+  }
+
+  function createTile(num, targetChar) {
+    const tile = document.createElement('div');
+    tile.className = 'letter-tile';
+    if (selectedNumber === num) tile.classList.add('selected');
+    else if (selectedNumber && selectedNumber === num) tile.classList.add('linked');
+
+    const isSolved = guessed[num] === targetChar;
+    if (isSolved) tile.classList.add('solved');
+
+    const box = document.createElement('div');
+    box.className = 'tile-box';
+
+    if (guessed[num]) {
+      box.textContent = guessed[num];
+    } else if (selectedNumber === num) {
+      box.innerHTML = '<div class="cursor-bar"></div>';
+    } else {
+      box.textContent = '?';
+      box.style.color = '#94A3B8';
+    }
+
+    const numSpan = document.createElement('div');
+    numSpan.className = 'tile-num';
+    numSpan.textContent = num;
+
+    tile.appendChild(box);
+    tile.appendChild(numSpan);
+
+    tile.onclick = () => {
+      soundKey();
+      selectedNumber = num;
+      updateBoard();
+    };
+
+    return tile;
+  }
+
+  function renderKeyboard() {
+    const rows = [
+      ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+      ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+      ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
+    ];
+
+    const kb = document.getElementById('virtual-keyboard');
+    kb.innerHTML = '';
+
+    rows.forEach((rowKeys, rowIdx) => {
+      const r = document.createElement('div');
+      r.className = 'keyboard-row';
+      rowKeys.forEach((k) => {
+        const btn = document.createElement('button');
+        btn.className = 'key-btn';
+        btn.textContent = k;
+        btn.onclick = () => handleInput(k);
+        r.appendChild(btn);
+      });
+
+      if (rowIdx === 2) {
+        const bk = document.createElement('button');
+        bk.className = 'key-btn backspace';
+        bk.innerHTML = '⌫';
+        bk.onclick = handleBackspace;
+        r.appendChild(bk);
+      }
+
+      kb.appendChild(r);
+    });
+  }
+
+  function handleInput(char) {
+    if (!selectedNumber) return;
+    soundKey();
+    guessed[selectedNumber] = char.toUpperCase();
+
+    // Check if letter is right
+    let targetChar = null;
+    activeLevel.clues.forEach(c => {
+      c.nums.forEach((n, i) => { if (n === selectedNumber) targetChar = c.word[i]; });
+    });
+
+    if (targetChar === char.toUpperCase()) {
+      soundReveal();
+    }
+
+    // Auto advance
+    const allNums = [];
+    activeLevel.clues.forEach(c => allNums.push(...c.nums));
+    const nextUnfilled = allNums.find(n => !guessed[n]);
+    if (nextUnfilled) selectedNumber = nextUnfilled;
+
+    updateBoard();
+    checkVictory();
+  }
+
+  function handleBackspace() {
+    if (!selectedNumber) return;
+    soundKey();
+    delete guessed[selectedNumber];
+    updateBoard();
+  }
+
+  function updateBoard() {
+    renderQuote();
+    renderClues();
+  }
+
+  function useHint() {
+    soundReveal();
+    // Find first unsolved number
+    const targetMap = {};
+    activeLevel.clues.forEach(c => {
+      c.nums.forEach((n, i) => targetMap[n] = c.word[i]);
+    });
+
+    const targetNum = selectedNumber && guessed[selectedNumber] !== targetMap[selectedNumber]
+      ? selectedNumber
+      : Object.keys(targetMap).find(n => guessed[n] !== targetMap[n]);
+
+    if (targetNum) {
+      guessed[targetNum] = targetMap[targetNum];
+      selectedNumber = parseInt(targetNum);
+      updateBoard();
+      checkVictory();
+    }
+  }
+
+  function checkVictory() {
+    let won = true;
+    activeLevel.quoteWords.forEach(qw => {
+      qw.word.split('').forEach((ch, idx) => {
+        if (guessed[qw.nums[idx]] !== ch) won = false;
+      });
+    });
+
+    if (won) {
+      soundVictory();
+      setTimeout(showVictory, 400);
+    }
+  }
+
+  function showVictory() {
+    document.getElementById('quote-reveal').textContent = `"${activeLevel.quoteWords.map(q => q.word).join(' ')}"`;
+    document.getElementById('author-reveal').textContent = `— ${activeLevel.fact.author} (${activeLevel.fact.year})`;
+    document.getElementById('fact-reveal').textContent = activeLevel.fact.context;
+
+    const vocabDiv = document.getElementById('vocab-reveal');
+    vocabDiv.innerHTML = activeLevel.vocab.map(v => `<b>${v.word}:</b> ${v.def}`).join('<br><br>');
+
+    document.getElementById('victory-modal').style.display = 'flex';
+  }
+
+  function nextLevel() {
+    closeModal();
+    currentLevelIdx = (currentLevelIdx + 1) % GAME_LEVELS.length;
+    activeLevel = GAME_LEVELS[currentLevelIdx];
+    document.getElementById('cat-title').textContent = activeLevel.category;
+    document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
+    guessed = {};
+    selectedNumber = activeLevel.clues[0].nums[0];
+    updateBoard();
+  }
+
+  function closeModal() { document.getElementById('victory-modal').style.display = 'none'; }
+  function openSettings() { document.getElementById('settings-modal').style.display = 'flex'; }
+  function closeSettings() { document.getElementById('settings-modal').style.display = 'none'; }
+  function openShop() { alert('Scholar Shop: Free 100 coins granted for vocabulary study!'); }
+  function openHome() { alert('Student Dashboard: Currently playing Level ' + activeLevel.id + ' (' + activeLevel.category + ')'); }
+
+  function copyCode() {
+    navigator.clipboard.writeText('CR-9041');
+    alert('Device Sync Code CR-9041 copied to clipboard!');
+  }
+
+  function pairDevice() {
+    const val = document.getElementById('sync-input').value.trim();
+    if (val) {
+      soundWord();
+      alert(`Successfully paired device with code ${val}! Progress synchronized.`);
+      closeSettings();
+    }
+  }
+
+  function toggleBgm(enabled) {}
+
+  // Physical keyboard support
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace') handleBackspace();
+    else if (/^[a-zA-Z]$/.test(e.key)) handleInput(e.key.toUpperCase());
+  });
+
+  // Start with first clue first tile selected
+  selectedNumber = activeLevel.clues[0].nums[0];
+  updateBoard();
+  renderKeyboard();
+</script>
+
+</body>
+</html>
