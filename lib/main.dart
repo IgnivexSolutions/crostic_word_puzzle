@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'data/levels_dataset.dart';
 import 'services/sound_service.dart';
 import 'services/storage_service.dart';
 import 'screens/home_screen.dart';
@@ -14,8 +15,9 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // Initialize storage & sound engine
+  // Initialize storage, levels & sound engine
   await StorageService().init();
+  await LevelRepository().init();
   await SoundService().init();
 
   runApp(const CrosticPuzzleApp());

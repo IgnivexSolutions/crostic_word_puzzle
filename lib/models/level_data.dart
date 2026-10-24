@@ -135,6 +135,35 @@ class LevelData {
     this.coinsReward = 50,
   });
 
+  factory LevelData.fromJson(Map<String, dynamic> json) => LevelData(
+        id: json['id'] is int ? json['id'] : int.tryParse(json['id'].toString()) ?? 1,
+        title: json['title'] ?? '',
+        category: json['category'] ?? 'General Knowledge',
+        quoteText: json['quoteText'] ?? '',
+        quoteWords: (json['quoteWords'] as List<dynamic>?)
+                ?.map((w) => QuoteWord.fromJson(w as Map<String, dynamic>))
+                .toList() ??
+            [],
+        clues: (json['clues'] as List<dynamic>?)
+                ?.map((c) => ClueData.fromJson(c as Map<String, dynamic>))
+                .toList() ??
+            [],
+        educationalFact: json['educationalFact'] != null
+            ? EducationalFact.fromJson(json['educationalFact'] as Map<String, dynamic>)
+            : const EducationalFact(
+                title: 'Educational Fact',
+                historicalContext: '',
+                attribution: '',
+                yearOrEra: '',
+                keyTakeaway: '',
+              ),
+        vocabularyList: (json['vocabularyList'] as List<dynamic>?)
+                ?.map((v) => WordDefinition.fromJson(v as Map<String, dynamic>))
+                .toList() ??
+            [],
+        coinsReward: json['coinsReward'] is int ? json['coinsReward'] : 50,
+      );
+
   // Unique mapping of letter number -> character
   Map<int, String> get numberToLetterMap {
     final map = <int, String>{};
@@ -160,3 +189,4 @@ class LevelData {
     return map;
   }
 }
+

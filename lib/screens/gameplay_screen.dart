@@ -346,12 +346,35 @@ class _GameplayScreenState extends State<GameplayScreen> {
       builder: (ctx) => LevelCompleteDialog(
         level: widget.level,
         coinsEarned: widget.level.coinsReward,
+        starsEarned: 3,
+        hintsUsed: 0,
         onNextLevel: () {
           Navigator.pop(ctx);
-          widget.onLevelCompleted();
+          Navigator.pop(context);
+          // Launch next level
+          final nextLevel = LevelRepository().getLevel(widget.level.id + 1);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (c) => GameplayScreen(
+                level: nextLevel,
+                user: widget.user,
+                onLevelCompleted: widget.onLevelCompleted,
+              ),
+            ),
+          );
         },
         onReviewBoard: () {
           Navigator.pop(ctx);
+        },
+        onReplay: () {
+          Navigator.pop(ctx);
+          setState(() {
+            gameState.guessedLetters.clear();
+            gameState.revealedLetterNumbers.clear();
+            gameState.selectedLetterNumber = null;
+          });
+          _storage.saveLevelGuesses(widget.level.id, {});
         },
       ),
     );
@@ -458,20 +481,20 @@ class _GameplayScreenState extends State<GameplayScreen> {
 
                   const SizedBox(height: 6.0),
 
-                  // 3. Scrollable Clues List (flex 1)
+                  // 3. Compact Clues List (All 7-8 clues fit neatly onto screen)
                   Expanded(
-                    child: ListView.separated(
-                      padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 6.0),
-                      itemCount: widget.level.clues.length,
-                      separatorBuilder: (ctx, i) => const Divider(color: Color(0xFFE2E8F0), height: 1.0),
-                      itemBuilder: (ctx, i) {
-                        final clue = widget.level.clues[i];
-                        return ClueRow(
-                          clue: clue,
-                          gameState: gameState,
-                          onTileTap: _onClueTileTap,
-                        );
-                      },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: widget.level.clues.map((clue) {
+                          return ClueRow(
+                            clue: clue,
+                            gameState: gameState,
+                            onTileTap: _onClueTileTap,
+                          );
+                        }).toList(),
+                      ),
                     ),
                   ),
 

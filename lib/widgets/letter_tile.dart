@@ -24,23 +24,23 @@ class LetterTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final hasLetter = letter != null && letter!.isNotEmpty;
-    final size = isSmall ? 36.0 : 42.0;
+    final size = isSmall ? 30.0 : 34.0;
 
     // Color states matching the screenshot
     Color backgroundColor;
     Color borderColor;
     Color textColor;
-    double borderWidth = 1.5;
+    double borderWidth = 1.2;
 
     if (isSelected) {
       backgroundColor = const Color(0xFFFEF3C7); // Warm amber gold
       borderColor = const Color(0xFFD97706);
-      borderWidth = 2.5;
+      borderWidth = 2.2;
       textColor = const Color(0xFF78350F);
     } else if (isLinked) {
       backgroundColor = const Color(0xFFFFFBEB); // Soft gold linkage
       borderColor = const Color(0xFFF59E0B);
-      borderWidth = 2.0;
+      borderWidth = 1.8;
       textColor = const Color(0xFF92400E);
     } else if (isSolved) {
       backgroundColor = const Color(0xFFECFDF5); // Soft emerald solved
@@ -58,7 +58,7 @@ class LetterTile extends StatelessWidget {
         duration: const Duration(milliseconds: 180),
         curve: Curves.easeOutQuad,
         width: size,
-        margin: const EdgeInsets.symmetric(horizontal: 2.5, vertical: 2.0),
+        margin: const EdgeInsets.symmetric(horizontal: 1.5, vertical: 1.5),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

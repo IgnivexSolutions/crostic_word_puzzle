@@ -22,20 +22,20 @@ class ClueRow extends StatelessWidget {
     final isCurrentClue = !gameState.isQuoteFocused && gameState.selectedClueId == clue.id;
 
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 6.0),
-      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+      margin: const EdgeInsets.symmetric(vertical: 2.5),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       decoration: BoxDecoration(
         color: isCurrentClue
             ? Colors.white.withOpacity(0.85)
             : isComplete
                 ? const Color(0xFFF0FDF4).withOpacity(0.6)
                 : Colors.transparent,
-        borderRadius: BorderRadius.circular(12.0),
+        borderRadius: BorderRadius.circular(10.0),
         border: Border.all(
           color: isCurrentClue
               ? const Color(0xFFBAE6FD)
               : Colors.transparent,
-          width: 1.2,
+          width: 1.0,
         ),
       ),
       child: Row(
@@ -49,19 +49,19 @@ class ClueRow extends StatelessWidget {
               children: [
                 if (isComplete)
                   const Padding(
-                    padding: EdgeInsets.only(right: 6.0),
-                    child: Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 18),
+                    padding: EdgeInsets.only(right: 4.0),
+                    child: Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 16),
                   ),
                 Expanded(
                   child: Text(
                     clue.clueText,
                     style: GoogleFonts.plusJakartaSans(
-                      fontSize: 14.5,
+                      fontSize: 12.0,
                       fontWeight: isCurrentClue ? FontWeight.w700 : FontWeight.w600,
                       color: isComplete
                           ? const Color(0xFF475569)
                           : const Color(0xFF1E293B),
-                      height: 1.25,
+                      height: 1.15,
                     ),
                   ),
                 ),

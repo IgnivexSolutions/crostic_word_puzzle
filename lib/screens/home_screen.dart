@@ -6,6 +6,7 @@ import '../services/sound_service.dart';
 import '../services/storage_service.dart';
 import 'gameplay_screen.dart';
 import 'category_levels_screen.dart';
+import 'level_map_screen.dart';
 import 'vocabulary_book_screen.dart';
 import 'account_sync_screen.dart';
 import 'settings_screen.dart';
@@ -40,10 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void _openLevel(int levelId) {
     if (_user == null) return;
     _sound.playKeyTap();
-    final level = allGameLevels.firstWhere(
-      (l) => l.id == levelId,
-      orElse: () => allGameLevels.first,
-    );
+    final level = LevelRepository().getLevel(levelId);
 
     Navigator.push(
       context,
@@ -54,6 +52,20 @@ class _HomeScreenState extends State<HomeScreen> {
           onLevelCompleted: () {
             _loadData();
           },
+        ),
+      ),
+    );
+  }
+
+  void _openLevelMap() {
+    if (_user == null) return;
+    _sound.playKeyTap();
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (c) => LevelMapScreen(
+          user: _user!,
+          onUserUpdated: (u) => setState(() => _user = u),
         ),
       ),
     );
@@ -309,29 +321,18 @@ class _HomeScreenState extends State<HomeScreen> {
               // Action Tiles Grid
               Row(
                 children: [
-                  // Browse Categories
+                  // Level Map Quest Path (Matching User's screenshot)
                   Expanded(
                     child: GestureDetector(
-                      onTap: () {
-                        _sound.playKeyTap();
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (c) => CategoryLevelsScreen(
-                              user: _user!,
-                              onUserUpdated: (u) => setState(() => _user = u),
-                            ),
-                          ),
-                        );
-                      },
+                      onTap: _openLevelMap,
                       child: Container(
                         padding: const EdgeInsets.all(16.0),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(18.0),
-                          border: Border.all(color: const Color(0xFFCBD5E1)),
+                          border: Border.all(color: const Color(0xFF0284C7), width: 1.5),
                           boxShadow: [
-                            BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6.0, offset: const Offset(0, 2)),
+                            BoxShadow(color: const Color(0xFF0284C7).withOpacity(0.08), blurRadius: 8.0, offset: const Offset(0, 3)),
                           ],
                         ),
                         child: Column(
@@ -340,20 +341,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               padding: const EdgeInsets.all(10.0),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFFEF3C7),
+                                color: const Color(0xFFE0F2FE),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
-                              child: const Icon(Icons.grid_view_rounded, color: Color(0xFFD97706)),
+                              child: const Icon(Icons.alt_route_rounded, color: Color(0xFF0284C7)),
                             ),
                             const SizedBox(height: 12.0),
                             Text(
-                              'All Categories',
-                              style: GoogleFonts.spaceGrotesk(fontSize: 16.0, fontWeight: FontWeight.w700),
+                              'Level Map',
+                              style: GoogleFonts.spaceGrotesk(fontSize: 16.0, fontWeight: FontWeight.w800),
                             ),
                             const SizedBox(height: 2.0),
                             Text(
-                              '${allGameLevels.length} Verified Levels',
-                              style: GoogleFonts.plusJakartaSans(fontSize: 12.0, color: const Color(0xFF64748B)),
+                              '1,000 Verified Levels',
+                              style: GoogleFonts.plusJakartaSans(fontSize: 12.0, color: const Color(0xFF0284C7), fontWeight: FontWeight.w600),
                             ),
                           ],
                         ),

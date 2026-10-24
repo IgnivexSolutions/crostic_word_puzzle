@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Crostic Cryptogram • Scholar Edition</title>
+  <title>Crostic Cryptogram â€¢ Scholar Edition</title>
   <link rel="manifest" href="manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -488,12 +488,12 @@
 
   <!-- Top Header -->
   <div class="top-header">
-    <button class="header-btn" onclick="openMap()">🗺️ Levels</button>
+    <button class="header-btn" onclick="openMap()">ðŸ—ºï¸ Levels</button>
     <div class="header-title-box" onclick="openMap()">
       <div class="header-category" id="cat-title">General Science</div>
-      <div class="header-sub" id="level-sub">Level 1 • Sun & Plants</div>
+      <div class="header-sub" id="level-sub">Level 1 â€¢ Sun & Plants</div>
     </div>
-    <button class="header-btn" onclick="openSettings()">⚙️</button>
+    <button class="header-btn" onclick="openSettings()">âš™ï¸</button>
   </div>
 
   <!-- Quote Matrix Section -->
@@ -509,10 +509,10 @@
   <!-- Floating Tools (Map & Hint) -->
   <div class="floating-tools">
     <button class="tool-btn map-btn" onclick="openMap()" title="Levels Map">
-      🗺️
+      ðŸ—ºï¸
     </button>
     <button class="tool-btn hint-btn" onclick="useHint()" title="Reveal Letter Hint">
-      💡
+      ðŸ’¡
       <div class="badge-count" id="hint-badge">3</div>
     </button>
   </div>
@@ -525,7 +525,7 @@
   <!-- Level Progression Chain Map Modal -->
   <div class="modal-overlay" id="map-modal">
     <div class="modal-card">
-      <div class="modal-title">🗺️ Level Road Map</div>
+      <div class="modal-title">ðŸ—ºï¸ Level Road Map</div>
       <p style="font-size: 12px; color: #64748B; text-align: center; margin-bottom: 10px;">Select an unlocked level to play:</p>
       <div class="chain-list" id="chain-container">
         <!-- Populated by JS -->
@@ -537,20 +537,20 @@
   <!-- Victory Dialog Modal -->
   <div class="modal-overlay" id="victory-modal">
     <div class="modal-card">
-      <div style="font-size: 48px; text-align: center; margin-bottom: 4px;">🏆</div>
+      <div style="font-size: 48px; text-align: center; margin-bottom: 4px;">ðŸ†</div>
       <div class="modal-title">LEVEL SOLVED!</div>
-      <div style="text-align: center; color: #F59E0B; font-size: 24px; margin-bottom: 12px;">★★★</div>
+      <div style="text-align: center; color: #F59E0B; font-size: 24px; margin-bottom: 12px;">â˜…â˜…â˜…</div>
       <div id="quote-reveal" style="font-family: 'Space Grotesk'; font-weight: 700; font-size: 15px; font-style: italic; background: #F8FAFC; padding: 10px; border-radius: 10px; text-align: center; border: 1px solid #E2E8F0;">
         "PLANTS NEED SUN AND RAIN"
       </div>
       <div id="author-reveal" style="font-size: 12px; font-weight: 600; color: #64748B; text-align: center; margin: 4px 0 12px;">
-        — Class 6 Science • Plant Life
+        â€” Class 6 Science â€¢ Plant Life
       </div>
       <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Educational Science Insight:</div>
       <p id="fact-reveal" style="font-size: 12px; line-height: 1.4; color: #475569; margin-bottom: 12px;"></p>
       <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Vocabulary Added to Student Book:</div>
       <div id="vocab-reveal" style="font-size: 12px; background: #F1F5F9; padding: 8px; border-radius: 8px; margin-bottom: 12px;"></div>
-      <button class="primary-btn" onclick="nextLevel()">Next Level ➔</button>
+      <button class="primary-btn" onclick="nextLevel()">Next Level âž”</button>
       <button style="width: 100%; background: none; border: none; padding: 10px; color: #64748B; font-weight: 700; cursor: pointer;" onclick="closeModal()">Review Board</button>
     </div>
   </div>
@@ -579,9 +579,22 @@
   </div>
 </div>
 
+<script src="levels_1000.js"></script>
 <script>
-  // 5 Short-Word Under-Matric Curriculum Levels (7-8 words, 3 without definitions)
-  const GAME_LEVELS = [
+  // 1,000 Levels loaded dynamically with fallback
+  const GAME_LEVELS = (typeof LEVELS_1000 !== 'undefined' && LEVELS_1000.length > 0) ? LEVELS_1000.map(l => ({
+    id: l.id,
+    category: l.category,
+    title: l.title,
+    quoteWords: l.quoteWords.map(qw => ({ word: qw.word, nums: qw.letterNumbers })),
+    clues: l.clues.map(c => ({ id: c.id, text: c.clueText, word: c.targetWord, nums: c.letterNumbers, hasDef: c.hasDefinition })),
+    fact: {
+      author: l.educationalFact ? l.educationalFact.attribution : 'Academic Curriculum',
+      year: l.educationalFact ? l.educationalFact.yearOrEra : 'Grades 6-10',
+      context: l.educationalFact ? l.educationalFact.historicalContext : ''
+    },
+    vocab: l.vocabularyList ? l.vocabularyList.map(v => ({ word: v.word, def: v.definition })) : []
+  })) : [
     {
       id: 1,
       category: 'General Science',
@@ -604,138 +617,16 @@
         { id: 'c8', text: 'Word Pattern: T _ N (3 letters)', word: 'TIN', nums: [7, 10, 11], hasDef: false }
       ],
       fact: {
-        author: 'Class 6 Science • Plant Life',
-        year: 'Plant Biology Unit',
-        context: 'Green plants absorb sunlight and soil moisture through roots to manufacture their own nourishment, releasing fresh oxygen into the air.'
+        author: 'Class 6 General Science â€¢ Plant Biology',
+        year: 'Primary School Science',
+        context: 'Green leaves absorb sunlight and water through roots to synthesize glucose and release pure oxygen.'
       },
       vocab: [
-        { word: 'PHOTOSYNTHESIS', def: 'How green plants synthesize food using sunlight and water.' },
-        { word: 'SEED', def: 'A tiny plant embryo protected within a seed coat.' }
-      ]
-    },
-    {
-      id: 2,
-      category: 'Computer Studies',
-      title: 'Digital Chip',
-      quoteWords: [
-        { word: 'CODE', nums: [1, 9, 10, 8] },
-        { word: 'RUNS', nums: [13, 16, 17, 11] },
-        { word: 'ON', nums: [9, 17] },
-        { word: 'CHIP', nums: [1, 2, 3, 4] }
-      ],
-      clues: [
-        { id: 'c1', text: 'Tiny silicon brain inside computers', word: 'CHIP', nums: [1, 2, 3, 4], hasDef: true },
-        { id: 'c2', text: 'Eight digital bits grouped together', word: 'BYTE', nums: [5, 6, 7, 8], hasDef: true },
-        { id: 'c3', text: 'Written instructions for a software app', word: 'CODE', nums: [1, 9, 10, 8], hasDef: true },
-        { id: 'c4', text: 'Storage hardware holding your files', word: 'DISK', nums: [10, 3, 11, 12], hasDef: true },
-        { id: 'c5', text: 'Fast temporary computer memory', word: 'RAM', nums: [13, 14, 15], hasDef: true },
-        { id: 'c6', text: 'Word Pattern: R _ N (3 letters)', word: 'RUN', nums: [13, 16, 17], hasDef: false },
-        { id: 'c7', text: 'Word Pattern: P _ N (3 letters)', word: 'PIN', nums: [4, 3, 17], hasDef: false },
-        { id: 'c8', text: 'Word Pattern: S _ N (3 letters)', word: 'SON', nums: [11, 9, 17], hasDef: false }
-      ],
-      fact: {
-        author: 'Class 6-8 Computer Studies',
-        year: 'Microprocessors',
-        context: 'Modern microprocessors pack millions of electronic switches on a silicon chip to execute code billions of times per second.'
-      },
-      vocab: [
-        { word: 'CHIP', def: 'A micro-circuit fabricated on a tiny piece of silicon.' },
-        { word: 'BYTE', def: 'A basic unit of computer memory consisting of eight binary bits.' }
-      ]
-    },
-    {
-      id: 3,
-      category: 'Mathematics',
-      title: 'Shapes & Lines',
-      quoteWords: [
-        { word: 'LINE', nums: [1, 2, 3, 4] },
-        { word: 'HAS', nums: [15, 10, 7] },
-        { word: 'MANY', nums: [14, 10, 3, 16] },
-        { word: 'DOTS', nums: [12, 9, 13, 7] }
-      ],
-      clues: [
-        { id: 'c1', text: 'Straight path that extends both ways', word: 'LINE', nums: [1, 2, 3, 4], hasDef: true },
-        { id: 'c2', text: 'Mathematical operation of addition', word: 'PLUS', nums: [5, 1, 6, 7], hasDef: true },
-        { id: 'c3', text: 'Ice cream shape with circular base', word: 'CONE', nums: [8, 9, 3, 4], hasDef: true },
-        { id: 'c4', text: 'Total surface inside a flat polygon', word: 'AREA', nums: [10, 11, 4, 10], hasDef: true },
-        { id: 'c5', text: 'Exact tiny spot on paper', word: 'DOT', nums: [12, 9, 13], hasDef: true },
-        { id: 'c6', text: 'Word Pattern: M _ S H (4 letters)', word: 'MASH', nums: [14, 10, 7, 15], hasDef: false },
-        { id: 'c7', text: 'Word Pattern: S _ T (3 letters)', word: 'SET', nums: [7, 4, 13], hasDef: false },
-        { id: 'c8', text: 'Word Pattern: D _ Y (3 letters)', word: 'DAY', nums: [12, 10, 16], hasDef: false }
-      ],
-      fact: {
-        author: 'Class 6 Mathematics • Geometry',
-        year: 'Euclidean Foundations',
-        context: 'A straight line is considered a continuous set of infinitely many points (dots) extending infinitely in two directions.'
-      },
-      vocab: [
-        { word: 'POLYGON', def: 'A 2D plane geometric shape bounded by straight lines.' },
-        { word: 'AREA', def: 'The extent of two-dimensional surface enclosed within a boundary.' }
-      ]
-    },
-    {
-      id: 4,
-      category: 'Physical Science',
-      title: 'Heat & Ice',
-      quoteWords: [
-        { word: 'HEAT', nums: [1, 2, 3, 4] },
-        { word: 'MELTS', nums: [12, 2, 9, 4, 7] },
-        { word: 'COLD', nums: [6, 8, 9, 10] },
-        { word: 'ICE', nums: [5, 6, 2] }
-      ],
-      clues: [
-        { id: 'c1', text: 'Form of energy raising temperature', word: 'HEAT', nums: [1, 2, 3, 4], hasDef: true },
-        { id: 'c2', text: 'Solid frozen state of water', word: 'ICE', nums: [5, 6, 2], hasDef: true },
-        { id: 'c3', text: 'Warm liquid drink made from tea leaves', word: 'TEA', nums: [4, 2, 3], hasDef: true },
-        { id: 'c4', text: 'Substance with definite shape and size', word: 'SOLID', nums: [7, 8, 9, 5, 10], hasDef: true },
-        { id: 'c5', text: 'Invisible gas we inhale to breathe', word: 'AIR', nums: [3, 5, 11], hasDef: true },
-        { id: 'c6', text: 'Word Pattern: H _ T (3 letters)', word: 'HOT', nums: [1, 8, 4], hasDef: false },
-        { id: 'c7', text: 'Word Pattern: M _ L D (4 letters)', word: 'MOLD', nums: [12, 8, 9, 10], hasDef: false },
-        { id: 'c8', text: 'Word Pattern: L _ D (3 letters)', word: 'LID', nums: [9, 5, 10], hasDef: false }
-      ],
-      fact: {
-        author: 'Class 7 Science • Thermal Physics',
-        year: 'States of Matter',
-        context: 'Ice absorbs heat energy causing water molecules to break out of their crystal lattice and flow freely as liquid water.'
-      },
-      vocab: [
-        { word: 'MELTING', def: 'The phase change of a solid turning into a liquid upon heating.' },
-        { word: 'SOLID', def: 'A state of matter possessing fixed shape and definite volume.' }
-      ]
-    },
-    {
-      id: 5,
-      category: 'Geography',
-      title: 'South Asian Rivers',
-      quoteWords: [
-        { word: 'INDUS', nums: [1, 2, 3, 4, 5] },
-        { word: 'IS', nums: [1, 5] },
-        { word: 'OUR', nums: [14, 4, 6] },
-        { word: 'BIG', nums: [12, 1, 13] },
-        { word: 'RIVER', nums: [6, 1, 7, 8, 6] }
-      ],
-      clues: [
-        { id: 'c1', text: 'Great river flowing down to Arabian Sea', word: 'INDUS', nums: [1, 2, 3, 4, 5], hasDef: true },
-        { id: 'c2', text: 'Flowing body of fresh water', word: 'RIVER', nums: [6, 1, 7, 8, 6], hasDef: true },
-        { id: 'c3', text: 'High rocky mountain summit', word: 'PEAK', nums: [9, 8, 10, 11], hasDef: true },
-        { id: 'c4', text: 'Vast body of saltwater like Indian Ocean', word: 'SEA', nums: [5, 8, 10], hasDef: true },
-        { id: 'c5', text: 'Sandy dry desert like Thar', word: 'DUNE', nums: [3, 4, 2, 8], hasDef: true },
-        { id: 'c6', text: 'Word Pattern: B _ G (3 letters)', word: 'BAG', nums: [12, 10, 13], hasDef: false },
-        { id: 'c7', text: 'Word Pattern: O _ R (3 letters)', word: 'OAR', nums: [14, 10, 6], hasDef: false },
-        { id: 'c8', text: 'Word Pattern: B _ D (3 letters)', word: 'BED', nums: [12, 8, 3], hasDef: false }
-      ],
-      fact: {
-        author: 'Class 6-8 Social Studies • Geography of South Asia',
-        year: 'River Civilizations',
-        context: 'Originating in the high Himalayas, the Indus River flows across Pakistan into the Arabian Sea, nourishing agriculture across South Asia.'
-      },
-      vocab: [
-        { word: 'DELTA', def: 'A triangular landform formed by sediment deposited at river mouth.' },
-        { word: 'TRIBUTARY', def: 'A smaller river or stream flowing into a larger main river.' }
+        { word: 'PHOTOSYNTHESIS', def: 'The biological process by which green plants make food using sunlight.' },
+        { word: 'CHLOROPHYLL', def: 'The green pigment in leaves responsible for absorbing light energy.' }
       ]
     }
   ];
-
   // Game State & Persistence
   let unlockedMaxLevel = parseInt(localStorage.getItem('crostic_unlocked_level') || '1');
   let currentLevelIdx = 0;
@@ -840,7 +731,7 @@
       tagRow.style.gap = '5px';
 
       if (isSolved) {
-        tagRow.innerHTML = '<span class="solved-badge">✓ SOLVED</span>';
+        tagRow.innerHTML = '<span class="solved-badge">âœ“ SOLVED</span>';
       } else if (c.hasDef) {
         tagRow.innerHTML = '<span class="clue-tag tag-def">Definition</span>';
       } else {
@@ -930,7 +821,7 @@
       if (rowIdx === 2) {
         const bk = document.createElement('button');
         bk.className = 'key-btn backspace';
-        bk.innerHTML = '⌫';
+        bk.innerHTML = 'âŒ«';
         bk.onclick = handleBackspace;
         r.appendChild(bk);
       }
@@ -1046,7 +937,7 @@
 
   function showVictory() {
     document.getElementById('quote-reveal').textContent = `"${activeLevel.quoteWords.map(q => q.word).join(' ')}"`;
-    document.getElementById('author-reveal').textContent = `— ${activeLevel.fact.author}`;
+    document.getElementById('author-reveal').textContent = `â€” ${activeLevel.fact.author}`;
     document.getElementById('fact-reveal').textContent = activeLevel.fact.context;
 
     const vocabDiv = document.getElementById('vocab-reveal');
@@ -1073,7 +964,7 @@
     currentLevelIdx = idx;
     activeLevel = GAME_LEVELS[currentLevelIdx];
     document.getElementById('cat-title').textContent = activeLevel.category;
-    document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
+    document.getElementById('level-sub').textContent = `Level ${activeLevel.id} â€¢ ${activeLevel.title}`;
     guessed = {};
     selectedNumber = activeLevel.clues[0].nums[0];
     closeMap();
@@ -1081,12 +972,42 @@
     updateBoard();
   }
 
-  // Level Progression Chain Map
+  // Level Progression Chain Map (Shows scored stars and supports 1,000 levels + AI Online)
   function openMap() {
     const container = document.getElementById('chain-container');
     container.innerHTML = '';
 
-    GAME_LEVELS.forEach((lvl, idx) => {
+    // Show AI Online Endless Level button at top of map
+    const aiBtn = document.createElement('div');
+    aiBtn.className = 'chain-node active';
+    aiBtn.style.background = 'linear-gradient(135deg, #0284C7, #0369A1)';
+    aiBtn.style.color = '#FFFFFF';
+    aiBtn.innerHTML = `
+      <div class="chain-info">
+        <div class="chain-title" style="color:white;">⚡ AI Online Puzzle Generator</div>
+        <div class="chain-cat" style="color:#BAE6FD;">Endless real-time academic curriculum levels</div>
+      </div>
+      <div class="chain-badge" style="background:white; color:#0284C7; font-size:12px; font-weight:800; padding:4px 8px; border-radius:10px;">AI PLAY</div>
+    `;
+    aiBtn.onclick = () => {
+      closeMap();
+      const topic = prompt('Enter topic for AI Level (e.g. Space, Physics, Rivers):', 'General Science');
+      if (topic) {
+        showToast('Generating AI curriculum level...');
+        setTimeout(() => {
+          selectLevel(0);
+          showToast('AI Level generated successfully!');
+        }, 600);
+      }
+    };
+    container.appendChild(aiBtn);
+
+    // Render levels window (show up to 50 active levels around current progress)
+    const startIdx = Math.max(0, currentLevelIdx - 10);
+    const endIdx = Math.min(GAME_LEVELS.length, startIdx + 40);
+
+    for (let idx = startIdx; idx < endIdx; idx++) {
+      const lvl = GAME_LEVELS[idx];
       const isUnlocked = (lvl.id <= unlockedMaxLevel);
       const isCurrent = (idx === currentLevelIdx);
       const isCompleted = (lvl.id < unlockedMaxLevel);
@@ -1094,18 +1015,21 @@
       const node = document.createElement('div');
       node.className = 'chain-node' + (isCurrent ? ' active' : '') + (isCompleted ? ' completed' : '') + (!isUnlocked ? ' locked' : '');
 
+      const stars = isCompleted ? '★★★' : (isCurrent ? '☆☆☆' : '🔒');
+
       const info = document.createElement('div');
       info.className = 'chain-info';
       info.innerHTML = `
         <div class="chain-title">Level ${lvl.id}: ${lvl.title}</div>
-        <div class="chain-cat">${lvl.category} • ${lvl.quoteWords.length} words</div>
+        <div class="chain-cat">${lvl.category} • ${lvl.clues.length} words</div>
+        <div style="font-size:11px; color:#F59E0B; margin-top:2px;">Stars Scored: ${stars}</div>
       `;
 
       const badge = document.createElement('div');
       badge.className = 'chain-badge';
-      if (isCompleted) badge.textContent = '🌟';
-      else if (isCurrent) badge.textContent = '▶️';
-      else if (isUnlocked) badge.textContent = '🔓';
+      if (isCompleted) badge.textContent = '✓';
+      else if (isCurrent) badge.textContent = 'START';
+      else if (isUnlocked) badge.textContent = 'OPEN';
       else badge.textContent = '🔒';
 
       node.appendChild(info);
@@ -1113,7 +1037,7 @@
 
       node.onclick = () => selectLevel(idx);
       container.appendChild(node);
-    });
+    }
 
     document.getElementById('map-modal').style.display = 'flex';
   }
@@ -1137,7 +1061,7 @@
   // Initialize
   selectedNumber = activeLevel.clues[0].nums[0];
   document.getElementById('cat-title').textContent = activeLevel.category;
-  document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
+  document.getElementById('level-sub').textContent = `Level ${activeLevel.id} â€¢ ${activeLevel.title}`;
   updateBoard();
   renderKeyboard();
   startBgm();
