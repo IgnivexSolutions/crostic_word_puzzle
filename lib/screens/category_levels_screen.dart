@@ -17,41 +17,23 @@ class CategoryLevelsScreen extends StatelessWidget {
   });
 
   IconData _getCategoryIcon(String cat) {
-    switch (cat.toLowerCase()) {
-      case 'history':
-        return Icons.history_edu_rounded;
-      case 'science':
-        return Icons.science_rounded;
-      case 'literature':
-        return Icons.menu_book_rounded;
-      case 'nature':
-        return Icons.eco_rounded;
-      case 'astronomy':
-        return Icons.nights_stay_rounded;
-      case 'inventions':
-        return Icons.lightbulb_circle_rounded;
-      default:
-        return Icons.category_rounded;
-    }
+    final c = cat.toLowerCase();
+    if (c.contains('science')) return Icons.biotech_rounded;
+    if (c.contains('computer')) return Icons.memory_rounded;
+    if (c.contains('math')) return Icons.calculate_rounded;
+    if (c.contains('geography')) return Icons.public_rounded;
+    if (c.contains('astronomy')) return Icons.nights_stay_rounded;
+    return Icons.menu_book_rounded;
   }
 
   Color _getCategoryColor(String cat) {
-    switch (cat.toLowerCase()) {
-      case 'history':
-        return const Color(0xFFD97706);
-      case 'science':
-        return const Color(0xFF0284C7);
-      case 'literature':
-        return const Color(0xFF8B5CF6);
-      case 'nature':
-        return const Color(0xFF059669);
-      case 'astronomy':
-        return const Color(0xFF4F46E5);
-      case 'inventions':
-        return const Color(0xFFEA580C);
-      default:
-        return const Color(0xFF64748B);
-    }
+    final c = cat.toLowerCase();
+    if (c.contains('science')) return const Color(0xFF059669);
+    if (c.contains('computer')) return const Color(0xFF0284C7);
+    if (c.contains('math')) return const Color(0xFF7C3AED);
+    if (c.contains('geography')) return const Color(0xFFD97706);
+    if (c.contains('astronomy')) return const Color(0xFF4F46E5);
+    return const Color(0xFF0284C7);
   }
 
   @override

@@ -122,13 +122,23 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final activeNumber = gameState.selectedLetterNumber;
     if (activeNumber == null) return;
 
+    // Check if this letter is already correctly solved
+    final correctChar = gameState.targetSolution[activeNumber];
+    final currentGuess = gameState.guessedLetters[activeNumber];
+
+    if (currentGuess != null && currentGuess == correctChar) {
+      // Solved letters are locked and protected from accidental deletion
+      _sound.playError();
+      return;
+    }
+
     _sound.playKeyTap();
 
     setState(() {
       if (gameState.guessedLetters.containsKey(activeNumber)) {
         gameState.guessedLetters.remove(activeNumber);
       } else {
-        // Move backwards
+        // Move backwards to previous editable tile
         _retreatCursor();
       }
     });

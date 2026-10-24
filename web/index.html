@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Crostic Cryptogram • Educational Scholar Edition</title>
+  <title>Crostic Cryptogram • Scholar Edition</title>
   <link rel="manifest" href="manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,7 +20,7 @@
       -webkit-user-select: none;
     }
     body {
-      background-color: #E8F1F5;
+      background-color: #E2E8F0;
       font-family: 'Plus Jakarta Sans', sans-serif;
       display: flex;
       justify-content: center;
@@ -49,59 +49,77 @@
     }
     /* Top Header */
     .top-header {
-      padding: 10px 16px 6px;
+      padding: 10px 14px 6px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(203, 213, 225, 0.6);
     }
-    .icon-btn {
-      background: none;
-      border: none;
+    .header-btn {
+      background: white;
+      border: 1.5px solid #CBD5E1;
       cursor: pointer;
-      padding: 6px;
-      color: #64748B;
+      padding: 6px 10px;
+      color: #475569;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      border-radius: 50%;
-      transition: background 0.15s;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      transition: all 0.15s;
     }
-    .icon-btn:hover {
-      background: rgba(0,0,0,0.05);
+    .header-btn:hover {
+      background: #F1F5F9;
+      border-color: #94A3B8;
     }
     .header-title-box {
       text-align: center;
+      cursor: pointer;
     }
     .header-category {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: #475569;
+      font-size: 17px;
+      font-weight: 800;
+      color: #0284C7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
     }
     .header-sub {
       font-size: 11px;
-      font-weight: 600;
-      color: #94A3B8;
+      font-weight: 700;
+      color: #64748B;
     }
 
     /* Top Quote Matrix Card */
     .quote-card {
       background: rgba(255, 255, 255, 0.95);
-      margin: 0 14px 6px;
-      padding: 12px 10px;
-      border-radius: 16px;
-      border: 1.2px solid #CDE1EC;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      margin: 8px 12px 6px;
+      padding: 10px 8px;
+      border-radius: 14px;
+      border: 1.5px solid #CBD5E1;
+      box-shadow: 0 3px 8px rgba(15, 23, 42, 0.04);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      min-height: 110px;
+      gap: 10px;
+      min-height: 85px;
     }
     .quote-word {
       display: inline-flex;
       gap: 3px;
+      padding: 2px 4px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .quote-word.word-solved {
+      background: #DCFCE7;
+      border-radius: 8px;
     }
 
     /* Tiles */
@@ -113,8 +131,8 @@
       position: relative;
     }
     .tile-box {
-      width: 38px;
-      height: 38px;
+      width: 35px;
+      height: 35px;
       background: #FFFFFF;
       border: 1.5px solid #CBD5E1;
       border-radius: 8px;
@@ -123,21 +141,21 @@
       align-items: center;
       justify-content: center;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 800;
       color: #1E293B;
       transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .tile-num {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      font-weight: 600;
+      font-size: 10px;
+      font-weight: 700;
       color: #64748B;
-      margin-top: 2px;
-      padding: 0 3px;
+      margin-top: 1px;
+      padding: 0 2px;
       border-radius: 3px;
     }
-    /* Tile States matching screenshot */
+    /* Tile States */
     .letter-tile.selected .tile-box {
       background: #FEF3C7;
       border-color: #D97706;
@@ -162,59 +180,101 @@
       background: #FFFBEB;
       font-weight: 800;
     }
+    /* Solved Tile Styling */
     .letter-tile.solved .tile-box {
-      background: #ECFDF5;
-      border-color: #A7F3D0;
-      color: #065F46;
+      background: #DCFCE7 !important;
+      border-color: #16A34A !important;
+      color: #15803D !important;
+      box-shadow: 0 2px 0 #15803D !important;
+    }
+    .letter-tile.solved .tile-num {
+      color: #15803D;
+      font-weight: 800;
     }
     .cursor-bar {
       width: 2px;
-      height: 20px;
+      height: 18px;
       background-color: #D97706;
       animation: blink 1s infinite;
     }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+    @keyframes blink { 50% { opacity: 0; } }
 
     /* Clues Section */
     .clues-container {
       flex: 1;
       overflow-y: auto;
-      padding: 4px 14px;
+      padding: 4px 12px;
       display: flex;
       flex-direction: column;
+      gap: 5px;
     }
     .clue-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 7px 6px;
-      border-bottom: 1px solid #E2E8F0;
+      padding: 6px 8px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #E2E8F0;
       gap: 8px;
+      transition: all 0.2s;
+    }
+    .clue-row.row-solved {
+      background: #F0FDF4;
+      border-color: #BBF7D0;
+    }
+    .clue-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
     .clue-text {
-      flex: 1;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       color: #1E293B;
       line-height: 1.25;
     }
-    .clue-text.completed {
-      color: #64748B;
+    .clue-tag {
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .tag-def {
+      background: #E0F2FE;
+      color: #0369A1;
+    }
+    .tag-pattern {
+      background: #F3E8FF;
+      color: #7E22CE;
+    }
+    .solved-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #16A34A;
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 4px;
+      width: fit-content;
     }
     .clue-tiles {
       display: flex;
       gap: 3px;
-      overflow-x: auto;
     }
 
-    /* Floating buttons */
+    /* Floating Tools */
     .floating-tools {
       position: absolute;
-      bottom: 195px;
-      left: 14px;
-      right: 14px;
+      bottom: 185px;
+      left: 12px;
+      right: 12px;
       display: flex;
       justify-content: space-between;
       pointer-events: none;
@@ -222,8 +282,8 @@
     }
     .tool-btn {
       pointer-events: auto;
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -234,36 +294,38 @@
       border: none;
       transition: transform 0.1s;
     }
-    .tool-btn:active {
-      transform: scale(0.94);
-    }
-    .shop-btn {
-      background: #FB923C;
+    .tool-btn:active { transform: scale(0.92); }
+    .map-btn {
+      background: #0284C7;
       color: white;
-      font-size: 24px;
+      font-size: 22px;
     }
     .hint-btn {
-      background: #FBBF24;
+      background: #F59E0B;
       color: white;
-      font-size: 26px;
+      font-size: 24px;
     }
     .badge-count {
       position: absolute;
       top: -3px;
       right: -3px;
-      background: #EA580C;
+      background: #EF4444;
       color: white;
       font-size: 10px;
       font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 10px;
-      border: 1.5px solid white;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
     }
 
-    /* Keyboard */
+    /* QWERTY Virtual Keyboard */
     .keyboard-container {
       background: #CBD5E1;
-      padding: 5px 4px 8px;
+      padding: 6px 4px 10px;
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -276,43 +338,41 @@
     }
     .key-btn {
       flex: 1;
-      height: 48px;
-      max-width: 40px;
-      background: #FFFFFF;
+      max-width: 38px;
+      height: 42px;
+      background: white;
       border: none;
       border-radius: 6px;
       box-shadow: 0 2px 0 #94A3B8;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      color: #0F172A;
+      color: #1E293B;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.08s;
+      transition: background 0.08s;
     }
     .key-btn:active {
       transform: translateY(2px);
-      box-shadow: 0 0 0 #94A3B8;
+      box-shadow: none;
+      background: #E2E8F0;
     }
     .key-btn.backspace {
-      max-width: 58px;
-      background: #E2E8F0;
-      font-size: 20px;
-    }
-    .key-btn.disabled {
-      background: #E2E8F0;
-      color: #94A3B8;
-      box-shadow: none;
-      cursor: default;
+      max-width: 50px;
+      background: #94A3B8;
+      color: white;
+      box-shadow: 0 2px 0 #64748B;
+      font-size: 18px;
     }
 
-    /* Modal / Dialog */
+    /* Modals */
     .modal-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
       display: none;
       align-items: center;
       justify-content: center;
@@ -321,20 +381,21 @@
     }
     .modal-card {
       background: white;
-      width: 100%;
-      max-width: 380px;
-      max-height: 85vh;
-      overflow-y: auto;
       border-radius: 20px;
       padding: 20px;
+      width: 100%;
+      max-width: 380px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      max-height: 85vh;
+      overflow-y: auto;
     }
     .modal-title {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 20px;
       font-weight: 800;
-      margin-bottom: 6px;
       text-align: center;
+      color: #0F172A;
+      margin-bottom: 12px;
     }
     .primary-btn {
       width: 100%;
@@ -347,21 +408,92 @@
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
-      margin-top: 12px;
+      margin-top: 10px;
+    }
+
+    /* Level Chain Map */
+    .chain-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin: 16px 0;
+      position: relative;
+    }
+    .chain-node {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 2px solid #E2E8F0;
+      background: #F8FAFC;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .chain-node.active {
+      border-color: #0284C7;
+      background: #F0F9FF;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+    }
+    .chain-node.completed {
+      border-color: #16A34A;
+      background: #F0FDF4;
+    }
+    .chain-node.locked {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background: #F1F5F9;
+    }
+    .chain-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .chain-title {
+      font-weight: 800;
+      font-size: 14px;
+      color: #0F172A;
+    }
+    .chain-cat {
+      font-size: 11px;
+      color: #64748B;
+      font-weight: 600;
+    }
+    .chain-badge {
+      font-size: 18px;
+    }
+    .toast {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1E293B;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      display: none;
+      z-index: 200;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
 
 <div id="phone-container">
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Locked! Complete previous level.</div>
+
   <!-- Top Header -->
   <div class="top-header">
-    <button class="icon-btn" onclick="openHome()"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></button>
-    <div class="header-title-box">
+    <button class="header-btn" onclick="openMap()">🗺️ Levels</button>
+    <div class="header-title-box" onclick="openMap()">
       <div class="header-category" id="cat-title">General Science</div>
-      <div class="header-sub" id="level-sub">Level 1 • Plant Photosynthesis</div>
+      <div class="header-sub" id="level-sub">Level 1 • Sun & Plants</div>
     </div>
-    <button class="icon-btn" onclick="openSettings()"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
+    <button class="header-btn" onclick="openSettings()">⚙️</button>
   </div>
 
   <!-- Quote Matrix Section -->
@@ -374,15 +506,14 @@
     <!-- Populated by JS -->
   </div>
 
-  <!-- Floating Tools (Shop & Hint) -->
+  <!-- Floating Tools (Map & Hint) -->
   <div class="floating-tools">
-    <button class="tool-btn shop-btn" onclick="openShop()">
-      🛍️
-      <div class="badge-count">1</div>
+    <button class="tool-btn map-btn" onclick="openMap()" title="Levels Map">
+      🗺️
     </button>
-    <button class="tool-btn hint-btn" onclick="useHint()">
+    <button class="tool-btn hint-btn" onclick="useHint()" title="Reveal Letter Hint">
       💡
-      <div class="badge-count" id="hint-badge">Ad</div>
+      <div class="badge-count" id="hint-badge">3</div>
     </button>
   </div>
 
@@ -391,19 +522,31 @@
     <!-- Populated by JS -->
   </div>
 
+  <!-- Level Progression Chain Map Modal -->
+  <div class="modal-overlay" id="map-modal">
+    <div class="modal-card">
+      <div class="modal-title">🗺️ Level Road Map</div>
+      <p style="font-size: 12px; color: #64748B; text-align: center; margin-bottom: 10px;">Select an unlocked level to play:</p>
+      <div class="chain-list" id="chain-container">
+        <!-- Populated by JS -->
+      </div>
+      <button class="primary-btn" onclick="closeMap()">Back to Game</button>
+    </div>
+  </div>
+
   <!-- Victory Dialog Modal -->
   <div class="modal-overlay" id="victory-modal">
     <div class="modal-card">
       <div style="font-size: 48px; text-align: center; margin-bottom: 4px;">🏆</div>
-      <div class="modal-title">PUZZLE SOLVED!</div>
+      <div class="modal-title">LEVEL SOLVED!</div>
       <div style="text-align: center; color: #F59E0B; font-size: 24px; margin-bottom: 12px;">★★★</div>
       <div id="quote-reveal" style="font-family: 'Space Grotesk'; font-weight: 700; font-size: 15px; font-style: italic; background: #F8FAFC; padding: 10px; border-radius: 10px; text-align: center; border: 1px solid #E2E8F0;">
-        "GREEN PLANTS PRODUCE FOOD"
+        "PLANTS NEED SUN AND RAIN"
       </div>
       <div id="author-reveal" style="font-size: 12px; font-weight: 600; color: #64748B; text-align: center; margin: 4px 0 12px;">
-        — Class 6-9 General Science (Biology)
+        — Class 6 Science • Plant Life
       </div>
-      <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Educational Historical Insight:</div>
+      <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Educational Science Insight:</div>
       <p id="fact-reveal" style="font-size: 12px; line-height: 1.4; color: #475569; margin-bottom: 12px;"></p>
       <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Vocabulary Added to Student Book:</div>
       <div id="vocab-reveal" style="font-size: 12px; background: #F1F5F9; padding: 8px; border-radius: 8px; margin-bottom: 12px;"></div>
@@ -415,247 +558,199 @@
   <!-- Settings & Device Sync Modal -->
   <div class="modal-overlay" id="settings-modal">
     <div class="modal-card">
-      <div class="modal-title">Game Settings & Device Sync</div>
+      <div class="modal-title">Game Settings & Audio</div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 14px 0;">
+        <span style="font-weight: 700; font-size: 14px;">Background Music (BGM)</span>
+        <input type="checkbox" id="bgm-toggle" checked onchange="toggleBgm(this.checked)">
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 14px 0;">
+        <span style="font-weight: 700; font-size: 14px;">Sound Effects (SFX)</span>
+        <input type="checkbox" id="sfx-toggle" checked onchange="sfxEnabled = this.checked">
+      </div>
       <div style="margin: 14px 0;">
-        <label style="font-weight: 700; font-size: 13px;">Your Cross-Device Sync Code:</label>
+        <label style="font-weight: 700; font-size: 13px;">Your Device Sync Code:</label>
         <div style="display: flex; gap: 8px; margin-top: 4px;">
           <input type="text" id="sync-code-display" readonly value="CR-9041" style="flex: 1; padding: 10px; font-family: 'JetBrains Mono'; font-weight: 800; font-size: 18px; color: #0284C7; text-align: center; border: 1px solid #CBD5E1; border-radius: 8px;">
           <button onclick="copyCode()" style="padding: 0 12px; background: #0284C7; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Copy</button>
         </div>
-        <p style="font-size: 11px; color: #64748B; margin-top: 4px;">Enter this code on another device to seamlessly sync your progress, vocabulary, and stars.</p>
       </div>
-
-      <div style="margin: 14px 0;">
-        <label style="font-weight: 700; font-size: 13px;">Pair With Other Device:</label>
-        <div style="display: flex; gap: 8px; margin-top: 4px;">
-          <input type="text" id="sync-input" placeholder="e.g. CR-8192" style="flex: 1; padding: 8px; border: 1px solid #CBD5E1; border-radius: 8px;">
-          <button onclick="pairDevice()" style="padding: 0 12px; background: #059669; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Pair</button>
-        </div>
-      </div>
-
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0;">
-        <span style="font-weight: 600; font-size: 14px;">Background Music</span>
-        <input type="checkbox" id="bgm-toggle" checked onchange="toggleBgm(this.checked)">
-      </div>
-
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0;">
-        <span style="font-weight: 600; font-size: 14px;">Sound Effects</span>
-        <input type="checkbox" id="sfx-toggle" checked>
-      </div>
-
       <button class="primary-btn" onclick="closeSettings()">Done</button>
     </div>
   </div>
 </div>
 
 <script>
-  // Complete Verified Levels Dataset (Under-Matric Curriculum: Science, Maths, Computer, Geography)
+  // 5 Short-Word Under-Matric Curriculum Levels (7-8 words, 3 without definitions)
   const GAME_LEVELS = [
     {
       id: 1,
       category: 'General Science',
-      title: 'Plant Photosynthesis',
+      title: 'Sun & Plants',
       quoteWords: [
-        { word: 'GREEN', nums: [13, 5, 2, 2, 15] },
-        { word: 'PLANTS', nums: [14, 1, 3, 15, 7, 8] },
-        { word: 'PRODUCE', nums: [14, 5, 6, 10, 12, 11, 2] },
-        { word: 'FOOD', nums: [4, 6, 6, 10] }
+        { word: 'PLANTS', nums: [13, 1, 3, 11, 7, 8] },
+        { word: 'NEED', nums: [11, 2, 2, 9] },
+        { word: 'SUN', nums: [8, 12, 11] },
+        { word: 'AND', nums: [3, 11, 9] },
+        { word: 'RAIN', nums: [5, 3, 10, 11] }
       ],
       clues: [
-        { id: 'c1', text: 'Green food-producing factory of a plant', word: 'LEAF', nums: [1, 2, 3, 4] },
-        { id: 'c2', text: 'Underground organ absorbing water and minerals', word: 'ROOT', nums: [5, 6, 6, 7] },
-        { id: 'c3', text: 'Plant axis supporting leaves and flowers', word: 'STEM', nums: [8, 7, 2, 9] },
-        { id: 'c4', text: 'Embryonic plant enclosed in a protective coat', word: 'SEED', nums: [8, 2, 2, 10] },
-        { id: 'c5', text: 'Microscopic building block of all living cells', word: 'CELL', nums: [11, 2, 1, 1] },
-        { id: 'c6', text: 'Sweet soluble carbohydrate produced during photosynthesis', word: 'SUGAR', nums: [8, 12, 13, 3, 5] },
-        { id: 'c7', text: 'Small body of still water supporting aquatic ecosystem', word: 'POND', nums: [14, 6, 15, 10] },
-        { id: 'c8', text: 'Upper fertile layer of earth where roots grow', word: 'SOIL', nums: [8, 6, 16, 1] }
+        { id: 'c1', text: 'Flat green food factory of a plant', word: 'LEAF', nums: [1, 2, 3, 4], hasDef: true },
+        { id: 'c2', text: 'Underground plant part absorbing water', word: 'ROOT', nums: [5, 6, 6, 7], hasDef: true },
+        { id: 'c3', text: 'Small grain that grows into a new plant', word: 'SEED', nums: [8, 2, 2, 9], hasDef: true },
+        { id: 'c4', text: 'Brown earth where plants grow', word: 'SOIL', nums: [8, 6, 10, 1], hasDef: true },
+        { id: 'c5', text: 'Water droplets falling from sky clouds', word: 'RAIN', nums: [5, 3, 10, 11], hasDef: true },
+        { id: 'c6', text: 'Word Pattern: S _ N (3 letters)', word: 'SUN', nums: [8, 12, 11], hasDef: false },
+        { id: 'c7', text: 'Word Pattern: P _ A N (4 letters)', word: 'PLAN', nums: [13, 1, 3, 11], hasDef: false },
+        { id: 'c8', text: 'Word Pattern: T _ N (3 letters)', word: 'TIN', nums: [7, 10, 11], hasDef: false }
       ],
       fact: {
-        author: 'Class 6-9 General Science (Biology)',
+        author: 'Class 6 Science • Plant Life',
         year: 'Plant Biology Unit',
-        context: 'Plants absorb carbon dioxide from air and water from soil, using sunlight trapped by green chlorophyll to create glucose and release vital oxygen.'
+        context: 'Green plants absorb sunlight and soil moisture through roots to manufacture their own nourishment, releasing fresh oxygen into the air.'
       },
       vocab: [
-        { word: 'PHOTOSYNTHESIS', def: 'The biological process by which autotrophic plants synthesize food from CO2 and water using solar light.' },
-        { word: 'CHLOROPHYLL', def: 'The vital green pigment in plants that absorbs sunlight.' },
-        { word: 'STOMATA', def: 'Microscopic pores on leaf surfaces that regulate gas exchange.' }
+        { word: 'PHOTOSYNTHESIS', def: 'How green plants synthesize food using sunlight and water.' },
+        { word: 'SEED', def: 'A tiny plant embryo protected within a seed coat.' }
       ]
     },
     {
       id: 2,
-      category: 'Computer Science',
-      title: 'Computer Architecture',
+      category: 'Computer Studies',
+      title: 'Digital Chip',
       quoteWords: [
-        { word: 'CPU', nums: [6, 14, 3] },
-        { word: 'IS', nums: [13, 4] },
-        { word: 'THE', nums: [11, 12, 5] },
-        { word: 'BRAIN', nums: [9, 7, 16, 13, 8] },
-        { word: 'OF', nums: [2, 15] },
-        { word: 'COMPUTER', nums: [6, 2, 1, 14, 3, 11, 5, 7] }
+        { word: 'CODE', nums: [1, 9, 10, 8] },
+        { word: 'RUNS', nums: [13, 16, 17, 11] },
+        { word: 'ON', nums: [9, 17] },
+        { word: 'CHIP', nums: [1, 2, 3, 4] }
       ],
       clues: [
-        { id: 'c1', text: 'Handheld pointing device used to click on monitor', word: 'MOUSE', nums: [1, 2, 3, 4, 5] },
-        { id: 'c2', text: 'Display monitor showing visual output to user', word: 'SCREEN', nums: [4, 6, 7, 5, 5, 8] },
-        { id: 'c3', text: 'Group of eight bits representing a character', word: 'BYTE', nums: [9, 10, 11, 5] },
-        { id: 'c4', text: 'Tiny silicon wafer containing electronic microcircuits', word: 'CHIP', nums: [6, 12, 13, 14] },
-        { id: 'c5', text: 'Style and design of typographic text characters', word: 'FONT', nums: [15, 2, 8, 11] },
-        { id: 'c6', text: 'Produce physical hard copy of digital documents on paper', word: 'PRINT', nums: [14, 7, 13, 8, 11] },
-        { id: 'c7', text: 'Fast primary memory storing running programs temporarily', word: 'RAM', nums: [7, 16, 1] },
-        { id: 'c8', text: 'Data or instructions entered into a computer system', word: 'INPUT', nums: [13, 8, 14, 3, 11] }
+        { id: 'c1', text: 'Tiny silicon brain inside computers', word: 'CHIP', nums: [1, 2, 3, 4], hasDef: true },
+        { id: 'c2', text: 'Eight digital bits grouped together', word: 'BYTE', nums: [5, 6, 7, 8], hasDef: true },
+        { id: 'c3', text: 'Written instructions for a software app', word: 'CODE', nums: [1, 9, 10, 8], hasDef: true },
+        { id: 'c4', text: 'Storage hardware holding your files', word: 'DISK', nums: [10, 3, 11, 12], hasDef: true },
+        { id: 'c5', text: 'Fast temporary computer memory', word: 'RAM', nums: [13, 14, 15], hasDef: true },
+        { id: 'c6', text: 'Word Pattern: R _ N (3 letters)', word: 'RUN', nums: [13, 16, 17], hasDef: false },
+        { id: 'c7', text: 'Word Pattern: P _ N (3 letters)', word: 'PIN', nums: [4, 3, 17], hasDef: false },
+        { id: 'c8', text: 'Word Pattern: S _ N (3 letters)', word: 'SON', nums: [11, 9, 17], hasDef: false }
       ],
       fact: {
-        author: 'Class 6-10 Computer Studies',
-        year: 'IT Fundamentals',
-        context: 'The Central Processing Unit (CPU) executes calculations and controls all input, output, and memory storage devices.'
+        author: 'Class 6-8 Computer Studies',
+        year: 'Microprocessors',
+        context: 'Modern microprocessors pack millions of electronic switches on a silicon chip to execute code billions of times per second.'
       },
       vocab: [
-        { word: 'HARDWARE', def: 'Physical and electronic machinery composing a computer.' },
-        { word: 'ALGORITHM', def: 'Step-by-step sequence of instructions designed to solve a problem.' },
-        { word: 'BINARY', def: 'Base-two numerical system using 0s and 1s used by microprocessors.' }
+        { word: 'CHIP', def: 'A micro-circuit fabricated on a tiny piece of silicon.' },
+        { word: 'BYTE', def: 'A basic unit of computer memory consisting of eight binary bits.' }
       ]
     },
     {
       id: 3,
       category: 'Mathematics',
-      title: 'Geometry & Shapes',
+      title: 'Shapes & Lines',
       quoteWords: [
-        { word: 'SUM', nums: [10, 9, 15] },
-        { word: 'OF', nums: [14, 11] },
-        { word: 'TRIANGLE', nums: [13, 6, 8, 1, 2, 3, 4, 5] },
-        { word: 'ANGLES', nums: [1, 2, 3, 4, 5, 10] },
-        { word: 'IS', nums: [8, 10] },
-        { word: 'FIXED', nums: [11, 8, 18, 5, 7] }
+        { word: 'LINE', nums: [1, 2, 3, 4] },
+        { word: 'HAS', nums: [15, 10, 7] },
+        { word: 'MANY', nums: [14, 10, 3, 16] },
+        { word: 'DOTS', nums: [12, 9, 13, 7] }
       ],
       clues: [
-        { id: 'c1', text: 'Geometric figure formed by two rays sharing a vertex', word: 'ANGLE', nums: [1, 2, 3, 4, 5] },
-        { id: 'c2', text: 'Distance from center of circle to its boundary edge', word: 'RADIUS', nums: [6, 1, 7, 8, 9, 10] },
-        { id: 'c3', text: 'Part of a whole represented as numerator over denominator', word: 'FRACTION', nums: [11, 6, 1, 12, 13, 8, 14, 2] },
-        { id: 'c4', text: 'Mathematical symbol denoting operation of subtraction', word: 'MINUS', nums: [15, 8, 2, 9, 10] },
-        { id: 'c5', text: 'Visual chart representing equations or statistical data', word: 'GRAPH', nums: [3, 6, 1, 16, 17] },
-        { id: 'c6', text: 'Exact dimensionless location in space having no length', word: 'POINT', nums: [16, 14, 8, 2, 13] },
-        { id: 'c7', text: 'Reference line on a Cartesian coordinate plane', word: 'AXIS', nums: [1, 18, 8, 10] },
-        { id: 'c8', text: 'Any individual numeral from zero through nine', word: 'DIGIT', nums: [7, 8, 3, 8, 13] }
+        { id: 'c1', text: 'Straight path that extends both ways', word: 'LINE', nums: [1, 2, 3, 4], hasDef: true },
+        { id: 'c2', text: 'Mathematical operation of addition', word: 'PLUS', nums: [5, 1, 6, 7], hasDef: true },
+        { id: 'c3', text: 'Ice cream shape with circular base', word: 'CONE', nums: [8, 9, 3, 4], hasDef: true },
+        { id: 'c4', text: 'Total surface inside a flat polygon', word: 'AREA', nums: [10, 11, 4, 10], hasDef: true },
+        { id: 'c5', text: 'Exact tiny spot on paper', word: 'DOT', nums: [12, 9, 13], hasDef: true },
+        { id: 'c6', text: 'Word Pattern: M _ S H (4 letters)', word: 'MASH', nums: [14, 10, 7, 15], hasDef: false },
+        { id: 'c7', text: 'Word Pattern: S _ T (3 letters)', word: 'SET', nums: [7, 4, 13], hasDef: false },
+        { id: 'c8', text: 'Word Pattern: D _ Y (3 letters)', word: 'DAY', nums: [12, 10, 16], hasDef: false }
       ],
       fact: {
-        author: 'Class 6-9 General Mathematics',
-        year: 'Euclidean Geometry',
-        context: 'On a flat plane, the three interior angles of any triangle always add up to exactly 180 degrees (two right angles).'
+        author: 'Class 6 Mathematics • Geometry',
+        year: 'Euclidean Foundations',
+        context: 'A straight line is considered a continuous set of infinitely many points (dots) extending infinitely in two directions.'
       },
       vocab: [
-        { word: 'HYPOTENUSE', def: 'The longest side of a right-angled triangle, opposite the right angle.' },
-        { word: 'PERIMETER', def: 'The continuous distance around the outer boundary of a polygon.' },
-        { word: 'POLYGON', def: 'A closed plane figure bounded by three or more straight lines.' }
+        { word: 'POLYGON', def: 'A 2D plane geometric shape bounded by straight lines.' },
+        { word: 'AREA', def: 'The extent of two-dimensional surface enclosed within a boundary.' }
       ]
     },
     {
       id: 4,
-      category: 'Physics & Chemistry',
-      title: 'States of Matter',
+      category: 'Physical Science',
+      title: 'Heat & Ice',
       quoteWords: [
-        { word: 'MATTER', nums: [4, 1, 2, 2, 10, 13] },
-        { word: 'HAS', nums: [9, 1, 5] },
-        { word: 'MASS', nums: [4, 1, 5, 5] },
-        { word: 'AND', nums: [1, 14, 8] },
-        { word: 'VOLUME', nums: [11, 3, 6, 16, 4, 10] }
+        { word: 'HEAT', nums: [1, 2, 3, 4] },
+        { word: 'MELTS', nums: [12, 2, 9, 4, 7] },
+        { word: 'COLD', nums: [6, 8, 9, 10] },
+        { word: 'ICE', nums: [5, 6, 2] }
       ],
       clues: [
-        { id: 'c1', text: 'Smallest fundamental particle of a chemical element', word: 'ATOM', nums: [1, 2, 3, 4] },
-        { id: 'c2', text: 'State of matter having rigid definite shape and volume', word: 'SOLID', nums: [5, 3, 6, 7, 8] },
-        { id: 'c3', text: 'Form of thermal energy that raises temperature', word: 'HEAT', nums: [9, 10, 1, 2] },
-        { id: 'c4', text: 'Gaseous state of water produced by boiling or evaporation', word: 'VAPOR', nums: [11, 1, 12, 3, 13] },
-        { id: 'c5', text: 'Transparent curved optical glass that refracts light', word: 'LENS', nums: [6, 10, 14, 5] },
-        { id: 'c6', text: 'Substance such as liquid or gas that flows smoothly', word: 'FLUID', nums: [15, 6, 16, 7, 8] },
-        { id: 'c7', text: 'Mechanical vibration propagating as acoustic pressure waves', word: 'SOUND', nums: [5, 3, 16, 14, 8] },
-        { id: 'c8', text: 'Shiny element that conducts electricity and heat efficiently', word: 'METAL', nums: [4, 10, 2, 1, 6] }
+        { id: 'c1', text: 'Form of energy raising temperature', word: 'HEAT', nums: [1, 2, 3, 4], hasDef: true },
+        { id: 'c2', text: 'Solid frozen state of water', word: 'ICE', nums: [5, 6, 2], hasDef: true },
+        { id: 'c3', text: 'Warm liquid drink made from tea leaves', word: 'TEA', nums: [4, 2, 3], hasDef: true },
+        { id: 'c4', text: 'Substance with definite shape and size', word: 'SOLID', nums: [7, 8, 9, 5, 10], hasDef: true },
+        { id: 'c5', text: 'Invisible gas we inhale to breathe', word: 'AIR', nums: [3, 5, 11], hasDef: true },
+        { id: 'c6', text: 'Word Pattern: H _ T (3 letters)', word: 'HOT', nums: [1, 8, 4], hasDef: false },
+        { id: 'c7', text: 'Word Pattern: M _ L D (4 letters)', word: 'MOLD', nums: [12, 8, 9, 10], hasDef: false },
+        { id: 'c8', text: 'Word Pattern: L _ D (3 letters)', word: 'LID', nums: [9, 5, 10], hasDef: false }
       ],
       fact: {
-        author: 'Class 7-9 Physical Sciences',
-        year: 'Properties of Matter',
-        context: 'Matter is anything that occupies space and has mass, existing predominantly in solid, liquid, or gaseous phases.'
+        author: 'Class 7 Science • Thermal Physics',
+        year: 'States of Matter',
+        context: 'Ice absorbs heat energy causing water molecules to break out of their crystal lattice and flow freely as liquid water.'
       },
       vocab: [
-        { word: 'DENSITY', def: 'Mass per unit volume of a substance (mass divided by volume).' },
-        { word: 'CONDUCTOR', def: 'A substance permitting easy flow of heat or electricity.' },
-        { word: 'EVAPORATION', def: 'Phase transformation of liquid into vapor at its surface below boiling.' }
+        { word: 'MELTING', def: 'The phase change of a solid turning into a liquid upon heating.' },
+        { word: 'SOLID', def: 'A state of matter possessing fixed shape and definite volume.' }
       ]
     },
     {
       id: 5,
-      category: 'Geography & Social Studies',
-      title: 'Rivers & Climate of South Asia',
+      category: 'Geography',
+      title: 'South Asian Rivers',
       quoteWords: [
-        { word: 'MONSOON', nums: [11, 14, 2, 5, 14, 14, 2] },
-        { word: 'RAIN', nums: [15, 9, 1, 2] },
-        { word: 'FEEDS', nums: [13, 6, 6, 3, 5] },
-        { word: 'SOUTH', nums: [5, 14, 4, 8, 10] },
-        { word: 'ASIA', nums: [9, 5, 1, 9] }
+        { word: 'INDUS', nums: [1, 2, 3, 4, 5] },
+        { word: 'IS', nums: [1, 5] },
+        { word: 'OUR', nums: [14, 4, 6] },
+        { word: 'BIG', nums: [12, 1, 13] },
+        { word: 'RIVER', nums: [6, 1, 7, 8, 6] }
       ],
       clues: [
-        { id: 'c1', text: 'Mighty river flowing from Himalayas through Pakistan to Arabian Sea', word: 'INDUS', nums: [1, 2, 3, 4, 5] },
-        { id: 'c2', text: 'Fertile triangular landform formed by sediment at river mouth', word: 'DELTA', nums: [3, 6, 7, 8, 9] },
-        { id: 'c3', text: 'Landmass completely encircled by water, like Sri Lanka', word: 'ISLAND', nums: [1, 5, 7, 9, 2, 3] },
-        { id: 'c4', text: 'Majestic mountain range featuring Mount Everest and K2', word: 'HIMALAYA', nums: [10, 1, 11, 9, 7, 9, 12, 9] },
-        { id: 'c5', text: 'Lush woodland ecosystem like Bengal Sundarbans mangrove', word: 'FOREST', nums: [13, 14, 15, 6, 5, 8] },
-        { id: 'c6', text: 'Expansive saltwater body south of subcontinent (Indian Ocean)', word: 'OCEAN', nums: [14, 16, 6, 9, 2] },
-        { id: 'c7', text: 'Arid sandy geographic region like Thar and Cholistan', word: 'DESERT', nums: [3, 6, 5, 6, 15, 8] },
-        { id: 'c8', text: 'Freshwater stream flowing continuously down to the sea', word: 'RIVER', nums: [15, 1, 17, 6, 15] }
+        { id: 'c1', text: 'Great river flowing down to Arabian Sea', word: 'INDUS', nums: [1, 2, 3, 4, 5], hasDef: true },
+        { id: 'c2', text: 'Flowing body of fresh water', word: 'RIVER', nums: [6, 1, 7, 8, 6], hasDef: true },
+        { id: 'c3', text: 'High rocky mountain summit', word: 'PEAK', nums: [9, 8, 10, 11], hasDef: true },
+        { id: 'c4', text: 'Vast body of saltwater like Indian Ocean', word: 'SEA', nums: [5, 8, 10], hasDef: true },
+        { id: 'c5', text: 'Sandy dry desert like Thar', word: 'DUNE', nums: [3, 4, 2, 8], hasDef: true },
+        { id: 'c6', text: 'Word Pattern: B _ G (3 letters)', word: 'BAG', nums: [12, 10, 13], hasDef: false },
+        { id: 'c7', text: 'Word Pattern: O _ R (3 letters)', word: 'OAR', nums: [14, 10, 6], hasDef: false },
+        { id: 'c8', text: 'Word Pattern: B _ D (3 letters)', word: 'BED', nums: [12, 8, 3], hasDef: false }
       ],
       fact: {
-        author: 'Class 6-10 Social Studies & Geography',
-        year: 'South Asian Geography',
-        context: 'Monsoon winds bring rainfall across Pakistan, India, Bangladesh, and Sri Lanka, recharging the Indus, Ganges, Brahmaputra, and Mahaweli river basins.'
+        author: 'Class 6-8 Social Studies • Geography of South Asia',
+        year: 'River Civilizations',
+        context: 'Originating in the high Himalayas, the Indus River flows across Pakistan into the Arabian Sea, nourishing agriculture across South Asia.'
       },
       vocab: [
-        { word: 'TRIBUTARY', def: 'A freshwater river or stream that flows into a larger river.' },
-        { word: 'ALLUVIAL', def: 'Relating to fertile soil deposited by flowing river waters.' },
-        { word: 'MANGROVE', def: 'Coastal salt-tolerant tidal wetland forest, like the Sundarbans.' }
-      ]
-    },
-    {
-      id: 6,
-      category: 'Astronomy & Space',
-      title: 'The Solar System',
-      quoteWords: [
-        { word: 'EARTH', nums: [5, 3, 9, 6, 15] },
-        { word: 'REVOLVES', nums: [9, 5, 16, 8, 2, 16, 5, 7] },
-        { word: 'AROUND', nums: [3, 9, 8, 14, 4, 13] },
-        { word: 'SUN', nums: [7, 14, 4] }
-      ],
-      clues: [
-        { id: 'c1', text: 'Large celestial body orbiting a star in clear path', word: 'PLANET', nums: [1, 2, 3, 4, 5, 6] },
-        { id: 'c2', text: 'Radiant light and heat energy emitted by our Sun', word: 'SOLAR', nums: [7, 8, 2, 3, 9] },
-        { id: 'c3', text: 'Earth\'s natural celestial satellite causing ocean tides', word: 'MOON', nums: [10, 8, 8, 4] },
-        { id: 'c4', text: 'Curved gravitational trajectory of a planet or satellite', word: 'ORBIT', nums: [8, 9, 11, 12, 6] },
-        { id: 'c5', text: 'Microscopic cosmic matter floating between planets in space', word: 'DUST', nums: [13, 14, 7, 6] },
-        { id: 'c6', text: 'Sky and celestial sphere visible from Earth surface', word: 'HEAVEN', nums: [15, 5, 3, 16, 5, 4] },
-        { id: 'c7', text: 'Massive glowing sphere of plasma held together by gravity', word: 'STAR', nums: [7, 6, 3, 9] },
-        { id: 'c8', text: 'Second planet from Sun known as the brilliant evening star', word: 'VENUS', nums: [16, 5, 4, 14, 7] }
-      ],
-      fact: {
-        author: 'Class 6-8 General Science',
-        year: 'Astronomy Unit',
-        context: 'Earth revolves around the Sun in an elliptical orbit every 365.25 days while rotating on its axis every 24 hours.'
-      },
-      vocab: [
-        { word: 'ECLIPSE', def: 'The obscuring of light from one celestial body by another.' },
-        { word: 'GRAVITATION', def: 'The universal fundamental force of attraction between all masses.' },
-        { word: 'SATELLITE', def: 'A body in space orbiting around a larger planetary body.' }
+        { word: 'DELTA', def: 'A triangular landform formed by sediment deposited at river mouth.' },
+        { word: 'TRIBUTARY', def: 'A smaller river or stream flowing into a larger main river.' }
       ]
     }
   ];
 
+  // Game State & Persistence
+  let unlockedMaxLevel = parseInt(localStorage.getItem('crostic_unlocked_level') || '1');
   let currentLevelIdx = 0;
   let activeLevel = GAME_LEVELS[currentLevelIdx];
   let guessed = {}; // number -> char
   let selectedNumber = null;
   let sfxEnabled = true;
+  let bgmEnabled = true;
 
   // Synthesized Web Audio Engine
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   function playBeep(freq, type, dur, gain) {
     if (!sfxEnabled) return;
     try {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
       const osc = audioCtx.createOscillator();
       const g = audioCtx.createGain();
       osc.type = type;
@@ -671,6 +766,7 @@
 
   function soundKey() { playBeep(650, 'sine', 0.05, 0.2); }
   function soundReveal() { playBeep(880, 'sine', 0.18, 0.35); }
+  function soundError() { playBeep(160, 'sawtooth', 0.15, 0.3); }
   function soundWord() {
     playBeep(523, 'sine', 0.12, 0.3);
     setTimeout(() => playBeep(659, 'sine', 0.12, 0.3), 100);
@@ -682,12 +778,39 @@
     });
   }
 
+  // Background Music Simulator
+  let bgmInterval = null;
+  function startBgm() {
+    if (!bgmEnabled) return;
+    const chords = [392, 440, 349, 392];
+    let idx = 0;
+    bgmInterval = setInterval(() => {
+      if (bgmEnabled) playBeep(chords[idx % chords.length], 'sine', 1.2, 0.04);
+      idx++;
+    }, 1800);
+  }
+  function toggleBgm(enabled) {
+    bgmEnabled = enabled;
+    if (!enabled && bgmInterval) clearInterval(bgmInterval);
+    else if (enabled) startBgm();
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.style.display = 'block';
+    setTimeout(() => t.style.display = 'none', 1800);
+  }
+
+  // Render Top Quote Matrix
   function renderQuote() {
     const board = document.getElementById('quote-board');
     board.innerHTML = '';
     activeLevel.quoteWords.forEach((qw) => {
+      const isWordSolved = qw.word.split('').every((ch, idx) => guessed[qw.nums[idx]] === ch);
       const wordDiv = document.createElement('div');
-      wordDiv.className = 'quote-word';
+      wordDiv.className = 'quote-word' + (isWordSolved ? ' word-solved' : '');
+
       qw.word.split('').forEach((char, idx) => {
         const num = qw.nums[idx];
         const tile = createTile(num, char);
@@ -697,28 +820,50 @@
     });
   }
 
+  // Render Clue Rows
   function renderClues() {
     const list = document.getElementById('clues-list');
     list.innerHTML = '';
+
     activeLevel.clues.forEach((c) => {
       const row = document.createElement('div');
-      row.className = 'clue-row';
+      const isSolved = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
+      row.className = 'clue-row' + (isSolved ? ' row-solved' : '');
 
-      // Check if clue is solved
-      const isComplete = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
+      const info = document.createElement('div');
+      info.className = 'clue-info';
+
+      // Solved badge with checkmark or type tag
+      const tagRow = document.createElement('div');
+      tagRow.style.display = 'flex';
+      tagRow.style.alignItems = 'center';
+      tagRow.style.gap = '5px';
+
+      if (isSolved) {
+        tagRow.innerHTML = '<span class="solved-badge">✓ SOLVED</span>';
+      } else if (c.hasDef) {
+        tagRow.innerHTML = '<span class="clue-tag tag-def">Definition</span>';
+      } else {
+        tagRow.innerHTML = '<span class="clue-tag tag-pattern">Pattern</span>';
+      }
 
       const text = document.createElement('div');
-      text.className = 'clue-text' + (isComplete ? ' completed' : '');
-      text.innerHTML = (isComplete ? '✓ ' : '') + c.text;
+      text.className = 'clue-text';
+      text.textContent = c.text;
+
+      info.appendChild(tagRow);
+      info.appendChild(text);
 
       const tiles = document.createElement('div');
       tiles.className = 'clue-tiles';
       c.word.split('').forEach((ch, i) => {
         const num = c.nums[i];
-        tiles.appendChild(createTile(num, ch));
+        const tile = createTile(num, ch);
+        if (isSolved) tile.classList.add('word-solved');
+        tiles.appendChild(tile);
       });
 
-      row.appendChild(text);
+      row.appendChild(info);
       row.appendChild(tiles);
       list.appendChild(row);
     });
@@ -796,34 +941,64 @@
 
   function handleInput(char) {
     if (!selectedNumber) return;
+    
+    // Check if the current selectedNumber is already a correctly solved letter!
+    const targetMap = {};
+    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
+
+    if (guessed[selectedNumber] && guessed[selectedNumber] === targetMap[selectedNumber]) {
+      // Already solved letter is locked!
+      soundError();
+      return;
+    }
+
     soundKey();
     guessed[selectedNumber] = char.toUpperCase();
 
-    // Check if letter is right
-    let targetChar = null;
-    activeLevel.clues.forEach(c => {
-      c.nums.forEach((n, i) => { if (n === selectedNumber) targetChar = c.word[i]; });
-    });
-
-    if (targetChar === char.toUpperCase()) {
+    if (targetMap[selectedNumber] === char.toUpperCase()) {
       soundReveal();
+      // Check if this completed any words
+      activeLevel.clues.forEach(c => {
+        const isNowSolved = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
+        if (isNowSolved && c.nums.includes(selectedNumber)) {
+          soundWord();
+        }
+      });
     }
 
-    // Auto advance
+    // Auto advance to next unsolved letter
     const allNums = [];
     activeLevel.clues.forEach(c => allNums.push(...c.nums));
-    const nextUnfilled = allNums.find(n => !guessed[n]);
+    const nextUnfilled = allNums.find(n => !guessed[n] || guessed[n] !== targetMap[n]);
     if (nextUnfilled) selectedNumber = nextUnfilled;
 
     updateBoard();
     checkVictory();
   }
 
+  // BACKSPACE RULE: Can backspace in substituted/tentative words, but NOT in solved words!
   function handleBackspace() {
     if (!selectedNumber) return;
-    soundKey();
-    delete guessed[selectedNumber];
-    updateBoard();
+
+    const targetMap = {};
+    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
+
+    // Check if this letter is already correctly solved
+    if (guessed[selectedNumber] && guessed[selectedNumber] === targetMap[selectedNumber]) {
+      // LOCKED: Solved letter cannot be deleted
+      soundError();
+      showToast('Solved letters are locked and cannot be erased!');
+      return;
+    }
+
+    // If it is a tentative or substituted guess, erase it!
+    if (guessed[selectedNumber]) {
+      soundKey();
+      delete guessed[selectedNumber];
+      updateBoard();
+    } else {
+      soundError();
+    }
   }
 
   function updateBoard() {
@@ -833,7 +1008,6 @@
 
   function useHint() {
     soundReveal();
-    // Find first unsolved number
     const targetMap = {};
     activeLevel.clues.forEach(c => {
       c.nums.forEach((n, i) => targetMap[n] = c.word[i]);
@@ -861,13 +1035,18 @@
 
     if (won) {
       soundVictory();
+      // Unlock next level in progression chain!
+      if (activeLevel.id >= unlockedMaxLevel && unlockedMaxLevel < GAME_LEVELS.length) {
+        unlockedMaxLevel = activeLevel.id + 1;
+        localStorage.setItem('crostic_unlocked_level', unlockedMaxLevel.toString());
+      }
       setTimeout(showVictory, 400);
     }
   }
 
   function showVictory() {
     document.getElementById('quote-reveal').textContent = `"${activeLevel.quoteWords.map(q => q.word).join(' ')}"`;
-    document.getElementById('author-reveal').textContent = `— ${activeLevel.fact.author} (${activeLevel.fact.year})`;
+    document.getElementById('author-reveal').textContent = `— ${activeLevel.fact.author}`;
     document.getElementById('fact-reveal').textContent = activeLevel.fact.context;
 
     const vocabDiv = document.getElementById('vocab-reveal');
@@ -878,36 +1057,76 @@
 
   function nextLevel() {
     closeModal();
-    currentLevelIdx = (currentLevelIdx + 1) % GAME_LEVELS.length;
+    if (currentLevelIdx + 1 < GAME_LEVELS.length) {
+      selectLevel(currentLevelIdx + 1);
+    } else {
+      openMap();
+    }
+  }
+
+  function selectLevel(idx) {
+    if (idx + 1 > unlockedMaxLevel) {
+      soundError();
+      showToast(`Level ${idx + 1} is locked! Complete Level ${idx} first.`);
+      return;
+    }
+    currentLevelIdx = idx;
     activeLevel = GAME_LEVELS[currentLevelIdx];
     document.getElementById('cat-title').textContent = activeLevel.category;
     document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
     guessed = {};
     selectedNumber = activeLevel.clues[0].nums[0];
+    closeMap();
+    closeModal();
     updateBoard();
   }
 
+  // Level Progression Chain Map
+  function openMap() {
+    const container = document.getElementById('chain-container');
+    container.innerHTML = '';
+
+    GAME_LEVELS.forEach((lvl, idx) => {
+      const isUnlocked = (lvl.id <= unlockedMaxLevel);
+      const isCurrent = (idx === currentLevelIdx);
+      const isCompleted = (lvl.id < unlockedMaxLevel);
+
+      const node = document.createElement('div');
+      node.className = 'chain-node' + (isCurrent ? ' active' : '') + (isCompleted ? ' completed' : '') + (!isUnlocked ? ' locked' : '');
+
+      const info = document.createElement('div');
+      info.className = 'chain-info';
+      info.innerHTML = `
+        <div class="chain-title">Level ${lvl.id}: ${lvl.title}</div>
+        <div class="chain-cat">${lvl.category} • ${lvl.quoteWords.length} words</div>
+      `;
+
+      const badge = document.createElement('div');
+      badge.className = 'chain-badge';
+      if (isCompleted) badge.textContent = '🌟';
+      else if (isCurrent) badge.textContent = '▶️';
+      else if (isUnlocked) badge.textContent = '🔓';
+      else badge.textContent = '🔒';
+
+      node.appendChild(info);
+      node.appendChild(badge);
+
+      node.onclick = () => selectLevel(idx);
+      container.appendChild(node);
+    });
+
+    document.getElementById('map-modal').style.display = 'flex';
+  }
+
+  function closeMap() { document.getElementById('map-modal').style.display = 'none'; }
   function closeModal() { document.getElementById('victory-modal').style.display = 'none'; }
   function openSettings() { document.getElementById('settings-modal').style.display = 'flex'; }
   function closeSettings() { document.getElementById('settings-modal').style.display = 'none'; }
-  function openShop() { alert('Scholar Shop: Free 100 coins granted for vocabulary study!'); }
-  function openHome() { alert('Student Dashboard: Currently playing Level ' + activeLevel.id + ' (' + activeLevel.category + ')'); }
 
   function copyCode() {
     navigator.clipboard.writeText('CR-9041');
     alert('Device Sync Code CR-9041 copied to clipboard!');
   }
-
-  function pairDevice() {
-    const val = document.getElementById('sync-input').value.trim();
-    if (val) {
-      soundWord();
-      alert(`Successfully paired device with code ${val}! Progress synchronized.`);
-      closeSettings();
-    }
-  }
-
-  function toggleBgm(enabled) {}
 
   // Physical keyboard support
   window.addEventListener('keydown', (e) => {
@@ -915,10 +1134,13 @@
     else if (/^[a-zA-Z]$/.test(e.key)) handleInput(e.key.toUpperCase());
   });
 
-  // Start with first clue first tile selected
+  // Initialize
   selectedNumber = activeLevel.clues[0].nums[0];
+  document.getElementById('cat-title').textContent = activeLevel.category;
+  document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
   updateBoard();
   renderKeyboard();
+  startBgm();
 </script>
 
 </body>
