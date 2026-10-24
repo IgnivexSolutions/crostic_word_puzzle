@@ -123,11 +123,8 @@ class _GameplayScreenState extends State<GameplayScreen> {
     if (activeNumber == null) return;
 
     // Check if this letter is already correctly solved
-    final correctChar = gameState.targetSolution[activeNumber];
-    final currentGuess = gameState.guessedLetters[activeNumber];
-
-    if (currentGuess != null && currentGuess == correctChar) {
-      // Solved letters are locked and protected from accidental deletion
+    if (gameState.isNumberSolved(activeNumber)) {
+      // Solved letters are locked and protected from deletion
       _sound.playError();
       return;
     }
