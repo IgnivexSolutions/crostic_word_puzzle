@@ -54,19 +54,19 @@ final List<LevelData> allGameLevels = [
       ),
       ClueData(
         id: 'c1_6',
-        clueText: 'Word Pattern: S _ N (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'SUN',
         letterNumbers: [8, 12, 11], // U=12
       ),
       ClueData(
         id: 'c1_7',
-        clueText: 'Word Pattern: P _ A N (4 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'PLAN',
         letterNumbers: [13, 1, 3, 11], // P=13
       ),
       ClueData(
         id: 'c1_8',
-        clueText: 'Word Pattern: T _ N (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'TIN',
         letterNumbers: [7, 10, 11],
       ),
@@ -145,19 +145,19 @@ final List<LevelData> allGameLevels = [
       ),
       ClueData(
         id: 'c2_6',
-        clueText: 'Word Pattern: R _ N (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'RUN',
         letterNumbers: [13, 16, 17], // U=16, N=17
       ),
       ClueData(
         id: 'c2_7',
-        clueText: 'Word Pattern: P _ N (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'PIN',
         letterNumbers: [4, 3, 17],
       ),
       ClueData(
         id: 'c2_8',
-        clueText: 'Word Pattern: S _ N (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'SON',
         letterNumbers: [11, 9, 17],
       ),
@@ -236,19 +236,19 @@ final List<LevelData> allGameLevels = [
       ),
       ClueData(
         id: 'c3_6',
-        clueText: 'Word Pattern: M _ S H (4 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'MASH',
         letterNumbers: [14, 10, 7, 15], // M=14, H=15
       ),
       ClueData(
         id: 'c3_7',
-        clueText: 'Word Pattern: S _ T (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'SET',
         letterNumbers: [7, 4, 13],
       ),
       ClueData(
         id: 'c3_8',
-        clueText: 'Word Pattern: D _ Y (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'DAY',
         letterNumbers: [12, 10, 16], // Y=16
       ),
@@ -327,19 +327,19 @@ final List<LevelData> allGameLevels = [
       ),
       ClueData(
         id: 'c4_6',
-        clueText: 'Word Pattern: H _ T (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'HOT',
         letterNumbers: [1, 8, 4],
       ),
       ClueData(
         id: 'c4_7',
-        clueText: 'Word Pattern: M _ L D (4 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'MOLD',
         letterNumbers: [12, 8, 9, 10], // M=12
       ),
       ClueData(
         id: 'c4_8',
-        clueText: 'Word Pattern: L _ D (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'LID',
         letterNumbers: [9, 5, 10],
       ),
@@ -419,19 +419,19 @@ final List<LevelData> allGameLevels = [
       ),
       ClueData(
         id: 'c5_6',
-        clueText: 'Word Pattern: B _ G (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'BAG',
         letterNumbers: [12, 10, 13], // B=12, G=13
       ),
       ClueData(
         id: 'c5_7',
-        clueText: 'Word Pattern: O _ R (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'OAR',
         letterNumbers: [14, 10, 6], // O=14
       ),
       ClueData(
         id: 'c5_8',
-        clueText: 'Word Pattern: B _ D (3 letters)',
+        clueText: 'Cross-cipher substitution word',
         targetWord: 'BED',
         letterNumbers: [12, 8, 3],
       ),
@@ -540,25 +540,25 @@ class LevelRepository {
         ),
         const ClueData(
           id: 'ai_4',
-          clueText: 'Word Pattern: N _ W (3 letters)',
+          clueText: 'Cross-cipher substitution word',
           targetWord: 'NEW',
           letterNumbers: [3, 7, 8],
         ),
         const ClueData(
           id: 'ai_5',
-          clueText: 'Word Pattern: R _ N (3 letters)',
+          clueText: 'Cross-cipher substitution word',
           targetWord: 'RUN',
           letterNumbers: [10, 11, 3],
         ),
         const ClueData(
           id: 'ai_6',
-          clueText: 'Word Pattern: H _ T (3 letters)',
+          clueText: 'Cross-cipher substitution word',
           targetWord: 'HIT',
           letterNumbers: [12, 2, 9],
         ),
         const ClueData(
           id: 'ai_7',
-          clueText: 'Word with out meaning pattern: R _ A',
+          clueText: 'Cross-cipher substitution word',
           targetWord: 'RUQIYA',
           letterNumbers: [10, 11, 13, 2, 14, 15],
         ),
