@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../models/level_data.dart';
 import '../models/game_state.dart';
 import '../models/user_account.dart';
+import '../data/levels_dataset.dart';
 import '../services/sound_service.dart';
 import '../services/storage_service.dart';
 import '../services/sync_service.dart';
