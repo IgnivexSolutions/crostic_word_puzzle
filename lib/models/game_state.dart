@@ -84,9 +84,17 @@ class GameState {
     return true;
   }
 
-  /// Check if the entire level is won
+  /// Check if all clues are completely solved
+  bool areAllCluesComplete() {
+    for (final clue in level.clues) {
+      if (!isClueComplete(clue)) return false;
+    }
+    return true;
+  }
+
+  /// Check if the entire level is won (both quote and all clues solved)
   bool checkEntireLevelWon() {
-    return isQuoteComplete();
+    return isQuoteComplete() && areAllCluesComplete();
   }
 
   /// Calculate completion progress percentage (0.0 to 1.0)

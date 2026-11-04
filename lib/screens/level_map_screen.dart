@@ -475,7 +475,20 @@ class _LevelMapScreenState extends State<LevelMapScreen> {
                                                       color: Colors.white,
                                                     ),
                                                   )
-                                                : const Icon(Icons.lock_rounded, color: Color(0xFF94A3B8), size: 22.0),
+                                                : Column(
+                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                    children: [
+                                                      const Icon(Icons.lock_rounded, color: Color(0xFF94A3B8), size: 15.0),
+                                                      Text(
+                                                        '${level.id}',
+                                                        style: GoogleFonts.spaceGrotesk(
+                                                          fontSize: 11.0,
+                                                          fontWeight: FontWeight.w800,
+                                                          color: const Color(0xFF64748B),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
                                   ),
                                 ),
 
@@ -483,24 +496,37 @@ class _LevelMapScreenState extends State<LevelMapScreen> {
 
                                 // Stars or Level Label below node
                                 if (isCompleted)
-                                  Row(
+                                  Column(
                                     mainAxisSize: MainAxisSize.min,
-                                    children: List.generate(
-                                      3,
-                                      (sIdx) => Icon(
-                                        Icons.star_rounded,
-                                        size: 14.0,
-                                        color: sIdx < stars ? const Color(0xFFF59E0B) : const Color(0xFFCBD5E1),
+                                    children: [
+                                      Text(
+                                        'Level ${level.id}',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          fontSize: 11.5,
+                                          fontWeight: FontWeight.w800,
+                                          color: const Color(0xFF0F172A),
+                                        ),
                                       ),
-                                    ),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: List.generate(
+                                          3,
+                                          (sIdx) => Icon(
+                                            Icons.star_rounded,
+                                            size: 13.0,
+                                            color: sIdx < stars ? const Color(0xFFF59E0B) : const Color(0xFFCBD5E1),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   )
                                 else
                                   Text(
-                                    'Lv ${level.id}',
+                                    isUnlocked ? 'Level ${level.id} • Play' : 'Level ${level.id} • Locked',
                                     style: GoogleFonts.spaceGrotesk(
                                       fontSize: 11.0,
                                       fontWeight: FontWeight.w700,
-                                      color: isUnlocked ? const Color(0xFF334155) : const Color(0xFF94A3B8),
+                                      color: isUnlocked ? const Color(0xFF0284C7) : const Color(0xFF94A3B8),
                                     ),
                                   ),
                               ],

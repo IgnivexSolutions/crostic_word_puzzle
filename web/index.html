@@ -1702,11 +1702,34 @@
     });
   }
 
+  function getTargetMap() {
+    const targetMap = {};
+    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
+    activeLevel.quoteWords.forEach(qw => qw.nums.forEach((n, i) => targetMap[n] = qw.word[i]));
+    return targetMap;
+  }
+
+  function getAllPuzzleSlots() {
+    const slots = [];
+    // 1. Clue slots
+    activeLevel.clues.forEach(c => {
+      c.nums.forEach((n, idx) => {
+        slots.push({ type: 'clue', id: c.id, num: n, indexInWord: idx });
+      });
+    });
+    // 2. Quote slots
+    activeLevel.quoteWords.forEach((qw, wIdx) => {
+      qw.nums.forEach((n, idx) => {
+        slots.push({ type: 'quote', id: wIdx, num: n, indexInWord: idx });
+      });
+    });
+    return slots;
+  }
+
   function handleInput(char) {
     if (!selectedNumber) return;
 
-    const targetMap = {};
-    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
+    const targetMap = getTargetMap();
 
     // If letter is already correctly solved and locked
     if (guessed[selectedNumber] && guessed[selectedNumber] === targetMap[selectedNumber]) {
@@ -1720,10 +1743,11 @@
     const isCorrect = (targetMap[selectedNumber] === typedChar);
 
     if (isCorrect) {
+      // 1. Substitute letter across ALL matching cipher slots in quote and clues!
       guessed[selectedNumber] = typedChar;
       soundReveal();
 
-      // Check if this input solved any Clue Words or Quote Words (Word Completer Trigger)
+      // 2. Check if this input solved any Clue Words or Quote Words
       let wordSolvedNow = false;
       activeLevel.clues.forEach(c => {
         const isNowSolved = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
@@ -1739,22 +1763,42 @@
       });
 
       if (wordSolvedNow) {
-        setTimeout(soundWord, 100);
+        setTimeout(soundWord, 90);
       }
 
-      // Auto advance cursor to next unsolved slot
-      const allNums = [];
-      activeLevel.clues.forEach(c => allNums.push(...c.nums));
-      const nextUnfilled = allNums.find(n => !guessed[n] || guessed[n] !== targetMap[n]);
-      if (nextUnfilled) selectedNumber = nextUnfilled;
+      // 3. Auto-advance cursor to NEXT empty letter space!
+      const slots = getAllPuzzleSlots();
+      const currentSlotIdx = slots.findIndex(s => s.num === selectedNumber);
+      let nextEmptySlot = null;
+
+      // Look forward from current slot
+      for (let i = currentSlotIdx + 1; i < slots.length; i++) {
+        const sNum = slots[i].num;
+        if (!guessed[sNum] || guessed[sNum] !== targetMap[sNum]) {
+          nextEmptySlot = slots[i];
+          break;
+        }
+      }
+
+      // Wrap around from beginning if not found ahead
+      if (!nextEmptySlot) {
+        for (let i = 0; i < currentSlotIdx; i++) {
+          const sNum = slots[i].num;
+          if (!guessed[sNum] || guessed[sNum] !== targetMap[sNum]) {
+            nextEmptySlot = slots[i];
+            break;
+          }
+        }
+      }
+
+      if (nextEmptySlot) {
+        selectedNumber = nextEmptySlot.num;
+      }
 
     } else {
-      // Mistake made
       mistakesCount++;
       soundError();
       updateAccuracyDisplay();
-      
-      // Temporary tentative fill with visual error indication
       guessed[selectedNumber] = typedChar;
       showToast(`Incorrect letter for slot #${selectedNumber}`);
     }
@@ -1767,22 +1811,56 @@
   function handleBackspace() {
     if (!selectedNumber) return;
 
-    const targetMap = {};
-    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
+    const targetMap = getTargetMap();
+    const slots = getAllPuzzleSlots();
+    const currentSlotIdx = slots.findIndex(s => s.num === selectedNumber);
 
-    if (guessed[selectedNumber] && guessed[selectedNumber] === targetMap[selectedNumber]) {
-      soundError();
-      showToast('Correctly solved letters cannot be deleted!');
+    // If current slot has a user-typed guess (not locked), clear it and auto-retreat backwards!
+    if (guessed[selectedNumber] && guessed[selectedNumber] !== targetMap[selectedNumber]) {
+      soundButton();
+      delete guessed[selectedNumber];
+
+      // Auto-retreat cursor backwards to previous editable slot
+      for (let i = currentSlotIdx - 1; i >= 0; i--) {
+        const sNum = slots[i].num;
+        if (!guessed[sNum] || guessed[sNum] !== targetMap[sNum]) {
+          selectedNumber = sNum;
+          break;
+        }
+      }
+      updateBoard();
       return;
     }
 
-    if (guessed[selectedNumber]) {
-      soundButton();
-      delete guessed[selectedNumber];
-      updateBoard();
-    } else {
-      soundError();
+    // If current slot is empty or solved, auto-retreat to previous editable slot AND clear it!
+    for (let i = currentSlotIdx - 1; i >= 0; i--) {
+      const sNum = slots[i].num;
+      if (!guessed[sNum] || guessed[sNum] !== targetMap[sNum]) {
+        selectedNumber = sNum;
+        if (guessed[sNum]) {
+          delete guessed[sNum];
+        }
+        soundButton();
+        updateBoard();
+        return;
+      }
     }
+
+    // Wrap around backwards from end of puzzle
+    for (let i = slots.length - 1; i > currentSlotIdx; i--) {
+      const sNum = slots[i].num;
+      if (!guessed[sNum] || guessed[sNum] !== targetMap[sNum]) {
+        selectedNumber = sNum;
+        if (guessed[sNum]) {
+          delete guessed[sNum];
+        }
+        soundButton();
+        updateBoard();
+        return;
+      }
+    }
+
+    soundError();
   }
 
   function updateBoard() {
@@ -1798,8 +1876,7 @@
     }
 
     soundHint();
-    const targetMap = {};
-    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
+    const targetMap = getTargetMap();
 
     const targetNum = selectedNumber && guessed[selectedNumber] !== targetMap[selectedNumber]
       ? selectedNumber
@@ -1823,10 +1900,6 @@
     const acc = calculateAccuracy();
     const sec = levelElapsedSeconds;
 
-    // Criteria:
-    // 3 Stars (Mastery): Accuracy >= 85% AND time <= 120 seconds (or 0 mistakes)
-    // 2 Stars (Proficient): Accuracy >= 65% AND time <= 240 seconds
-    // 1 Star (Passed): Completed level
     if (acc >= 85 && sec <= 120) {
       return 3;
     } else if (acc >= 65 && sec <= 240) {
@@ -1837,14 +1910,13 @@
   }
 
   function checkVictory() {
-    let won = true;
-    activeLevel.quoteWords.forEach(qw => {
-      qw.word.split('').forEach((ch, idx) => {
-        if (guessed[qw.nums[idx]] !== ch) won = false;
-      });
-    });
+    const targetMap = getTargetMap();
+    const allNums = Object.keys(targetMap);
+    
+    // Level is complete only when all words (all numbers) are correctly solved!
+    const isLevelWon = allNums.length > 0 && allNums.every(n => guessed[n] === targetMap[n]);
 
-    if (won) {
+    if (isLevelWon) {
       stopTimer();
       soundVictory();
 
@@ -1855,11 +1927,12 @@
         localStorage.setItem(`crostic_stars_${activeLevel.id}`, earnedStars.toString());
       }
 
+      // Unlock next level in progression!
       if (activeLevel.id >= unlockedMaxLevel && unlockedMaxLevel < GAME_LEVELS.length) {
         unlockedMaxLevel = activeLevel.id + 1;
         localStorage.setItem('crostic_unlocked_level', unlockedMaxLevel.toString());
       }
-      setTimeout(() => showVictory(earnedStars), 450);
+      setTimeout(() => showVictory(earnedStars), 400);
     }
   }
 
@@ -1907,9 +1980,10 @@
   }
 
   function selectLevel(idx) {
-    if (idx + 1 > unlockedMaxLevel) {
+    const targetLevelId = GAME_LEVELS[idx].id;
+    if (targetLevelId > unlockedMaxLevel) {
       soundError();
-      showToast(`Level ${idx + 1} is locked! Complete Level ${idx} first.`);
+      showToast(`🔒 Level ${targetLevelId} is locked! Complete Level ${targetLevelId - 1} first.`);
       return;
     }
     soundButton();
@@ -1921,17 +1995,61 @@
     selectedNumber = activeLevel.clues[0].nums[0];
     mistakesCount = 0;
     hintsUsedInLevel = 0;
+    levelElapsedSeconds = 0;
     closeMap();
     closeModal();
     updateBoard();
     updateAccuracyDisplay();
     startTimer();
+    showToast(`Loaded Level ${activeLevel.id}: ${activeLevel.title}`);
   }
+
+  let currentMapFilter = 'all';
 
   function openMap() {
     soundButton();
+    renderMapModal();
+    document.getElementById('map-modal').style.display = 'flex';
+  }
+
+  function setMapFilter(filter) {
+    soundButton();
+    currentMapFilter = filter;
+    renderMapModal();
+  }
+
+  function renderMapModal() {
     const container = document.getElementById('chain-container');
     container.innerHTML = '';
+
+    // Filter Buttons Bar
+    const filterBar = document.createElement('div');
+    filterBar.style.display = 'flex';
+    filterBar.style.justifyContent = 'center';
+    filterBar.style.gap = '8px';
+    filterBar.style.marginBottom = '14px';
+
+    const filters = [
+      { id: 'all', label: `All (${GAME_LEVELS.length})` },
+      { id: 'unlocked', label: `Unlocked (${unlockedMaxLevel})` },
+      { id: 'locked', label: `Locked (${Math.max(0, GAME_LEVELS.length - unlockedMaxLevel)})` }
+    ];
+
+    filters.forEach(f => {
+      const btn = document.createElement('button');
+      btn.textContent = f.label;
+      btn.style.padding = '5px 12px';
+      btn.style.borderRadius = '16px';
+      btn.style.fontSize = '11px';
+      btn.style.fontWeight = '700';
+      btn.style.cursor = 'pointer';
+      btn.style.border = currentMapFilter === f.id ? '1.5px solid #0284C7' : '1px solid #CBD5E1';
+      btn.style.background = currentMapFilter === f.id ? '#0284C7' : 'white';
+      btn.style.color = currentMapFilter === f.id ? 'white' : '#475569';
+      btn.onclick = () => setMapFilter(f.id);
+      filterBar.appendChild(btn);
+    });
+    container.appendChild(filterBar);
 
     GAME_LEVELS.forEach((lvl, idx) => {
       const isUnlocked = (lvl.id <= unlockedMaxLevel);
@@ -1939,30 +2057,53 @@
       const isCompleted = (lvl.id < unlockedMaxLevel);
       const savedStars = parseInt(localStorage.getItem(`crostic_stars_${lvl.id}`) || (isCompleted ? '3' : '0'));
 
+      // Filter check
+      if (currentMapFilter === 'unlocked' && !isUnlocked) return;
+      if (currentMapFilter === 'locked' && isUnlocked) return;
+
       const node = document.createElement('div');
       node.className = 'chain-node' + (isCurrent ? ' active' : '') + (isCompleted ? ' completed' : '') + (!isUnlocked ? ' locked' : '');
 
-      let starDisplay = '🔒 Locked';
+      let starDisplay = `🔒 Level ${lvl.id} • Locked`;
       if (isCompleted) {
-        starDisplay = '★'.repeat(savedStars) + '☆'.repeat(3 - savedStars);
+        starDisplay = `★`.repeat(savedStars) + `☆`.repeat(3 - savedStars) + ` • Level ${lvl.id} Completed`;
       } else if (isCurrent) {
-        starDisplay = '⚡ Current Challenge';
+        starDisplay = `⚡ Level ${lvl.id} • Current Active Challenge`;
+      } else if (isUnlocked) {
+        starDisplay = `🔓 Level ${lvl.id} • Unlocked & Ready`;
       }
 
       const info = document.createElement('div');
       info.className = 'chain-info';
       info.innerHTML = `
-        <div class="chain-title">Level ${lvl.id}: ${lvl.title}</div>
+        <div class="chain-title" style="display:flex; align-items:center; gap:6px;">
+          <span style="background:${isCompleted ? '#10B981' : isUnlocked ? '#0284C7' : '#64748B'}; color:white; padding:2px 7px; border-radius:6px; font-size:10.5px; font-weight:800;">
+            ${isUnlocked ? `LV ${lvl.id}` : `🔒 LV ${lvl.id}`}
+          </span>
+          <span>${lvl.title}</span>
+        </div>
         <div class="chain-cat">${lvl.category} • ${lvl.clues.length} clues</div>
-        <div style="font-size:11px; color:#F59E0B; margin-top:2px; font-weight:800;">${starDisplay}</div>
+        <div style="font-size:11px; color:${isCompleted ? '#059669' : isCurrent ? '#0284C7' : isUnlocked ? '#D97706' : '#94A3B8'}; margin-top:2px; font-weight:800;">
+          ${starDisplay}
+        </div>
       `;
 
       const badge = document.createElement('div');
-      badge.style.fontSize = '18px';
-      if (isCompleted) badge.textContent = '✓';
-      else if (isCurrent) badge.textContent = '▶';
-      else if (isUnlocked) badge.textContent = 'OPEN';
-      else badge.textContent = '🔒';
+      badge.style.display = 'flex';
+      badge.style.flexDirection = 'column';
+      badge.style.alignItems = 'center';
+      badge.style.fontWeight = '800';
+      badge.style.fontSize = '12px';
+
+      if (isCompleted) {
+        badge.innerHTML = `<span style="font-size:18px; color:#10B981;">✓</span><span style="font-size:9px; color:#10B981;">DONE</span>`;
+      } else if (isCurrent) {
+        badge.innerHTML = `<span style="font-size:18px; color:#0284C7;">▶</span><span style="font-size:9px; color:#0284C7;">PLAY</span>`;
+      } else if (isUnlocked) {
+        badge.innerHTML = `<span style="font-size:13px; color:#0284C7;">OPEN</span><span style="font-size:9px; color:#64748B;">LV ${lvl.id}</span>`;
+      } else {
+        badge.innerHTML = `<span style="font-size:18px; color:#94A3B8;">🔒</span><span style="font-size:9px; color:#94A3B8;">LV ${lvl.id}</span>`;
+      }
 
       node.appendChild(info);
       node.appendChild(badge);
@@ -1970,8 +2111,6 @@
       node.onclick = () => selectLevel(idx);
       container.appendChild(node);
     });
-
-    document.getElementById('map-modal').style.display = 'flex';
   }
 
   function closeMap() {

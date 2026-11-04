@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,6 +39,11 @@ class _GameplayScreenState extends State<GameplayScreen> {
   final FocusNode _keyboardFocusNode = FocusNode();
   bool _isLoading = true;
 
+  Timer? _gameTimer;
+  int _elapsedSeconds = 0;
+  int _mistakesCount = 0;
+  int _hintsUsed = 0;
+
   @override
   void initState() {
     super.initState();
@@ -51,6 +57,19 @@ class _GameplayScreenState extends State<GameplayScreen> {
     if (savedGuesses.isNotEmpty) {
       gameState.guessedLetters.addAll(savedGuesses);
     }
+
+    _elapsedSeconds = 0;
+    _mistakesCount = 0;
+    _hintsUsed = 0;
+    _gameTimer?.cancel();
+    _gameTimer = Timer.periodic(const Duration(seconds: 1), (t) {
+      if (mounted) {
+        setState(() {
+          _elapsedSeconds++;
+        });
+      }
+    });
+
     setState(() {
       _isLoading = false;
     });
@@ -58,6 +77,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
 
   @override
   void dispose() {
+    _gameTimer?.cancel();
     _keyboardFocusNode.dispose();
     super.dispose();
   }
@@ -96,6 +116,10 @@ class _GameplayScreenState extends State<GameplayScreen> {
       final expectedChar = widget.level.numberToLetterMap[activeNumber];
       if (char.toUpperCase() == expectedChar) {
         _sound.playLetterReveal();
+      } else {
+        _sound.playError();
+        _mistakesCount++;
+        gameState.mistakesCount = _mistakesCount;
       }
 
       // 2. Check if the active clue just completed
@@ -123,21 +147,21 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final activeNumber = gameState.selectedLetterNumber;
     if (activeNumber == null) return;
 
-    // Check if this letter is already correctly solved
-    if (gameState.isNumberSolved(activeNumber)) {
-      // Solved letters are locked and protected from deletion
-      _sound.playError();
-      return;
-    }
-
     _sound.playKeyTap();
 
     setState(() {
-      if (gameState.guessedLetters.containsKey(activeNumber)) {
+      // 1. If active tile has an unverified guess, remove it and auto-retreat backwards!
+      if (gameState.guessedLetters.containsKey(activeNumber) && !gameState.isNumberSolved(activeNumber)) {
         gameState.guessedLetters.remove(activeNumber);
-      } else {
-        // Move backwards to previous editable tile
         _retreatCursor();
+        return;
+      }
+
+      // 2. If active tile was already empty or solved, auto-retreat backwards AND delete that tile!
+      _retreatCursor();
+      final newActiveNum = gameState.selectedLetterNumber;
+      if (newActiveNum != null && !gameState.isNumberSolved(newActiveNum)) {
+        gameState.guessedLetters.remove(newActiveNum);
       }
     });
 
@@ -145,48 +169,138 @@ class _GameplayScreenState extends State<GameplayScreen> {
   }
 
   void _advanceCursor() {
+    // If focused on clues:
     if (!gameState.isQuoteFocused && gameState.selectedClueId != null) {
-      final clue = widget.level.clues.firstWhere((c) => c.id == gameState.selectedClueId);
-      // Advance to next char in this clue
-      if (gameState.selectedCharIndexInClue + 1 < clue.letterNumbers.length) {
-        gameState.selectedCharIndexInClue++;
-        gameState.selectedLetterNumber = clue.letterNumbers[gameState.selectedCharIndexInClue];
-      } else {
-        // Move to next clue
-        final currentClueIdx = widget.level.clues.indexOf(clue);
-        if (currentClueIdx + 1 < widget.level.clues.length) {
-          final nextClue = widget.level.clues[currentClueIdx + 1];
-          gameState.selectedClueId = nextClue.id;
-          gameState.selectedCharIndexInClue = 0;
-          gameState.selectedLetterNumber = nextClue.letterNumbers.first;
+      final currentClueIdx = widget.level.clues.indexWhere((c) => c.id == gameState.selectedClueId);
+      if (currentClueIdx != -1) {
+        // 1. Search ahead in current clue for first empty slot
+        final clue = widget.level.clues[currentClueIdx];
+        for (int i = gameState.selectedCharIndexInClue + 1; i < clue.letterNumbers.length; i++) {
+          final n = clue.letterNumbers[i];
+          if (!gameState.isNumberSolved(n)) {
+            gameState.selectedCharIndexInClue = i;
+            gameState.selectedLetterNumber = n;
+            return;
+          }
+        }
+        // 2. Search subsequent clues for first empty slot
+        for (int cIdx = currentClueIdx + 1; cIdx < widget.level.clues.length; cIdx++) {
+          final nextClue = widget.level.clues[cIdx];
+          for (int i = 0; i < nextClue.letterNumbers.length; i++) {
+            final n = nextClue.letterNumbers[i];
+            if (!gameState.isNumberSolved(n)) {
+              gameState.selectedClueId = nextClue.id;
+              gameState.selectedCharIndexInClue = i;
+              gameState.selectedLetterNumber = n;
+              return;
+            }
+          }
+        }
+        // 3. Search earlier clues from beginning (wrap around)
+        for (int cIdx = 0; cIdx <= currentClueIdx; cIdx++) {
+          final prevClue = widget.level.clues[cIdx];
+          for (int i = 0; i < prevClue.letterNumbers.length; i++) {
+            final n = prevClue.letterNumbers[i];
+            if (!gameState.isNumberSolved(n)) {
+              gameState.selectedClueId = prevClue.id;
+              gameState.selectedCharIndexInClue = i;
+              gameState.selectedLetterNumber = n;
+              return;
+            }
+          }
         }
       }
     } else if (gameState.isQuoteFocused && gameState.selectedQuoteWordIndex != null) {
-      final qw = widget.level.quoteWords[gameState.selectedQuoteWordIndex!];
-      if (gameState.selectedCharIndexInQuote + 1 < qw.letterNumbers.length) {
-        gameState.selectedCharIndexInQuote++;
-        gameState.selectedLetterNumber = qw.letterNumbers[gameState.selectedCharIndexInQuote];
-      } else if (gameState.selectedQuoteWordIndex! + 1 < widget.level.quoteWords.length) {
-        gameState.selectedQuoteWordIndex = gameState.selectedQuoteWordIndex! + 1;
-        gameState.selectedCharIndexInQuote = 0;
-        final nextQw = widget.level.quoteWords[gameState.selectedQuoteWordIndex!];
-        gameState.selectedLetterNumber = nextQw.letterNumbers.first;
+      final currentWordIdx = gameState.selectedQuoteWordIndex!;
+      final qw = widget.level.quoteWords[currentWordIdx];
+      // Search forward in current quote word
+      for (int i = gameState.selectedCharIndexInQuote + 1; i < qw.letterNumbers.length; i++) {
+        final n = qw.letterNumbers[i];
+        if (!gameState.isNumberSolved(n)) {
+          gameState.selectedCharIndexInQuote = i;
+          gameState.selectedLetterNumber = n;
+          return;
+        }
+      }
+      // Search subsequent quote words
+      for (int wIdx = currentWordIdx + 1; wIdx < widget.level.quoteWords.length; wIdx++) {
+        final nextQw = widget.level.quoteWords[wIdx];
+        for (int i = 0; i < nextQw.letterNumbers.length; i++) {
+          final n = nextQw.letterNumbers[i];
+          if (!gameState.isNumberSolved(n)) {
+            gameState.selectedQuoteWordIndex = wIdx;
+            gameState.selectedCharIndexInQuote = i;
+            gameState.selectedLetterNumber = n;
+            return;
+          }
+        }
+      }
+      // Wrap around earlier quote words
+      for (int wIdx = 0; wIdx <= currentWordIdx; wIdx++) {
+        final nextQw = widget.level.quoteWords[wIdx];
+        for (int i = 0; i < nextQw.letterNumbers.length; i++) {
+          final n = nextQw.letterNumbers[i];
+          if (!gameState.isNumberSolved(n)) {
+            gameState.selectedQuoteWordIndex = wIdx;
+            gameState.selectedCharIndexInQuote = i;
+            gameState.selectedLetterNumber = n;
+            return;
+          }
+        }
       }
     }
   }
 
   void _retreatCursor() {
     if (!gameState.isQuoteFocused && gameState.selectedClueId != null) {
-      if (gameState.selectedCharIndexInClue > 0) {
-        gameState.selectedCharIndexInClue--;
-        final clue = widget.level.clues.firstWhere((c) => c.id == gameState.selectedClueId);
-        gameState.selectedLetterNumber = clue.letterNumbers[gameState.selectedCharIndexInClue];
+      final currentClueIdx = widget.level.clues.indexWhere((c) => c.id == gameState.selectedClueId);
+      if (currentClueIdx != -1) {
+        final clue = widget.level.clues[currentClueIdx];
+        // 1. Look backwards in current clue
+        for (int i = gameState.selectedCharIndexInClue - 1; i >= 0; i--) {
+          final n = clue.letterNumbers[i];
+          if (!gameState.isNumberSolved(n)) {
+            gameState.selectedCharIndexInClue = i;
+            gameState.selectedLetterNumber = n;
+            return;
+          }
+        }
+        // 2. Look backwards in previous clues
+        for (int cIdx = currentClueIdx - 1; cIdx >= 0; cIdx--) {
+          final prevClue = widget.level.clues[cIdx];
+          for (int i = prevClue.letterNumbers.length - 1; i >= 0; i--) {
+            final n = prevClue.letterNumbers[i];
+            if (!gameState.isNumberSolved(n)) {
+              gameState.selectedClueId = prevClue.id;
+              gameState.selectedCharIndexInClue = i;
+              gameState.selectedLetterNumber = n;
+              return;
+            }
+          }
+        }
       }
     } else if (gameState.isQuoteFocused && gameState.selectedQuoteWordIndex != null) {
-      if (gameState.selectedCharIndexInQuote > 0) {
-        gameState.selectedCharIndexInQuote--;
-        final qw = widget.level.quoteWords[gameState.selectedQuoteWordIndex!];
-        gameState.selectedLetterNumber = qw.letterNumbers[gameState.selectedCharIndexInQuote];
+      final currentWordIdx = gameState.selectedQuoteWordIndex!;
+      final qw = widget.level.quoteWords[currentWordIdx];
+      for (int i = gameState.selectedCharIndexInQuote - 1; i >= 0; i--) {
+        final n = qw.letterNumbers[i];
+        if (!gameState.isNumberSolved(n)) {
+          gameState.selectedCharIndexInQuote = i;
+          gameState.selectedLetterNumber = n;
+          return;
+        }
+      }
+      for (int wIdx = currentWordIdx - 1; wIdx >= 0; wIdx--) {
+        final prevQw = widget.level.quoteWords[wIdx];
+        for (int i = prevQw.letterNumbers.length - 1; i >= 0; i--) {
+          final n = prevQw.letterNumbers[i];
+          if (!gameState.isNumberSolved(n)) {
+            gameState.selectedQuoteWordIndex = wIdx;
+            gameState.selectedCharIndexInQuote = i;
+            gameState.selectedLetterNumber = n;
+            return;
+          }
+        }
       }
     }
   }
@@ -210,6 +324,8 @@ class _GameplayScreenState extends State<GameplayScreen> {
       } else {
         widget.user.coins -= 25;
       }
+      _hintsUsed++;
+      gameState.hintsUsed = _hintsUsed;
 
       // Find an unsolved letter number
       int? targetNumber;
@@ -316,6 +432,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
   }
 
   void _handleVictory() async {
+    _gameTimer?.cancel();
     _sound.playVictory();
 
     // Reward user
@@ -327,7 +444,20 @@ class _GameplayScreenState extends State<GameplayScreen> {
     if (!widget.user.unlockedLevels.contains(widget.level.id + 1)) {
       widget.user.unlockedLevels.add(widget.level.id + 1);
     }
-    widget.user.levelStars['${widget.level.id}'] = 3;
+
+    // Dynamic Star Calculation based on Time & Accuracy
+    final accuracy = (100 - (_mistakesCount * 6) - (_hintsUsed * 8)).clamp(10, 100);
+    int calculatedStars = 1;
+    if (accuracy >= 85 && _elapsedSeconds <= 120) {
+      calculatedStars = 3;
+    } else if (accuracy >= 65 && _elapsedSeconds <= 240) {
+      calculatedStars = 2;
+    }
+
+    final existingStars = widget.user.levelStars['${widget.level.id}'] ?? 0;
+    if (calculatedStars > existingStars) {
+      widget.user.levelStars['${widget.level.id}'] = calculatedStars;
+    }
 
     // Add vocabulary words to user's learned lexicon
     for (final v in widget.level.vocabularyList) {
@@ -347,8 +477,8 @@ class _GameplayScreenState extends State<GameplayScreen> {
       builder: (ctx) => LevelCompleteDialog(
         level: widget.level,
         coinsEarned: widget.level.coinsReward,
-        starsEarned: 3,
-        hintsUsed: 0,
+        starsEarned: calculatedStars,
+        hintsUsed: _hintsUsed,
         onNextLevel: () {
           Navigator.pop(ctx);
           Navigator.pop(context);
@@ -469,6 +599,53 @@ class _GameplayScreenState extends State<GameplayScreen> {
                       ],
                     ),
                   ),
+
+                  // Live Timer & Accuracy HUD
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 2.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            const Icon(Icons.timer_outlined, size: 16.0, color: Color(0xFF0284C7)),
+                            const SizedBox(width: 4.0),
+                            Text(
+                              '${(_elapsedSeconds ~/ 60).toString().padLeft(2, '0')}:${(_elapsedSeconds % 60).toString().padLeft(2, '0')}',
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0xFF0284C7),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            const Icon(Icons.track_changes_rounded, size: 16.0, color: Color(0xFF16A34A)),
+                            const SizedBox(width: 4.0),
+                            Text(
+                              '${(100 - (_mistakesCount * 6) - (_hintsUsed * 8)).clamp(10, 100)}% Acc',
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 13.0,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0xFF16A34A),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '🪙 ${widget.user.coins}',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.w700,
+                            color: const Color(0xFFD97706),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 4.0),
 
                   // 2. Top Hidden Quote Card
                   Padding(
