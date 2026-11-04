@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Crostic Cryptogram â€¢ Scholar Edition</title>
+  <title>Crostic Cryptogram • Scholar Mobile Edition</title>
   <link rel="manifest" href="manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,75 +20,103 @@
       -webkit-user-select: none;
     }
     body {
-      background-color: #E2E8F0;
+      background: radial-gradient(circle at 50% 10%, #1E293B 0%, #0F172A 100%);
       font-family: 'Plus Jakarta Sans', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       color: #0F172A;
+      padding: 12px;
+      overflow: hidden;
     }
+    /* Mobile Device Frame Simulation */
     #phone-container {
       width: 100%;
-      max-width: 440px;
-      height: 100vh;
-      max-height: 920px;
-      background: #EBF3F8;
+      max-width: 430px;
+      height: 92vh;
+      max-height: 890px;
+      background: #F1F5F9;
       display: flex;
       flex-direction: column;
       position: relative;
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), 0 0 0 10px #1E293B, 0 0 0 12px #334155;
+      border-radius: 36px;
       overflow: hidden;
     }
     @media (max-width: 480px) {
+      body {
+        padding: 0;
+      }
       #phone-container {
+        height: 100vh;
         max-height: 100vh;
         border-radius: 0;
+        box-shadow: none;
       }
     }
+
+    /* Top Device Notch / Status Bar */
+    .device-notch {
+      height: 18px;
+      background: #E2E8F0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .notch-pill {
+      width: 80px;
+      height: 5px;
+      background: #94A3B8;
+      border-radius: 10px;
+    }
+
     /* Top Header */
     .top-header {
-      padding: 10px 14px 6px;
+      padding: 8px 12px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1.5px solid #E2E8F0;
+      z-index: 10;
     }
     .header-btn {
       background: white;
       border: 1.5px solid #CBD5E1;
       cursor: pointer;
       padding: 6px 10px;
-      color: #475569;
+      color: #334155;
       display: flex;
       align-items: center;
       gap: 5px;
       font-size: 13px;
       font-weight: 700;
       border-radius: 12px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      transition: all 0.15s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: all 0.12s ease;
     }
-    .header-btn:hover {
-      background: #F1F5F9;
-      border-color: #94A3B8;
+    .header-btn:active {
+      transform: scale(0.95);
+      background: #E2E8F0;
     }
     .header-title-box {
       text-align: center;
       cursor: pointer;
+      flex: 1;
+      margin: 0 8px;
     }
     .header-category {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 800;
       color: #0284C7;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 4px;
+      letter-spacing: -0.3px;
     }
     .header-sub {
       font-size: 11px;
@@ -96,43 +124,89 @@
       color: #64748B;
     }
 
-    /* Top Quote Matrix Card */
+    /* Live Game HUD Bar (Timer, Accuracy, Hints) */
+    .hud-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px;
+      background: #E2E8F0;
+      border-bottom: 1px solid #CBD5E1;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .hud-stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #475569;
+    }
+    .hud-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .hud-timer {
+      color: #0284C7;
+    }
+    .hud-accuracy {
+      color: #16A34A;
+    }
+
+    /* Section Label Badge */
+    .section-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px 2px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #0369A1;
+      text-transform: uppercase;
+    }
+
+    /* Top Crosswords / Quote Matrix Card */
     .quote-card {
       background: rgba(255, 255, 255, 0.95);
-      margin: 8px 12px 6px;
+      margin: 4px 10px 6px;
       padding: 10px 8px;
-      border-radius: 14px;
+      border-radius: 16px;
       border: 1.5px solid #CBD5E1;
-      box-shadow: 0 3px 8px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      min-height: 85px;
+      gap: 8px 10px;
+      min-height: 80px;
+      max-height: 140px;
+      overflow-y: auto;
     }
     .quote-word {
       display: inline-flex;
       gap: 3px;
       padding: 2px 4px;
-      border-radius: 6px;
+      border-radius: 8px;
       transition: background 0.2s;
     }
     .quote-word.word-solved {
       background: #DCFCE7;
-      border-radius: 8px;
+      border: 1px solid #86EFAC;
     }
 
-    /* Tiles */
+    /* Letter Tiles */
     .letter-tile {
       display: inline-flex;
       flex-direction: column;
       align-items: center;
       cursor: pointer;
       position: relative;
+      touch-action: manipulation;
     }
     .tile-box {
-      width: 35px;
-      height: 35px;
+      width: 33px;
+      height: 33px;
       background: #FFFFFF;
       border: 1.5px solid #CBD5E1;
       border-radius: 8px;
@@ -141,27 +215,29 @@
       align-items: center;
       justify-content: center;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
       color: #1E293B;
-      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.12s ease;
     }
     .tile-num {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 700;
       color: #64748B;
       margin-top: 1px;
       padding: 0 2px;
       border-radius: 3px;
     }
-    /* Tile States */
+
+    /* Tile Interactive States */
     .letter-tile.selected .tile-box {
-      background: #FEF3C7;
-      border-color: #D97706;
+      background: #FEF3C7 !important;
+      border-color: #D97706 !important;
       border-width: 2.2px;
-      box-shadow: 0 2px 0 #B45309, 0 0 10px rgba(217, 119, 6, 0.35);
-      color: #78350F;
+      box-shadow: 0 2px 0 #B45309, 0 0 10px rgba(217, 119, 6, 0.4);
+      color: #78350F !important;
+      transform: translateY(-2px);
     }
     .letter-tile.selected .tile-num {
       color: #B45309;
@@ -169,18 +245,17 @@
       font-weight: 800;
     }
     .letter-tile.linked .tile-box {
-      background: #FFFBEB;
-      border-color: #F59E0B;
+      background: #FFFBEB !important;
+      border-color: #F59E0B !important;
       border-width: 2px;
       box-shadow: 0 2px 0 #D97706;
-      color: #92400E;
+      color: #92400E !important;
     }
     .letter-tile.linked .tile-num {
       color: #D97706;
       background: #FFFBEB;
       font-weight: 800;
     }
-    /* Solved Tile Styling */
     .letter-tile.solved .tile-box {
       background: #DCFCE7 !important;
       border-color: #16A34A !important;
@@ -191,33 +266,52 @@
       color: #15803D;
       font-weight: 800;
     }
+    .letter-tile.error-shake .tile-box {
+      background: #FEE2E2 !important;
+      border-color: #EF4444 !important;
+      color: #B91C1C !important;
+      animation: shake 0.3s ease;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
+    }
     .cursor-bar {
       width: 2px;
-      height: 18px;
+      height: 16px;
       background-color: #D97706;
       animation: blink 1s infinite;
     }
     @keyframes blink { 50% { opacity: 0; } }
 
-    /* Clues Section */
+    /* Clues List Section */
+    .clues-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
+    }
     .clues-container {
       flex: 1;
       overflow-y: auto;
-      padding: 4px 12px;
+      padding: 4px 10px;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 6px;
     }
     .clue-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 6px 8px;
+      padding: 7px 10px;
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1px solid #E2E8F0;
       gap: 8px;
-      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      transition: all 0.15s ease;
     }
     .clue-row.row-solved {
       background: #F0FDF4;
@@ -229,28 +323,19 @@
       flex-direction: column;
       gap: 2px;
     }
-    .clue-text {
-      font-size: 13px;
-      font-weight: 600;
-      color: #1E293B;
-      line-height: 1.25;
+    .clue-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
-    .clue-tag {
-      font-size: 9px;
+    .clue-num-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
       font-weight: 800;
-      text-transform: uppercase;
-      padding: 2px 6px;
-      border-radius: 4px;
-      display: inline-block;
-      width: fit-content;
-    }
-    .tag-def {
       background: #E0F2FE;
       color: #0369A1;
-    }
-    .tag-pattern {
-      background: #F3E8FF;
-      color: #7E22CE;
+      padding: 1px 6px;
+      border-radius: 6px;
     }
     .solved-badge {
       display: inline-flex;
@@ -258,52 +343,57 @@
       gap: 3px;
       background: #16A34A;
       color: white;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 800;
       padding: 1px 6px;
       border-radius: 4px;
-      width: fit-content;
+    }
+    .clue-text {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #1E293B;
+      line-height: 1.3;
     }
     .clue-tiles {
       display: flex;
       gap: 3px;
     }
 
-    /* Floating Tools */
+    /* Floating Quick Tools */
     .floating-tools {
       position: absolute;
-      bottom: 185px;
+      bottom: 175px;
       left: 12px;
       right: 12px;
       display: flex;
       justify-content: space-between;
       pointer-events: none;
-      z-index: 20;
+      z-index: 25;
     }
     .tool-btn {
       pointer-events: auto;
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
       border: none;
-      transition: transform 0.1s;
+      transition: transform 0.1s ease;
     }
     .tool-btn:active { transform: scale(0.92); }
     .map-btn {
       background: #0284C7;
       color: white;
-      font-size: 22px;
+      font-size: 20px;
     }
     .hint-btn {
       background: #F59E0B;
       color: white;
-      font-size: 24px;
+      font-size: 20px;
     }
     .badge-count {
       position: absolute;
@@ -325,24 +415,24 @@
     /* QWERTY Virtual Keyboard */
     .keyboard-container {
       background: #CBD5E1;
-      padding: 6px 4px 10px;
+      padding: 6px 4px 8px;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 4px;
       z-index: 10;
     }
     .keyboard-row {
       display: flex;
       justify-content: center;
-      gap: 4px;
+      gap: 3.5px;
     }
     .key-btn {
       flex: 1;
-      max-width: 38px;
-      height: 42px;
+      max-width: 36px;
+      height: 40px;
       background: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 7px;
       box-shadow: 0 2px 0 #94A3B8;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 16px;
@@ -352,7 +442,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background 0.08s;
+      transition: all 0.08s;
+      touch-action: manipulation;
     }
     .key-btn:active {
       transform: translateY(2px);
@@ -360,19 +451,19 @@
       background: #E2E8F0;
     }
     .key-btn.backspace {
-      max-width: 50px;
+      max-width: 46px;
       background: #94A3B8;
       color: white;
       box-shadow: 0 2px 0 #64748B;
       font-size: 18px;
     }
 
-    /* Modals */
+    /* Modals & Dialogs */
     .modal-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(4px);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(5px);
       display: none;
       align-items: center;
       justify-content: center;
@@ -381,13 +472,14 @@
     }
     .modal-card {
       background: white;
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 20px;
       width: 100%;
       max-width: 380px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
       max-height: 85vh;
       overflow-y: auto;
+      border: 1px solid #CBD5E1;
     }
     .modal-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -395,7 +487,7 @@
       font-weight: 800;
       text-align: center;
       color: #0F172A;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .primary-btn {
       width: 100%;
@@ -409,25 +501,74 @@
       font-weight: 700;
       cursor: pointer;
       margin-top: 10px;
+      box-shadow: 0 2px 0 #0369A1;
+      transition: all 0.12s;
+    }
+    .primary-btn:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+    /* Victory Stars & Metrics */
+    .stars-display {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 10px 0;
+      font-size: 34px;
+    }
+    .star-icon {
+      color: #E2E8F0;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .star-icon.earned {
+      color: #F59E0B;
+      text-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+      transform: scale(1.15);
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .metric-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .metric-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .metric-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748B;
+      margin-top: 2px;
     }
 
     /* Level Chain Map */
     .chain-list {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      margin: 16px 0;
-      position: relative;
+      gap: 8px;
+      margin: 12px 0;
+      max-height: 52vh;
+      overflow-y: auto;
+      padding-right: 4px;
     }
     .chain-node {
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 14px;
-      border-radius: 14px;
-      border: 2px solid #E2E8F0;
+      padding: 9px 12px;
+      border-radius: 12px;
+      border: 1.5px solid #E2E8F0;
       background: #F8FAFC;
       cursor: pointer;
       transition: all 0.15s;
@@ -442,7 +583,7 @@
       background: #F0FDF4;
     }
     .chain-node.locked {
-      opacity: 0.6;
+      opacity: 0.55;
       cursor: not-allowed;
       background: #F1F5F9;
     }
@@ -452,7 +593,7 @@
     }
     .chain-title {
       font-weight: 800;
-      font-size: 14px;
+      font-size: 13.5px;
       color: #0F172A;
     }
     .chain-cat {
@@ -460,59 +601,441 @@
       color: #64748B;
       font-weight: 600;
     }
-    .chain-badge {
-      font-size: 18px;
-    }
+
     .toast {
       position: absolute;
-      top: 60px;
+      top: 55px;
       left: 50%;
       transform: translateX(-50%);
       background: #1E293B;
       color: white;
-      padding: 8px 14px;
+      padding: 7px 14px;
       border-radius: 8px;
       font-size: 12px;
       font-weight: 700;
       display: none;
       z-index: 200;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    /* IGNIVEX SOLUTIONS Animated Loading & Splash Screen */
+    .splash-screen {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 28%, #131D36 0%, #0B0F19 75%, #030712 100%);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), transform 0.65s ease, visibility 0.65s;
+    }
+    .splash-screen.fade-out {
+      opacity: 0;
+      transform: scale(1.04);
+      pointer-events: none;
+      visibility: hidden;
+    }
+    .splash-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(55px);
+      pointer-events: none;
+    }
+    .splash-glow.glow-1 {
+      width: 260px;
+      height: 260px;
+      background: rgba(6, 182, 212, 0.22);
+      top: -40px;
+      right: -50px;
+    }
+    .splash-glow.glow-2 {
+      width: 280px;
+      height: 280px;
+      background: rgba(139, 92, 246, 0.22);
+      bottom: -50px;
+      left: -60px;
+    }
+    .splash-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    /* Glowing Emblem */
+    .ignivex-logo-box {
+      width: 96px;
+      height: 96px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 50%, #8B5CF6 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 35px rgba(6, 182, 212, 0.55), 0 0 55px rgba(139, 92, 246, 0.40);
+      position: relative;
+      animation: ignivexPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes ignivexPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 35px rgba(6, 182, 212, 0.55), 0 0 55px rgba(139, 92, 246, 0.40);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 45px rgba(6, 182, 212, 0.80), 0 0 75px rgba(139, 92, 246, 0.65);
+      }
+    }
+    .ignivex-logo-outer {
+      width: 82px;
+      height: 82px;
+      border-radius: 20px;
+      background: rgba(11, 15, 25, 0.35);
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .ignivex-diamond-shield {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      transform: rotate(45deg);
+      animation: shieldRotate 12s linear infinite;
+    }
+    @keyframes shieldRotate {
+      0% { transform: rotate(45deg); }
+      100% { transform: rotate(405deg); }
+    }
+    .ignivex-monogram {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 50px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -2px;
+      z-index: 2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .ignivex-brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      color: #FFFFFF;
+      margin-top: 24px;
+      text-shadow: 0 0 24px rgba(56, 189, 248, 0.7);
+    }
+    .ignivex-brand-sub {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 8.5px;
+      color: #94A3B8;
+      margin-top: 2px;
+      margin-left: 6px;
+    }
+    .ignivex-presents-badge {
+      color: #38BDF8;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.8px;
+      padding: 4px 14px;
+      margin: 14px 0 26px;
+    }
+    .splash-game-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #FFFFFF;
+    }
+    .splash-game-subtitle {
+      font-size: 11.5px;
+      color: #64748B;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    /* Progress bar */
+    .splash-progress-container {
+      width: 220px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 30px;
+    }
+    .splash-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #06B6D4, #38BDF8, #818CF8);
+      border-radius: 10px;
+      transition: width 0.35s ease;
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.8);
+    }
+    .splash-status-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: #94A3B8;
+      margin-top: 9px;
+      min-height: 16px;
+    }
+
+    .splash-start-btn {
+      margin-top: 22px;
+      background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+      color: white;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: btnGlow 1.8s ease-in-out infinite alternate;
+    }
+    .splash-start-btn:active {
+      transform: scale(0.96);
+    }
+    @keyframes btnGlow {
+      from { box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4); }
+      to { box-shadow: 0 6px 25px rgba(56, 189, 248, 0.7); }
+    }
+    .splash-footer-badge {
+      position: absolute;
+      bottom: 18px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    /* Interactive Music Player Bar */
+    .music-player-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 12px;
+      background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%);
+      color: white;
+      border-bottom: 1.5px solid #334155;
+      font-size: 11.5px;
+      z-index: 15;
+    }
+    .music-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+    }
+    .music-icon-animated {
+      font-size: 15px;
+      display: inline-block;
+      animation: musicPulse 1.2s ease-in-out infinite alternate;
+    }
+    .music-icon-animated.paused {
+      animation: none;
+      opacity: 0.5;
+    }
+    @keyframes musicPulse {
+      from { transform: scale(0.9); opacity: 0.75; }
+      to { transform: scale(1.18); opacity: 1; }
+    }
+    .music-track-details {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+    .music-title {
+      font-weight: 800;
+      font-size: 11.5px;
+      color: #38BDF8;
+      letter-spacing: 0.3px;
+    }
+    .music-tag {
+      font-size: 9.5px;
+      color: #94A3B8;
+    }
+    .music-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .music-ctrl-btn {
+      background: #0284C7;
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 10.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.15s ease;
+    }
+    .music-ctrl-btn:hover {
+      background: #0369A1;
+    }
+    .music-file-btn {
+      background: #334155;
+      color: #E2E8F0;
+      border: 1px solid #475569;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .music-file-btn:hover {
+      background: #475569;
+      color: white;
     }
   </style>
 </head>
 <body>
 
 <div id="phone-container">
+  <!-- Audio element for Allarh Ballarh Bawa Da Background Music -->
+  <audio id="alar-balr-audio" src="bgm_loop.wav" loop preload="auto"></audio>
+
+  <!-- IGNIVEX SOLUTIONS Animated Splash & Loading Screen -->
+  <div id="splash-screen" class="splash-screen" onclick="dismissSplash()">
+    <div class="splash-glow glow-1"></div>
+    <div class="splash-glow glow-2"></div>
+    
+    <div class="splash-content">
+      <!-- Animated Glowing IGNIVEX Logo Emblem -->
+      <div class="ignivex-logo-box">
+        <div class="ignivex-logo-outer">
+          <div class="ignivex-diamond-shield"></div>
+          <span class="ignivex-monogram">I</span>
+        </div>
+      </div>
+
+      <div class="ignivex-brand-title">IGNIVEX</div>
+      <div class="ignivex-brand-sub">SOLUTIONS</div>
+      
+      <div class="ignivex-presents-badge">PRESENTS</div>
+
+      <div class="splash-game-title">CROSTIC CRYPTOGRAM</div>
+      <div class="splash-game-subtitle">Educational Word Puzzle • Curriculum Edition</div>
+
+      <!-- Animated Progress Bar -->
+      <div class="splash-progress-container">
+        <div class="splash-progress-bar" id="splash-progress-bar"></div>
+      </div>
+      <div class="splash-status-text" id="splash-status-text">Initializing Cipher Engine...</div>
+
+      <!-- Tap to Start Interactive Button -->
+      <button class="splash-start-btn" id="splash-start-btn" onclick="event.stopPropagation(); dismissSplash();">
+        <span>TAP TO START</span> 🎮
+      </button>
+    </div>
+
+    <div class="splash-footer-badge">
+      <span>v1.0.0 • Ignivex Studio Engine</span>
+    </div>
+  </div>
+
+  <!-- Device Top Notch -->
+  <div class="device-notch">
+    <div class="notch-pill"></div>
+  </div>
+
   <!-- Toast Notification -->
-  <div id="toast" class="toast">Locked! Complete previous level.</div>
+  <div id="toast" class="toast">Notice</div>
 
   <!-- Top Header -->
   <div class="top-header">
-    <button class="header-btn" onclick="openMap()">ðŸ—ºï¸ Levels</button>
+    <button class="header-btn" onclick="openMap()" title="Levels Map">🗺️ Map</button>
     <div class="header-title-box" onclick="openMap()">
       <div class="header-category" id="cat-title">General Science</div>
-      <div class="header-sub" id="level-sub">Level 1 â€¢ Sun & Plants</div>
+      <div class="header-sub" id="level-sub">Level 1 • Sun & Plant Life</div>
     </div>
-    <button class="header-btn" onclick="openSettings()">âš™ï¸</button>
+    <button class="header-btn" onclick="openSettings()" title="Settings & Audio">⚙️ Audio</button>
   </div>
 
-  <!-- Quote Matrix Section -->
+  <!-- Interactive Background Music Bar -->
+  <div class="music-player-bar">
+    <div class="music-info">
+      <span class="music-icon-animated" id="music-equalizer">🎵</span>
+      <div class="music-track-details">
+        <span class="music-title" id="music-display-title">Allar Ballr Baway Da</span>
+        <span class="music-tag">Punjabi Folk Lullaby Theme</span>
+      </div>
+    </div>
+    <div class="music-actions">
+      <button class="music-ctrl-btn" id="music-play-btn" onclick="toggleBgmManually()" title="Play/Pause Background Music">
+        <span id="music-btn-text">⏸️ Playing</span>
+      </button>
+      <input type="file" id="custom-audio-input" accept="audio/*" style="display:none" onchange="loadCustomAudio(event)">
+      <button class="music-file-btn" onclick="document.getElementById('custom-audio-input').click()" title="Select your own MP3/Audio file">
+        📂 MP3
+      </button>
+    </div>
+  </div>
+
+  <!-- Live Game HUD Bar (Timer, Accuracy, Hints) -->
+  <div class="hud-bar">
+    <div class="hud-stat">
+      <span>⏱️</span>
+      <span class="hud-val hud-timer" id="hud-timer">00:00</span>
+    </div>
+    <div class="hud-stat">
+      <span>🎯 Accuracy:</span>
+      <span class="hud-val hud-accuracy" id="hud-acc">100%</span>
+    </div>
+    <div class="hud-stat">
+      <span>❌ Miss:</span>
+      <span class="hud-val" id="hud-miss">0</span>
+    </div>
+  </div>
+
+  <!-- Cross Words on Top Section -->
+  <div class="section-banner">
+    <span>Crossword Quote Matrix</span>
+    <span style="font-size: 10px; color: #64748B;">Tap any tile to solve</span>
+  </div>
   <div class="quote-card" id="quote-board">
     <!-- Populated by JS -->
   </div>
 
-  <!-- Clues List Section -->
-  <div class="clues-container" id="clues-list">
-    <!-- Populated by JS -->
+  <!-- Clues with Definitions & Meanings Section -->
+  <div class="clues-wrapper">
+    <div class="section-banner">
+      <span>Clues & Educational Definitions</span>
+      <span style="font-size: 10px; color: #64748B;" id="clues-count">7 Clues</span>
+    </div>
+    <div class="clues-container" id="clues-list">
+      <!-- Populated by JS -->
+    </div>
   </div>
 
   <!-- Floating Tools (Map & Hint) -->
   <div class="floating-tools">
-    <button class="tool-btn map-btn" onclick="openMap()" title="Levels Map">
-      ðŸ—ºï¸
+    <button class="tool-btn map-btn" onclick="openMap()" title="Levels Road Map">
+      🗺️
     </button>
     <button class="tool-btn hint-btn" onclick="useHint()" title="Reveal Letter Hint">
-      ðŸ’¡
+      💡
       <div class="badge-count" id="hint-badge">3</div>
     </button>
   </div>
@@ -525,7 +1048,7 @@
   <!-- Level Progression Chain Map Modal -->
   <div class="modal-overlay" id="map-modal">
     <div class="modal-card">
-      <div class="modal-title">ðŸ—ºï¸ Level Road Map</div>
+      <div class="modal-title">🗺️ Verified Levels Road Map</div>
       <p style="font-size: 12px; color: #64748B; text-align: center; margin-bottom: 10px;">Select an unlocked level to play:</p>
       <div class="chain-list" id="chain-container">
         <!-- Populated by JS -->
@@ -534,24 +1057,58 @@
     </div>
   </div>
 
-  <!-- Victory Dialog Modal -->
+  <!-- Victory Dialog Modal with Accuracy & Time Star Calculations -->
   <div class="modal-overlay" id="victory-modal">
     <div class="modal-card">
-      <div style="font-size: 48px; text-align: center; margin-bottom: 4px;">ðŸ†</div>
-      <div class="modal-title">LEVEL SOLVED!</div>
-      <div style="text-align: center; color: #F59E0B; font-size: 24px; margin-bottom: 12px;">â˜…â˜…â˜…</div>
-      <div id="quote-reveal" style="font-family: 'Space Grotesk'; font-weight: 700; font-size: 15px; font-style: italic; background: #F8FAFC; padding: 10px; border-radius: 10px; text-align: center; border: 1px solid #E2E8F0;">
+      <div style="font-size: 40px; text-align: center; margin-bottom: 2px;">🏆</div>
+      <div class="modal-title" style="color: #0284C7; margin-bottom: 0;">LEVEL COMPLETE!</div>
+      
+      <!-- Dynamic Star Display -->
+      <div class="stars-display" id="victory-stars">
+        <span class="star-icon" id="star-1">★</span>
+        <span class="star-icon" id="star-2">★</span>
+        <span class="star-icon" id="star-3">★</span>
+      </div>
+      <div id="star-verdict" style="text-align: center; font-weight: 800; font-size: 13px; color: #D97706; margin-bottom: 10px;">
+        3 / 3 Stars Earned
+      </div>
+
+      <!-- Live Performance Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-val" id="vic-time">01:12</div>
+          <div class="metric-label">⏱️ Time Elapsed</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="vic-acc">96%</div>
+          <div class="metric-label">🎯 Accuracy</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="vic-hints">0</div>
+          <div class="metric-label">💡 Hints Used</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="vic-miss">1</div>
+          <div class="metric-label">❌ Mistakes</div>
+        </div>
+      </div>
+
+      <!-- Quote Reveal -->
+      <div id="quote-reveal" style="font-family: 'Space Grotesk'; font-weight: 700; font-size: 14px; font-style: italic; background: #F8FAFC; padding: 8px 10px; border-radius: 10px; text-align: center; border: 1px solid #E2E8F0; color: #1E293B;">
         "PLANTS NEED SUN AND RAIN"
       </div>
-      <div id="author-reveal" style="font-size: 12px; font-weight: 600; color: #64748B; text-align: center; margin: 4px 0 12px;">
-        â€” Class 6 Science â€¢ Plant Life
+      <div id="author-reveal" style="font-size: 11px; font-weight: 600; color: #64748B; text-align: center; margin: 3px 0 8px;">
+        — Class 6 Science
       </div>
-      <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Educational Science Insight:</div>
-      <p id="fact-reveal" style="font-size: 12px; line-height: 1.4; color: #475569; margin-bottom: 12px;"></p>
-      <div style="font-size: 13px; font-weight: 700; margin-bottom: 4px;">Vocabulary Added to Student Book:</div>
-      <div id="vocab-reveal" style="font-size: 12px; background: #F1F5F9; padding: 8px; border-radius: 8px; margin-bottom: 12px;"></div>
-      <button class="primary-btn" onclick="nextLevel()">Next Level âž”</button>
-      <button style="width: 100%; background: none; border: none; padding: 10px; color: #64748B; font-weight: 700; cursor: pointer;" onclick="closeModal()">Review Board</button>
+
+      <div style="font-size: 12px; font-weight: 800; margin-bottom: 3px; color: #334155;">Curriculum Science Fact:</div>
+      <p id="fact-reveal" style="font-size: 11.5px; line-height: 1.35; color: #475569; margin-bottom: 8px;"></p>
+      
+      <div style="font-size: 12px; font-weight: 800; margin-bottom: 3px; color: #334155;">Vocabulary Added to Student Lexicon:</div>
+      <div id="vocab-reveal" style="font-size: 11px; background: #F1F5F9; padding: 7px; border-radius: 8px; margin-bottom: 10px; line-height: 1.35;"></div>
+
+      <button class="primary-btn" onclick="nextLevel()">Next Level ➔</button>
+      <button style="width: 100%; background: none; border: none; padding: 8px; color: #64748B; font-weight: 700; cursor: pointer; font-size: 13px;" onclick="closeModal()">Review Solved Board</button>
     </div>
   </div>
 
@@ -559,35 +1116,38 @@
   <div class="modal-overlay" id="settings-modal">
     <div class="modal-card">
       <div class="modal-title">Game Settings & Audio</div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 14px 0;">
-        <span style="font-weight: 700; font-size: 14px;">Background Music (BGM)</span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0;">
+        <span style="font-weight: 700; font-size: 13.5px;">Sound Effects (SFX)</span>
+        <input type="checkbox" id="sfx-toggle" checked onchange="toggleSfx(this.checked)">
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0;">
+        <div>
+          <div style="font-weight: 700; font-size: 13.5px;">Background Music (BGM)</div>
+          <div style="font-size: 11px; color: #0284C7; font-weight: 600;">Theme: Allarh Ballarh Bawa Da (Lullaby)</div>
+        </div>
         <input type="checkbox" id="bgm-toggle" checked onchange="toggleBgm(this.checked)">
       </div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 14px 0;">
-        <span style="font-weight: 700; font-size: 14px;">Sound Effects (SFX)</span>
-        <input type="checkbox" id="sfx-toggle" checked onchange="sfxEnabled = this.checked">
-      </div>
-      <div style="margin: 14px 0;">
-        <label style="font-weight: 700; font-size: 13px;">Your Device Sync Code:</label>
+      <div style="margin: 12px 0;">
+        <label style="font-weight: 700; font-size: 12px; color: #475569;">Device Cloud Sync Code:</label>
         <div style="display: flex; gap: 8px; margin-top: 4px;">
-          <input type="text" id="sync-code-display" readonly value="CR-9041" style="flex: 1; padding: 10px; font-family: 'JetBrains Mono'; font-weight: 800; font-size: 18px; color: #0284C7; text-align: center; border: 1px solid #CBD5E1; border-radius: 8px;">
-          <button onclick="copyCode()" style="padding: 0 12px; background: #0284C7; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Copy</button>
+          <input type="text" id="sync-code-display" readonly value="CR-9041" style="flex: 1; padding: 8px; font-family: 'JetBrains Mono'; font-weight: 800; font-size: 16px; color: #0284C7; text-align: center; border: 1.5px solid #CBD5E1; border-radius: 8px;">
+          <button onclick="copyCode()" class="header-btn" style="background: #0284C7; color: white; border: none;">Copy</button>
         </div>
       </div>
-      <button class="primary-btn" onclick="closeSettings()">Done</button>
+      <button class="primary-btn" onclick="closeSettings()">Save & Close</button>
     </div>
   </div>
 </div>
 
 <script src="levels_1000.js"></script>
 <script>
-  // 1,000 Levels loaded dynamically with fallback
+  // 100% Verified Distinct Curriculum Levels
   const GAME_LEVELS = (typeof LEVELS_1000 !== 'undefined' && LEVELS_1000.length > 0) ? LEVELS_1000.map(l => ({
     id: l.id,
     category: l.category,
     title: l.title,
     quoteWords: l.quoteWords.map(qw => ({ word: qw.word, nums: qw.letterNumbers })),
-    clues: l.clues.map(c => ({ id: c.id, text: c.clueText, word: c.targetWord, nums: c.letterNumbers, hasDef: c.hasDefinition })),
+    clues: l.clues.map(c => ({ id: c.id, text: c.clueText, word: c.targetWord, nums: c.letterNumbers, hasDef: true })),
     fact: {
       author: l.educationalFact ? l.educationalFact.attribution : 'Academic Curriculum',
       year: l.educationalFact ? l.educationalFact.yearOrEra : 'Grades 6-10',
@@ -598,35 +1158,35 @@
     {
       id: 1,
       category: 'General Science',
-      title: 'Sun & Plants',
+      title: 'Sun & Plant Life',
       quoteWords: [
-        { word: 'PLANTS', nums: [13, 1, 3, 11, 7, 8] },
-        { word: 'NEED', nums: [11, 2, 2, 9] },
-        { word: 'SUN', nums: [8, 12, 11] },
-        { word: 'AND', nums: [3, 11, 9] },
-        { word: 'RAIN', nums: [5, 3, 10, 11] }
+        { word: 'PLANTS', nums: [1, 2, 3, 4, 5, 6] },
+        { word: 'NEED', nums: [4, 7, 7, 8] },
+        { word: 'SUN', nums: [6, 9, 4] },
+        { word: 'AND', nums: [3, 4, 8] },
+        { word: 'RAIN', nums: [10, 3, 11, 4] }
       ],
       clues: [
-        { id: 'c1', text: 'Flat green food factory of a plant', word: 'LEAF', nums: [1, 2, 3, 4], hasDef: true },
-        { id: 'c2', text: 'Underground plant part absorbing water', word: 'ROOT', nums: [5, 6, 6, 7], hasDef: true },
-        { id: 'c3', text: 'Small grain that grows into a new plant', word: 'SEED', nums: [8, 2, 2, 9], hasDef: true },
-        { id: 'c4', text: 'Brown earth where plants grow', word: 'SOIL', nums: [8, 6, 10, 1], hasDef: true },
-        { id: 'c5', text: 'Water droplets falling from sky clouds', word: 'RAIN', nums: [5, 3, 10, 11], hasDef: true },
-        { id: 'c6', text: 'Cross-cipher substitution word', word: 'SUN', nums: [8, 12, 11], hasDef: false },
-        { id: 'c7', text: 'Cross-cipher substitution word', word: 'PLAN', nums: [13, 1, 3, 11], hasDef: false },
-        { id: 'c8', text: 'Cross-cipher substitution word', word: 'TIN', nums: [7, 10, 11], hasDef: false }
+        { id: 'c1_1', text: 'Flat green food factory of a plant', word: 'LEAF', nums: [2, 7, 3, 12], hasDef: true },
+        { id: 'c1_2', text: 'Underground moisture absorber', word: 'ROOT', nums: [10, 13, 13, 5], hasDef: true },
+        { id: 'c1_3', text: 'Small grain forming new plant', word: 'SEED', nums: [6, 7, 7, 8], hasDef: true },
+        { id: 'c1_4', text: 'Earth substrate providing minerals', word: 'SOIL', nums: [6, 13, 11, 2], hasDef: true },
+        { id: 'c1_5', text: 'Water droplets falling from clouds', word: 'RAIN', nums: [10, 3, 11, 4], hasDef: true },
+        { id: 'c1_6', text: 'Bright star giving warmth and light', word: 'SUN', nums: [6, 9, 4], hasDef: true },
+        { id: 'c1_7', text: 'Organized design or agricultural blueprint', word: 'PLAN', nums: [1, 2, 3, 4], hasDef: true }
       ],
       fact: {
-        author: 'Class 6 General Science â€¢ Plant Biology',
-        year: 'Primary School Science',
-        context: 'Green leaves absorb sunlight and water through roots to synthesize glucose and release pure oxygen.'
+        author: 'Class 6 General Science • Botany',
+        year: 'Primary Biology Unit',
+        context: 'Green leaves use chlorophyll and sunlight to produce glucose and pure oxygen.'
       },
       vocab: [
-        { word: 'PHOTOSYNTHESIS', def: 'The biological process by which green plants make food using sunlight.' },
-        { word: 'CHLOROPHYLL', def: 'The green pigment in leaves responsible for absorbing light energy.' }
+        { word: 'PHOTOSYNTHESIS', def: 'Process by which green plants make food from light' },
+        { word: 'CHLOROPHYLL', def: 'Green pigment absorbing sunlight inside leaves' }
       ]
     }
   ];
+
   // Game State & Persistence
   let unlockedMaxLevel = parseInt(localStorage.getItem('crostic_unlocked_level') || '1');
   let currentLevelIdx = 0;
@@ -636,64 +1196,369 @@
   let sfxEnabled = true;
   let bgmEnabled = true;
 
-  // Synthesized Web Audio Engine
-  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  function playBeep(freq, type, dur, gain) {
+  // Real-time Timer and Performance Metrics for Star Calculation
+  let levelStartTime = Date.now();
+  let timerInterval = null;
+  let levelElapsedSeconds = 0;
+  let mistakesCount = 0;
+  let hintsCount = 3;
+  let hintsUsedInLevel = 0;
+
+  // Synthesized Web Audio API Engine
+  let audioCtx = null;
+  function getAudioContext() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioContextClass) {
+        audioCtx = new AudioContextClass();
+      }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  }
+
+  // Global user interaction listener to unlock browser audio restrictions
+  function unlockAudio() {
+    const ctx = getAudioContext();
+    if (ctx && ctx.state === 'suspended') {
+      ctx.resume();
+    }
+  }
+  window.addEventListener('pointerdown', unlockAudio, { passive: true });
+  window.addEventListener('keydown', unlockAudio, { passive: true });
+
+  function playTone(freq, type, dur, gain, endFreq = null) {
     if (!sfxEnabled) return;
     try {
-      if (audioCtx.state === 'suspended') audioCtx.resume();
-      const osc = audioCtx.createOscillator();
-      const g = audioCtx.createGain();
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
       osc.type = type;
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      g.gain.setValueAtTime(gain, audioCtx.currentTime);
-      g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+      osc.frequency.setValueAtTime(freq, ctx.currentTime);
+      if (endFreq) {
+        osc.frequency.exponentialRampToValueAtTime(endFreq, ctx.currentTime + dur);
+      }
+      g.gain.setValueAtTime(gain, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
       osc.connect(g);
-      g.connect(audioCtx.destination);
+      g.connect(ctx.destination);
       osc.start();
-      osc.stop(audioCtx.currentTime + dur);
-    } catch(e){}
+      osc.stop(ctx.currentTime + dur);
+    } catch(e) {}
   }
 
-  function soundKey() { playBeep(650, 'sine', 0.05, 0.2); }
-  function soundReveal() { playBeep(880, 'sine', 0.18, 0.35); }
-  function soundError() { playBeep(160, 'sawtooth', 0.15, 0.3); }
-  function soundWord() {
-    playBeep(523, 'sine', 0.12, 0.3);
-    setTimeout(() => playBeep(659, 'sine', 0.12, 0.3), 100);
-    setTimeout(() => playBeep(784, 'sine', 0.2, 0.4), 200);
+  // Sound Effects:
+  // 1. Button / Key tap
+  function soundButton() {
+    playTone(600, 'sine', 0.04, 0.2, 400);
   }
+  function soundKey() {
+    playTone(720, 'sine', 0.05, 0.25, 450);
+  }
+  // 2. Letter Reveal
+  function soundReveal() {
+    playTone(880, 'sine', 0.12, 0.35);
+  }
+  // 3. Word Complete (Word Completer Sound)
+  function soundWord() {
+    if (!sfxEnabled) return;
+    // Pleasant 3-note ascending chime (C5 - E5 - G5)
+    playTone(523.25, 'triangle', 0.14, 0.3);
+    setTimeout(() => playTone(659.25, 'triangle', 0.14, 0.35), 90);
+    setTimeout(() => playTone(783.99, 'triangle', 0.22, 0.4), 180);
+  }
+  // 4. Level Victory (Level Completer Fanfare)
   function soundVictory() {
-    [523, 659, 784, 1046].forEach((f, i) => {
-      setTimeout(() => playBeep(f, 'triangle', 0.28, 0.4), i * 140);
+    if (!sfxEnabled) return;
+    // Triumphant 5-note fanfare (C5, E5, G5, B5, C6)
+    const notes = [523.25, 659.25, 783.99, 987.77, 1046.50];
+    notes.forEach((f, idx) => {
+      setTimeout(() => playTone(f, 'sine', 0.35, 0.45), idx * 130);
     });
   }
+  // 5. Error Buzzer
+  function soundError() {
+    playTone(180, 'sawtooth', 0.14, 0.3, 120);
+  }
+  // 6. Hint Chime
+  function soundHint() {
+    playTone(700, 'sine', 0.1, 0.3, 1200);
+  }
 
-  // Background Music Simulator
-  let bgmInterval = null;
+  // Background Music Engine: "Allarh Ballarh Bawa Da" (Traditional Lullaby Folk Theme)
+  let bgmTimeout = null;
+  let bgmStep = 0;
+  const ALLARH_BALLARH_MELODY = [
+    // Phrase 1: "Al-larh Bal-larh Ba-wa Da"
+    { freq: 392.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 392.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 440.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 440.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 392.00, dur: 0.60, bass: 130.81, delay: 620 },
+    { freq: 329.63, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 392.00, dur: 0.90, bass: 130.81, delay: 950 },
+    { freq: 0,      dur: 0.00, bass: 0,      delay: 350 }, // Rest
+
+    // Phrase 2: "Boh-ri Chhan-ne Ba-wa Da"
+    { freq: 440.00, dur: 0.45, bass: 174.61, delay: 480 },
+    { freq: 523.25, dur: 0.45, bass: 174.61, delay: 480 },
+    { freq: 440.00, dur: 0.45, bass: 174.61, delay: 480 },
+    { freq: 392.00, dur: 0.45, bass: 196.00, delay: 480 },
+    { freq: 329.63, dur: 0.45, bass: 196.00, delay: 480 },
+    { freq: 293.66, dur: 0.45, bass: 196.00, delay: 480 },
+    { freq: 261.63, dur: 1.00, bass: 130.81, delay: 1050 },
+    { freq: 0,      dur: 0.00, bass: 0,      delay: 400 }, // Rest
+
+    // Phrase 3: "Ba-wa Be-tha Ki Kar-da"
+    { freq: 261.63, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 329.63, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 392.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 392.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 440.00, dur: 0.45, bass: 174.61, delay: 480 },
+    { freq: 392.00, dur: 0.45, bass: 174.61, delay: 480 },
+    { freq: 329.63, dur: 0.90, bass: 130.81, delay: 950 },
+    { freq: 0,      dur: 0.00, bass: 0,      delay: 350 }, // Rest
+
+    // Phrase 4: "Hath Vich Lai Ke Phul Farh-da"
+    { freq: 392.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 440.00, dur: 0.45, bass: 174.61, delay: 480 },
+    { freq: 523.25, dur: 0.55, bass: 174.61, delay: 580 },
+    { freq: 493.88, dur: 0.45, bass: 196.00, delay: 480 },
+    { freq: 440.00, dur: 0.45, bass: 196.00, delay: 480 },
+    { freq: 392.00, dur: 0.45, bass: 130.81, delay: 480 },
+    { freq: 392.00, dur: 1.20, bass: 130.81, delay: 1300 },
+    { freq: 0,      dur: 0.00, bass: 0,      delay: 900 }  // Gentle loop tail
+  ];
+
+  function playBgmNote(freq, dur, gain, bassFreq) {
+    if (!bgmEnabled) return;
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const t = ctx.currentTime;
+
+      if (freq > 0) {
+        // Celesta / Music Box Harmonic Bell
+        const osc = ctx.createOscillator();
+        const g = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, t);
+
+        // Soft bell envelope
+        g.gain.setValueAtTime(0.001, t);
+        g.gain.linearRampToValueAtTime(gain, t + 0.015);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+
+        osc.connect(g);
+        g.connect(ctx.destination);
+        osc.start(t);
+        osc.stop(t + dur);
+
+        // Soft harmonic overtone
+        const oscHarm = ctx.createOscillator();
+        const gHarm = ctx.createGain();
+        oscHarm.type = 'triangle';
+        oscHarm.frequency.setValueAtTime(freq * 2, t);
+        gHarm.gain.setValueAtTime(0.001, t);
+        gHarm.gain.linearRampToValueAtTime(gain * 0.3, t + 0.01);
+        gHarm.gain.exponentialRampToValueAtTime(0.0001, t + (dur * 0.7));
+        oscHarm.connect(gHarm);
+        gHarm.connect(ctx.destination);
+        oscHarm.start(t);
+        oscHarm.stop(t + (dur * 0.7));
+      }
+
+      if (bassFreq > 0) {
+        // Gentle acoustic bass drone
+        const oscBass = ctx.createOscillator();
+        const gBass = ctx.createGain();
+        oscBass.type = 'sine';
+        oscBass.frequency.setValueAtTime(bassFreq, t);
+        gBass.gain.setValueAtTime(0.001, t);
+        gBass.gain.linearRampToValueAtTime(0.18, t + 0.05);
+        gBass.gain.exponentialRampToValueAtTime(0.0001, t + dur * 1.1);
+        oscBass.connect(gBass);
+        gBass.connect(ctx.destination);
+        oscBass.start(t);
+        oscBass.stop(t + dur * 1.1);
+      }
+    } catch(e) {}
+  }
+
+  function playNextBgmStep() {
+    if (!bgmEnabled) return;
+    const note = ALLARH_BALLARH_MELODY[bgmStep % ALLARH_BALLARH_MELODY.length];
+    if (note.freq > 0) {
+      playBgmNote(note.freq, note.dur, 0.38, note.bass);
+    }
+    bgmStep++;
+    bgmTimeout = setTimeout(playNextBgmStep, note.delay);
+  }
+
   function startBgm() {
     if (!bgmEnabled) return;
-    const chords = [392, 440, 349, 392];
-    let idx = 0;
-    bgmInterval = setInterval(() => {
-      if (bgmEnabled) playBeep(chords[idx % chords.length], 'sine', 1.2, 0.04);
-      idx++;
-    }, 1800);
+    updateMusicUI(true);
+    const audioEl = document.getElementById('alar-balr-audio');
+    if (audioEl) {
+      audioEl.volume = 0.85;
+      const playPromise = audioEl.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          console.log('Playing Alar Balr Baway Da audio element');
+        }).catch((err) => {
+          console.log('Audio element play blocked by browser, falling back to Web Audio melody');
+          startSynthesizedBgm();
+        });
+        return;
+      }
+    }
+    startSynthesizedBgm();
   }
+
+  function startSynthesizedBgm() {
+    if (!bgmEnabled) return;
+    updateMusicUI(true);
+    if (bgmTimeout) clearTimeout(bgmTimeout);
+    playNextBgmStep();
+  }
+
+  function stopBgm() {
+    updateMusicUI(false);
+    const audioEl = document.getElementById('alar-balr-audio');
+    if (audioEl) {
+      audioEl.pause();
+    }
+    if (bgmTimeout) {
+      clearTimeout(bgmTimeout);
+      bgmTimeout = null;
+    }
+  }
+
+  function updateMusicUI(isPlaying) {
+    const playBtn = document.getElementById('music-play-btn');
+    const eq = document.getElementById('music-equalizer');
+    const btnText = document.getElementById('music-btn-text');
+    if (isPlaying) {
+      if (btnText) btnText.textContent = '⏸️ Playing';
+      if (eq) eq.classList.remove('paused');
+      if (playBtn) playBtn.style.background = '#0284C7';
+    } else {
+      if (btnText) btnText.textContent = '▶️ Play';
+      if (eq) eq.classList.add('paused');
+      if (playBtn) playBtn.style.background = '#475569';
+    }
+  }
+
+  function toggleBgmManually() {
+    unlockAudio();
+    if (bgmEnabled) {
+      bgmEnabled = false;
+      stopBgm();
+      showToast('Background music paused');
+    } else {
+      bgmEnabled = true;
+      startBgm();
+      showToast('Playing: Allar Ballr Baway Da');
+    }
+    const bgmToggle = document.getElementById('bgm-toggle');
+    if (bgmToggle) bgmToggle.checked = bgmEnabled;
+  }
+
+  function loadCustomAudio(event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    const url = URL.createObjectURL(file);
+    const audioEl = document.getElementById('alar-balr-audio');
+    if (audioEl) {
+      audioEl.src = url;
+      audioEl.load();
+      bgmEnabled = true;
+      audioEl.play().then(() => {
+        const titleEl = document.getElementById('music-display-title');
+        if (titleEl) titleEl.textContent = file.name.substring(0, 22);
+        updateMusicUI(true);
+        showToast('Loaded custom track: ' + file.name);
+      }).catch(err => {
+        showToast('Error playing custom file');
+      });
+    }
+  }
+
   function toggleBgm(enabled) {
+    soundButton();
     bgmEnabled = enabled;
-    if (!enabled && bgmInterval) clearInterval(bgmInterval);
-    else if (enabled) startBgm();
+    if (!enabled) {
+      stopBgm();
+    } else {
+      startBgm();
+    }
+  }
+  function toggleSfx(enabled) {
+    sfxEnabled = enabled;
+    if (enabled) soundButton();
   }
 
   function showToast(msg) {
     const t = document.getElementById('toast');
     t.textContent = msg;
     t.style.display = 'block';
-    setTimeout(() => t.style.display = 'none', 1800);
+    setTimeout(() => t.style.display = 'none', 1900);
   }
 
-  // Render Top Quote Matrix
+  // Timer Management
+  function startTimer() {
+    if (timerInterval) clearInterval(timerInterval);
+    levelStartTime = Date.now();
+    levelElapsedSeconds = 0;
+    updateTimerDisplay();
+    timerInterval = setInterval(() => {
+      levelElapsedSeconds = Math.floor((Date.now() - levelStartTime) / 1000);
+      updateTimerDisplay();
+      updateAccuracyDisplay();
+    }, 1000);
+  }
+
+  function stopTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  }
+
+  function formatSeconds(sec) {
+    const m = Math.floor(sec / 60).toString().padStart(2, '0');
+    const s = (sec % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  }
+
+  function updateTimerDisplay() {
+    const el = document.getElementById('hud-timer');
+    if (el) el.textContent = formatSeconds(levelElapsedSeconds);
+  }
+
+  function calculateAccuracy() {
+    const totalLetters = Object.keys(activeLevel.clues.reduce((acc, c) => {
+      c.nums.forEach(n => acc[n] = true);
+      return acc;
+    }, {})).length;
+    
+    // Penalize errors and hints
+    const penalty = (mistakesCount * 6) + (hintsUsedInLevel * 8);
+    const score = Math.max(10, Math.min(100, 100 - penalty));
+    return score;
+  }
+
+  function updateAccuracyDisplay() {
+    const accEl = document.getElementById('hud-acc');
+    const missEl = document.getElementById('hud-miss');
+    if (accEl) accEl.textContent = `${calculateAccuracy()}%`;
+    if (missEl) missEl.textContent = mistakesCount;
+  }
+
+  // Render Top Quote Matrix (Cross Words on Top)
   function renderQuote() {
     const board = document.getElementById('quote-board');
     board.innerHTML = '';
@@ -711,12 +1576,13 @@
     });
   }
 
-  // Render Clue Rows
+  // Render Clues Section (Only Definitions & Meanings)
   function renderClues() {
     const list = document.getElementById('clues-list');
     list.innerHTML = '';
+    document.getElementById('clues-count').textContent = `${activeLevel.clues.length} Clues`;
 
-    activeLevel.clues.forEach((c) => {
+    activeLevel.clues.forEach((c, idx) => {
       const row = document.createElement('div');
       const isSolved = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
       row.className = 'clue-row' + (isSolved ? ' row-solved' : '');
@@ -724,25 +1590,26 @@
       const info = document.createElement('div');
       info.className = 'clue-info';
 
-      // Solved badge with checkmark or type tag
-      const tagRow = document.createElement('div');
-      tagRow.style.display = 'flex';
-      tagRow.style.alignItems = 'center';
-      tagRow.style.gap = '5px';
+      const badgeRow = document.createElement('div');
+      badgeRow.className = 'clue-badge-row';
+
+      const numTag = document.createElement('span');
+      numTag.className = 'clue-num-tag';
+      numTag.textContent = `CLUE ${idx + 1}`;
+      badgeRow.appendChild(numTag);
 
       if (isSolved) {
-        tagRow.innerHTML = '<span class="solved-badge">âœ“ SOLVED</span>';
-      } else if (c.hasDef) {
-        tagRow.innerHTML = '<span class="clue-tag tag-def">Definition</span>';
-      } else {
-        tagRow.innerHTML = '<span class="clue-tag tag-pattern">Pattern</span>';
+        const solvedBadge = document.createElement('span');
+        solvedBadge.className = 'solved-badge';
+        solvedBadge.textContent = '✓ SOLVED';
+        badgeRow.appendChild(solvedBadge);
       }
 
       const text = document.createElement('div');
       text.className = 'clue-text';
       text.textContent = c.text;
 
-      info.appendChild(tagRow);
+      info.appendChild(badgeRow);
       info.appendChild(text);
 
       const tiles = document.createElement('div');
@@ -764,7 +1631,7 @@
     const tile = document.createElement('div');
     tile.className = 'letter-tile';
     if (selectedNumber === num) tile.classList.add('selected');
-    else if (selectedNumber && selectedNumber === num) tile.classList.add('linked');
+    else if (selectedNumber && isNumberLinked(selectedNumber, num)) tile.classList.add('linked');
 
     const isSolved = guessed[num] === targetChar;
     if (isSolved) tile.classList.add('solved');
@@ -789,12 +1656,16 @@
     tile.appendChild(numSpan);
 
     tile.onclick = () => {
-      soundKey();
+      soundButton();
       selectedNumber = num;
       updateBoard();
     };
 
     return tile;
+  }
+
+  function isNumberLinked(num1, num2) {
+    return num1 === num2;
   }
 
   function renderKeyboard() {
@@ -821,7 +1692,8 @@
       if (rowIdx === 2) {
         const bk = document.createElement('button');
         bk.className = 'key-btn backspace';
-        bk.innerHTML = 'âŒ«';
+        bk.innerHTML = '⌫';
+        bk.title = 'Backspace';
         bk.onclick = handleBackspace;
         r.appendChild(bk);
       }
@@ -832,59 +1704,80 @@
 
   function handleInput(char) {
     if (!selectedNumber) return;
-    
-    // Check if the current selectedNumber is already a correctly solved letter!
+
     const targetMap = {};
     activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
 
+    // If letter is already correctly solved and locked
     if (guessed[selectedNumber] && guessed[selectedNumber] === targetMap[selectedNumber]) {
-      // Already solved letter is locked!
       soundError();
+      showToast('Solved letters are locked and verified!');
       return;
     }
 
     soundKey();
-    guessed[selectedNumber] = char.toUpperCase();
+    const typedChar = char.toUpperCase();
+    const isCorrect = (targetMap[selectedNumber] === typedChar);
 
-    if (targetMap[selectedNumber] === char.toUpperCase()) {
+    if (isCorrect) {
+      guessed[selectedNumber] = typedChar;
       soundReveal();
-      // Check if this completed any words
+
+      // Check if this input solved any Clue Words or Quote Words (Word Completer Trigger)
+      let wordSolvedNow = false;
       activeLevel.clues.forEach(c => {
         const isNowSolved = c.word.split('').every((ch, i) => guessed[c.nums[i]] === ch);
         if (isNowSolved && c.nums.includes(selectedNumber)) {
-          soundWord();
+          wordSolvedNow = true;
         }
       });
+      activeLevel.quoteWords.forEach(qw => {
+        const isNowSolved = qw.word.split('').every((ch, i) => guessed[qw.nums[i]] === ch);
+        if (isNowSolved && qw.nums.includes(selectedNumber)) {
+          wordSolvedNow = true;
+        }
+      });
+
+      if (wordSolvedNow) {
+        setTimeout(soundWord, 100);
+      }
+
+      // Auto advance cursor to next unsolved slot
+      const allNums = [];
+      activeLevel.clues.forEach(c => allNums.push(...c.nums));
+      const nextUnfilled = allNums.find(n => !guessed[n] || guessed[n] !== targetMap[n]);
+      if (nextUnfilled) selectedNumber = nextUnfilled;
+
+    } else {
+      // Mistake made
+      mistakesCount++;
+      soundError();
+      updateAccuracyDisplay();
+      
+      // Temporary tentative fill with visual error indication
+      guessed[selectedNumber] = typedChar;
+      showToast(`Incorrect letter for slot #${selectedNumber}`);
     }
 
-    // Auto advance to next unsolved letter
-    const allNums = [];
-    activeLevel.clues.forEach(c => allNums.push(...c.nums));
-    const nextUnfilled = allNums.find(n => !guessed[n] || guessed[n] !== targetMap[n]);
-    if (nextUnfilled) selectedNumber = nextUnfilled;
-
     updateBoard();
+    updateAccuracyDisplay();
     checkVictory();
   }
 
-  // BACKSPACE RULE: Can backspace in substituted/tentative words, but NOT in solved words!
   function handleBackspace() {
     if (!selectedNumber) return;
 
     const targetMap = {};
     activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
 
-    // Check if this letter is already correctly solved
     if (guessed[selectedNumber] && guessed[selectedNumber] === targetMap[selectedNumber]) {
-      // LOCKED: Solved letter cannot be deleted
       soundError();
-      showToast('Solved letters are locked and cannot be erased!');
+      showToast('Correctly solved letters cannot be deleted!');
       return;
     }
 
-    // If it is a tentative or substituted guess, erase it!
     if (guessed[selectedNumber]) {
-      soundKey();
+      soundButton();
       delete guessed[selectedNumber];
       updateBoard();
     } else {
@@ -898,21 +1791,48 @@
   }
 
   function useHint() {
-    soundReveal();
+    if (hintsCount <= 0) {
+      soundError();
+      showToast('No hints remaining!');
+      return;
+    }
+
+    soundHint();
     const targetMap = {};
-    activeLevel.clues.forEach(c => {
-      c.nums.forEach((n, i) => targetMap[n] = c.word[i]);
-    });
+    activeLevel.clues.forEach(c => c.nums.forEach((n, i) => targetMap[n] = c.word[i]));
 
     const targetNum = selectedNumber && guessed[selectedNumber] !== targetMap[selectedNumber]
       ? selectedNumber
       : Object.keys(targetMap).find(n => guessed[n] !== targetMap[n]);
 
     if (targetNum) {
+      hintsCount--;
+      hintsUsedInLevel++;
+      document.getElementById('hint-badge').textContent = hintsCount;
       guessed[targetNum] = targetMap[targetNum];
       selectedNumber = parseInt(targetNum);
       updateBoard();
+      updateAccuracyDisplay();
+      soundReveal();
       checkVictory();
+    }
+  }
+
+  // Star Calculation Strictly on Time & Accuracy
+  function calculateStars() {
+    const acc = calculateAccuracy();
+    const sec = levelElapsedSeconds;
+
+    // Criteria:
+    // 3 Stars (Mastery): Accuracy >= 85% AND time <= 120 seconds (or 0 mistakes)
+    // 2 Stars (Proficient): Accuracy >= 65% AND time <= 240 seconds
+    // 1 Star (Passed): Completed level
+    if (acc >= 85 && sec <= 120) {
+      return 3;
+    } else if (acc >= 65 && sec <= 240) {
+      return 2;
+    } else {
+      return 1;
     }
   }
 
@@ -925,28 +1845,59 @@
     });
 
     if (won) {
+      stopTimer();
       soundVictory();
-      // Unlock next level in progression chain!
+
+      const earnedStars = calculateStars();
+      // Save best stars
+      const existingStars = parseInt(localStorage.getItem(`crostic_stars_${activeLevel.id}`) || '0');
+      if (earnedStars > existingStars) {
+        localStorage.setItem(`crostic_stars_${activeLevel.id}`, earnedStars.toString());
+      }
+
       if (activeLevel.id >= unlockedMaxLevel && unlockedMaxLevel < GAME_LEVELS.length) {
         unlockedMaxLevel = activeLevel.id + 1;
         localStorage.setItem('crostic_unlocked_level', unlockedMaxLevel.toString());
       }
-      setTimeout(showVictory, 400);
+      setTimeout(() => showVictory(earnedStars), 450);
     }
   }
 
-  function showVictory() {
+  function showVictory(stars) {
+    // Populate Quote and Educational Facts
     document.getElementById('quote-reveal').textContent = `"${activeLevel.quoteWords.map(q => q.word).join(' ')}"`;
-    document.getElementById('author-reveal').textContent = `â€” ${activeLevel.fact.author}`;
+    document.getElementById('author-reveal').textContent = `— ${activeLevel.fact.author}`;
     document.getElementById('fact-reveal').textContent = activeLevel.fact.context;
 
     const vocabDiv = document.getElementById('vocab-reveal');
-    vocabDiv.innerHTML = activeLevel.vocab.map(v => `<b>${v.word}:</b> ${v.def}`).join('<br><br>');
+    vocabDiv.innerHTML = activeLevel.vocab.map(v => `<b>${v.word}:</b> ${v.def}`).join('<br>');
+
+    // Populate Time & Accuracy Metrics
+    document.getElementById('vic-time').textContent = formatSeconds(levelElapsedSeconds);
+    document.getElementById('vic-acc').textContent = `${calculateAccuracy()}%`;
+    document.getElementById('vic-hints').textContent = hintsUsedInLevel;
+    document.getElementById('vic-miss').textContent = mistakesCount;
+
+    // Render Stars (1, 2, or 3)
+    for (let i = 1; i <= 3; i++) {
+      const starEl = document.getElementById(`star-${i}`);
+      if (i <= stars) {
+        starEl.className = 'star-icon earned';
+      } else {
+        starEl.className = 'star-icon';
+      }
+    }
+
+    let verdictText = '★☆☆ 1 Star Earned';
+    if (stars === 3) verdictText = '★★★ 3 Stars • Speedy & Flawless Accuracy!';
+    else if (stars === 2) verdictText = '★★☆ 2 Stars • Great Speed & Skill!';
+    document.getElementById('star-verdict').textContent = verdictText;
 
     document.getElementById('victory-modal').style.display = 'flex';
   }
 
   function nextLevel() {
+    soundButton();
     closeModal();
     if (currentLevelIdx + 1 < GAME_LEVELS.length) {
       selectLevel(currentLevelIdx + 1);
@@ -961,74 +1912,55 @@
       showToast(`Level ${idx + 1} is locked! Complete Level ${idx} first.`);
       return;
     }
+    soundButton();
     currentLevelIdx = idx;
     activeLevel = GAME_LEVELS[currentLevelIdx];
     document.getElementById('cat-title').textContent = activeLevel.category;
-    document.getElementById('level-sub').textContent = `Level ${activeLevel.id} â€¢ ${activeLevel.title}`;
+    document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
     guessed = {};
     selectedNumber = activeLevel.clues[0].nums[0];
+    mistakesCount = 0;
+    hintsUsedInLevel = 0;
     closeMap();
     closeModal();
     updateBoard();
+    updateAccuracyDisplay();
+    startTimer();
   }
 
-  // Level Progression Chain Map (Shows scored stars and supports 1,000 levels + AI Online)
   function openMap() {
+    soundButton();
     const container = document.getElementById('chain-container');
     container.innerHTML = '';
 
-    // Show AI Online Endless Level button at top of map
-    const aiBtn = document.createElement('div');
-    aiBtn.className = 'chain-node active';
-    aiBtn.style.background = 'linear-gradient(135deg, #0284C7, #0369A1)';
-    aiBtn.style.color = '#FFFFFF';
-    aiBtn.innerHTML = `
-      <div class="chain-info">
-        <div class="chain-title" style="color:white;">⚡ AI Online Puzzle Generator</div>
-        <div class="chain-cat" style="color:#BAE6FD;">Endless real-time academic curriculum levels</div>
-      </div>
-      <div class="chain-badge" style="background:white; color:#0284C7; font-size:12px; font-weight:800; padding:4px 8px; border-radius:10px;">AI PLAY</div>
-    `;
-    aiBtn.onclick = () => {
-      closeMap();
-      const topic = prompt('Enter topic for AI Level (e.g. Space, Physics, Rivers):', 'General Science');
-      if (topic) {
-        showToast('Generating AI curriculum level...');
-        setTimeout(() => {
-          selectLevel(0);
-          showToast('AI Level generated successfully!');
-        }, 600);
-      }
-    };
-    container.appendChild(aiBtn);
-
-    // Render levels window (show up to 50 active levels around current progress)
-    const startIdx = Math.max(0, currentLevelIdx - 10);
-    const endIdx = Math.min(GAME_LEVELS.length, startIdx + 40);
-
-    for (let idx = startIdx; idx < endIdx; idx++) {
-      const lvl = GAME_LEVELS[idx];
+    GAME_LEVELS.forEach((lvl, idx) => {
       const isUnlocked = (lvl.id <= unlockedMaxLevel);
       const isCurrent = (idx === currentLevelIdx);
       const isCompleted = (lvl.id < unlockedMaxLevel);
+      const savedStars = parseInt(localStorage.getItem(`crostic_stars_${lvl.id}`) || (isCompleted ? '3' : '0'));
 
       const node = document.createElement('div');
       node.className = 'chain-node' + (isCurrent ? ' active' : '') + (isCompleted ? ' completed' : '') + (!isUnlocked ? ' locked' : '');
 
-      const stars = isCompleted ? '★★★' : (isCurrent ? '☆☆☆' : '🔒');
+      let starDisplay = '🔒 Locked';
+      if (isCompleted) {
+        starDisplay = '★'.repeat(savedStars) + '☆'.repeat(3 - savedStars);
+      } else if (isCurrent) {
+        starDisplay = '⚡ Current Challenge';
+      }
 
       const info = document.createElement('div');
       info.className = 'chain-info';
       info.innerHTML = `
         <div class="chain-title">Level ${lvl.id}: ${lvl.title}</div>
-        <div class="chain-cat">${lvl.category} • ${lvl.clues.length} words</div>
-        <div style="font-size:11px; color:#F59E0B; margin-top:2px;">Stars Scored: ${stars}</div>
+        <div class="chain-cat">${lvl.category} • ${lvl.clues.length} clues</div>
+        <div style="font-size:11px; color:#F59E0B; margin-top:2px; font-weight:800;">${starDisplay}</div>
       `;
 
       const badge = document.createElement('div');
-      badge.className = 'chain-badge';
+      badge.style.fontSize = '18px';
       if (isCompleted) badge.textContent = '✓';
-      else if (isCurrent) badge.textContent = 'START';
+      else if (isCurrent) badge.textContent = '▶';
       else if (isUnlocked) badge.textContent = 'OPEN';
       else badge.textContent = '🔒';
 
@@ -1037,34 +1969,100 @@
 
       node.onclick = () => selectLevel(idx);
       container.appendChild(node);
-    }
+    });
 
     document.getElementById('map-modal').style.display = 'flex';
   }
 
-  function closeMap() { document.getElementById('map-modal').style.display = 'none'; }
-  function closeModal() { document.getElementById('victory-modal').style.display = 'none'; }
-  function openSettings() { document.getElementById('settings-modal').style.display = 'flex'; }
-  function closeSettings() { document.getElementById('settings-modal').style.display = 'none'; }
-
-  function copyCode() {
-    navigator.clipboard.writeText('CR-9041');
-    alert('Device Sync Code CR-9041 copied to clipboard!');
+  function closeMap() {
+    soundButton();
+    document.getElementById('map-modal').style.display = 'none';
+  }
+  function closeModal() {
+    soundButton();
+    document.getElementById('victory-modal').style.display = 'none';
+  }
+  function openSettings() {
+    soundButton();
+    document.getElementById('settings-modal').style.display = 'flex';
+  }
+  function closeSettings() {
+    soundButton();
+    document.getElementById('settings-modal').style.display = 'none';
   }
 
-  // Physical keyboard support
+  function copyCode() {
+    soundButton();
+    navigator.clipboard.writeText('CR-9041');
+    showToast('Device Sync Code CR-9041 copied!');
+  }
+
+  // Physical Keyboard Support
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Backspace') handleBackspace();
-    else if (/^[a-zA-Z]$/.test(e.key)) handleInput(e.key.toUpperCase());
+    if (e.key === 'Backspace') {
+      handleBackspace();
+    } else if (/^[a-zA-Z]$/.test(e.key)) {
+      handleInput(e.key.toUpperCase());
+    }
   });
 
-  // Initialize
+  // --- IGNIVEX SOLUTIONS Splash Loading & Dismiss Sequence ---
+  let splashDismissed = false;
+  const progressBar = document.getElementById('splash-progress-bar');
+  const statusText = document.getElementById('splash-status-text');
+  const splashScreen = document.getElementById('splash-screen');
+  const startBtn = document.getElementById('splash-start-btn');
+
+  const loadingSteps = [
+    { p: 25, msg: 'Loading Cipher Matrices...' },
+    { p: 55, msg: 'Verifying 1,000+ Distinct Levels...' },
+    { p: 85, msg: 'Tuning BGM: "Allarh Ballarh Bawa Da"...' },
+    { p: 100, msg: 'Ignivex Engine Ready!' }
+  ];
+
+  let currentStep = 0;
+  const loadInterval = setInterval(() => {
+    if (currentStep < loadingSteps.length) {
+      if (progressBar) progressBar.style.width = loadingSteps[currentStep].p + '%';
+      if (statusText) statusText.textContent = loadingSteps[currentStep].msg;
+      currentStep++;
+    } else {
+      clearInterval(loadInterval);
+      if (startBtn) {
+        startBtn.innerHTML = '<span>START GAME</span> 🎵';
+        startBtn.style.transform = 'scale(1.05)';
+      }
+    }
+  }, 450);
+
+  function dismissSplash() {
+    if (splashDismissed) return;
+    splashDismissed = true;
+    if (splashScreen) {
+      splashScreen.classList.add('fade-out');
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+      }, 700);
+    }
+    unlockAudio();
+    startBgm();
+  }
+
+  // Also auto-start audio on first user touch anywhere if not started yet
+  window.addEventListener('pointerdown', () => {
+    unlockAudio();
+    if (splashDismissed && bgmEnabled) {
+      startBgm();
+    }
+  }, { once: false, passive: true });
+
+  // Initialize First Level
   selectedNumber = activeLevel.clues[0].nums[0];
   document.getElementById('cat-title').textContent = activeLevel.category;
-  document.getElementById('level-sub').textContent = `Level ${activeLevel.id} â€¢ ${activeLevel.title}`;
+  document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
   updateBoard();
   renderKeyboard();
-  startBgm();
+  startTimer();
 </script>
 
 </body>

@@ -12,7 +12,7 @@ class SoundService {
 
   bool isBgmEnabled = true;
   bool isSfxEnabled = true;
-  double bgmVolume = 0.4;
+  double bgmVolume = 0.85;
   double sfxVolume = 1.0;
   bool _isBgmPlaying = false;
 
@@ -26,8 +26,8 @@ class SoundService {
   Uint8List? _bgmBytes;
 
   Future<void> init() async {
+    // 1. Android audio context (safe fallback for Web & Desktop)
     try {
-      // Configure audio context for optimal Android low-latency gameplay
       await AudioPlayer.global.setAudioContext(AudioContext(
         android: const AudioContextAndroid(
           isSpeakerphoneOn: false,
@@ -37,24 +37,38 @@ class SoundService {
           audioFocus: AndroidAudioFocus.gainTransientMayDuck,
         ),
       ));
+    } catch (_) {}
 
+    try {
       await _player.setReleaseMode(ReleaseMode.stop);
       await _bgmPlayer.setReleaseMode(ReleaseMode.loop);
+    } catch (_) {}
 
-      // Pre-load all sound bytes into memory from Flutter assets
+    // 2. Pre-load sound bytes into memory
+    try {
       _tapBytes = (await rootBundle.load('assets/audio/key_tap.wav')).buffer.asUint8List();
+    } catch (_) {}
+    try {
       _revealBytes = (await rootBundle.load('assets/audio/letter_reveal.wav')).buffer.asUint8List();
+    } catch (_) {}
+    try {
       _wordBytes = (await rootBundle.load('assets/audio/word_complete.wav')).buffer.asUint8List();
+    } catch (_) {}
+    try {
       _errorBytes = (await rootBundle.load('assets/audio/error.wav')).buffer.asUint8List();
+    } catch (_) {}
+    try {
       _hintBytes = (await rootBundle.load('assets/audio/hint.wav')).buffer.asUint8List();
+    } catch (_) {}
+    try {
       _victoryBytes = (await rootBundle.load('assets/audio/level_victory.wav')).buffer.asUint8List();
+    } catch (_) {}
+    try {
       _bgmBytes = (await rootBundle.load('assets/audio/bgm_loop.wav')).buffer.asUint8List();
+    } catch (_) {}
 
-      if (isBgmEnabled) {
-        await startBgm();
-      }
-    } catch (e) {
-      // Audio fallback
+    if (isBgmEnabled) {
+      await startBgm();
     }
   }
 

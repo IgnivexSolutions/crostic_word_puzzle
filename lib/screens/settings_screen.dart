@@ -80,7 +80,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       'Background Music',
                       style: GoogleFonts.spaceGrotesk(fontSize: 15, fontWeight: FontWeight.w600),
                     ),
-                    subtitle: const Text('Gentle ambient study progression loop'),
+                    subtitle: const Text('Theme: Allarh Ballarh Bawa Da (Lullaby Chime)'),
                     value: _bgm,
                     activeColor: const Color(0xFF0284C7),
                     onChanged: (val) {
