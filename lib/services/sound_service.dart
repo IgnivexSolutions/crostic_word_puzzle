@@ -1,14 +1,20 @@
-import 'dart:typed_data';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
+import 'storage_service.dart';
 
 class SoundService {
   static final SoundService _instance = SoundService._internal();
   factory SoundService() => _instance;
   SoundService._internal();
 
-  final AudioPlayer _player = AudioPlayer();
+  // Dedicated AudioPlayer instances for each sound event to prevent race conditions & cutoffs
   final AudioPlayer _bgmPlayer = AudioPlayer();
+  final AudioPlayer _tapPlayer = AudioPlayer();
+  final AudioPlayer _revealPlayer = AudioPlayer();
+  final AudioPlayer _wordPlayer = AudioPlayer();
+  final AudioPlayer _errorPlayer = AudioPlayer();
+  final AudioPlayer _hintPlayer = AudioPlayer();
+  final AudioPlayer _victoryPlayer = AudioPlayer();
 
   bool isBgmEnabled = true;
   bool isSfxEnabled = true;
@@ -16,17 +22,14 @@ class SoundService {
   double sfxVolume = 1.0;
   bool _isBgmPlaying = false;
 
-  // Cached sound bytes for instantaneous Android playback
-  Uint8List? _tapBytes;
-  Uint8List? _revealBytes;
-  Uint8List? _wordBytes;
-  Uint8List? _errorBytes;
-  Uint8List? _hintBytes;
-  Uint8List? _victoryBytes;
-  Uint8List? _bgmBytes;
-
   Future<void> init() async {
-    // 1. Android audio context (safe fallback for Web & Desktop)
+    // 1. Load preferences
+    final storage = StorageService();
+    await storage.init();
+    isBgmEnabled = storage.getBgmSetting();
+    isSfxEnabled = storage.getSfxSetting();
+
+    // 2. Configure global audio context for Android sonification
     try {
       await AudioPlayer.global.setAudioContext(AudioContext(
         android: const AudioContextAndroid(
@@ -39,32 +42,15 @@ class SoundService {
       ));
     } catch (_) {}
 
+    // 3. Configure individual player release modes
     try {
-      await _player.setReleaseMode(ReleaseMode.stop);
       await _bgmPlayer.setReleaseMode(ReleaseMode.loop);
-    } catch (_) {}
-
-    // 2. Pre-load sound bytes into memory
-    try {
-      _tapBytes = (await rootBundle.load('assets/audio/key_tap.wav')).buffer.asUint8List();
-    } catch (_) {}
-    try {
-      _revealBytes = (await rootBundle.load('assets/audio/letter_reveal.wav')).buffer.asUint8List();
-    } catch (_) {}
-    try {
-      _wordBytes = (await rootBundle.load('assets/audio/word_complete.wav')).buffer.asUint8List();
-    } catch (_) {}
-    try {
-      _errorBytes = (await rootBundle.load('assets/audio/error.wav')).buffer.asUint8List();
-    } catch (_) {}
-    try {
-      _hintBytes = (await rootBundle.load('assets/audio/hint.wav')).buffer.asUint8List();
-    } catch (_) {}
-    try {
-      _victoryBytes = (await rootBundle.load('assets/audio/level_victory.wav')).buffer.asUint8List();
-    } catch (_) {}
-    try {
-      _bgmBytes = (await rootBundle.load('assets/audio/bgm_loop.wav')).buffer.asUint8List();
+      await _tapPlayer.setReleaseMode(ReleaseMode.stop);
+      await _revealPlayer.setReleaseMode(ReleaseMode.stop);
+      await _wordPlayer.setReleaseMode(ReleaseMode.stop);
+      await _errorPlayer.setReleaseMode(ReleaseMode.stop);
+      await _hintPlayer.setReleaseMode(ReleaseMode.stop);
+      await _victoryPlayer.setReleaseMode(ReleaseMode.stop);
     } catch (_) {}
 
     if (isBgmEnabled) {
@@ -75,12 +61,16 @@ class SoundService {
   Future<void> startBgm() async {
     if (!isBgmEnabled || _isBgmPlaying) return;
     try {
-      if (_bgmBytes != null) {
-        await _bgmPlayer.setVolume(bgmVolume);
-        await _bgmPlayer.play(BytesSource(_bgmBytes!));
+      await _bgmPlayer.setReleaseMode(ReleaseMode.loop);
+      await _bgmPlayer.setVolume(bgmVolume);
+      await _bgmPlayer.play(AssetSource('audio/bgm_loop.wav'));
+      _isBgmPlaying = true;
+    } catch (_) {
+      try {
+        await _bgmPlayer.play(AssetSource('assets/audio/bgm_loop.wav'));
         _isBgmPlaying = true;
-      }
-    } catch (_) {}
+      } catch (_) {}
+    }
   }
 
   Future<void> stopBgm() async {
@@ -110,64 +100,75 @@ class SoundService {
     sfxVolume = volume.clamp(0.0, 1.0);
   }
 
-  Future<void> _playSfx(Uint8List? bytes, {bool vibrateOnKey = false}) async {
+  Future<void> _safePlay(AudioPlayer player, String fileName, {bool isLowLatency = false}) async {
     if (!isSfxEnabled) return;
-
-    // Haptic feedback ensures tactile response even if system volume is muted
-    if (vibrateOnKey) {
-      try {
-        HapticFeedback.lightImpact();
-      } catch (_) {}
-    }
-
-    if (bytes == null) return;
-
     try {
-      await _player.stop();
-      await _player.setVolume(sfxVolume);
-      await _player.play(BytesSource(bytes), mode: PlayerMode.lowLatency);
+      await player.stop();
+      await player.setVolume(sfxVolume);
+      await player.play(
+        AssetSource('audio/$fileName'),
+        mode: isLowLatency ? PlayerMode.lowLatency : PlayerMode.mediaPlayer,
+      );
     } catch (_) {
       try {
-        await _player.play(BytesSource(bytes));
-      } catch (_) {}
+        await player.play(AssetSource('audio/$fileName'), mode: PlayerMode.mediaPlayer);
+      } catch (_) {
+        try {
+          await player.play(AssetSource('assets/audio/$fileName'));
+        } catch (_) {}
+      }
     }
   }
 
   Future<void> playKeyTap() async {
-    await _playSfx(_tapBytes, vibrateOnKey: true);
+    try {
+      HapticFeedback.lightImpact();
+    } catch (_) {}
+    await _safePlay(_tapPlayer, 'key_tap.wav', isLowLatency: true);
   }
 
   Future<void> playLetterReveal() async {
-    await _playSfx(_revealBytes, vibrateOnKey: true);
+    try {
+      HapticFeedback.lightImpact();
+    } catch (_) {}
+    await _safePlay(_revealPlayer, 'letter_reveal.wav', isLowLatency: true);
   }
 
   Future<void> playWordComplete() async {
     try {
       HapticFeedback.mediumImpact();
     } catch (_) {}
-    await _playSfx(_wordBytes);
+    await _safePlay(_wordPlayer, 'word_complete.wav', isLowLatency: false);
   }
 
   Future<void> playError() async {
     try {
       HapticFeedback.heavyImpact();
     } catch (_) {}
-    await _playSfx(_errorBytes);
+    await _safePlay(_errorPlayer, 'error.wav', isLowLatency: true);
   }
 
   Future<void> playHint() async {
-    await _playSfx(_hintBytes);
+    try {
+      HapticFeedback.mediumImpact();
+    } catch (_) {}
+    await _safePlay(_hintPlayer, 'hint.wav', isLowLatency: false);
   }
 
   Future<void> playVictory() async {
     try {
       HapticFeedback.heavyImpact();
     } catch (_) {}
-    await _playSfx(_victoryBytes);
+    await _safePlay(_victoryPlayer, 'level_victory.wav', isLowLatency: false);
   }
 
   void dispose() {
     _bgmPlayer.dispose();
-    _player.dispose();
+    _tapPlayer.dispose();
+    _revealPlayer.dispose();
+    _wordPlayer.dispose();
+    _errorPlayer.dispose();
+    _hintPlayer.dispose();
+    _victoryPlayer.dispose();
   }
 }

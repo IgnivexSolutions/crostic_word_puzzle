@@ -38,6 +38,8 @@ class _GameplayScreenState extends State<GameplayScreen> {
   final SyncService _sync = SyncService();
   final FocusNode _keyboardFocusNode = FocusNode();
   bool _isLoading = true;
+  bool _highContrast = false;
+  bool _openApertures = false;
 
   Timer? _gameTimer;
   int _elapsedSeconds = 0;
@@ -52,6 +54,9 @@ class _GameplayScreenState extends State<GameplayScreen> {
 
   Future<void> _initGame() async {
     gameState = GameState.initial(widget.level);
+    _highContrast = _storage.getHighContrastSetting();
+    _openApertures = _storage.getDyslexicFontSetting();
+
     // Load any saved guesses from storage
     final savedGuesses = await _storage.loadLevelGuesses(widget.level.id);
     if (savedGuesses.isNotEmpty) {
@@ -106,8 +111,6 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final activeNumber = gameState.selectedLetterNumber;
     if (activeNumber == null) return;
 
-    _sound.playKeyTap();
-
     setState(() {
       // 1. Assign character to this letter number (reveals in ALL matching slots!)
       gameState.guessedLetters[activeNumber] = char.toUpperCase();
@@ -115,25 +118,29 @@ class _GameplayScreenState extends State<GameplayScreen> {
       // Check if this guess is correct
       final expectedChar = widget.level.numberToLetterMap[activeNumber];
       if (char.toUpperCase() == expectedChar) {
-        _sound.playLetterReveal();
+        // If it completes a clue, play word complete; otherwise play letter reveal!
+        bool clueJustCompleted = false;
+        if (!gameState.isQuoteFocused && gameState.selectedClueId != null) {
+          final currentClue = widget.level.clues.firstWhere((c) => c.id == gameState.selectedClueId);
+          if (gameState.isClueComplete(currentClue)) {
+            clueJustCompleted = true;
+            _sound.playWordComplete();
+          }
+        }
+        if (!clueJustCompleted) {
+          _sound.playLetterReveal();
+        }
       } else {
+        // Incorrect letter: trigger error buzzer & tactile feedback
         _sound.playError();
         _mistakesCount++;
         gameState.mistakesCount = _mistakesCount;
       }
 
-      // 2. Check if the active clue just completed
-      if (!gameState.isQuoteFocused && gameState.selectedClueId != null) {
-        final currentClue = widget.level.clues.firstWhere((c) => c.id == gameState.selectedClueId);
-        if (gameState.isClueComplete(currentClue)) {
-          _sound.playWordComplete();
-        }
-      }
-
-      // 3. Auto-advance to next empty slot
+      // 2. Auto-advance to next empty slot
       _advanceCursor();
 
-      // 4. Check if entire puzzle is solved
+      // 3. Check if entire puzzle is solved
       if (gameState.checkEntireLevelWon()) {
         _handleVictory();
       }
@@ -588,12 +595,18 @@ class _GameplayScreenState extends State<GameplayScreen> {
                         ),
                         IconButton(
                           icon: const Icon(Icons.more_horiz_rounded, color: Color(0xFF64748B), size: 28.0),
-                          onPressed: () {
+                          onPressed: () async {
                             _sound.playKeyTap();
-                            Navigator.push(
+                            await Navigator.push(
                               context,
                               MaterialPageRoute(builder: (c) => const SettingsScreen()),
                             );
+                            if (mounted) {
+                              setState(() {
+                                _highContrast = _storage.getHighContrastSetting();
+                                _openApertures = _storage.getDyslexicFontSetting();
+                              });
+                            }
                           },
                         ),
                       ],
@@ -653,22 +666,26 @@ class _GameplayScreenState extends State<GameplayScreen> {
                     child: QuoteMatrix(
                       level: widget.level,
                       gameState: gameState,
+                      highContrast: _highContrast,
+                      openApertures: _openApertures,
                       onTileTap: _onQuoteTileTap,
                     ),
                   ),
 
                   const SizedBox(height: 6.0),
 
-                  // 3. Compact Clues List (All 7-8 clues fit neatly onto screen)
+                  // 3. Scrollable Clues List (Effortlessly scrolls all clues, never cut off, zero overlap!)
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      padding: const EdgeInsets.fromLTRB(10.0, 4.0, 10.0, 16.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: widget.level.clues.map((clue) {
                           return ClueRow(
                             clue: clue,
                             gameState: gameState,
+                            highContrast: _highContrast,
+                            openApertures: _openApertures,
                             onTileTap: _onClueTileTap,
                           );
                         }).toList(),
@@ -676,122 +693,166 @@ class _GameplayScreenState extends State<GameplayScreen> {
                     ),
                   ),
 
-                  // 4. Virtual Keyboard Pinned to Bottom
+                  // 4. Dedicated Action Control Bar (Shop & Hint buttons right above keyboard, zero obstruction!)
+                  _buildActionBar(),
+
+                  // 5. Virtual Keyboard Pinned to Bottom
                   VirtualKeyboard(
                     onKeyTap: _onKeyInput,
                     onBackspace: _onBackspace,
                     disabledLetters: _getDisabledLetters(),
+                    openApertures: _openApertures,
                   ),
                 ],
-              ),
-
-              // 5. Floating Action Buttons (Shop on left, Hint on right - matching screenshot!)
-              Positioned(
-                bottom: 175.0, // Floating right above virtual keyboard
-                left: 14.0,
-                child: GestureDetector(
-                  onTap: _openShop,
-                  child: Stack(
-                    clipBehavior: Clip.none,
-                    children: [
-                      Container(
-                        width: 52.0,
-                        height: 52.0,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFB923C), // Warm orange as in screenshot
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFFEA580C).withOpacity(0.35),
-                              blurRadius: 8.0,
-                              offset: const Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: const Center(
-                          child: Icon(Icons.shopping_bag_rounded, color: Colors.white, size: 26.0),
-                        ),
-                      ),
-                      Positioned(
-                        top: -3.0,
-                        right: -3.0,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 2.0),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                            boxShadow: [
-                              BoxShadow(color: Colors.black12, blurRadius: 2.0),
-                            ],
-                          ),
-                          child: Text(
-                            '1',
-                            style: GoogleFonts.spaceGrotesk(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w800,
-                              color: const Color(0xFFEA580C),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-              Positioned(
-                bottom: 175.0, // Floating right above virtual keyboard
-                right: 14.0,
-                child: GestureDetector(
-                  onTap: _useHint,
-                  child: Stack(
-                    clipBehavior: Clip.none,
-                    children: [
-                      Container(
-                        width: 52.0,
-                        height: 52.0,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFBBF24), // Vibrant gold as in screenshot
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFFD97706).withOpacity(0.35),
-                              blurRadius: 8.0,
-                              offset: const Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: const Center(
-                          child: Icon(Icons.lightbulb_rounded, color: Colors.white, size: 28.0),
-                        ),
-                      ),
-                      Positioned(
-                        top: -3.0,
-                        right: -3.0,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.0),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFF59E0B),
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.white, width: 1.5),
-                          ),
-                          child: Text(
-                            widget.user.hintsCount > 0 ? '${widget.user.hintsCount}' : 'Ad',
-                            style: GoogleFonts.spaceGrotesk(
-                              fontSize: 9.5,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildActionBar() {
+    final solvedCount = widget.level.clues.where((c) => gameState.isClueComplete(c)).length;
+    final totalClues = widget.level.clues.length;
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 6.0),
+      decoration: BoxDecoration(
+        color: const Color(0xFFEBF3F8),
+        border: Border(
+          top: BorderSide(color: const Color(0xFFCBD5E1).withOpacity(0.4), width: 1.0),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Shop Button (Non-overlapping pill)
+          GestureDetector(
+            onTap: _openShop,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 7.0),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [Color(0xFFFB923C), Color(0xFFEA580C)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(20.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFEA580C).withOpacity(0.3),
+                    blurRadius: 6.0,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.shopping_bag_rounded, color: Colors.white, size: 18.0),
+                  const SizedBox(width: 6.0),
+                  Text(
+                    'Shop',
+                    style: GoogleFonts.spaceGrotesk(
+                      fontSize: 13.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(width: 6.0),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5.5, vertical: 1.5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Text(
+                      '1',
+                      style: GoogleFonts.spaceGrotesk(
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w800,
+                        color: const Color(0xFFEA580C),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          // Center Progress Pill
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.85),
+              borderRadius: BorderRadius.circular(14.0),
+              border: Border.all(color: const Color(0xFFCBD5E1)),
+            ),
+            child: Text(
+              '$solvedCount / $totalClues Solved',
+              style: GoogleFonts.spaceGrotesk(
+                fontSize: 12.0,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF475569),
+              ),
+            ),
+          ),
+
+          // Hint Button (Non-overlapping pill)
+          GestureDetector(
+            onTap: _useHint,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 7.0),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [Color(0xFFFBBF24), Color(0xFFD97706)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(20.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFD97706).withOpacity(0.35),
+                    blurRadius: 6.0,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.lightbulb_rounded, color: Colors.white, size: 18.0),
+                  const SizedBox(width: 6.0),
+                  Text(
+                    'Hint',
+                    style: GoogleFonts.spaceGrotesk(
+                      fontSize: 13.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(width: 6.0),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5.5, vertical: 1.5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Text(
+                      widget.user.hintsCount > 0 ? '${widget.user.hintsCount}' : '+',
+                      style: GoogleFonts.spaceGrotesk(
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w800,
+                        color: const Color(0xFFD97706),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

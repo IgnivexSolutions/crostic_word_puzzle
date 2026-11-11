@@ -5,12 +5,14 @@ class VirtualKeyboard extends StatelessWidget {
   final Function(String char) onKeyTap;
   final VoidCallback onBackspace;
   final Set<String> disabledLetters; // Letters fully solved across the level
+  final bool openApertures;
 
   const VirtualKeyboard({
     super.key,
     required this.onKeyTap,
     required this.onBackspace,
     this.disabledLetters = const {},
+    this.openApertures = false,
   });
 
   static const List<String> _row1 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
@@ -19,6 +21,19 @@ class VirtualKeyboard extends StatelessWidget {
 
   Widget _buildKey(BuildContext context, String key, {double flex = 1.0}) {
     final isDisabled = disabledLetters.contains(key);
+
+    final textStyle = openApertures
+        ? GoogleFonts.lexend(
+            fontSize: 18.0,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 0.5,
+            color: isDisabled ? const Color(0xFF94A3B8) : const Color(0xFF0F172A),
+          )
+        : GoogleFonts.spaceGrotesk(
+            fontSize: 19.0,
+            fontWeight: FontWeight.w700,
+            color: isDisabled ? const Color(0xFF94A3B8) : const Color(0xFF0F172A),
+          );
 
     return Expanded(
       flex: (flex * 10).toInt(),
@@ -50,13 +65,7 @@ class VirtualKeyboard extends StatelessWidget {
             child: Center(
               child: Text(
                 key,
-                style: GoogleFonts.spaceGrotesk(
-                  fontSize: 19.0,
-                  fontWeight: FontWeight.w700,
-                  color: isDisabled
-                      ? const Color(0xFF94A3B8)
-                      : const Color(0xFF0F172A),
-                ),
+                style: textStyle,
               ),
             ),
           ),

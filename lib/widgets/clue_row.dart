@@ -7,12 +7,16 @@ import 'letter_tile.dart';
 class ClueRow extends StatelessWidget {
   final ClueData clue;
   final GameState gameState;
+  final bool highContrast;
+  final bool openApertures;
   final Function(String clueId, int charIdx, int letterNumber) onTileTap;
 
   const ClueRow({
     super.key,
     required this.clue,
     required this.gameState,
+    this.highContrast = false,
+    this.openApertures = false,
     required this.onTileTap,
   });
 
@@ -26,16 +30,16 @@ class ClueRow extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       decoration: BoxDecoration(
         color: isCurrentClue
-            ? Colors.white.withOpacity(0.85)
+            ? Colors.white.withOpacity(0.9)
             : isComplete
                 ? const Color(0xFFF0FDF4).withOpacity(0.6)
                 : Colors.transparent,
         borderRadius: BorderRadius.circular(10.0),
         border: Border.all(
           color: isCurrentClue
-              ? const Color(0xFFBAE6FD)
+              ? const Color(0xFF0284C7)
               : Colors.transparent,
-          width: 1.0,
+          width: 1.2,
         ),
       ),
       child: Row(
@@ -55,14 +59,24 @@ class ClueRow extends StatelessWidget {
                 Expanded(
                   child: Text(
                     clue.clueText,
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize: 12.0,
-                      fontWeight: isCurrentClue ? FontWeight.w700 : FontWeight.w600,
-                      color: isComplete
-                          ? const Color(0xFF475569)
-                          : const Color(0xFF1E293B),
-                      height: 1.15,
-                    ),
+                    style: openApertures
+                        ? GoogleFonts.lexend(
+                            fontSize: 12.0,
+                            fontWeight: isCurrentClue ? FontWeight.w700 : FontWeight.w600,
+                            color: isComplete
+                                ? const Color(0xFF475569)
+                                : (highContrast ? Colors.black : const Color(0xFF1E293B)),
+                            height: 1.2,
+                            letterSpacing: 0.3,
+                          )
+                        : GoogleFonts.plusJakartaSans(
+                            fontSize: 12.0,
+                            fontWeight: isCurrentClue ? FontWeight.w700 : FontWeight.w600,
+                            color: isComplete
+                                ? const Color(0xFF475569)
+                                : (highContrast ? Colors.black : const Color(0xFF1E293B)),
+                            height: 1.15,
+                          ),
                   ),
                 ),
               ],
@@ -93,6 +107,8 @@ class ClueRow extends StatelessWidget {
                     isLinked: isLinked,
                     isSolved: isSolved,
                     isSmall: false,
+                    highContrast: highContrast,
+                    openApertures: openApertures,
                     onTap: () => onTileTap(clue.id, charIdx, num),
                   );
                 }),
