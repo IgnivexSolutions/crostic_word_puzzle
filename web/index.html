@@ -910,6 +910,61 @@
       background: #475569;
       color: white;
     }
+
+    /* Class Level Selector Bar */
+    .class-selector-bar {
+      display: flex;
+      gap: 6px;
+      padding: 8px 12px;
+      background: #FFFFFF;
+      border-bottom: 1.5px solid #E2E8F0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      z-index: 10;
+    }
+    .class-selector-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .class-tab {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 12px;
+      background: #F1F5F9;
+      border: 1.5px solid #CBD5E1;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    .class-tab.active {
+      background: #0284C7;
+      border-color: #0284C7;
+      color: white;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+    }
+    .class-tab.active .class-name {
+      color: white;
+    }
+    .class-tab.active .class-desc {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .class-tab-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    .class-name {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .class-desc {
+      font-size: 9px;
+      color: #64748B;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -969,10 +1024,42 @@
   <div class="top-header">
     <button class="header-btn" onclick="openMap()" title="Levels Map">🗺️ Map</button>
     <div class="header-title-box" onclick="openMap()">
-      <div class="header-category" id="cat-title">General Science</div>
-      <div class="header-sub" id="level-sub">Level 1 • Sun & Plant Life</div>
+      <div class="header-category" id="cat-title">Animals</div>
+      <div class="header-sub" id="level-sub">Level 1 • Cats at Night</div>
     </div>
     <button class="header-btn" onclick="openSettings()" title="Settings & Audio">⚙️ Audio</button>
+  </div>
+
+  <!-- Class Level Selector Bar -->
+  <div class="class-selector-bar" id="class-selector-bar">
+    <div class="class-tab active" id="tab-class-1" onclick="selectClassTier('Class 1 - 3')">
+      <span>🎒</span>
+      <div class="class-tab-info">
+        <span class="class-name">Class 1 - 3</span>
+        <span class="class-desc">Primary Stars</span>
+      </div>
+    </div>
+    <div class="class-tab" id="tab-class-2" onclick="selectClassTier('Class 4 - 5')">
+      <span>🚀</span>
+      <div class="class-tab-info">
+        <span class="class-name">Class 4 - 5</span>
+        <span class="class-desc">Young Explorers</span>
+      </div>
+    </div>
+    <div class="class-tab" id="tab-class-3" onclick="selectClassTier('Class 6 - 8')">
+      <span>🔬</span>
+      <div class="class-tab-info">
+        <span class="class-name">Class 6 - 8</span>
+        <span class="class-desc">Middle Scholars</span>
+      </div>
+    </div>
+    <div class="class-tab" id="tab-class-4" onclick="selectClassTier('Class 9 - 10+')">
+      <span>🎓</span>
+      <div class="class-tab-info">
+        <span class="class-name">Class 9 - 10+</span>
+        <span class="class-desc">Senior Masters</span>
+      </div>
+    </div>
   </div>
 
   <!-- Interactive Background Music Bar -->
@@ -1148,11 +1235,12 @@
     id: l.id,
     category: l.category,
     title: l.title,
+    classLevel: l.classLevel || (l.id <= 10 ? 'Class 1 - 3' : (l.id <= 20 ? 'Class 4 - 5' : (l.id <= 30 ? 'Class 6 - 8' : 'Class 9 - 10+'))),
     quoteWords: l.quoteWords.map(qw => ({ word: qw.word, nums: qw.letterNumbers })),
     clues: l.clues.map(c => ({ id: c.id, text: c.clueText, word: c.targetWord, nums: c.letterNumbers, hasDef: true })),
     fact: {
       author: l.educationalFact ? l.educationalFact.attribution : 'Academic Curriculum',
-      year: l.educationalFact ? l.educationalFact.yearOrEra : 'Grades 6-10',
+      year: l.educationalFact ? l.educationalFact.yearOrEra : 'Curriculum Unit',
       context: l.educationalFact ? l.educationalFact.historicalContext : ''
     },
     vocab: l.vocabularyList ? l.vocabularyList.map(v => ({ word: v.word, def: v.definition })) : []
@@ -1981,6 +2069,43 @@
     }
   }
 
+  let currentClassTier = localStorage.getItem('crostic_class_tier') || 'Class 1 - 3';
+
+  function selectClassTier(tierName) {
+    soundButton();
+    currentClassTier = tierName;
+    localStorage.setItem('crostic_class_tier', tierName);
+    updateClassTabsUI();
+    const classLevels = GAME_LEVELS.filter(l => l.classLevel === tierName);
+    if (classLevels.length > 0) {
+      const nextLvl = classLevels.find(l => l.id <= unlockedMaxLevel) || classLevels[0];
+      const nextIdx = GAME_LEVELS.findIndex(l => l.id === nextLvl.id);
+      if (nextIdx >= 0) {
+        selectLevel(nextIdx);
+      }
+    }
+    showToast('Switched to ' + tierName);
+  }
+
+  function updateClassTabsUI() {
+    const tabs = [
+      { id: 'tab-class-1', name: 'Class 1 - 3' },
+      { id: 'tab-class-2', name: 'Class 4 - 5' },
+      { id: 'tab-class-3', name: 'Class 6 - 8' },
+      { id: 'tab-class-4', name: 'Class 9 - 10+' }
+    ];
+    tabs.forEach(t => {
+      const el = document.getElementById(t.id);
+      if (el) {
+        if (t.name === currentClassTier) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      }
+    });
+  }
+
   function selectLevel(idx) {
     const targetLevelId = GAME_LEVELS[idx].id;
     if (targetLevelId > unlockedMaxLevel) {
@@ -1991,7 +2116,7 @@
     soundButton();
     currentLevelIdx = idx;
     activeLevel = GAME_LEVELS[currentLevelIdx];
-    document.getElementById('cat-title').textContent = activeLevel.category;
+    document.getElementById('cat-title').textContent = `${activeLevel.classLevel || 'Class 1 - 3'} • ${activeLevel.category}`;
     document.getElementById('level-sub').textContent = `Level ${activeLevel.id} • ${activeLevel.title}`;
     guessed = {};
     selectedNumber = activeLevel.clues[0].nums[0];
@@ -2003,6 +2128,7 @@
     updateBoard();
     updateAccuracyDisplay();
     startTimer();
+    updateClassTabsUI();
     showToast(`Loaded Level ${activeLevel.id}: ${activeLevel.title}`);
   }
 

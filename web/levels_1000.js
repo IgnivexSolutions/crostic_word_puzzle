@@ -1,1208 +1,1208 @@
 ﻿const LEVELS_1000 = [
     {
+        "quoteText":  "CATS CAN SEE AT NIGHT",
+        "educationalFact":  {
+                                "historicalContext":  "Cats have special eyes that capture even tiny amounts of light.",
+                                "title":  "Night Eyes",
+                                "attribution":  "Class 1 - 3 • Animals",
+                                "keyTakeaway":  "Cats can see six times better in dim light than humans!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
         "id":  1,
-        "title":  "Sun \u0026 Plant Life",
-        "category":  "General Science",
-        "quoteText":  "PLANTS NEED SUN AND RAIN",
+        "coinsReward":  52,
         "quoteWords":  [
                            {
-                               "word":  "PLANTS",
+                               "word":  "CATS",
                                "letterNumbers":  [
-                                                     9,
-                                                     6,
+                                                     2,
                                                      1,
-                                                     7,
-                                                     12,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "NEED",
-                               "letterNumbers":  [
-                                                     7,
-                                                     3,
-                                                     3,
-                                                     2
-                                                 ]
-                           },
-                           {
-                               "word":  "SUN",
-                               "letterNumbers":  [
-                                                     11,
-                                                     13,
-                                                     7
-                                                 ]
-                           },
-                           {
-                               "word":  "AND",
-                               "letterNumbers":  [
-                                                     1,
-                                                     7,
-                                                     2
-                                                 ]
-                           },
-                           {
-                               "word":  "RAIN",
-                               "letterNumbers":  [
                                                      10,
-                                                     1,
-                                                     5,
-                                                     7
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c1_1",
-                          "clueText":  "Flat green food factory of a plant",
-                          "targetWord":  "LEAF",
-                          "letterNumbers":  [
-                                                6,
-                                                3,
-                                                1,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c1_2",
-                          "clueText":  "Underground part absorbing moisture",
-                          "targetWord":  "ROOT",
-                          "letterNumbers":  [
-                                                10,
-                                                8,
-                                                8,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c1_3",
-                          "clueText":  "Small grain that grows into a plant",
-                          "targetWord":  "SEED",
-                          "letterNumbers":  [
-                                                11,
-                                                3,
-                                                3,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c1_4",
-                          "clueText":  "Earth substrate providing minerals",
-                          "targetWord":  "SOIL",
-                          "letterNumbers":  [
-                                                11,
-                                                8,
-                                                5,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c1_5",
-                          "clueText":  "Water droplets falling from clouds",
-                          "targetWord":  "RAIN",
-                          "letterNumbers":  [
-                                                10,
-                                                1,
-                                                5,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c1_6",
-                          "clueText":  "Bright star giving warmth and light",
-                          "targetWord":  "SUN",
-                          "letterNumbers":  [
-                                                11,
-                                                13,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c1_7",
-                          "clueText":  "Organized design or agricultural blueprint",
-                          "targetWord":  "PLAN",
-                          "letterNumbers":  [
-                                                9,
-                                                6,
-                                                1,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Green leaves use chlorophyll and sunlight to produce glucose and pure oxygen.",
-                                "title":  "Plant Nutrition \u0026 Photosynthesis",
-                                "attribution":  "Class 6 General Science â€¢ Botany",
-                                "keyTakeaway":  "All earthly animal life depends on oxygen generated by photosynthetic plants.",
-                                "yearOrEra":  "Primary Biology Unit"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "PHOTOSYNTHESIS",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Process by which green plants make food from light",
-                                   "etymology":  "Greek photo (light) + synthesis (combining)",
-                                   "exampleSentence":  "Photosynthesis takes place within plant chloroplasts."
-                               },
-                               {
-                                   "word":  "CHLOROPHYLL",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Green pigment absorbing sunlight inside leaves",
-                                   "etymology":  "Greek chloros (green) + phyllon (leaf)",
-                                   "exampleSentence":  "Chlorophyll gives plant leaves their vibrant emerald color."
-                               }
-                           ],
-        "coinsReward":  51
-    },
-    {
-        "id":  2,
-        "title":  "Digital Chip Logic",
-        "category":  "Computer Studies",
-        "quoteText":  "CODE RUNS ON SILICON CHIP",
-        "quoteWords":  [
-                           {
-                               "word":  "CODE",
-                               "letterNumbers":  [
-                                                     3,
-                                                     12,
-                                                     4,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "RUNS",
-                               "letterNumbers":  [
-                                                     14,
-                                                     17,
-                                                     11,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "ON",
-                               "letterNumbers":  [
-                                                     12,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "SILICON",
-                               "letterNumbers":  [
-                                                     15,
-                                                     7,
-                                                     9,
-                                                     7,
-                                                     3,
-                                                     12,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "CHIP",
-                               "letterNumbers":  [
-                                                     3,
-                                                     6,
-                                                     7,
-                                                     13
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c2_1",
-                          "clueText":  "Tiny silicon integrated circuit brain",
-                          "targetWord":  "CHIP",
-                          "letterNumbers":  [
-                                                3,
-                                                6,
-                                                7,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c2_2",
-                          "clueText":  "Group of eight binary bits",
-                          "targetWord":  "BYTE",
-                          "letterNumbers":  [
-                                                2,
-                                                18,
-                                                16,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c2_3",
-                          "clueText":  "Written instructions executing in software",
-                          "targetWord":  "CODE",
-                          "letterNumbers":  [
-                                                3,
-                                                12,
-                                                4,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c2_4",
-                          "clueText":  "Magnetic or flash storage holding user files",
-                          "targetWord":  "DISK",
-                          "letterNumbers":  [
-                                                4,
-                                                7,
-                                                15,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c2_5",
-                          "clueText":  "Semiconductor crystal used to build microchips",
-                          "targetWord":  "SILICON",
-                          "letterNumbers":  [
-                                                15,
-                                                7,
-                                                9,
-                                                7,
-                                                3,
-                                                12,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c2_6",
-                          "clueText":  "Fast temporary active computer memory",
-                          "targetWord":  "RAM",
-                          "letterNumbers":  [
-                                                14,
-                                                1,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c2_7",
-                          "clueText":  "To execute a program or subroutine",
-                          "targetWord":  "RUN",
-                          "letterNumbers":  [
-                                                14,
-                                                17,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Billions of microscopic transistors etched on silicon chips switch billions of times per second.",
-                                "title":  "Microprocessor Architecture",
-                                "attribution":  "Class 7 Computer Science â€¢ Digital Hardware",
-                                "keyTakeaway":  "Microprocessors compute digital instructions using binary arithmetic.",
-                                "yearOrEra":  "Modern Computing Era"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "MICROPROCESSOR",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Integrated circuit containing central processing logic",
-                                   "etymology":  "Greek mikros (small) + processor",
-                                   "exampleSentence":  "The microprocessor calculates operations at gigahertz frequencies."
-                               },
-                               {
-                                   "word":  "BINARY",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Number system based strictly on zeroes and ones",
-                                   "etymology":  "Latin binarius (consisting of two)",
-                                   "exampleSentence":  "Binary code forms the foundational language of all digital devices."
-                               }
-                           ],
-        "coinsReward":  52
-    },
-    {
-        "id":  3,
-        "title":  "Plane Geometry",
-        "category":  "Mathematics",
-        "quoteText":  "LINES FORM ANGLES AND SHAPES",
-        "quoteWords":  [
-                           {
-                               "word":  "LINES",
-                               "letterNumbers":  [
-                                                     8,
-                                                     7,
-                                                     10,
-                                                     3,
-                                                     14
-                                                 ]
-                           },
-                           {
-                               "word":  "FORM",
-                               "letterNumbers":  [
-                                                     4,
-                                                     11,
-                                                     13,
                                                      9
                                                  ]
                            },
                            {
-                               "word":  "ANGLES",
+                               "word":  "CAN",
                                "letterNumbers":  [
+                                                     2,
                                                      1,
-                                                     10,
-                                                     5,
-                                                     8,
-                                                     3,
-                                                     14
+                                                     7
                                                  ]
                            },
                            {
-                               "word":  "AND",
-                               "letterNumbers":  [
-                                                     1,
-                                                     10,
-                                                     2
-                                                 ]
-                           },
-                           {
-                               "word":  "SHAPES",
-                               "letterNumbers":  [
-                                                     14,
-                                                     6,
-                                                     1,
-                                                     12,
-                                                     3,
-                                                     14
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c3_1",
-                          "clueText":  "Figure formed by two rays meeting at a vertex",
-                          "targetWord":  "ANGLE",
-                          "letterNumbers":  [
-                                                1,
-                                                10,
-                                                5,
-                                                8,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c3_2",
-                          "clueText":  "Straight infinite one-dimensional geometric path",
-                          "targetWord":  "LINE",
-                          "letterNumbers":  [
-                                                8,
-                                                7,
-                                                10,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c3_3",
-                          "clueText":  "Form or geometric outline of an enclosed area",
-                          "targetWord":  "SHAPE",
-                          "letterNumbers":  [
-                                                14,
-                                                6,
-                                                1,
-                                                12,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c3_4",
-                          "clueText":  "Structure or configuration of geometric figures",
-                          "targetWord":  "FORM",
-                          "letterNumbers":  [
-                                                4,
-                                                11,
-                                                13,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c3_5",
-                          "clueText":  "Exact position in space having zero dimensions",
-                          "targetWord":  "POINT",
-                          "letterNumbers":  [
-                                                12,
-                                                11,
-                                                7,
-                                                10,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c3_6",
-                          "clueText":  "Straight line segment forming the boundary of a polygon",
-                          "targetWord":  "SIDE",
-                          "letterNumbers":  [
-                                                14,
-                                                7,
-                                                2,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c3_7",
-                          "clueText":  "Three-dimensional geometric body having volume",
-                          "targetWord":  "SOLID",
-                          "letterNumbers":  [
-                                                14,
-                                                11,
-                                                8,
-                                                7,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Euclid established axiomatic rules defining straight lines, acute angles, and polygon shapes.",
-                                "title":  "Euclidean Plane Geometry",
-                                "attribution":  "Class 8 Mathematics â€¢ Plane Geometry",
-                                "keyTakeaway":  "Every complex polyhedral architecture is built upon basic lines and planar angles.",
-                                "yearOrEra":  "Classical Greek Mathematics"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "VERTEX",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Meeting point of lines forming an angle",
-                                   "etymology":  "Latin vertex (turning point / summit)",
-                                   "exampleSentence":  "A triangle possesses three distinct vertices."
-                               },
-                               {
-                                   "word":  "POLYGON",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Flat closed figure with straight sides",
-                                   "etymology":  "Greek poly (many) + gonia (angle)",
-                                   "exampleSentence":  "Pentagons and hexagons are common regular polygons."
-                               }
-                           ],
-        "coinsReward":  53
-    },
-    {
-        "id":  4,
-        "title":  "Thermal Energy",
-        "category":  "Physical Science",
-        "quoteText":  "HEAT MELTS SOLID COLD ICE",
-        "quoteWords":  [
-                           {
-                               "word":  "HEAT",
-                               "letterNumbers":  [
-                                                     6,
-                                                     4,
-                                                     1,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "MELTS",
+                               "word":  "SEE",
                                "letterNumbers":  [
                                                      9,
-                                                     4,
-                                                     8,
-                                                     12,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "SOLID",
-                               "letterNumbers":  [
-                                                     11,
-                                                     10,
-                                                     8,
-                                                     7,
+                                                     3,
                                                      3
                                                  ]
                            },
                            {
-                               "word":  "COLD",
+                               "word":  "AT",
                                "letterNumbers":  [
-                                                     2,
-                                                     10,
-                                                     8,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "ICE",
-                               "letterNumbers":  [
-                                                     7,
-                                                     2,
-                                                     4
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c4_1",
-                          "clueText":  "Thermal energy transferred by temperature gradient",
-                          "targetWord":  "HEAT",
-                          "letterNumbers":  [
-                                                6,
-                                                4,
-                                                1,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c4_2",
-                          "clueText":  "To transform from solid state to liquid",
-                          "targetWord":  "MELT",
-                          "letterNumbers":  [
-                                                9,
-                                                4,
-                                                8,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c4_3",
-                          "clueText":  "Firm state of matter retaining fixed shape",
-                          "targetWord":  "SOLID",
-                          "letterNumbers":  [
-                                                11,
-                                                10,
-                                                8,
-                                                7,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c4_4",
-                          "clueText":  "Condition of having low thermal temperature",
-                          "targetWord":  "COLD",
-                          "letterNumbers":  [
-                                                2,
-                                                10,
-                                                8,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c4_5",
-                          "clueText":  "Frozen crystal solid state of water",
-                          "targetWord":  "ICE",
-                          "letterNumbers":  [
-                                                7,
-                                                2,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c4_6",
-                          "clueText":  "Invisible hot vapor produced by boiling water",
-                          "targetWord":  "STEAM",
-                          "letterNumbers":  [
-                                                11,
-                                                12,
-                                                4,
-                                                1,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c4_7",
-                          "clueText":  "Visible glowing gas of active combustion",
-                          "targetWord":  "FLAME",
-                          "letterNumbers":  [
-                                                5,
-                                                8,
-                                                1,
-                                                9,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Applying latent heat breaks molecular crystal lattices, causing rigid ice to melt into water.",
-                                "title":  "Thermodynamics \u0026 Phase Transition",
-                                "attribution":  "Class 9 Physics â€¢ Heat \u0026 Matter",
-                                "keyTakeaway":  "Temperature measures average molecular kinetic energy.",
-                                "yearOrEra":  "Physical Chemistry Principles"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "THERMODYNAMICS",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Branch of physics studying heat and work transformation",
-                                   "etymology":  "Greek therme (heat) + dynamis (power)",
-                                   "exampleSentence":  "Thermodynamics explains energy conservation during phase shifts."
-                               },
-                               {
-                                   "word":  "LATENT",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Hidden heat absorbed during phase transition without temperature change",
-                                   "etymology":  "Latin latens (hidden, concealed)",
-                                   "exampleSentence":  "Latent heat of fusion is required to melt polar ice caps."
-                               }
-                           ],
-        "coinsReward":  54
-    },
-    {
-        "id":  5,
-        "title":  "Indus River Basin",
-        "category":  "Geography",
-        "quoteText":  "RIVERS BRING WATER TO FARMS",
-        "quoteWords":  [
-                           {
-                               "word":  "RIVERS",
-                               "letterNumbers":  [
-                                                     11,
-                                                     6,
-                                                     14,
-                                                     3,
-                                                     11,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "BRING",
-                               "letterNumbers":  [
-                                                     2,
-                                                     11,
-                                                     6,
-                                                     9,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "WATER",
-                               "letterNumbers":  [
-                                                     15,
                                                      1,
-                                                     13,
-                                                     3,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "TO",
-                               "letterNumbers":  [
-                                                     13,
                                                      10
                                                  ]
                            },
                            {
-                               "word":  "FARMS",
+                               "word":  "NIGHT",
                                "letterNumbers":  [
+                                                     7,
+                                                     6,
                                                      4,
-                                                     1,
-                                                     11,
-                                                     8,
-                                                     12
+                                                     5,
+                                                     10
                                                  ]
                            }
                        ],
+        "category":  "Animals",
+        "title":  "Cats at Night",
+        "vocabularyList":  [
+                               {
+                                   "word":  "KITTEN",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "A young baby cat",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "KITTEN is an important concept in Animals."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
         "clues":  [
                       {
-                          "id":  "c5_1",
-                          "clueText":  "Large natural flowing freshwater stream",
-                          "targetWord":  "RIVER",
-                          "letterNumbers":  [
-                                                11,
-                                                6,
-                                                14,
-                                                3,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c5_2",
-                          "clueText":  "Liquid compound of hydrogen and oxygen",
-                          "targetWord":  "WATER",
-                          "letterNumbers":  [
-                                                15,
-                                                1,
-                                                13,
-                                                3,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c5_3",
-                          "clueText":  "Tilled land devoted to agricultural crops",
-                          "targetWord":  "FARM",
-                          "letterNumbers":  [
-                                                4,
-                                                1,
-                                                11,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c5_4",
-                          "clueText":  "Geographical depression drained by a river system",
-                          "targetWord":  "BASIN",
                           "letterNumbers":  [
                                                 2,
                                                 1,
-                                                12,
-                                                6,
-                                                9
+                                                10
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "CAT",
+                          "clueText":  "Furry pet that meows and purrs",
+                          "id":  "c1_1"
                       },
                       {
-                          "id":  "c5_5",
-                          "clueText":  "Steady continuous smooth fluid movement",
-                          "targetWord":  "FLOW",
                           "letterNumbers":  [
-                                                4,
-                                                7,
-                                                10,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c5_6",
-                          "clueText":  "Narrow channel of running water",
-                          "targetWord":  "STREAM",
-                          "letterNumbers":  [
-                                                12,
-                                                13,
+                                                9,
                                                 11,
-                                                3,
-                                                1,
-                                                8
+                                                7
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright star in daytime sky",
+                          "id":  "c1_2"
                       },
                       {
-                          "id":  "c5_7",
-                          "clueText":  "Lush color of fertile vegetative foliage",
-                          "targetWord":  "GREEN",
                           "letterNumbers":  [
                                                 5,
-                                                11,
-                                                3,
-                                                3,
-                                                9
+                                                1,
+                                                10
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "HAT",
+                          "clueText":  "Clothing worn on the head",
+                          "id":  "c1_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                3,
+                                                10
+                                            ],
+                          "targetWord":  "NET",
+                          "clueText":  "Mesh used to catch fish",
+                          "id":  "c1_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                6,
+                                                4
+                                            ],
+                          "targetWord":  "PIG",
+                          "clueText":  "Pink farm animal that oinks",
+                          "id":  "c1_5"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Originating from Himalayan glaciers, the Indus feeds the largest contiguous canal irrigation network.",
-                                "title":  "Indus Basin Agricultural Lifeline",
-                                "attribution":  "Class 8 Geography â€¢ South Asian Basins",
-                                "keyTakeaway":  "Alluvial soil along riverbanks fosters thriving agrarian civilizations.",
-                                "yearOrEra":  "Ancient \u0026 Modern Irrigation Systems"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "TRIBUTARY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Freshwater stream feeding into a larger parent river",
-                                   "etymology":  "Latin tributum (contribution)",
-                                   "exampleSentence":  "The Jhelum River is a major northern tributary of the Indus."
-                               },
-                               {
-                                   "word":  "ALLUVIAL",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Rich soil deposit left by river floodwaters",
-                                   "etymology":  "Latin alluvio (wash against)",
-                                   "exampleSentence":  "Alluvial plains support dense crop yields."
-                               }
-                           ],
-        "coinsReward":  55
+                  ]
     },
     {
-        "id":  6,
-        "title":  "Atomic Structure",
-        "category":  "Chemistry",
-        "quoteText":  "ATOMS BOND TO MAKE MOLECULES",
+        "quoteText":  "SUN GIVES EARTH WARM LIGHT",
+        "educationalFact":  {
+                                "historicalContext":  "The Sun gives our planet heat and bright light every day.",
+                                "title":  "Our Sun",
+                                "attribution":  "Class 1 - 3 • Nature",
+                                "keyTakeaway":  "Plants and trees need sunlight to make their food!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  2,
+        "coinsReward":  54,
         "quoteWords":  [
                            {
-                               "word":  "ATOMS",
+                               "word":  "SUN",
                                "letterNumbers":  [
-                                                     1,
-                                                     14,
-                                                     11,
-                                                     9,
-                                                     13
+                                                     10,
+                                                     12,
+                                                     8
                                                  ]
                            },
                            {
-                               "word":  "BOND",
+                               "word":  "GIVES",
+                               "letterNumbers":  [
+                                                     3,
+                                                     5,
+                                                     13,
+                                                     2,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "EARTH",
                                "letterNumbers":  [
                                                      2,
+                                                     1,
+                                                     9,
                                                      11,
-                                                     10,
                                                      4
                                                  ]
                            },
                            {
-                               "word":  "TO",
+                               "word":  "WARM",
                                "letterNumbers":  [
                                                      14,
+                                                     1,
+                                                     9,
+                                                     7
+                                                 ]
+                           },
+                           {
+                               "word":  "LIGHT",
+                               "letterNumbers":  [
+                                                     6,
+                                                     5,
+                                                     3,
+                                                     4,
                                                      11
+                                                 ]
+                           }
+                       ],
+        "category":  "Nature",
+        "title":  "Warm Sunshine",
+        "vocabularyList":  [
+                               {
+                                   "word":  "SOLAR",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Coming from the Sun",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "SOLAR is an important concept in Nature."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                12,
+                                                8
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright yellow star in the sky",
+                          "id":  "c2_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                1,
+                                                9,
+                                                7
+                                            ],
+                          "targetWord":  "WARM",
+                          "clueText":  "Pleasantly hot like a cozy blanket",
+                          "id":  "c2_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                5,
+                                                3,
+                                                4,
+                                                11
+                                            ],
+                          "targetWord":  "LIGHT",
+                          "clueText":  "Brightness that helps us see",
+                          "id":  "c2_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                1,
+                                                9,
+                                                11,
+                                                4
+                                            ],
+                          "targetWord":  "EARTH",
+                          "clueText":  "The planet we all live on",
+                          "id":  "c2_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                5,
+                                                8,
+                                                2
+                                            ],
+                          "targetWord":  "VINE",
+                          "clueText":  "Climbing plant growing on walls",
+                          "id":  "c2_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "BEES MAKE SWEET HONEY",
+        "educationalFact":  {
+                                "historicalContext":  "Bees visit colorful flowers to collect sweet nectar.",
+                                "title":  "Busy Honey Bees",
+                                "attribution":  "Class 1 - 3 • Insects",
+                                "keyTakeaway":  "Honey is pure natural food that never goes bad!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  3,
+        "coinsReward":  56,
+        "quoteWords":  [
+                           {
+                               "word":  "BEES",
+                               "letterNumbers":  [
+                                                     2,
+                                                     3,
+                                                     3,
+                                                     10
                                                  ]
                            },
                            {
                                "word":  "MAKE",
                                "letterNumbers":  [
-                                                     9,
+                                                     6,
                                                      1,
-                                                     7,
-                                                     5
+                                                     5,
+                                                     3
                                                  ]
                            },
                            {
-                               "word":  "MOLECULES",
+                               "word":  "SWEET",
                                "letterNumbers":  [
-                                                     9,
-                                                     11,
-                                                     8,
-                                                     5,
+                                                     10,
+                                                     12,
                                                      3,
-                                                     15,
+                                                     3,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "HONEY",
+                               "letterNumbers":  [
+                                                     4,
                                                      8,
-                                                     5,
+                                                     7,
+                                                     3,
                                                      13
                                                  ]
                            }
                        ],
-        "clues":  [
-                      {
-                          "id":  "c6_1",
-                          "clueText":  "Smallest indivisible constituent unit of matter",
-                          "targetWord":  "ATOM",
-                          "letterNumbers":  [
-                                                1,
-                                                14,
-                                                11,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c6_2",
-                          "clueText":  "Chemical attraction binding atomic nuclei",
-                          "targetWord":  "BOND",
-                          "letterNumbers":  [
-                                                2,
-                                                11,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c6_3",
-                          "clueText":  "Group of atoms held together by covalent bonds",
-                          "targetWord":  "MOLECULE",
-                          "letterNumbers":  [
-                                                9,
-                                                11,
-                                                8,
-                                                5,
-                                                3,
-                                                15,
-                                                8,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c6_4",
-                          "clueText":  "Central nucleus containing protons and neutrons",
-                          "targetWord":  "CORE",
-                          "letterNumbers":  [
-                                                3,
-                                                11,
-                                                12,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c6_5",
-                          "clueText":  "Quantity of matter contained within a physical body",
-                          "targetWord":  "MASS",
-                          "letterNumbers":  [
-                                                9,
-                                                1,
-                                                13,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c6_6",
-                          "clueText":  "Electrically conductive lustrous element",
-                          "targetWord":  "METAL",
-                          "letterNumbers":  [
-                                                9,
-                                                5,
-                                                14,
-                                                1,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c6_7",
-                          "clueText":  "Chemical bond or connection joining atoms",
-                          "targetWord":  "LINK",
-                          "letterNumbers":  [
-                                                8,
-                                                6,
-                                                10,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Electrons share valence orbitals to form stable covalent bonds, assembling all elements into complex substances.",
-                                "title":  "Subatomic Physics \u0026 Chemical Bonds",
-                                "attribution":  "Class 9 Chemistry â€¢ Atomic Theory",
-                                "keyTakeaway":  "Chemical reactions rearrange atomic bonds without destroying matter.",
-                                "yearOrEra":  "Atomic Era Discoveries"
-                            },
+        "category":  "Insects",
+        "title":  "Sweet Honey",
         "vocabularyList":  [
                                {
-                                   "word":  "VALENCE",
+                                   "word":  "NECTAR",
                                    "partOfSpeech":  "noun",
-                                   "definition":  "Combining power of an atom determined by outer electrons",
-                                   "etymology":  "Latin valentia (strength)",
-                                   "exampleSentence":  "Carbon possesses a valence of four, allowing varied organic chains."
-                               },
-                               {
-                                   "word":  "COVALENT",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Chemical link formed through mutual sharing of electron pairs",
-                                   "etymology":  "Prefix co- (together) + valence",
-                                   "exampleSentence":  "Water molecules are bound by polar covalent bonds."
+                                   "definition":  "Sweet juice made by flowers",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "NECTAR is an important concept in Insects."
                                }
                            ],
-        "coinsReward":  56
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                3,
+                                                3
+                                            ],
+                          "targetWord":  "BEE",
+                          "clueText":  "Buzzing insect making honey",
+                          "id":  "c3_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                12,
+                                                3,
+                                                3,
+                                                11
+                                            ],
+                          "targetWord":  "SWEET",
+                          "clueText":  "Tasting sugary and delicious",
+                          "id":  "c3_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                8,
+                                                7,
+                                                3,
+                                                13
+                                            ],
+                          "targetWord":  "HONEY",
+                          "clueText":  "Golden syrup made by bees",
+                          "id":  "c3_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                1,
+                                                5,
+                                                3
+                                            ],
+                          "targetWord":  "MAKE",
+                          "clueText":  "To create or build something",
+                          "id":  "c3_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                9,
+                                                3,
+                                                3
+                                            ],
+                          "targetWord":  "TREE",
+                          "clueText":  "Tall leafy green plant",
+                          "id":  "c3_5"
+                      }
+                  ]
     },
     {
-        "id":  7,
-        "title":  "Light \u0026 Optics",
-        "category":  "Physical Science",
-        "quoteText":  "PRISMS BEND RAYS OF SUNLIGHT",
+        "quoteText":  "BIRDS HAVE WARM FEATHERS",
+        "educationalFact":  {
+                                "historicalContext":  "Feathers keep birds warm in cold weather and help them fly.",
+                                "title":  "Feather Warmth",
+                                "attribution":  "Class 1 - 3 • Birds",
+                                "keyTakeaway":  "Birds are the only creatures with true feathers!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  4,
+        "coinsReward":  58,
         "quoteWords":  [
                            {
-                               "word":  "PRISMS",
+                               "word":  "BIRDS",
                                "letterNumbers":  [
-                                                     14,
-                                                     15,
+                                                     2,
+                                                     7,
                                                      9,
-                                                     16,
-                                                     11,
-                                                     16
+                                                     3,
+                                                     10
                                                  ]
                            },
                            {
-                               "word":  "BEND",
+                               "word":  "HAVE",
                                "letterNumbers":  [
-                                                     2,
-                                                     5,
+                                                     6,
+                                                     1,
                                                      12,
                                                      4
                                                  ]
                            },
                            {
-                               "word":  "RAYS",
-                               "letterNumbers":  [
-                                                     15,
-                                                     1,
-                                                     19,
-                                                     16
-                                                 ]
-                           },
-                           {
-                               "word":  "OF",
+                               "word":  "WARM",
                                "letterNumbers":  [
                                                      13,
-                                                     6
+                                                     1,
+                                                     9,
+                                                     8
                                                  ]
                            },
                            {
-                               "word":  "SUNLIGHT",
+                               "word":  "FEATHERS",
                                "letterNumbers":  [
-                                                     16,
-                                                     18,
-                                                     12,
-                                                     10,
+                                                     5,
+                                                     4,
+                                                     1,
+                                                     11,
+                                                     6,
+                                                     4,
                                                      9,
-                                                     7,
-                                                     8,
-                                                     17
+                                                     10
                                                  ]
                            }
                        ],
+        "category":  "Birds",
+        "title":  "Soft Feathers",
+        "vocabularyList":  [
+                               {
+                                   "word":  "WING",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Body part used for flying",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "WING is an important concept in Birds."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
         "clues":  [
                       {
-                          "id":  "c7_1",
-                          "clueText":  "Triangular glass block dispersing incident light",
-                          "targetWord":  "PRISM",
-                          "letterNumbers":  [
-                                                14,
-                                                15,
-                                                9,
-                                                16,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c7_2",
-                          "clueText":  "To deviate or refract from a straight path",
-                          "targetWord":  "BEND",
                           "letterNumbers":  [
                                                 2,
-                                                5,
+                                                7,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "BIRD",
+                          "clueText":  "Winged animal singing in trees",
+                          "id":  "c4_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                1,
+                                                9,
+                                                8
+                                            ],
+                          "targetWord":  "WARM",
+                          "clueText":  "Pleasantly heated, not cold",
+                          "id":  "c4_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                1,
                                                 12,
                                                 4
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "HAVE",
+                          "clueText":  "To own or hold something",
+                          "id":  "c4_3"
                       },
                       {
-                          "id":  "c7_3",
-                          "clueText":  "Narrow beam or line of radiant light energy",
-                          "targetWord":  "RAY",
                           "letterNumbers":  [
-                                                15,
-                                                1,
-                                                19
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c7_4",
-                          "clueText":  "Electromagnetic radiation visible to the human eye",
-                          "targetWord":  "LIGHT",
-                          "letterNumbers":  [
-                                                10,
-                                                9,
+                                                5,
                                                 7,
-                                                8,
-                                                17
+                                                10,
+                                                6
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "FISH",
+                          "clueText":  "Swimmer with fins in water",
+                          "id":  "c4_4"
                       },
                       {
-                          "id":  "c7_5",
-                          "clueText":  "Point at which converging light rays meet",
-                          "targetWord":  "FOCUS",
-                          "letterNumbers":  [
-                                                6,
-                                                13,
-                                                3,
-                                                18,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c7_6",
-                          "clueText":  "Curved transparent glass focusing optical rays",
-                          "targetWord":  "LENS",
                           "letterNumbers":  [
                                                 10,
-                                                5,
-                                                12,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c7_7",
-                          "clueText":  "Concentrated directional stream of photon radiation",
-                          "targetWord":  "BEAM",
-                          "letterNumbers":  [
-                                                2,
-                                                5,
+                                                11,
                                                 1,
-                                                11
+                                                9
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "STAR",
+                          "clueText":  "Twinkling night light in sky",
+                          "id":  "c4_5"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Sir Isaac Newton proved white sunlight is composed of a continuous spectrum of rainbow hues.",
-                                "title":  "Refraction \u0026 Optical Dispersion",
-                                "attribution":  "Class 8 Physics â€¢ Light \u0026 Optics",
-                                "keyTakeaway":  "Light slows down and bends when entering denser media like water or glass.",
-                                "yearOrEra":  "Newtonian Optics Experiments"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "REFRACTION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Bending of light waves entering a different optical medium",
-                                   "etymology":  "Latin refractus (broken back)",
-                                   "exampleSentence":  "Refraction causes underwater objects to appear shallower."
-                               },
-                               {
-                                   "word":  "DISPERSION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Separation of composite white light into distinct wavelength colors",
-                                   "etymology":  "Latin dispergere (to scatter)",
-                                   "exampleSentence":  "Raindrops create rainbows through optical dispersion."
-                               }
-                           ],
-        "coinsReward":  57
+                  ]
     },
     {
-        "id":  8,
-        "title":  "Solar System",
-        "category":  "Astronomy",
-        "quoteText":  "PLANETS REVOLVE IN SOLAR ORBITS",
+        "quoteText":  "RAIN HELPS BIG TREES GROW",
+        "educationalFact":  {
+                                "historicalContext":  "Roots drink water deep in soil and send it to leaves.",
+                                "title":  "Plant Drinking",
+                                "attribution":  "Class 1 - 3 • Plants",
+                                "keyTakeaway":  "Big trees drink many gallons of water on sunny days!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  5,
+        "coinsReward":  60,
         "quoteWords":  [
                            {
-                               "word":  "PLANETS",
+                               "word":  "RAIN",
                                "letterNumbers":  [
-                                                     10,
-                                                     6,
+                                                     11,
                                                      1,
-                                                     8,
-                                                     4,
-                                                     13,
+                                                     6,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "HELPS",
+                               "letterNumbers":  [
+                                                     5,
+                                                     3,
+                                                     7,
+                                                     10,
                                                      12
                                                  ]
                            },
                            {
-                               "word":  "REVOLVE",
+                               "word":  "BIG",
+                               "letterNumbers":  [
+                                                     2,
+                                                     6,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "TREES",
+                               "letterNumbers":  [
+                                                     13,
+                                                     11,
+                                                     3,
+                                                     3,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "GROW",
+                               "letterNumbers":  [
+                                                     4,
+                                                     11,
+                                                     9,
+                                                     15
+                                                 ]
+                           }
+                       ],
+        "category":  "Plants",
+        "title":  "Rain on Trees",
+        "vocabularyList":  [
+                               {
+                                   "word":  "ROOT",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Underground part of a plant",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "ROOT is an important concept in Plants."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                1,
+                                                6,
+                                                8
+                                            ],
+                          "targetWord":  "RAIN",
+                          "clueText":  "Water drops falling from clouds",
+                          "id":  "c5_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                11,
+                                                3,
+                                                3
+                                            ],
+                          "targetWord":  "TREE",
+                          "clueText":  "Tall wooden plant with branches",
+                          "id":  "c5_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                11,
+                                                9,
+                                                15
+                                            ],
+                          "targetWord":  "GROW",
+                          "clueText":  "To get bigger and taller",
+                          "id":  "c5_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                3,
+                                                7,
+                                                10
+                                            ],
+                          "targetWord":  "HELP",
+                          "clueText":  "To give a hand to someone",
+                          "id":  "c5_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                6,
+                                                4
+                                            ],
+                          "targetWord":  "BIG",
+                          "clueText":  "Large in size, not small",
+                          "id":  "c5_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                14,
+                                                8
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright glowing star warming our daytime sky",
+                          "id":  "c5_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "FISH SWIM WITH SOFT FINS",
+        "educationalFact":  {
+                                "historicalContext":  "Fish use gills on their sides to breathe underwater.",
+                                "title":  "Breathing in Water",
+                                "attribution":  "Class 1 - 3 • Ocean Life",
+                                "keyTakeaway":  "Some fish can sleep with eyes open without eyelids!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  6,
+        "coinsReward":  62,
+        "quoteWords":  [
+                           {
+                               "word":  "FISH",
+                               "letterNumbers":  [
+                                                     2,
+                                                     5,
+                                                     10,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "SWIM",
+                               "letterNumbers":  [
+                                                     10,
+                                                     12,
+                                                     5,
+                                                     6
+                                                 ]
+                           },
+                           {
+                               "word":  "WITH",
+                               "letterNumbers":  [
+                                                     12,
+                                                     5,
+                                                     11,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "SOFT",
+                               "letterNumbers":  [
+                                                     10,
+                                                     8,
+                                                     2,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "FINS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     5,
+                                                     7,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Ocean Life",
+        "title":  "Fins in Water",
+        "vocabularyList":  [
+                               {
+                                   "word":  "GILLS",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Organs fish use to breathe",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "GILLS is an important concept in Ocean Life."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                5,
+                                                10,
+                                                4
+                                            ],
+                          "targetWord":  "FISH",
+                          "clueText":  "Animal swimming underwater",
+                          "id":  "c6_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                12,
+                                                5,
+                                                6
+                                            ],
+                          "targetWord":  "SWIM",
+                          "clueText":  "To glide through water",
+                          "id":  "c6_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                8,
+                                                2,
+                                                11
+                                            ],
+                          "targetWord":  "SOFT",
+                          "clueText":  "Pleasant to touch, like fur",
+                          "id":  "c6_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                5,
+                                                7,
+                                                1
+                                            ],
+                          "targetWord":  "WIND",
+                          "clueText":  "Moving air on a breezy day",
+                          "id":  "c6_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                9,
+                                                8,
+                                                3
+                                            ],
+                          "targetWord":  "FROG",
+                          "clueText":  "Green animal leaping in ponds",
+                          "id":  "c6_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "COWS EAT GREEN FRESH GRASS",
+        "educationalFact":  {
+                                "historicalContext":  "Cows chew grass in sunny fields and produce fresh milk.",
+                                "title":  "Gentle Grazers",
+                                "attribution":  "Class 1 - 3 • Farm Animals",
+                                "keyTakeaway":  "Cows have four stomach sections to digest green grass!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  7,
+        "coinsReward":  64,
+        "quoteWords":  [
+                           {
+                               "word":  "COWS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     8,
+                                                     12,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "EAT",
+                               "letterNumbers":  [
+                                                     3,
+                                                     1,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "GREEN",
+                               "letterNumbers":  [
+                                                     5,
+                                                     9,
+                                                     3,
+                                                     3,
+                                                     7
+                                                 ]
+                           },
+                           {
+                               "word":  "FRESH",
+                               "letterNumbers":  [
+                                                     4,
+                                                     9,
+                                                     3,
+                                                     10,
+                                                     6
+                                                 ]
+                           },
+                           {
+                               "word":  "GRASS",
+                               "letterNumbers":  [
+                                                     5,
+                                                     9,
+                                                     1,
+                                                     10,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Farm Animals",
+        "title":  "Green Pastures",
+        "vocabularyList":  [
+                               {
+                                   "word":  "DAIRY",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Foods made from milk",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "DAIRY is an important concept in Farm Animals."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                8,
+                                                12
+                                            ],
+                          "targetWord":  "COW",
+                          "clueText":  "Farm animal giving us milk",
+                          "id":  "c7_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                11
+                                            ],
+                          "targetWord":  "EAT",
+                          "clueText":  "To chew and swallow food",
+                          "id":  "c7_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                9,
+                                                3,
+                                                3,
+                                                7
+                                            ],
+                          "targetWord":  "GREEN",
+                          "clueText":  "The color of grass and leaves",
+                          "id":  "c7_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                9,
+                                                1,
+                                                10,
+                                                10
+                                            ],
+                          "targetWord":  "GRASS",
+                          "clueText":  "Short green plants in fields",
+                          "id":  "c7_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                1,
+                                                10,
+                                                11
+                                            ],
+                          "targetWord":  "FAST",
+                          "clueText":  "Moving quickly with speed",
+                          "id":  "c7_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                1,
+                                                11
+                                            ],
+                          "targetWord":  "HAT",
+                          "clueText":  "Headwear that protects you from sun or rain",
+                          "id":  "c7_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "MOON GLOWS IN NIGHT SKY",
+        "educationalFact":  {
+                                "historicalContext":  "The Moon acts like a big mirror reflecting the Sun\u0027s light.",
+                                "title":  "Reflecting Light",
+                                "attribution":  "Class 1 - 3 • Sky",
+                                "keyTakeaway":  "Astronaut footprints on the Moon stay for millions of years!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  8,
+        "coinsReward":  66,
+        "quoteWords":  [
+                           {
+                               "word":  "MOON",
+                               "letterNumbers":  [
+                                                     7,
+                                                     9,
+                                                     9,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "GLOWS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     6,
+                                                     9,
+                                                     13,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "IN",
+                               "letterNumbers":  [
+                                                     4,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "NIGHT",
+                               "letterNumbers":  [
+                                                     8,
+                                                     4,
+                                                     2,
+                                                     3,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "SKY",
                                "letterNumbers":  [
                                                      11,
+                                                     5,
+                                                     14
+                                                 ]
+                           }
+                       ],
+        "category":  "Sky",
+        "title":  "Night Moon",
+        "vocabularyList":  [
+                               {
+                                   "word":  "LUNAR",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Relating to the Moon",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "LUNAR is an important concept in Sky."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                9,
+                                                9,
+                                                8
+                                            ],
+                          "targetWord":  "MOON",
+                          "clueText":  "Glowing orb in the night sky",
+                          "id":  "c8_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                6,
+                                                9,
+                                                13
+                                            ],
+                          "targetWord":  "GLOW",
+                          "clueText":  "To shine with gentle light",
+                          "id":  "c8_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                4,
+                                                2,
+                                                3,
+                                                12
+                                            ],
+                          "targetWord":  "NIGHT",
+                          "clueText":  "Dark time when stars appear",
+                          "id":  "c8_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                5,
+                                                14
+                                            ],
+                          "targetWord":  "SKY",
+                          "clueText":  "Blue space above our heads",
+                          "id":  "c8_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "STAR",
+                          "clueText":  "Twinkling dot of light in space",
+                          "id":  "c8_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "DOGS WAG TAILS WHEN GLAD",
+        "educationalFact":  {
+                                "historicalContext":  "Dogs wag their tails to show when they feel happy and playful.",
+                                "title":  "Tail Talk",
+                                "attribution":  "Class 1 - 3 • Pets",
+                                "keyTakeaway":  "A puppy\u0027s sense of smell is much stronger than a human\u0027s!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  9,
+        "coinsReward":  68,
+        "quoteWords":  [
+                           {
+                               "word":  "DOGS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     11,
                                                      4,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "WAG",
+                               "letterNumbers":  [
                                                      15,
-                                                     9,
+                                                     1,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "TAILS",
+                               "letterNumbers":  [
+                                                     13,
+                                                     1,
                                                      6,
+                                                     8,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "WHEN",
+                               "letterNumbers":  [
                                                      15,
+                                                     5,
+                                                     3,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "GLAD",
+                               "letterNumbers":  [
+                                                     4,
+                                                     8,
+                                                     1,
+                                                     2
+                                                 ]
+                           }
+                       ],
+        "category":  "Pets",
+        "title":  "Happy Dogs",
+        "vocabularyList":  [
+                               {
+                                   "word":  "PUPPY",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "A young baby dog",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "PUPPY is an important concept in Pets."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                11,
+                                                4
+                                            ],
+                          "targetWord":  "DOG",
+                          "clueText":  "Faithful pet that loves fetch",
+                          "id":  "c9_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                1,
+                                                6,
+                                                8
+                                            ],
+                          "targetWord":  "TAIL",
+                          "clueText":  "Flexible part at back of dog",
+                          "id":  "c9_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                8,
+                                                1,
+                                                2
+                                            ],
+                          "targetWord":  "GLAD",
+                          "clueText":  "Happy and cheerful feeling",
+                          "id":  "c9_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                15,
+                                                1,
+                                                8,
+                                                7
+                                            ],
+                          "targetWord":  "WALK",
+                          "clueText":  "To step forward on feet",
+                          "id":  "c9_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                11,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "HOME",
+                          "clueText":  "Where a family lives happily",
+                          "id":  "c9_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                14,
+                                                10
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright glowing star warming our daytime sky",
+                          "id":  "c9_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "FROGS JUMP HIGH IN PONDS",
+        "educationalFact":  {
+                                "historicalContext":  "Frogs start as swimming tadpoles before growing four strong legs.",
+                                "title":  "Growing Frogs",
+                                "attribution":  "Class 1 - 3 • Pond Life",
+                                "keyTakeaway":  "Some tiny tree frogs can jump twenty times their length!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  10,
+        "coinsReward":  70,
+        "quoteWords":  [
+                           {
+                               "word":  "FROGS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     11,
+                                                     9,
+                                                     3,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "JUMP",
+                               "letterNumbers":  [
+                                                     6,
+                                                     13,
+                                                     7,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "HIGH",
+                               "letterNumbers":  [
+                                                     4,
+                                                     5,
+                                                     3,
                                                      4
                                                  ]
                            },
@@ -1214,158 +1214,3365 @@
                                                  ]
                            },
                            {
-                               "word":  "SOLAR",
+                               "word":  "PONDS",
                                "letterNumbers":  [
-                                                     12,
+                                                     10,
                                                      9,
-                                                     6,
+                                                     8,
                                                      1,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "ORBITS",
-                               "letterNumbers":  [
-                                                     9,
-                                                     11,
-                                                     2,
-                                                     5,
-                                                     13,
                                                      12
                                                  ]
                            }
                        ],
+        "category":  "Pond Life",
+        "title":  "Leaping Frogs",
+        "vocabularyList":  [
+                               {
+                                   "word":  "HOP",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "To bounce or spring up",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "HOP is an important concept in Pond Life."
+                               }
+                           ],
+        "classLevel":  "Class 1 - 3",
         "clues":  [
                       {
-                          "id":  "c8_1",
-                          "clueText":  "Large celestial body orbiting a central star",
-                          "targetWord":  "PLANET",
+                          "letterNumbers":  [
+                                                2,
+                                                11,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "FROG",
+                          "clueText":  "Green hopper croaking near water",
+                          "id":  "c10_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                13,
+                                                7,
+                                                10
+                                            ],
+                          "targetWord":  "JUMP",
+                          "clueText":  "To leap high in the air",
+                          "id":  "c10_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                5,
+                                                3,
+                                                4
+                                            ],
+                          "targetWord":  "HIGH",
+                          "clueText":  "Far above the ground",
+                          "id":  "c10_3"
+                      },
+                      {
                           "letterNumbers":  [
                                                 10,
-                                                6,
-                                                1,
+                                                9,
                                                 8,
+                                                1
+                                            ],
+                          "targetWord":  "POND",
+                          "clueText":  "Small pool of fresh water",
+                          "id":  "c10_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                5,
+                                                12,
+                                                4
+                                            ],
+                          "targetWord":  "FISH",
+                          "clueText":  "Underwater creature with fins",
+                          "id":  "c10_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "OCEANS COVER MOST OF EARTH",
+        "educationalFact":  {
+                                "historicalContext":  "Over 70 percent of Earth\u0027s surface is covered by blue ocean water.",
+                                "title":  "Water Planet",
+                                "attribution":  "Class 4 - 5 • Earth",
+                                "keyTakeaway":  "Most living creatures on our planet live in the oceans!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  11,
+        "coinsReward":  72,
+        "quoteWords":  [
+                           {
+                               "word":  "OCEANS",
+                               "letterNumbers":  [
+                                                     9,
+                                                     2,
+                                                     3,
+                                                     1,
+                                                     8,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "COVER",
+                               "letterNumbers":  [
+                                                     2,
+                                                     9,
+                                                     13,
+                                                     3,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "MOST",
+                               "letterNumbers":  [
+                                                     7,
+                                                     9,
+                                                     11,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "OF",
+                               "letterNumbers":  [
+                                                     9,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "EARTH",
+                               "letterNumbers":  [
+                                                     3,
+                                                     1,
+                                                     10,
+                                                     12,
+                                                     5
+                                                 ]
+                           }
+                       ],
+        "category":  "Earth",
+        "title":  "Blue Oceans",
+        "vocabularyList":  [
+                               {
+                                   "word":  "OCEAN",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Very large body of salt water",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "OCEAN is an important concept in Earth."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                2,
+                                                3,
+                                                1,
+                                                8
+                                            ],
+                          "targetWord":  "OCEAN",
+                          "clueText":  "Vast salt water covering Earth",
+                          "id":  "c11_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                10,
+                                                12,
+                                                5
+                                            ],
+                          "targetWord":  "EARTH",
+                          "clueText":  "Our home planet in space",
+                          "id":  "c11_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                9,
+                                                13,
+                                                3,
+                                                10
+                                            ],
+                          "targetWord":  "COVER",
+                          "clueText":  "To spread over a surface",
+                          "id":  "c11_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                9,
+                                                11,
+                                                12
+                                            ],
+                          "targetWord":  "MOST",
+                          "clueText":  "The greatest amount or majority",
+                          "id":  "c11_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                6,
+                                                11,
+                                                5
+                                            ],
+                          "targetWord":  "FISH",
+                          "clueText":  "Scaly animal swimming in sea",
+                          "id":  "c11_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "HEART PUMPS BLOOD EVERY DAY",
+        "educationalFact":  {
+                                "historicalContext":  "Your heart beats about 100,000 times each day without stopping.",
+                                "title":  "Never Resting",
+                                "attribution":  "Class 4 - 5 • Human Body",
+                                "keyTakeaway":  "Your heart pumps thousands of gallons of blood each day!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  12,
+        "coinsReward":  74,
+        "quoteWords":  [
+                           {
+                               "word":  "HEART",
+                               "letterNumbers":  [
+                                                     5,
+                                                     4,
+                                                     1,
+                                                     10,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "PUMPS",
+                               "letterNumbers":  [
+                                                     9,
+                                                     13,
+                                                     7,
+                                                     9,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "BLOOD",
+                               "letterNumbers":  [
+                                                     2,
+                                                     6,
+                                                     8,
+                                                     8,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "EVERY",
+                               "letterNumbers":  [
+                                                     4,
+                                                     14,
+                                                     4,
+                                                     10,
+                                                     15
+                                                 ]
+                           },
+                           {
+                               "word":  "DAY",
+                               "letterNumbers":  [
+                                                     3,
+                                                     1,
+                                                     15
+                                                 ]
+                           }
+                       ],
+        "category":  "Human Body",
+        "title":  "Pumping Heart",
+        "vocabularyList":  [
+                               {
+                                   "word":  "PULSE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Beat of the heart felt in arteries",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "PULSE is an important concept in Human Body."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                4,
+                                                1,
+                                                10,
+                                                12
+                                            ],
+                          "targetWord":  "HEART",
+                          "clueText":  "Chest organ pumping blood",
+                          "id":  "c12_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                6,
+                                                8,
+                                                8,
+                                                3
+                                            ],
+                          "targetWord":  "BLOOD",
+                          "clueText":  "Red fluid carrying oxygen",
+                          "id":  "c12_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                14,
+                                                4,
+                                                10,
+                                                15
+                                            ],
+                          "targetWord":  "EVERY",
+                          "clueText":  "Each single one without fail",
+                          "id":  "c12_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                13,
+                                                7,
+                                                9
+                                            ],
+                          "targetWord":  "PUMP",
+                          "clueText":  "To push liquids through pipes",
+                          "id":  "c12_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "STAR",
+                          "clueText":  "Glowing point in night sky",
+                          "id":  "c12_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "CLOUDS ARE MADE OF WATER DROPS",
+        "educationalFact":  {
+                                "historicalContext":  "Clouds look like white cotton, but they are made of tiny floating water drops.",
+                                "title":  "Floating Water",
+                                "attribution":  "Class 4 - 5 • Weather",
+                                "keyTakeaway":  "A large fluffy white cloud can weigh over a million pounds!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  13,
+        "coinsReward":  76,
+        "quoteWords":  [
+                           {
+                               "word":  "CLOUDS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     8,
+                                                     11,
+                                                     16,
+                                                     3,
+                                                     14
+                                                 ]
+                           },
+                           {
+                               "word":  "ARE",
+                               "letterNumbers":  [
+                                                     1,
+                                                     13,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "MADE",
+                               "letterNumbers":  [
+                                                     9,
+                                                     1,
+                                                     3,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "OF",
+                               "letterNumbers":  [
+                                                     11,
+                                                     5
+                                                 ]
+                           },
+                           {
+                               "word":  "WATER",
+                               "letterNumbers":  [
+                                                     17,
+                                                     1,
+                                                     15,
+                                                     4,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "DROPS",
+                               "letterNumbers":  [
+                                                     3,
+                                                     13,
+                                                     11,
+                                                     12,
+                                                     14
+                                                 ]
+                           }
+                       ],
+        "category":  "Weather",
+        "title":  "Water in Clouds",
+        "vocabularyList":  [
+                               {
+                                   "word":  "VAPOR",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Water in the form of gas in air",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "VAPOR is an important concept in Weather."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                8,
+                                                11,
+                                                16,
+                                                3
+                                            ],
+                          "targetWord":  "CLOUD",
+                          "clueText":  "White mass floating in sky",
+                          "id":  "c13_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                17,
+                                                1,
+                                                15,
                                                 4,
                                                 13
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "WATER",
+                          "clueText":  "Clear liquid we drink daily",
+                          "id":  "c13_2"
                       },
                       {
-                          "id":  "c8_2",
-                          "clueText":  "Gravitationally curved elliptical space trajectory",
-                          "targetWord":  "ORBIT",
-                          "letterNumbers":  [
-                                                9,
-                                                11,
-                                                2,
-                                                5,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c8_3",
-                          "clueText":  "Pertaining to the Sun and its gravitational domain",
-                          "targetWord":  "SOLAR",
-                          "letterNumbers":  [
-                                                12,
-                                                9,
-                                                6,
-                                                1,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c8_4",
-                          "clueText":  "Continuously bending line forming an orbital arc",
-                          "targetWord":  "CURVE",
                           "letterNumbers":  [
                                                 3,
-                                                14,
+                                                13,
                                                 11,
-                                                15,
-                                                4
+                                                12
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "DROP",
+                          "clueText":  "Tiny bead of rain or dew",
+                          "id":  "c13_3"
                       },
                       {
-                          "id":  "c8_5",
-                          "clueText":  "Luminous sphere of burning hydrogen and helium plasma",
-                          "targetWord":  "STAR",
+                          "letterNumbers":  [
+                                                13,
+                                                1,
+                                                7,
+                                                10
+                                            ],
+                          "targetWord":  "RAIN",
+                          "clueText":  "Water falling from storm clouds",
+                          "id":  "c13_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                13,
+                                                11,
+                                                6
+                                            ],
+                          "targetWord":  "FROG",
+                          "clueText":  "Green animal leaping in water",
+                          "id":  "c13_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                16,
+                                                10
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright glowing star warming our daytime sky",
+                          "id":  "c13_6"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                11,
+                                                11,
+                                                10
+                                            ],
+                          "targetWord":  "MOON",
+                          "clueText":  "Glowing orb that shines in the night sky",
+                          "id":  "c13_7"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "CAMELS STORE FAT IN HUMPS",
+        "educationalFact":  {
+                                "historicalContext":  "Camels have humps filled with fat, which they use for energy on long trips.",
+                                "title":  "Desert Travelers",
+                                "attribution":  "Class 4 - 5 • Adaptation",
+                                "keyTakeaway":  "A thirsty camel can drink 30 gallons of water in ten minutes!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  14,
+        "coinsReward":  78,
+        "quoteWords":  [
+                           {
+                               "word":  "CAMELS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     1,
+                                                     9,
+                                                     4,
+                                                     8,
+                                                     14
+                                                 ]
+                           },
+                           {
+                               "word":  "STORE",
+                               "letterNumbers":  [
+                                                     14,
+                                                     15,
+                                                     11,
+                                                     13,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "FAT",
+                               "letterNumbers":  [
+                                                     5,
+                                                     1,
+                                                     15
+                                                 ]
+                           },
+                           {
+                               "word":  "IN",
+                               "letterNumbers":  [
+                                                     7,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "HUMPS",
+                               "letterNumbers":  [
+                                                     6,
+                                                     16,
+                                                     9,
+                                                     12,
+                                                     14
+                                                 ]
+                           }
+                       ],
+        "category":  "Adaptation",
+        "title":  "Desert Camels",
+        "vocabularyList":  [
+                               {
+                                   "word":  "DESERT",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Dry sandy land with little rain",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "DESERT is an important concept in Adaptation."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                1,
+                                                9,
+                                                4,
+                                                8
+                                            ],
+                          "targetWord":  "CAMEL",
+                          "clueText":  "Desert animal with humps",
+                          "id":  "c14_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                15,
+                                                11,
+                                                13,
+                                                4
+                                            ],
+                          "targetWord":  "STORE",
+                          "clueText":  "To keep food for future use",
+                          "id":  "c14_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                16,
+                                                9,
+                                                12
+                                            ],
+                          "targetWord":  "HUMP",
+                          "clueText":  "Mound on the back of a camel",
+                          "id":  "c14_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                1,
+                                                10,
+                                                3
+                                            ],
+                          "targetWord":  "SAND",
+                          "clueText":  "Tiny yellow grains on beaches",
+                          "id":  "c14_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                2,
+                                                4
+                                            ],
+                          "targetWord":  "ICE",
+                          "clueText":  "Frozen solid cold water",
+                          "id":  "c14_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                7,
+                                                14,
+                                                6
+                                            ],
+                          "targetWord":  "FISH",
+                          "clueText":  "Creature with fins and scales swimming in water",
+                          "id":  "c14_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "EARTH MOVES AROUND THE SUN",
+        "educationalFact":  {
+                                "historicalContext":  "Earth travels at 67,000 miles per hour as it circles around the Sun.",
+                                "title":  "Yearly Orbit",
+                                "attribution":  "Class 4 - 5 • Space",
+                                "keyTakeaway":  "It takes 365 days for Earth to make one complete orbit around the Sun!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  15,
+        "coinsReward":  80,
+        "quoteWords":  [
+                           {
+                               "word":  "EARTH",
+                               "letterNumbers":  [
+                                                     3,
+                                                     1,
+                                                     8,
+                                                     10,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "MOVES",
+                               "letterNumbers":  [
+                                                     5,
+                                                     7,
+                                                     12,
+                                                     3,
+                                                     9
+                                                 ]
+                           },
+                           {
+                               "word":  "AROUND",
+                               "letterNumbers":  [
+                                                     1,
+                                                     8,
+                                                     7,
+                                                     11,
+                                                     6,
+                                                     2
+                                                 ]
+                           },
+                           {
+                               "word":  "THE",
+                               "letterNumbers":  [
+                                                     10,
+                                                     4,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "SUN",
+                               "letterNumbers":  [
+                                                     9,
+                                                     11,
+                                                     6
+                                                 ]
+                           }
+                       ],
+        "category":  "Space",
+        "title":  "Earth Orbit",
+        "vocabularyList":  [
+                               {
+                                   "word":  "ORBIT",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Path of a planet around a star",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "ORBIT is an important concept in Space."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                8,
+                                                10,
+                                                4
+                                            ],
+                          "targetWord":  "EARTH",
+                          "clueText":  "Our home planet with life",
+                          "id":  "c15_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                7,
+                                                12,
+                                                3
+                                            ],
+                          "targetWord":  "MOVE",
+                          "clueText":  "To travel from place to place",
+                          "id":  "c15_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                7,
+                                                11,
+                                                6,
+                                                2
+                                            ],
+                          "targetWord":  "ROUND",
+                          "clueText":  "Shaped in a circle or sphere",
+                          "id":  "c15_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                11,
+                                                6
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright central star of solar system",
+                          "id":  "c15_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                7,
+                                                7,
+                                                6
+                                            ],
+                          "targetWord":  "MOON",
+                          "clueText":  "Rocky sphere circling Earth",
+                          "id":  "c15_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "WHALES ARE GIANT SEA MAMMALS",
+        "educationalFact":  {
+                                "historicalContext":  "Blue whales are bigger than any dinosaur, growing up to 100 feet long.",
+                                "title":  "Ocean Giants",
+                                "attribution":  "Class 4 - 5 • Sea Creatures",
+                                "keyTakeaway":  "A blue whale\u0027s tongue weighs as much as an entire adult elephant!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  16,
+        "coinsReward":  82,
+        "quoteWords":  [
+                           {
+                               "word":  "WHALES",
+                               "letterNumbers":  [
+                                                     12,
+                                                     4,
+                                                     1,
+                                                     6,
+                                                     2,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "ARE",
+                               "letterNumbers":  [
+                                                     1,
+                                                     9,
+                                                     2
+                                                 ]
+                           },
+                           {
+                               "word":  "GIANT",
+                               "letterNumbers":  [
+                                                     3,
+                                                     5,
+                                                     1,
+                                                     8,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "SEA",
+                               "letterNumbers":  [
+                                                     10,
+                                                     2,
+                                                     1
+                                                 ]
+                           },
+                           {
+                               "word":  "MAMMALS",
+                               "letterNumbers":  [
+                                                     7,
+                                                     1,
+                                                     7,
+                                                     7,
+                                                     1,
+                                                     6,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Sea Creatures",
+        "title":  "Giant Whales",
+        "vocabularyList":  [
+                               {
+                                   "word":  "MAMMAL",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Animal that feeds milk to its young",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "MAMMAL is an important concept in Sea Creatures."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                4,
+                                                1,
+                                                6,
+                                                2
+                                            ],
+                          "targetWord":  "WHALE",
+                          "clueText":  "Giant ocean mammal that breathes air",
+                          "id":  "c16_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                5,
+                                                1,
+                                                8,
+                                                11
+                                            ],
+                          "targetWord":  "GIANT",
+                          "clueText":  "Huge, immense, and very large",
+                          "id":  "c16_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                2,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "SEAS",
+                          "clueText":  "Vast salt waters of the world",
+                          "id":  "c16_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                12,
+                                                5,
+                                                7
+                                            ],
+                          "targetWord":  "SWIM",
+                          "clueText":  "To move through clear water",
+                          "id":  "c16_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                5,
+                                                8,
+                                                3
+                                            ],
+                          "targetWord":  "RING",
+                          "clueText":  "Circular band worn on finger",
+                          "id":  "c16_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "TREES GIVE US PURE CLEAN AIR",
+        "educationalFact":  {
+                                "historicalContext":  "Leaves take in carbon dioxide and release fresh oxygen for us to breathe.",
+                                "title":  "Air Filters",
+                                "attribution":  "Class 4 - 5 • Environment",
+                                "keyTakeaway":  "One healthy tree produces enough oxygen in a year for two people!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  17,
+        "coinsReward":  84,
+        "quoteWords":  [
+                           {
+                               "word":  "TREES",
+                               "letterNumbers":  [
+                                                     11,
+                                                     9,
+                                                     3,
+                                                     3,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "GIVE",
+                               "letterNumbers":  [
+                                                     4,
+                                                     5,
+                                                     13,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "US",
+                               "letterNumbers":  [
+                                                     12,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "PURE",
+                               "letterNumbers":  [
+                                                     8,
+                                                     12,
+                                                     9,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "CLEAN",
+                               "letterNumbers":  [
+                                                     2,
+                                                     6,
+                                                     3,
+                                                     1,
+                                                     7
+                                                 ]
+                           },
+                           {
+                               "word":  "AIR",
+                               "letterNumbers":  [
+                                                     1,
+                                                     5,
+                                                     9
+                                                 ]
+                           }
+                       ],
+        "category":  "Environment",
+        "title":  "Forest Oxygen",
+        "vocabularyList":  [
+                               {
+                                   "word":  "OXYGEN",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Gas in air needed for breathing",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "OXYGEN is an important concept in Environment."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                9,
+                                                3,
+                                                3
+                                            ],
+                          "targetWord":  "TREE",
+                          "clueText":  "Tall plant with wooden trunk",
+                          "id":  "c17_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                5,
+                                                13,
+                                                3
+                                            ],
+                          "targetWord":  "GIVE",
+                          "clueText":  "To hand over as a gift",
+                          "id":  "c17_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                12,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "PURE",
+                          "clueText":  "Clean and free of dirt",
+                          "id":  "c17_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                6,
+                                                3,
+                                                1,
+                                                7
+                                            ],
+                          "targetWord":  "CLEAN",
+                          "clueText":  "Fresh and unpolluted",
+                          "id":  "c17_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                12,
+                                                7
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Daytime star giving warm light",
+                          "id":  "c17_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "ICE FLOATS ON COLD WATER",
+        "educationalFact":  {
+                                "historicalContext":  "Water expands when it freezes, making solid ice lighter than liquid water.",
+                                "title":  "Why Ice Floats",
+                                "attribution":  "Class 4 - 5 • Water Science",
+                                "keyTakeaway":  "Because ice floats, lakes freeze at the top, protecting fish below!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  18,
+        "coinsReward":  86,
+        "quoteWords":  [
+                           {
+                               "word":  "ICE",
+                               "letterNumbers":  [
+                                                     6,
+                                                     2,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "FLOATS",
+                               "letterNumbers":  [
+                                                     5,
+                                                     7,
+                                                     9,
+                                                     1,
+                                                     12,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "ON",
+                               "letterNumbers":  [
+                                                     9,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "COLD",
+                               "letterNumbers":  [
+                                                     2,
+                                                     9,
+                                                     7,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "WATER",
+                               "letterNumbers":  [
+                                                     13,
+                                                     1,
+                                                     12,
+                                                     4,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Water Science",
+        "title":  "Floating Ice",
+        "vocabularyList":  [
+                               {
+                                   "word":  "FREEZE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "To turn from liquid into solid ice",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "FREEZE is an important concept in Water Science."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                2,
+                                                4
+                                            ],
+                          "targetWord":  "ICE",
+                          "clueText":  "Frozen solid cold water",
+                          "id":  "c18_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                7,
+                                                9,
+                                                1,
+                                                12
+                                            ],
+                          "targetWord":  "FLOAT",
+                          "clueText":  "To rest on water without sinking",
+                          "id":  "c18_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                9,
+                                                7,
+                                                3
+                                            ],
+                          "targetWord":  "COLD",
+                          "clueText":  "Low temperature like winter",
+                          "id":  "c18_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                1,
+                                                12,
+                                                4,
+                                                10
+                                            ],
+                          "targetWord":  "WATER",
+                          "clueText":  "Clear liquid we drink daily",
+                          "id":  "c18_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                8,
+                                                9,
+                                                13
+                                            ],
+                          "targetWord":  "SNOW",
+                          "clueText":  "White frozen crystals from sky",
+                          "id":  "c18_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "RIVERS FLOW INTO WIDE SEAS",
+        "educationalFact":  {
+                                "historicalContext":  "Rivers start high up in snowy hills and flow downhill to the oceans.",
+                                "title":  "Water Journey",
+                                "attribution":  "Class 4 - 5 • Geography",
+                                "keyTakeaway":  "The Nile River is over 4,100 miles long, the longest river on Earth!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  19,
+        "coinsReward":  88,
+        "quoteWords":  [
+                           {
+                               "word":  "RIVERS",
+                               "letterNumbers":  [
+                                                     9,
+                                                     5,
+                                                     12,
+                                                     3,
+                                                     9,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "FLOW",
+                               "letterNumbers":  [
+                                                     4,
+                                                     6,
+                                                     8,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "INTO",
+                               "letterNumbers":  [
+                                                     5,
+                                                     7,
+                                                     11,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "WIDE",
+                               "letterNumbers":  [
+                                                     13,
+                                                     5,
+                                                     2,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "SEAS",
+                               "letterNumbers":  [
+                                                     10,
+                                                     3,
+                                                     1,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Geography",
+        "title":  "Flowing Rivers",
+        "vocabularyList":  [
+                               {
+                                   "word":  "RIVER",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Natural stream of fresh water",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "RIVER is an important concept in Geography."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                5,
+                                                12,
+                                                3,
+                                                9
+                                            ],
+                          "targetWord":  "RIVER",
+                          "clueText":  "Flowing stream of water",
+                          "id":  "c19_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                6,
+                                                8,
+                                                13
+                                            ],
+                          "targetWord":  "FLOW",
+                          "clueText":  "To glide steadily forward",
+                          "id":  "c19_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                5,
+                                                2,
+                                                3
+                                            ],
+                          "targetWord":  "WIDE",
+                          "clueText":  "Broad from side to side",
+                          "id":  "c19_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                3,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "SEAS",
+                          "clueText":  "Salt water oceans on Earth",
+                          "id":  "c19_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                3,
+                                                10,
+                                                11
+                                            ],
+                          "targetWord":  "NEST",
+                          "clueText":  "Twig home built by birds",
+                          "id":  "c19_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "STARS ARE GIANT BALLS OF GAS",
+        "educationalFact":  {
+                                "historicalContext":  "Stars are huge balls of hot glowing gas producing intense light and heat.",
+                                "title":  "Shining Spheres",
+                                "attribution":  "Class 4 - 5 • Astronomy",
+                                "keyTakeaway":  "There are more stars in space than grains of sand on all Earth\u0027s beaches!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  20,
+        "coinsReward":  90,
+        "quoteWords":  [
+                           {
+                               "word":  "STARS",
+                               "letterNumbers":  [
+                                                     12,
+                                                     13,
+                                                     1,
+                                                     11,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "ARE",
+                               "letterNumbers":  [
+                                                     1,
+                                                     11,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "GIANT",
+                               "letterNumbers":  [
+                                                     5,
+                                                     7,
+                                                     1,
+                                                     9,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "BALLS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     1,
+                                                     8,
+                                                     8,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "OF",
+                               "letterNumbers":  [
+                                                     10,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "GAS",
+                               "letterNumbers":  [
+                                                     5,
+                                                     1,
+                                                     12
+                                                 ]
+                           }
+                       ],
+        "category":  "Astronomy",
+        "title":  "Star Power",
+        "vocabularyList":  [
+                               {
+                                   "word":  "STAR",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Luminous ball of hot gas in space",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "STAR is an important concept in Astronomy."
+                               }
+                           ],
+        "classLevel":  "Class 4 - 5",
+        "clues":  [
+                      {
                           "letterNumbers":  [
                                                 12,
                                                 13,
                                                 1,
                                                 11
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "STAR",
+                          "clueText":  "Glowing point in night sky",
+                          "id":  "c20_1"
                       },
                       {
-                          "id":  "c8_6",
-                          "clueText":  "Natural satellite revolving around a planetary host",
-                          "targetWord":  "MOON",
                           "letterNumbers":  [
+                                                5,
                                                 7,
+                                                1,
                                                 9,
-                                                9,
+                                                13
+                                            ],
+                          "targetWord":  "GIANT",
+                          "clueText":  "Colossal and very large",
+                          "id":  "c20_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                1,
+                                                8,
                                                 8
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "BALL",
+                          "clueText":  "Round spherical shape",
+                          "id":  "c20_3"
                       },
                       {
-                          "id":  "c8_7",
-                          "clueText":  "Vast physical expanse beyond planetary atmospheres",
-                          "targetWord":  "SPACE",
                           "letterNumbers":  [
-                                                12,
-                                                10,
+                                                5,
                                                 1,
-                                                3,
-                                                4
+                                                12
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "GAS",
+                          "clueText":  "Air-like state of matter",
+                          "id":  "c20_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                11,
+                                                10,
+                                                5
+                                            ],
+                          "targetWord":  "FROG",
+                          "clueText":  "Green animal leaping in ponds",
+                          "id":  "c20_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                11,
+                                                13,
+                                                6
+                                            ],
+                          "targetWord":  "EARTH",
+                          "clueText":  "Blue planet we all live on",
+                          "id":  "c20_6"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Johannes Kepler demonstrated that planets travel along elliptical orbits with the Sun at one focus.",
-                                "title":  "Planetary Motion \u0026 Gravitation",
-                                "attribution":  "Class 7 Science â€¢ Earth \u0026 Universe",
-                                "keyTakeaway":  "Gravity maintains balance between planetary momentum and solar attraction.",
-                                "yearOrEra":  "Keplerian Astronomy"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "ELLIPSE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Regular oval shape traced by a moving gravitational orbit",
-                                   "etymology":  "Greek elleipsis (falling short)",
-                                   "exampleSentence":  "Earth traces an ellipse around the Sun every year."
-                               },
-                               {
-                                   "word":  "CELESTIAL",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Positioned in or relating to the visible night sky",
-                                   "etymology":  "Latin caelum (sky, heaven)",
-                                   "exampleSentence":  "Astronomers track celestial movements with deep space sensors."
-                               }
-                           ],
-        "coinsReward":  58
+                  ]
     },
     {
-        "id":  9,
-        "title":  "Cell Biology",
-        "category":  "General Science",
-        "quoteText":  "CELLS ARE THE BASIC BLOCKS OF LIFE",
+        "quoteText":  "SOUND TRAVELS FASTER IN WATER",
+        "educationalFact":  {
+                                "historicalContext":  "Because water molecules are packed closely together, sound travels faster in liquids than air.",
+                                "title":  "Speed of Waves",
+                                "attribution":  "Class 6 - 8 • Sound Waves",
+                                "keyTakeaway":  "Whales can communicate through ocean waves across hundreds of miles!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  21,
+        "coinsReward":  92,
+        "quoteWords":  [
+                           {
+                               "word":  "SOUND",
+                               "letterNumbers":  [
+                                                     10,
+                                                     8,
+                                                     12,
+                                                     7,
+                                                     2
+                                                 ]
+                           },
+                           {
+                               "word":  "TRAVELS",
+                               "letterNumbers":  [
+                                                     11,
+                                                     9,
+                                                     1,
+                                                     13,
+                                                     3,
+                                                     6,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "FASTER",
+                               "letterNumbers":  [
+                                                     4,
+                                                     1,
+                                                     10,
+                                                     11,
+                                                     3,
+                                                     9
+                                                 ]
+                           },
+                           {
+                               "word":  "IN",
+                               "letterNumbers":  [
+                                                     5,
+                                                     7
+                                                 ]
+                           },
+                           {
+                               "word":  "WATER",
+                               "letterNumbers":  [
+                                                     14,
+                                                     1,
+                                                     11,
+                                                     3,
+                                                     9
+                                                 ]
+                           }
+                       ],
+        "category":  "Sound Waves",
+        "title":  "Sound in Water",
+        "vocabularyList":  [
+                               {
+                                   "word":  "WAVE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Oscillation transferring energy",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "WAVE is an important concept in Sound Waves."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                8,
+                                                12,
+                                                7,
+                                                2
+                                            ],
+                          "targetWord":  "SOUND",
+                          "clueText":  "Vibrations detected by ears",
+                          "id":  "c21_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                1,
+                                                10,
+                                                11
+                                            ],
+                          "targetWord":  "FAST",
+                          "clueText":  "Moving with high speed",
+                          "id":  "c21_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                1,
+                                                11,
+                                                3,
+                                                9
+                                            ],
+                          "targetWord":  "WATER",
+                          "clueText":  "Liquid made of hydrogen and oxygen",
+                          "id":  "c21_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                5,
+                                                7,
+                                                3
+                                            ],
+                          "targetWord":  "LINE",
+                          "clueText":  "Straight continuous path",
+                          "id":  "c21_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                9
+                                            ],
+                          "targetWord":  "EAR",
+                          "clueText":  "Body organ used to hear sounds",
+                          "id":  "c21_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                5,
+                                                7,
+                                                3
+                                            ],
+                          "targetWord":  "VINE",
+                          "clueText":  "Climbing green plant that grows along walls or trees",
+                          "id":  "c21_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "MAGNETS ALWAYS HAVE TWO POLES",
+        "educationalFact":  {
+                                "historicalContext":  "Even if you snap a magnet in two, each piece will still have a North and South pole.",
+                                "title":  "North and South",
+                                "attribution":  "Class 6 - 8 • Magnetism",
+                                "keyTakeaway":  "Earth acts like a giant magnet, causing compass needles to point North!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  22,
+        "coinsReward":  94,
+        "quoteWords":  [
+                           {
+                               "word":  "MAGNETS",
+                               "letterNumbers":  [
+                                                     6,
+                                                     1,
+                                                     3,
+                                                     7,
+                                                     2,
+                                                     11,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "ALWAYS",
+                               "letterNumbers":  [
+                                                     1,
+                                                     5,
+                                                     13,
+                                                     1,
+                                                     14,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "HAVE",
+                               "letterNumbers":  [
+                                                     4,
+                                                     1,
+                                                     12,
+                                                     2
+                                                 ]
+                           },
+                           {
+                               "word":  "TWO",
+                               "letterNumbers":  [
+                                                     11,
+                                                     13,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "POLES",
+                               "letterNumbers":  [
+                                                     9,
+                                                     8,
+                                                     5,
+                                                     2,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Magnetism",
+        "title":  "Two Poles",
+        "vocabularyList":  [
+                               {
+                                   "word":  "POLE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Either magnetic end of a magnet",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "POLE is an important concept in Magnetism."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                1,
+                                                3,
+                                                7,
+                                                2,
+                                                11
+                                            ],
+                          "targetWord":  "MAGNET",
+                          "clueText":  "Material attracting iron and steel",
+                          "id":  "c22_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                8,
+                                                5,
+                                                2
+                                            ],
+                          "targetWord":  "POLE",
+                          "clueText":  "North or South magnetic end",
+                          "id":  "c22_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                1,
+                                                12,
+                                                2
+                                            ],
+                          "targetWord":  "HAVE",
+                          "clueText":  "To hold or possess a feature",
+                          "id":  "c22_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                1,
+                                                14
+                                            ],
+                          "targetWord":  "WAY",
+                          "clueText":  "A route, direction, or road",
+                          "id":  "c22_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                11,
+                                                2,
+                                                2,
+                                                5
+                                            ],
+                          "targetWord":  "STEEL",
+                          "clueText":  "Strong metal alloy with iron",
+                          "id":  "c22_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "DIAMONDS ARE MADE OF PURE CARBON",
+        "educationalFact":  {
+                                "historicalContext":  "Deep underground heat and pressure transform soft carbon into sparkling diamonds.",
+                                "title":  "Carbon Crystals",
+                                "attribution":  "Class 6 - 8 • Minerals",
+                                "keyTakeaway":  "Pencil graphite and hard diamonds are made of the exact same element: carbon!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  23,
+        "coinsReward":  96,
+        "quoteWords":  [
+                           {
+                               "word":  "DIAMONDS",
+                               "letterNumbers":  [
+                                                     4,
+                                                     8,
+                                                     1,
+                                                     9,
+                                                     11,
+                                                     10,
+                                                     4,
+                                                     14
+                                                 ]
+                           },
+                           {
+                               "word":  "ARE",
+                               "letterNumbers":  [
+                                                     1,
+                                                     13,
+                                                     5
+                                                 ]
+                           },
+                           {
+                               "word":  "MADE",
+                               "letterNumbers":  [
+                                                     9,
+                                                     1,
+                                                     4,
+                                                     5
+                                                 ]
+                           },
+                           {
+                               "word":  "OF",
+                               "letterNumbers":  [
+                                                     11,
+                                                     6
+                                                 ]
+                           },
+                           {
+                               "word":  "PURE",
+                               "letterNumbers":  [
+                                                     12,
+                                                     16,
+                                                     13,
+                                                     5
+                                                 ]
+                           },
+                           {
+                               "word":  "CARBON",
+                               "letterNumbers":  [
+                                                     3,
+                                                     1,
+                                                     13,
+                                                     2,
+                                                     11,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Minerals",
+        "title":  "Sparkling Carbon",
+        "vocabularyList":  [
+                               {
+                                   "word":  "CARBON",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Chemical element forming coal and diamond",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "CARBON is an important concept in Minerals."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                8,
+                                                1,
+                                                9,
+                                                11,
+                                                10,
+                                                4
+                                            ],
+                          "targetWord":  "DIAMOND",
+                          "clueText":  "Extremely hard sparkling gemstone",
+                          "id":  "c23_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                13,
+                                                2,
+                                                11,
+                                                10
+                                            ],
+                          "targetWord":  "CARBON",
+                          "clueText":  "Element forming charcoal and diamond",
+                          "id":  "c23_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                16,
+                                                13,
+                                                5
+                                            ],
+                          "targetWord":  "PURE",
+                          "clueText":  "Clean and unmixed with impurities",
+                          "id":  "c23_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                15,
+                                                11,
+                                                10,
+                                                5
+                                            ],
+                          "targetWord":  "STONE",
+                          "clueText":  "Hard mineral piece of rock",
+                          "id":  "c23_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                8,
+                                                14,
+                                                7
+                                            ],
+                          "targetWord":  "FISH",
+                          "clueText":  "Animal swimming in the water",
+                          "id":  "c23_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "LIGHT TRAVELS IN STRAIGHT LINES",
+        "educationalFact":  {
+                                "historicalContext":  "Light beams move in straight lines until they hit a mirror or pass through glass.",
+                                "title":  "Straight Beams",
+                                "attribution":  "Class 6 - 8 • Light Physics",
+                                "keyTakeaway":  "Light is the fastest thing in the universe, moving at 186,000 miles per second!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  24,
+        "coinsReward":  98,
+        "quoteWords":  [
+                           {
+                               "word":  "LIGHT",
+                               "letterNumbers":  [
+                                                     7,
+                                                     6,
+                                                     4,
+                                                     5,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "TRAVELS",
+                               "letterNumbers":  [
+                                                     12,
+                                                     10,
+                                                     1,
+                                                     13,
+                                                     3,
+                                                     7,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "IN",
+                               "letterNumbers":  [
+                                                     6,
+                                                     9
+                                                 ]
+                           },
+                           {
+                               "word":  "STRAIGHT",
+                               "letterNumbers":  [
+                                                     11,
+                                                     12,
+                                                     10,
+                                                     1,
+                                                     6,
+                                                     4,
+                                                     5,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "LINES",
+                               "letterNumbers":  [
+                                                     7,
+                                                     6,
+                                                     9,
+                                                     3,
+                                                     11
+                                                 ]
+                           }
+                       ],
+        "category":  "Light Physics",
+        "title":  "Straight Beams",
+        "vocabularyList":  [
+                               {
+                                   "word":  "RAY",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Narrow beam of light",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "RAY is an important concept in Light Physics."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                6,
+                                                4,
+                                                5,
+                                                12
+                                            ],
+                          "targetWord":  "LIGHT",
+                          "clueText":  "Electromagnetic waves our eyes see",
+                          "id":  "c24_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                6,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "LINE",
+                          "clueText":  "Straight mark connecting two points",
+                          "id":  "c24_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                3,
+                                                1,
+                                                8
+                                            ],
+                          "targetWord":  "BEAM",
+                          "clueText":  "Focused shaft of glowing light",
+                          "id":  "c24_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "STAR",
+                          "clueText":  "Luminous sphere in outer space",
+                          "id":  "c24_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                6,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "VINE",
+                          "clueText":  "Climbing plant on garden wall",
+                          "id":  "c24_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "CELLS ARE THE UNITS OF ALL LIFE",
+        "educationalFact":  {
+                                "historicalContext":  "Every plant, animal, and human body is built from tiny microscopic living cells.",
+                                "title":  "Living Bricks",
+                                "attribution":  "Class 6 - 8 • Biology",
+                                "keyTakeaway":  "Your body contains around 37 trillion living microscopic cells!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  25,
+        "coinsReward":  100,
         "quoteWords":  [
                            {
                                "word":  "CELLS",
                                "letterNumbers":  [
+                                                     2,
                                                      3,
-                                                     4,
+                                                     8,
+                                                     8,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "ARE",
+                               "letterNumbers":  [
+                                                     1,
+                                                     11,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "THE",
+                               "letterNumbers":  [
+                                                     13,
+                                                     5,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "UNITS",
+                               "letterNumbers":  [
+                                                     14,
                                                      9,
+                                                     6,
+                                                     13,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "OF",
+                               "letterNumbers":  [
+                                                     10,
+                                                     4
+                                                 ]
+                           },
+                           {
+                               "word":  "ALL",
+                               "letterNumbers":  [
+                                                     1,
+                                                     8,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "LIFE",
+                               "letterNumbers":  [
+                                                     8,
+                                                     6,
+                                                     4,
+                                                     3
+                                                 ]
+                           }
+                       ],
+        "category":  "Biology",
+        "title":  "Units of Life",
+        "vocabularyList":  [
+                               {
+                                   "word":  "CELL",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Basic structural unit of living things",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "CELL is an important concept in Biology."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                3,
+                                                8,
+                                                8
+                                            ],
+                          "targetWord":  "CELL",
+                          "clueText":  "Tiny microscopic building block of life",
+                          "id":  "c25_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                9,
+                                                6,
+                                                13
+                                            ],
+                          "targetWord":  "UNIT",
+                          "clueText":  "Single distinct part of a whole",
+                          "id":  "c25_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                6,
+                                                4,
+                                                3
+                                            ],
+                          "targetWord":  "LIFE",
+                          "clueText":  "State of growing and living",
+                          "id":  "c25_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                3,
+                                                1,
+                                                11,
+                                                13
+                                            ],
+                          "targetWord":  "HEART",
+                          "clueText":  "Chest organ pumping red blood",
+                          "id":  "c25_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                7,
+                                                6,
+                                                9
+                                            ],
+                          "targetWord":  "SKIN",
+                          "clueText":  "Outer surface covering human body",
+                          "id":  "c25_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                15,
+                                                8
+                                            ],
+                          "targetWord":  "OWL",
+                          "clueText":  "Wise bird that stays awake and hunts at night",
+                          "id":  "c25_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "OZONE LAYER SHIELDS US FROM SUN",
+        "educationalFact":  {
+                                "historicalContext":  "The ozone layer high in the sky absorbs harmful ultraviolet rays from sunlight.",
+                                "title":  "Atmospheric Blanket",
+                                "attribution":  "Class 6 - 8 • Atmosphere",
+                                "keyTakeaway":  "Without the protective ozone layer, complex life could not survive on land!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  26,
+        "coinsReward":  102,
+        "quoteWords":  [
+                           {
+                               "word":  "OZONE",
+                               "letterNumbers":  [
+                                                     10,
+                                                     15,
+                                                     10,
+                                                     9,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "LAYER",
+                               "letterNumbers":  [
+                                                     7,
+                                                     1,
+                                                     14,
+                                                     3,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "SHIELDS",
+                               "letterNumbers":  [
+                                                     12,
+                                                     5,
+                                                     6,
+                                                     3,
+                                                     7,
+                                                     2,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "US",
+                               "letterNumbers":  [
+                                                     13,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "FROM",
+                               "letterNumbers":  [
+                                                     4,
+                                                     11,
+                                                     10,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "SUN",
+                               "letterNumbers":  [
+                                                     12,
+                                                     13,
+                                                     9
+                                                 ]
+                           }
+                       ],
+        "category":  "Atmosphere",
+        "title":  "The Ozone Shield",
+        "vocabularyList":  [
+                               {
+                                   "word":  "OZONE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Gas shield absorbing UV solar rays",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "OZONE is an important concept in Atmosphere."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                15,
+                                                10,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "OZONE",
+                          "clueText":  "Gas layer protecting Earth from rays",
+                          "id":  "c26_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                5,
+                                                6,
+                                                3,
+                                                7,
+                                                2
+                                            ],
+                          "targetWord":  "SHIELD",
+                          "clueText":  "Protective armor blocking danger",
+                          "id":  "c26_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                1,
+                                                14,
+                                                3,
+                                                11
+                                            ],
+                          "targetWord":  "LAYER",
+                          "clueText":  "Sheet of material covering a surface",
+                          "id":  "c26_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                13,
+                                                9
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Star providing daylight and heat",
+                          "id":  "c26_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                1,
+                                                11,
+                                                8
+                                            ],
+                          "targetWord":  "FARM",
+                          "clueText":  "Land where crops and animals grow",
+                          "id":  "c26_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "ENERGY CANNOT BE DESTROYED",
+        "educationalFact":  {
+                                "historicalContext":  "Energy can change forms from chemical to motion or heat, but it never disappears.",
+                                "title":  "Energy Conservation",
+                                "attribution":  "Class 6 - 8 • Energy",
+                                "keyTakeaway":  "The electrical power in our lamps originally came from sunlight long ago!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  27,
+        "coinsReward":  104,
+        "quoteWords":  [
+                           {
+                               "word":  "ENERGY",
+                               "letterNumbers":  [
+                                                     5,
+                                                     8,
+                                                     5,
+                                                     10,
+                                                     6,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "CANNOT",
+                               "letterNumbers":  [
+                                                     3,
+                                                     1,
+                                                     8,
+                                                     8,
                                                      9,
                                                      12
+                                                 ]
+                           },
+                           {
+                               "word":  "BE",
+                               "letterNumbers":  [
+                                                     2,
+                                                     5
+                                                 ]
+                           },
+                           {
+                               "word":  "DESTROYED",
+                               "letterNumbers":  [
+                                                     4,
+                                                     5,
+                                                     11,
+                                                     12,
+                                                     10,
+                                                     9,
+                                                     13,
+                                                     5,
+                                                     4
+                                                 ]
+                           }
+                       ],
+        "category":  "Energy",
+        "title":  "Constant Energy",
+        "vocabularyList":  [
+                               {
+                                   "word":  "ENERGY",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Power to do work or make heat",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "ENERGY is an important concept in Energy."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                8,
+                                                5,
+                                                10,
+                                                6,
+                                                13
+                                            ],
+                          "targetWord":  "ENERGY",
+                          "clueText":  "Power that moves machines and bodies",
+                          "id":  "c27_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                8
+                                            ],
+                          "targetWord":  "CAN",
+                          "clueText":  "To be able to accomplish something",
+                          "id":  "c27_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                7,
+                                                10,
+                                                4
+                                            ],
+                          "targetWord":  "BIRD",
+                          "clueText":  "Winged singer flying in the sky",
+                          "id":  "c27_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                9,
+                                                8,
+                                                5
+                                            ],
+                          "targetWord":  "STONE",
+                          "clueText":  "Hard solid mineral piece",
+                          "id":  "c27_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                1,
+                                                13
+                                            ],
+                          "targetWord":  "DAY",
+                          "clueText":  "Time between sunrise and sunset",
+                          "id":  "c27_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "FOSSILS SHOW ANCIENT HISTORY",
+        "educationalFact":  {
+                                "historicalContext":  "Fossils are bones and shells buried in rock layers millions of years ago.",
+                                "title":  "Prehistoric Clues",
+                                "attribution":  "Class 6 - 8 • Earth History",
+                                "keyTakeaway":  "Fossils proved that modern birds are closely related to ancient dinosaurs!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  28,
+        "coinsReward":  106,
+        "quoteWords":  [
+                           {
+                               "word":  "FOSSILS",
+                               "letterNumbers":  [
+                                                     5,
+                                                     11,
+                                                     13,
+                                                     13,
+                                                     7,
+                                                     8,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "SHOW",
+                               "letterNumbers":  [
+                                                     13,
+                                                     6,
+                                                     11,
+                                                     15
+                                                 ]
+                           },
+                           {
+                               "word":  "ANCIENT",
+                               "letterNumbers":  [
+                                                     1,
+                                                     10,
+                                                     2,
+                                                     7,
+                                                     4,
+                                                     10,
+                                                     14
+                                                 ]
+                           },
+                           {
+                               "word":  "HISTORY",
+                               "letterNumbers":  [
+                                                     6,
+                                                     7,
+                                                     13,
+                                                     14,
+                                                     11,
+                                                     12,
+                                                     16
+                                                 ]
+                           }
+                       ],
+        "category":  "Earth History",
+        "title":  "Ancient Fossils",
+        "vocabularyList":  [
+                               {
+                                   "word":  "FOSSIL",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Preserved remains of ancient life",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "FOSSIL is an important concept in Earth History."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                11,
+                                                13,
+                                                13,
+                                                7,
+                                                8
+                                            ],
+                          "targetWord":  "FOSSIL",
+                          "clueText":  "Ancient bones preserved in rocks",
+                          "id":  "c28_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                6,
+                                                11,
+                                                15
+                                            ],
+                          "targetWord":  "SHOW",
+                          "clueText":  "To display or explain facts",
+                          "id":  "c28_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                14,
+                                                11,
+                                                10,
+                                                4
+                                            ],
+                          "targetWord":  "STONE",
+                          "clueText":  "Hard piece of natural mineral rock",
+                          "id":  "c28_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                7,
+                                                9,
+                                                4
+                                            ],
+                          "targetWord":  "TIME",
+                          "clueText":  "Hours, days, and passing years",
+                          "id":  "c28_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                16
+                                            ],
+                          "targetWord":  "DAY",
+                          "clueText":  "Period of twenty-four hours",
+                          "id":  "c28_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                1,
+                                                14
+                                            ],
+                          "targetWord":  "CAT",
+                          "clueText":  "Furry friendly pet that purrs and meows",
+                          "id":  "c28_6"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                1,
+                                                7,
+                                                10
+                                            ],
+                          "targetWord":  "RAIN",
+                          "clueText":  "Fresh water falling in drops from clouds",
+                          "id":  "c28_7"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "MAGMA BECOMES LAVA ON SURFACE",
+        "educationalFact":  {
+                                "historicalContext":  "Underground liquid rock is called magma; when it erupts into air, it is called lava.",
+                                "title":  "Molten Rock",
+                                "attribution":  "Class 6 - 8 • Volcanoes",
+                                "keyTakeaway":  "Over 80 percent of Earth\u0027s crust was formed from cooled volcanic rock!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  29,
+        "coinsReward":  108,
+        "quoteWords":  [
+                           {
+                               "word":  "MAGMA",
+                               "letterNumbers":  [
+                                                     9,
+                                                     1,
+                                                     6,
+                                                     9,
+                                                     1
+                                                 ]
+                           },
+                           {
+                               "word":  "BECOMES",
+                               "letterNumbers":  [
+                                                     2,
+                                                     4,
+                                                     3,
+                                                     11,
+                                                     9,
+                                                     4,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "LAVA",
+                               "letterNumbers":  [
+                                                     8,
+                                                     1,
+                                                     16,
+                                                     1
+                                                 ]
+                           },
+                           {
+                               "word":  "ON",
+                               "letterNumbers":  [
+                                                     11,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "SURFACE",
+                               "letterNumbers":  [
+                                                     13,
+                                                     15,
+                                                     12,
+                                                     5,
+                                                     1,
+                                                     3,
+                                                     4
+                                                 ]
+                           }
+                       ],
+        "category":  "Volcanoes",
+        "title":  "Magma and Lava",
+        "vocabularyList":  [
+                               {
+                                   "word":  "LAVA",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Hot molten rock flowing from volcano",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "LAVA is an important concept in Volcanoes."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                1,
+                                                6,
+                                                9,
+                                                1
+                                            ],
+                          "targetWord":  "MAGMA",
+                          "clueText":  "Hot liquid rock deep underground",
+                          "id":  "c29_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                1,
+                                                16,
+                                                1
+                                            ],
+                          "targetWord":  "LAVA",
+                          "clueText":  "Glowing liquid rock erupting on land",
+                          "id":  "c29_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                7,
+                                                12,
+                                                4
+                                            ],
+                          "targetWord":  "FIRE",
+                          "clueText":  "Blazing flame giving off heat",
+                          "id":  "c29_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                4,
+                                                4
+                                            ],
+                          "targetWord":  "BEE",
+                          "clueText":  "Buzzing insect making sweet honey",
+                          "id":  "c29_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                15,
+                                                10
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright star warming our planet",
+                          "id":  "c29_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                14
+                                            ],
+                          "targetWord":  "CAT",
+                          "clueText":  "Furry friendly pet that purrs and meows",
+                          "id":  "c29_6"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                17,
+                                                8
+                                            ],
+                          "targetWord":  "OWL",
+                          "clueText":  "Wise bird that stays awake and hunts at night",
+                          "id":  "c29_7"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "COPPER WIRES CONDUCT ELECTRICITY",
+        "educationalFact":  {
+                                "historicalContext":  "Copper allows tiny electrons to flow easily, making it great for power cables.",
+                                "title":  "Metal Conductors",
+                                "attribution":  "Class 6 - 8 • Circuits",
+                                "keyTakeaway":  "Almost all electrical cords in houses and phones use copper inside!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  30,
+        "coinsReward":  110,
+        "quoteWords":  [
+                           {
+                               "word":  "COPPER",
+                               "letterNumbers":  [
+                                                     2,
+                                                     10,
+                                                     11,
+                                                     11,
+                                                     4,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "WIRES",
+                               "letterNumbers":  [
+                                                     16,
+                                                     7,
+                                                     12,
+                                                     4,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "CONDUCT",
+                               "letterNumbers":  [
+                                                     2,
+                                                     10,
+                                                     9,
+                                                     3,
+                                                     15,
+                                                     2,
+                                                     14
+                                                 ]
+                           },
+                           {
+                               "word":  "ELECTRICITY",
+                               "letterNumbers":  [
+                                                     4,
+                                                     8,
+                                                     4,
+                                                     2,
+                                                     14,
+                                                     12,
+                                                     7,
+                                                     2,
+                                                     7,
+                                                     14,
+                                                     17
+                                                 ]
+                           }
+                       ],
+        "category":  "Circuits",
+        "title":  "Copper Power",
+        "vocabularyList":  [
+                               {
+                                   "word":  "WIRE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Flexible metal strand carrying current",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "WIRE is an important concept in Circuits."
+                               }
+                           ],
+        "classLevel":  "Class 6 - 8",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                10,
+                                                11,
+                                                11,
+                                                4,
+                                                12
+                                            ],
+                          "targetWord":  "COPPER",
+                          "clueText":  "Brownish metal used in electric cords",
+                          "id":  "c30_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                16,
+                                                7,
+                                                12,
+                                                4
+                                            ],
+                          "targetWord":  "WIRE",
+                          "clueText":  "Flexible metal line carrying power",
+                          "id":  "c30_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                7,
+                                                5,
+                                                6,
+                                                14
+                                            ],
+                          "targetWord":  "LIGHT",
+                          "clueText":  "Brightness produced by electric bulb",
+                          "id":  "c30_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                15,
+                                                12,
+                                                12,
+                                                4,
+                                                9,
+                                                14
+                                            ],
+                          "targetWord":  "CURRENT",
+                          "clueText":  "Flow of electric charges in a wire",
+                          "id":  "c30_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                17
+                                            ],
+                          "targetWord":  "DAY",
+                          "clueText":  "Sunlit hours between mornings",
+                          "id":  "c30_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                13,
+                                                15,
+                                                9
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright glowing star warming our daytime sky",
+                          "id":  "c30_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "GRAVITY HOLDS GALAXIES TOGETHER",
+        "educationalFact":  {
+                                "historicalContext":  "Gravity pulls all objects with mass together, keeping moons, planets, and stars in place.",
+                                "title":  "Universal Gravity",
+                                "attribution":  "Class 9 - 10+ • Physics",
+                                "keyTakeaway":  "Gravity holds huge galaxies together even though it is the gentlest force!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  31,
+        "coinsReward":  112,
+        "quoteWords":  [
+                           {
+                               "word":  "GRAVITY",
+                               "letterNumbers":  [
+                                                     5,
+                                                     10,
+                                                     1,
+                                                     13,
+                                                     7,
+                                                     12,
+                                                     15
+                                                 ]
+                           },
+                           {
+                               "word":  "HOLDS",
+                               "letterNumbers":  [
+                                                     6,
+                                                     9,
+                                                     8,
+                                                     2,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "GALAXIES",
+                               "letterNumbers":  [
+                                                     5,
+                                                     1,
+                                                     8,
+                                                     1,
+                                                     14,
+                                                     7,
+                                                     3,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "TOGETHER",
+                               "letterNumbers":  [
+                                                     12,
+                                                     9,
+                                                     5,
+                                                     3,
+                                                     12,
+                                                     6,
+                                                     3,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Physics",
+        "title":  "Cosmic Gravity",
+        "vocabularyList":  [
+                               {
+                                   "word":  "GRAVITY",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Force attracting masses to each other",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "GRAVITY is an important concept in Physics."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                10,
+                                                1,
+                                                13,
+                                                7,
+                                                12,
+                                                15
+                                            ],
+                          "targetWord":  "GRAVITY",
+                          "clueText":  "Attractive force pulling masses together",
+                          "id":  "c31_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                9,
+                                                8,
+                                                2
+                                            ],
+                          "targetWord":  "HOLD",
+                          "clueText":  "To grip, secure, or bind together",
+                          "id":  "c31_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "STAR",
+                          "clueText":  "Luminous plasma ball in space",
+                          "id":  "c31_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                10,
+                                                3,
+                                                3
+                                            ],
+                          "targetWord":  "TREE",
+                          "clueText":  "Tall wooden photosynthetic plant",
+                          "id":  "c31_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                3,
+                                                5
+                                            ],
+                          "targetWord":  "LEG",
+                          "clueText":  "Limb used for standing and walking",
+                          "id":  "c31_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                9,
+                                                14
+                                            ],
+                          "targetWord":  "FOX",
+                          "clueText":  "Clever wild animal with orange fur and bushy tail",
+                          "id":  "c31_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "WHITE LIGHT SPLITS INTO RAINBOW",
+        "educationalFact":  {
+                                "historicalContext":  "Passing sunlight through a glass prism reveals all the colors of the rainbow.",
+                                "title":  "White Light",
+                                "attribution":  "Class 9 - 10+ • Optics",
+                                "keyTakeaway":  "Rainbows happen in the sky because raindrops act like tiny glass prisms!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  32,
+        "coinsReward":  114,
+        "quoteWords":  [
+                           {
+                               "word":  "WHITE",
+                               "letterNumbers":  [
+                                                     14,
+                                                     5,
+                                                     6,
+                                                     13,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "LIGHT",
+                               "letterNumbers":  [
+                                                     7,
+                                                     6,
+                                                     4,
+                                                     5,
+                                                     13
+                                                 ]
+                           },
+                           {
+                               "word":  "SPLITS",
+                               "letterNumbers":  [
+                                                     12,
+                                                     10,
+                                                     7,
+                                                     6,
+                                                     13,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "INTO",
+                               "letterNumbers":  [
+                                                     6,
+                                                     8,
+                                                     13,
+                                                     9
+                                                 ]
+                           },
+                           {
+                               "word":  "RAINBOW",
+                               "letterNumbers":  [
+                                                     11,
+                                                     1,
+                                                     6,
+                                                     8,
+                                                     2,
+                                                     9,
+                                                     14
+                                                 ]
+                           }
+                       ],
+        "category":  "Optics",
+        "title":  "Prism Colors",
+        "vocabularyList":  [
+                               {
+                                   "word":  "PRISM",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Glass piece splitting light into colors",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "PRISM is an important concept in Optics."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                5,
+                                                6,
+                                                13,
+                                                3
+                                            ],
+                          "targetWord":  "WHITE",
+                          "clueText":  "Color combining all visible wavelengths",
+                          "id":  "c32_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                6,
+                                                4,
+                                                5,
+                                                13
+                                            ],
+                          "targetWord":  "LIGHT",
+                          "clueText":  "Electromagnetic rays our eyes see",
+                          "id":  "c32_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                10,
+                                                7,
+                                                6,
+                                                13
+                                            ],
+                          "targetWord":  "SPLIT",
+                          "clueText":  "To divide or separate into parts",
+                          "id":  "c32_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                1,
+                                                6,
+                                                8
+                                            ],
+                          "targetWord":  "RAIN",
+                          "clueText":  "Water drops falling from cloudy sky",
+                          "id":  "c32_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                2,
+                                                3,
+                                                3
+                                            ],
+                          "targetWord":  "BEE",
+                          "clueText":  "Yellow buzzing honey-making insect",
+                          "id":  "c32_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                9,
+                                                14,
+                                                7
+                                            ],
+                          "targetWord":  "OWL",
+                          "clueText":  "Wise bird that stays awake and hunts at night",
+                          "id":  "c32_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "ATOMS HAVE PROTONS AND NEUTRONS",
+        "educationalFact":  {
+                                "historicalContext":  "The dense center of an atom contains positive protons and neutral neutrons.",
+                                "title":  "Atomic Core",
+                                "attribution":  "Class 9 - 10+ • Chemistry",
+                                "keyTakeaway":  "Most of every atom is empty space around the tiny central nucleus!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  33,
+        "coinsReward":  116,
+        "quoteWords":  [
+                           {
+                               "word":  "ATOMS",
+                               "letterNumbers":  [
+                                                     1,
+                                                     11,
+                                                     7,
+                                                     5,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "HAVE",
+                               "letterNumbers":  [
+                                                     4,
+                                                     1,
+                                                     13,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "PROTONS",
+                               "letterNumbers":  [
+                                                     8,
+                                                     9,
+                                                     7,
+                                                     11,
+                                                     7,
+                                                     6,
+                                                     10
+                                                 ]
+                           },
+                           {
+                               "word":  "AND",
+                               "letterNumbers":  [
+                                                     1,
+                                                     6,
+                                                     2
+                                                 ]
+                           },
+                           {
+                               "word":  "NEUTRONS",
+                               "letterNumbers":  [
+                                                     6,
+                                                     3,
+                                                     12,
+                                                     11,
+                                                     9,
+                                                     7,
+                                                     6,
+                                                     10
+                                                 ]
+                           }
+                       ],
+        "category":  "Chemistry",
+        "title":  "Inside Atoms",
+        "vocabularyList":  [
+                               {
+                                   "word":  "ATOM",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Basic building block of all elements",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "ATOM is an important concept in Chemistry."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                1,
+                                                11,
+                                                7,
+                                                5
+                                            ],
+                          "targetWord":  "ATOM",
+                          "clueText":  "Basic building unit of all elements",
+                          "id":  "c33_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                4,
+                                                1,
+                                                13,
+                                                3
+                                            ],
+                          "targetWord":  "HAVE",
+                          "clueText":  "To contain or hold within structure",
+                          "id":  "c33_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                12,
+                                                6
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Central star warming our world",
+                          "id":  "c33_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                9,
+                                                7,
+                                                12,
+                                                2
+                                            ],
+                          "targetWord":  "PROUD",
+                          "clueText":  "Feeling pleased with good work",
+                          "id":  "c33_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                6,
+                                                3,
+                                                11
+                                            ],
+                          "targetWord":  "NET",
+                          "clueText":  "Mesh used to catch fish or balls",
+                          "id":  "c33_5"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "ACTION AND REACTION ARE EQUAL",
+        "educationalFact":  {
+                                "historicalContext":  "Whenever one object pushes another, the second object pushes back equally hard.",
+                                "title":  "Newton\u0027s Law",
+                                "attribution":  "Class 9 - 10+ • Mechanics",
+                                "keyTakeaway":  "Rockets blast into space by pushing hot exhaust gas backwards!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  34,
+        "coinsReward":  118,
+        "quoteWords":  [
+                           {
+                               "word":  "ACTION",
+                               "letterNumbers":  [
+                                                     1,
+                                                     2,
+                                                     12,
+                                                     6,
+                                                     9,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "AND",
+                               "letterNumbers":  [
+                                                     1,
+                                                     8,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "REACTION",
+                               "letterNumbers":  [
+                                                     11,
+                                                     4,
+                                                     1,
+                                                     2,
+                                                     12,
+                                                     6,
+                                                     9,
+                                                     8
                                                  ]
                            },
                            {
@@ -1377,5512 +4584,943 @@
                                                  ]
                            },
                            {
-                               "word":  "THE",
+                               "word":  "EQUAL",
                                "letterNumbers":  [
+                                                     4,
+                                                     10,
                                                      13,
-                                                     6,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "BASIC",
-                               "letterNumbers":  [
-                                                     2,
                                                      1,
-                                                     12,
-                                                     7,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "BLOCKS",
-                               "letterNumbers":  [
-                                                     2,
-                                                     9,
-                                                     10,
-                                                     3,
-                                                     8,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "OF",
-                               "letterNumbers":  [
-                                                     10,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "LIFE",
-                               "letterNumbers":  [
-                                                     9,
-                                                     7,
-                                                     5,
-                                                     4
+                                                     7
                                                  ]
                            }
                        ],
-        "clues":  [
-                      {
-                          "id":  "c9_1",
-                          "clueText":  "Smallest structural and functional unit of organisms",
-                          "targetWord":  "CELL",
-                          "letterNumbers":  [
-                                                3,
-                                                4,
-                                                9,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c9_2",
-                          "clueText":  "Foundational building unit assembled into structures",
-                          "targetWord":  "BLOCK",
-                          "letterNumbers":  [
-                                                2,
-                                                9,
-                                                10,
-                                                3,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c9_3",
-                          "clueText":  "Condition distinguishing active organisms from inorganic matter",
-                          "targetWord":  "LIFE",
-                          "letterNumbers":  [
-                                                9,
-                                                7,
-                                                5,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c9_4",
-                          "clueText":  "Vital muscular pump sustaining living tissues",
-                          "targetWord":  "HEART",
-                          "letterNumbers":  [
-                                                6,
-                                                4,
-                                                1,
-                                                11,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c9_5",
-                          "clueText":  "Aggregate of specialized cells working cooperatively",
-                          "targetWord":  "TISSUE",
-                          "letterNumbers":  [
-                                                13,
-                                                7,
-                                                12,
-                                                12,
-                                                14,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c9_6",
-                          "clueText":  "Forming an essential fundamental groundwork",
-                          "targetWord":  "BASIC",
-                          "letterNumbers":  [
-                                                2,
-                                                1,
-                                                12,
-                                                7,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c9_7",
-                          "clueText":  "Rigid outer cellulose layer enclosing plant cells",
-                          "targetWord":  "WALL",
-                          "letterNumbers":  [
-                                                15,
-                                                1,
-                                                9,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Schleiden and Schwann established that all biological tissues originate from cellular division.",
-                                "title":  "Cell Theory of Living Organisms",
-                                "attribution":  "Class 9 Biology â€¢ Cytology",
-                                "keyTakeaway":  "Cells contain genetic DNA code to synthesize enzymes and reproduce.",
-                                "yearOrEra":  "Nineteenth Century Biology"
-                            },
+        "category":  "Mechanics",
+        "title":  "Action Reaction",
         "vocabularyList":  [
                                {
-                                   "word":  "CYTOLOGY",
+                                   "word":  "FORCE",
                                    "partOfSpeech":  "noun",
-                                   "definition":  "Scientific study of cell structure and reproduction",
-                                   "etymology":  "Greek kytos (container/cell) + logia (study)",
-                                   "exampleSentence":  "Cytology enables early diagnosis of cellular anomalies."
-                               },
-                               {
-                                   "word":  "MEMBRANE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Selective barrier enclosing cell cytoplasm",
-                                   "etymology":  "Latin membrana (skin covering)",
-                                   "exampleSentence":  "The cell membrane controls incoming and outgoing nutrients."
+                                   "definition":  "Push or pull acting upon a mass",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "FORCE is an important concept in Mechanics."
                                }
                            ],
-        "coinsReward":  59
-    },
-    {
-        "id":  10,
-        "title":  "Ancient Wisdom",
-        "category":  "World History",
-        "quoteText":  "WISE MINDS SEEK KNOWLEDGE AND TRUTH",
-        "quoteWords":  [
-                           {
-                               "word":  "WISE",
-                               "letterNumbers":  [
-                                                     17,
-                                                     7,
-                                                     14,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "MINDS",
-                               "letterNumbers":  [
-                                                     10,
-                                                     7,
-                                                     11,
-                                                     3,
-                                                     14
-                                                 ]
-                           },
-                           {
-                               "word":  "SEEK",
-                               "letterNumbers":  [
-                                                     14,
-                                                     4,
-                                                     4,
-                                                     8
-                                                 ]
-                           },
-                           {
-                               "word":  "KNOWLEDGE",
-                               "letterNumbers":  [
-                                                     8,
-                                                     11,
-                                                     12,
-                                                     17,
-                                                     9,
-                                                     4,
-                                                     3,
-                                                     5,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "AND",
-                               "letterNumbers":  [
-                                                     1,
-                                                     11,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "TRUTH",
-                               "letterNumbers":  [
-                                                     15,
-                                                     13,
-                                                     16,
-                                                     15,
-                                                     6
-                                                 ]
-                           }
-                       ],
+        "classLevel":  "Class 9 - 10+",
         "clues":  [
                       {
-                          "id":  "c10_1",
-                          "clueText":  "Cognitive faculty of thought and intellectual consciousness",
-                          "targetWord":  "MIND",
                           "letterNumbers":  [
-                                                10,
-                                                7,
-                                                11,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c10_2",
-                          "clueText":  "To actively pursue and uncover hidden truths",
-                          "targetWord":  "SEEK",
-                          "letterNumbers":  [
-                                                14,
-                                                4,
-                                                4,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c10_3",
-                          "clueText":  "State of conforming with factual verifiable reality",
-                          "targetWord":  "TRUTH",
-                          "letterNumbers":  [
-                                                15,
-                                                13,
-                                                16,
-                                                15,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c10_4",
-                          "clueText":  "Possessing deep scholarly judgment and discernment",
-                          "targetWord":  "WISE",
-                          "letterNumbers":  [
-                                                17,
-                                                7,
-                                                14,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c10_5",
-                          "clueText":  "Precious enduring element symbolizing highest value",
-                          "targetWord":  "GOLD",
-                          "letterNumbers":  [
-                                                5,
-                                                12,
-                                                9,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c10_6",
-                          "clueText":  "Learned individual dedicated to higher academic study",
-                          "targetWord":  "SCHOLAR",
-                          "letterNumbers":  [
-                                                14,
+                                                1,
                                                 2,
+                                                12,
                                                 6,
-                                                12,
                                                 9,
-                                                1,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c10_7",
-                          "clueText":  "Mentor or compass directing students toward mastery",
-                          "targetWord":  "GUIDE",
-                          "letterNumbers":  [
-                                                5,
-                                                16,
-                                                7,
-                                                3,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The ancient university at Taxila attracted international scholars to study medicine, logic, and philosophy.",
-                                "title":  "Taxila \u0026 Ancient Academy Traditions",
-                                "attribution":  "Class 9 History â€¢ South Asian Heritage",
-                                "keyTakeaway":  "Preserving intellectual heritage enriches societal progress.",
-                                "yearOrEra":  "Classical Antiquity (5th Century BCE)"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "SCHOLASTIC",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Relating to academic scholarship and intellectual training",
-                                   "etymology":  "Greek scholastikos (devoted to learning)",
-                                   "exampleSentence":  "Scholastic rigor requires rigorous evidence and logic."
-                               },
-                               {
-                                   "word":  "PHILOSOPHY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Investigation of fundamental truths regarding knowledge and ethics",
-                                   "etymology":  "Greek philos (loving) + sophia (wisdom)",
-                                   "exampleSentence":  "Ancient philosophy laid the foundation for modern sciences."
-                               }
-                           ],
-        "coinsReward":  60
-    },
-    {
-        "id":  11,
-        "title":  "Ocean Coral Reefs",
-        "category":  "Marine Biology",
-        "quoteText":  "CORAL REEFS SHELTER MARINE LIFE",
-        "quoteWords":  [
-                           {
-                               "word":  "CORAL",
-                               "letterNumbers":  [
-                                                     2,
-                                                     11,
-                                                     12,
-                                                     1,
-                                                     8
-                                                 ]
-                           },
-                           {
-                               "word":  "REEFS",
-                               "letterNumbers":  [
-                                                     12,
-                                                     4,
-                                                     4,
-                                                     5,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "SHELTER",
-                               "letterNumbers":  [
-                                                     13,
-                                                     6,
-                                                     4,
-                                                     8,
-                                                     14,
-                                                     4,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "MARINE",
-                               "letterNumbers":  [
-                                                     9,
-                                                     1,
-                                                     12,
-                                                     7,
-                                                     10,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "LIFE",
-                               "letterNumbers":  [
-                                                     8,
-                                                     7,
-                                                     5,
-                                                     4
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c11_1",
-                          "clueText":  "Colony of tiny marine polyps producing calcium skeletons",
-                          "targetWord":  "CORAL",
-                          "letterNumbers":  [
-                                                2,
-                                                11,
-                                                12,
-                                                1,
                                                 8
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "ACTION",
+                          "clueText":  "Force applied by one moving body",
+                          "id":  "c34_1"
                       },
                       {
-                          "id":  "c11_2",
-                          "clueText":  "Submerged ridge of rock or coral near water surface",
-                          "targetWord":  "REEF",
                           "letterNumbers":  [
-                                                12,
                                                 4,
-                                                4,
+                                                10,
+                                                13,
+                                                1,
+                                                7
+                                            ],
+                          "targetWord":  "EQUAL",
+                          "clueText":  "Identical in size, value, or power",
+                          "id":  "c34_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                9,
                                                 5
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "DOG",
+                          "clueText":  "Faithful pet that barks and runs",
+                          "id":  "c34_3"
                       },
                       {
-                          "id":  "c11_3",
-                          "clueText":  "Vast expanse of salt water covering planetary surface",
-                          "targetWord":  "OCEAN",
                           "letterNumbers":  [
                                                 11,
+                                                13,
+                                                8
+                                            ],
+                          "targetWord":  "RUN",
+                          "clueText":  "To sprint forward on fast feet",
+                          "id":  "c34_4"
+                      },
+                      {
+                          "letterNumbers":  [
                                                 2,
-                                                4,
                                                 1,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c11_4",
-                          "clueText":  "Gill-bearing aquatic vertebrate with fins",
-                          "targetWord":  "FISH",
-                          "letterNumbers":  [
-                                                5,
-                                                7,
-                                                13,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c11_5",
-                          "clueText":  "Protective haven guarding creatures against predators",
-                          "targetWord":  "SHELTER",
-                          "letterNumbers":  [
-                                                13,
-                                                6,
-                                                4,
-                                                8,
-                                                14,
-                                                4,
                                                 12
                                             ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c11_6",
-                          "clueText":  "Periodic rise and fall of coastal ocean waters",
-                          "targetWord":  "TIDE",
-                          "letterNumbers":  [
-                                                14,
-                                                7,
-                                                3,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c11_7",
-                          "clueText":  "Relating to oceanic seas and salt water environments",
-                          "targetWord":  "MARINE",
-                          "letterNumbers":  [
-                                                9,
-                                                1,
-                                                12,
-                                                7,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
+                          "targetWord":  "CAT",
+                          "clueText":  "Furry friendly animal that purrs",
+                          "id":  "c34_5"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Though occupying under one percent of the seabed, coral reefs sustain twenty-five percent of all marine species.",
-                                "title":  "Ocean Biodiversity Hotspots",
-                                "attribution":  "Class 8 Science â€¢ Marine Ecology",
-                                "keyTakeaway":  "Reef systems protect shorelines from destructive wave surges.",
-                                "yearOrEra":  "Global Conservation Studies"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "BIODIVERSITY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Variety of living organism species within a habitat",
-                                   "etymology":  "Greek bios (life) + diversity",
-                                   "exampleSentence":  "Tropical reefs possess extraordinary aquatic biodiversity."
-                               },
-                               {
-                                   "word":  "SYMBIOSIS",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Mutually beneficial biological interaction between species",
-                                   "etymology":  "Greek syn (together) + bios (life)",
-                                   "exampleSentence":  "Corals live in close symbiosis with photosynthetic algae."
-                               }
-                           ],
-        "coinsReward":  61
+                  ]
     },
     {
-        "id":  12,
-        "title":  "Atmospheric Wind",
-        "category":  "Earth Science",
-        "quoteText":  "WARM AIR RISES AND CREATES WIND",
-        "quoteWords":  [
-                           {
-                               "word":  "WARM",
-                               "letterNumbers":  [
-                                                     15,
-                                                     1,
-                                                     11,
-                                                     8
-                                                 ]
-                           },
-                           {
-                               "word":  "AIR",
-                               "letterNumbers":  [
-                                                     1,
-                                                     6,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "RISES",
-                               "letterNumbers":  [
-                                                     11,
-                                                     6,
-                                                     12,
-                                                     4,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "AND",
-                               "letterNumbers":  [
-                                                     1,
-                                                     9,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "CREATES",
-                               "letterNumbers":  [
-                                                     2,
-                                                     11,
-                                                     4,
-                                                     1,
-                                                     13,
-                                                     4,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "WIND",
-                               "letterNumbers":  [
-                                                     15,
-                                                     6,
-                                                     9,
-                                                     3
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c12_1",
-                          "clueText":  "Perceptible natural movement of atmospheric air",
-                          "targetWord":  "WIND",
-                          "letterNumbers":  [
-                                                15,
-                                                6,
-                                                9,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c12_2",
-                          "clueText":  "Moderate heat condition invigorating convective flow",
-                          "targetWord":  "WARM",
-                          "letterNumbers":  [
-                                                15,
-                                                1,
-                                                11,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c12_3",
-                          "clueText":  "To ascend vertically due to lower buoyant density",
-                          "targetWord":  "RISE",
-                          "letterNumbers":  [
-                                                11,
-                                                6,
-                                                12,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c12_4",
-                          "clueText":  "Violent atmospheric disturbance with high wind and rain",
-                          "targetWord":  "STORM",
-                          "letterNumbers":  [
-                                                12,
-                                                13,
-                                                10,
-                                                11,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c12_5",
-                          "clueText":  "Visible floating mass of condensed water droplets",
-                          "targetWord":  "CLOUD",
-                          "letterNumbers":  [
-                                                2,
-                                                7,
-                                                10,
-                                                14,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c12_6",
-                          "clueText":  "To bring about or produce through natural forces",
-                          "targetWord":  "CREATE",
-                          "letterNumbers":  [
-                                                2,
-                                                11,
-                                                4,
-                                                1,
-                                                13,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c12_7",
-                          "clueText":  "Current of unconfined air circulating in an area",
-                          "targetWord":  "DRAFT",
-                          "letterNumbers":  [
-                                                3,
-                                                11,
-                                                1,
-                                                5,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
+        "quoteText":  "CHLOROPHYLL ABSORBS SOLAR ENERGY",
         "educationalFact":  {
-                                "historicalContext":  "Solar radiation heats the equator more than the poles, driving massive global convection wind belts.",
-                                "title":  "Convection Currents \u0026 Wind Cycles",
-                                "attribution":  "Class 7 Geography â€¢ Meteorology",
-                                "keyTakeaway":  "Differential heating drives high and low barometric pressure systems.",
-                                "yearOrEra":  "Atmospheric Physics"
+                                "historicalContext":  "Chlorophyll captures red and blue sunlight while reflecting green light back.",
+                                "title":  "Green Pigment",
+                                "attribution":  "Class 9 - 10+ • Biology",
+                                "keyTakeaway":  "All human food energy originally began as sunlight captured by plants!",
+                                "yearOrEra":  "Curriculum Unit"
                             },
-        "vocabularyList":  [
-                               {
-                                   "word":  "CONVECTION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Heat transfer through the buoyant movement of fluid or gas",
-                                   "etymology":  "Latin convectio (carrying together)",
-                                   "exampleSentence":  "Thermal convection causes hot air balloons to soar."
-                               },
-                               {
-                                   "word":  "BAROMETER",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Instrument measuring atmospheric pressure",
-                                   "etymology":  "Greek baros (weight) + metron (measure)",
-                                   "exampleSentence":  "Falling barometer readings frequently indicate arriving storms."
-                               }
-                           ],
-        "coinsReward":  62
-    },
-    {
-        "id":  13,
-        "title":  "Electric Circuits",
-        "category":  "Physical Science",
-        "quoteText":  "ELECTRIC CURRENT FLOWS THROUGH WIRE",
+        "id":  35,
+        "coinsReward":  120,
         "quoteWords":  [
                            {
-                               "word":  "ELECTRIC",
+                               "word":  "CHLOROPHYLL",
                                "letterNumbers":  [
                                                      3,
-                                                     9,
-                                                     3,
-                                                     2,
-                                                     15,
-                                                     13,
                                                      7,
-                                                     2
-                                                 ]
-                           },
-                           {
-                               "word":  "CURRENT",
-                               "letterNumbers":  [
-                                                     2,
-                                                     16,
-                                                     13,
-                                                     13,
-                                                     3,
-                                                     10,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "FLOWS",
-                               "letterNumbers":  [
-                                                     4,
                                                      9,
                                                      11,
-                                                     18,
+                                                     13,
+                                                     11,
+                                                     12,
+                                                     7,
+                                                     16,
+                                                     9,
+                                                     9
+                                                 ]
+                           },
+                           {
+                               "word":  "ABSORBS",
+                               "letterNumbers":  [
+                                                     1,
+                                                     2,
+                                                     14,
+                                                     11,
+                                                     13,
+                                                     2,
                                                      14
                                                  ]
                            },
                            {
-                               "word":  "THROUGH",
+                               "word":  "SOLAR",
                                "letterNumbers":  [
-                                                     15,
-                                                     6,
-                                                     13,
+                                                     14,
                                                      11,
-                                                     16,
-                                                     5,
-                                                     6
+                                                     9,
+                                                     1,
+                                                     13
                                                  ]
                            },
                            {
-                               "word":  "WIRE",
+                               "word":  "ENERGY",
                                "letterNumbers":  [
-                                                     18,
-                                                     7,
+                                                     4,
+                                                     10,
+                                                     4,
                                                      13,
-                                                     3
+                                                     6,
+                                                     16
                                                  ]
                            }
                        ],
+        "category":  "Biology",
+        "title":  "Solar Energy",
+        "vocabularyList":  [
+                               {
+                                   "word":  "SOLAR",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Relating to or powered by the Sun",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "SOLAR is an important concept in Biology."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
         "clues":  [
                       {
-                          "id":  "c13_1",
-                          "clueText":  "Flow of electric charge carriers through a conductor",
-                          "targetWord":  "CURRENT",
-                          "letterNumbers":  [
-                                                2,
-                                                16,
-                                                13,
-                                                13,
-                                                3,
-                                                10,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c13_2",
-                          "clueText":  "Slender flexible metallic strand conducting electricity",
-                          "targetWord":  "WIRE",
-                          "letterNumbers":  [
-                                                18,
-                                                7,
-                                                13,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c13_3",
-                          "clueText":  "Flashes of electrical discharge crossing an air gap",
-                          "targetWord":  "SPARK",
                           "letterNumbers":  [
                                                 14,
-                                                12,
-                                                1,
-                                                13,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c13_4",
-                          "clueText":  "Standard metric unit of electrical potential difference",
-                          "targetWord":  "VOLT",
-                          "letterNumbers":  [
-                                                17,
                                                 11,
                                                 9,
-                                                15
+                                                1,
+                                                13
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "SOLAR",
+                          "clueText":  "Powered by or relating to the Sun",
+                          "id":  "c35_1"
                       },
                       {
-                          "id":  "c13_5",
-                          "clueText":  "Closed loop conducting electric current seamlessly",
-                          "targetWord":  "CIRCUIT",
-                          "letterNumbers":  [
-                                                2,
-                                                7,
-                                                13,
-                                                2,
-                                                16,
-                                                7,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c13_6",
-                          "clueText":  "Continuous drift motion of charged electrons",
-                          "targetWord":  "FLOW",
                           "letterNumbers":  [
                                                 4,
-                                                9,
-                                                11,
-                                                18
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c13_7",
-                          "clueText":  "Bright illumination produced by incandescent current",
-                          "targetWord":  "LIGHT",
-                          "letterNumbers":  [
-                                                9,
-                                                7,
-                                                5,
-                                                6,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Copper wires contain loosely bound conduction electrons that flow rapidly under electric voltage.",
-                                "title":  "Ohm\u0027s Law \u0026 Circuit Conductors",
-                                "attribution":  "Class 9 Physics â€¢ Electromagnetism",
-                                "keyTakeaway":  "A continuous closed loop circuit is necessary for electric current to operate devices.",
-                                "yearOrEra":  "Electrodynamics Principles"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "CONDUCTOR",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Material permitting free transit of electric electrons",
-                                   "etymology":  "Latin conducere (to bring together)",
-                                   "exampleSentence":  "Copper and aluminum serve as excellent industrial conductors."
-                               },
-                               {
-                                   "word":  "RESISTANCE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Opposition to the flow of electrical current",
-                                   "etymology":  "Latin resistere (to hold back)",
-                                   "exampleSentence":  "Thin filament wires have higher electrical resistance."
-                               }
-                           ],
-        "coinsReward":  63
-    },
-    {
-        "id":  14,
-        "title":  "Sound \u0026 Acoustics",
-        "category":  "Physical Science",
-        "quoteText":  "SOUND TRAVELS IN VIBRATING WAVES",
-        "quoteWords":  [
-                           {
-                               "word":  "SOUND",
-                               "letterNumbers":  [
-                                                     13,
-                                                     11,
-                                                     15,
-                                                     10,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "TRAVELS",
-                               "letterNumbers":  [
-                                                     14,
-                                                     12,
-                                                     1,
-                                                     16,
-                                                     5,
-                                                     9,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "IN",
-                               "letterNumbers":  [
-                                                     8,
-                                                     10
-                                                 ]
-                           },
-                           {
-                               "word":  "VIBRATING",
-                               "letterNumbers":  [
-                                                     16,
-                                                     8,
-                                                     2,
-                                                     12,
-                                                     1,
-                                                     14,
-                                                     8,
-                                                     10,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "WAVES",
-                               "letterNumbers":  [
-                                                     17,
-                                                     1,
-                                                     16,
-                                                     5,
-                                                     13
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c14_1",
-                          "clueText":  "Mechanical pressure wave perceived by auditory organs",
-                          "targetWord":  "SOUND",
-                          "letterNumbers":  [
+                                                10,
+                                                4,
                                                 13,
-                                                11,
-                                                15,
-                                                10,
-                                                4
+                                                6,
+                                                16
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "ENERGY",
+                          "clueText":  "Power to perform mechanical work",
+                          "id":  "c35_2"
                       },
                       {
-                          "id":  "c14_2",
-                          "clueText":  "Periodic disturbance transferring energy across a medium",
-                          "targetWord":  "WAVE",
                           "letterNumbers":  [
-                                                17,
+                                                9,
+                                                4,
                                                 1,
-                                                16,
                                                 5
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "LEAF",
+                          "clueText":  "Green plant blade absorbing sunlight",
+                          "id":  "c35_3"
                       },
                       {
-                          "id":  "c14_3",
-                          "clueText":  "Musical sound characterized by distinct pitch and timbre",
-                          "targetWord":  "TONE",
-                          "letterNumbers":  [
-                                                14,
-                                                11,
-                                                10,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c14_4",
-                          "clueText":  "Repetition of sound caused by reflection off barriers",
-                          "targetWord":  "ECHO",
-                          "letterNumbers":  [
-                                                5,
-                                                3,
-                                                7,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c14_5",
-                          "clueText":  "To oscillate rapidly back and forth around equilibrium",
-                          "targetWord":  "VIBRATE",
-                          "letterNumbers":  [
-                                                16,
-                                                8,
-                                                2,
-                                                12,
-                                                1,
-                                                14,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c14_6",
-                          "clueText":  "To produce a clear resonant reverberating sound",
-                          "targetWord":  "RING",
                           "letterNumbers":  [
                                                 12,
                                                 8,
-                                                10,
                                                 6
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "PIG",
+                          "clueText":  "Pink farm animal that oinks",
+                          "id":  "c35_4"
                       },
                       {
-                          "id":  "c14_7",
-                          "clueText":  "To propagate across distance through solid, liquid, or gas",
-                          "targetWord":  "TRAVEL",
                           "letterNumbers":  [
-                                                14,
-                                                12,
-                                                1,
-                                                16,
-                                                5,
-                                                9
+                                                2,
+                                                4,
+                                                4
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "BEE",
+                          "clueText":  "Buzzing insect making sweet honey",
+                          "id":  "c35_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                3,
+                                                1,
+                                                15
+                                            ],
+                          "targetWord":  "CAT",
+                          "clueText":  "Furry friendly pet that purrs and meows",
+                          "id":  "c35_6"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                1,
+                                                15
+                                            ],
+                          "targetWord":  "HAT",
+                          "clueText":  "Headwear that protects you from sun or rain",
+                          "id":  "c35_7"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Unlike electromagnetic light, sound cannot travel through vacuum because it requires colliding physical particles.",
-                                "title":  "Acoustic Waves \u0026 Medium Propagation",
-                                "attribution":  "Class 8 Physics â€¢ Wave Mechanics",
-                                "keyTakeaway":  "Sound travels roughly four times faster through water than through atmospheric air.",
-                                "yearOrEra":  "Acoustics Principles"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "FREQUENCY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Number of wave oscillations occurring within one second",
-                                   "etymology":  "Latin frequens (crowded / repeated)",
-                                   "exampleSentence":  "Human ears can hear sound frequencies from 20 to 20,000 Hertz."
-                               },
-                               {
-                                   "word":  "AMPLITUDE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Maximum extent of wave displacement from resting position",
-                                   "etymology":  "Latin amplitudo (spaciousness)",
-                                   "exampleSentence":  "Audio volume corresponds directly with sound wave amplitude."
-                               }
-                           ],
-        "coinsReward":  64
+                  ]
     },
     {
-        "id":  15,
-        "title":  "Mountain Geology",
-        "category":  "Earth Science",
-        "quoteText":  "TECTONIC FORCES RAISE HIGH PEAKS",
+        "quoteText":  "TECTONIC PLATES SHAPE CONTINENTS",
+        "educationalFact":  {
+                                "historicalContext":  "Earth\u0027s surface consists of giant rocky plates that slide slowly over molten mantle.",
+                                "title":  "Floating Plates",
+                                "attribution":  "Class 9 - 10+ • Geology",
+                                "keyTakeaway":  "The Atlantic Ocean grows wider by an inch every year as plates move!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  36,
+        "coinsReward":  122,
         "quoteWords":  [
                            {
                                "word":  "TECTONIC",
                                "letterNumbers":  [
-                                                     16,
-                                                     4,
-                                                     2,
-                                                     16,
                                                      12,
-                                                     11,
+                                                     3,
+                                                     2,
+                                                     12,
                                                      8,
+                                                     7,
+                                                     5,
                                                      2
                                                  ]
                            },
                            {
-                               "word":  "FORCES",
+                               "word":  "PLATES",
                                "letterNumbers":  [
-                                                     5,
-                                                     12,
-                                                     14,
-                                                     2,
-                                                     4,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "RAISE",
-                               "letterNumbers":  [
-                                                     14,
-                                                     1,
-                                                     8,
-                                                     15,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "HIGH",
-                               "letterNumbers":  [
-                                                     7,
-                                                     8,
+                                                     9,
                                                      6,
-                                                     7
+                                                     1,
+                                                     12,
+                                                     3,
+                                                     11
                                                  ]
                            },
                            {
-                               "word":  "PEAKS",
+                               "word":  "SHAPE",
                                "letterNumbers":  [
-                                                     13,
+                                                     11,
                                                      4,
                                                      1,
                                                      9,
-                                                     15
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "CONTINENTS",
+                               "letterNumbers":  [
+                                                     2,
+                                                     8,
+                                                     7,
+                                                     12,
+                                                     5,
+                                                     7,
+                                                     3,
+                                                     7,
+                                                     12,
+                                                     11
                                                  ]
                            }
                        ],
+        "category":  "Geology",
+        "title":  "Plate Tectonics",
+        "vocabularyList":  [
+                               {
+                                   "word":  "PLATE",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Large slab of Earth\u0027s rigid crust",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "PLATE is an important concept in Geology."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
         "clues":  [
                       {
-                          "id":  "c15_1",
-                          "clueText":  "Physical push or pull exerted across terrestrial rock",
-                          "targetWord":  "FORCE",
                           "letterNumbers":  [
-                                                5,
-                                                12,
-                                                14,
-                                                2,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c15_2",
-                          "clueText":  "Pointed rocky summit of a towering mountain",
-                          "targetWord":  "PEAK",
-                          "letterNumbers":  [
-                                                13,
-                                                4,
+                                                9,
+                                                6,
                                                 1,
-                                                9
+                                                12,
+                                                3
                                             ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c15_3",
-                          "clueText":  "Outer rigid rocky planetary shell of the Earth",
-                          "targetWord":  "CRUST",
-                          "letterNumbers":  [
-                                                2,
-                                                14,
-                                                17,
-                                                15,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c15_4",
-                          "clueText":  "Massive drifting slab of continental or oceanic crust",
                           "targetWord":  "PLATE",
+                          "clueText":  "Huge rock slab forming Earth\u0027s crust",
+                          "id":  "c36_1"
+                      },
+                      {
                           "letterNumbers":  [
-                                                13,
-                                                10,
+                                                11,
+                                                4,
                                                 1,
-                                                16,
-                                                4
+                                                9,
+                                                3
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "SHAPE",
+                          "clueText":  "To form or mold the outline of land",
+                          "id":  "c36_2"
                       },
                       {
-                          "id":  "c15_5",
-                          "clueText":  "Long narrow elevated crest of upland hills",
-                          "targetWord":  "RIDGE",
                           "letterNumbers":  [
-                                                14,
-                                                8,
                                                 3,
-                                                6,
+                                                1,
+                                                10,
+                                                12,
                                                 4
                                             ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c15_6",
-                          "clueText":  "Our terrestrial home planet with dynamic geological layers",
                           "targetWord":  "EARTH",
-                          "letterNumbers":  [
-                                                4,
-                                                1,
-                                                14,
-                                                16,
-                                                7
-                                            ],
-                          "hasDefinition":  true
+                          "clueText":  "Our home planet in the solar system",
+                          "id":  "c36_3"
                       },
                       {
-                          "id":  "c15_7",
-                          "clueText":  "Hard mineral substance forming towering mountains",
+                          "letterNumbers":  [
+                                                5,
+                                                2,
+                                                3
+                                            ],
+                          "targetWord":  "ICE",
+                          "clueText":  "Cold frozen solid fresh water",
+                          "id":  "c36_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                8,
+                                                7,
+                                                3
+                                            ],
                           "targetWord":  "STONE",
-                          "letterNumbers":  [
-                                                15,
-                                                16,
-                                                12,
-                                                11,
-                                                4
-                                            ],
-                          "hasDefinition":  true
+                          "clueText":  "Hard mineral rock from the ground",
+                          "id":  "c36_5"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The Himalayas continue rising millimeters each year as the Indian plate collides into Eurasia.",
-                                "title":  "Plate Tectonics \u0026 Orogeny",
-                                "attribution":  "Class 8 Geography â€¢ Physical Geology",
-                                "keyTakeaway":  "Fold mountains emerge where converging tectonic plates buckle upward.",
-                                "yearOrEra":  "Plate Tectonic Theory"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "OROGENY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Geological process of mountain formation through tectonic folding",
-                                   "etymology":  "Greek oros (mountain) + genesis (creation)",
-                                   "exampleSentence":  "The Himalayan orogeny created the highest summits on Earth."
-                               },
-                               {
-                                   "word":  "SUBDUCTION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Sideways downward movement of a tectonic plate edge",
-                                   "etymology":  "Latin subducere (lead down)",
-                                   "exampleSentence":  "Subduction zones frequently produce deep seismic earthquakes."
-                               }
-                           ],
-        "coinsReward":  65
+                  ]
     },
     {
-        "id":  16,
-        "title":  "Human Circulation",
-        "category":  "Health Science",
-        "quoteText":  "THE HEART PUMPS BLOOD THROUGH VEINS",
+        "quoteText":  "CATALYSTS SPEED UP REACTIONS",
+        "educationalFact":  {
+                                "historicalContext":  "A catalyst speeds up chemical reactions without being used up itself.",
+                                "title":  "Helper Chemicals",
+                                "attribution":  "Class 9 - 10+ • Chemistry",
+                                "keyTakeaway":  "Enzymes in our bodies perform millions of life reactions every second!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  37,
+        "coinsReward":  124,
         "quoteWords":  [
                            {
-                               "word":  "THE",
-                               "letterNumbers":  [
-                                                     15,
-                                                     6,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "HEART",
-                               "letterNumbers":  [
-                                                     6,
-                                                     4,
-                                                     1,
-                                                     13,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "PUMPS",
-                               "letterNumbers":  [
-                                                     12,
-                                                     16,
-                                                     9,
-                                                     12,
-                                                     14
-                                                 ]
-                           },
-                           {
-                               "word":  "BLOOD",
+                               "word":  "CATALYSTS",
                                "letterNumbers":  [
                                                      2,
-                                                     8,
-                                                     11,
-                                                     11,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "THROUGH",
-                               "letterNumbers":  [
-                                                     15,
+                                                     1,
+                                                     12,
+                                                     1,
                                                      6,
-                                                     13,
+                                                     14,
                                                      11,
-                                                     16,
-                                                     5,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "VEINS",
-                               "letterNumbers":  [
-                                                     17,
-                                                     4,
-                                                     7,
-                                                     10,
-                                                     14
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c16_1",
-                          "clueText":  "Muscular organ pumping blood through the circulatory system",
-                          "targetWord":  "HEART",
-                          "letterNumbers":  [
-                                                6,
-                                                4,
-                                                1,
-                                                13,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c16_2",
-                          "clueText":  "Mechanical or biological device driving fluid displacement",
-                          "targetWord":  "PUMP",
-                          "letterNumbers":  [
-                                                12,
-                                                16,
-                                                9,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c16_3",
-                          "clueText":  "Red vascular fluid circulating oxygen and vital nutrients",
-                          "targetWord":  "BLOOD",
-                          "letterNumbers":  [
-                                                2,
-                                                8,
-                                                11,
-                                                11,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c16_4",
-                          "clueText":  "Vascular vessel carrying deoxygenated blood back to heart",
-                          "targetWord":  "VEIN",
-                          "letterNumbers":  [
-                                                17,
-                                                4,
-                                                7,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c16_5",
-                          "clueText":  "Respiratory organ oxygenating venous bloodstream",
-                          "targetWord":  "LUNG",
-                          "letterNumbers":  [
-                                                8,
-                                                16,
-                                                10,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c16_6",
-                          "clueText":  "Thick muscular blood vessel transporting oxygenated blood",
-                          "targetWord":  "ARTERY",
-                          "letterNumbers":  [
-                                                1,
-                                                13,
-                                                15,
-                                                4,
-                                                13,
-                                                18
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c16_7",
-                          "clueText":  "Rhythmic arterial throb created by cardiac contraction",
-                          "targetWord":  "PULSE",
-                          "letterNumbers":  [
-                                                12,
-                                                16,
-                                                8,
-                                                14,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "William Harvey demonstrated in 1628 that blood flows in a continuous closed cardiovascular loop.",
-                                "title":  "Cardiovascular Circulation System",
-                                "attribution":  "Class 9 Biology â€¢ Human Physiology",
-                                "keyTakeaway":  "Red blood cells carry oxygen via hemoglobin to energize active bodily tissues.",
-                                "yearOrEra":  "William Harvey\u0027s Circulation Discovery"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "HEMOGLOBIN",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Iron-rich protein in red blood cells that transports oxygen",
-                                   "etymology":  "Greek hemo (blood) + globus (sphere)",
-                                   "exampleSentence":  "Hemoglobin binds four oxygen molecules to deliver through arteries."
-                               },
-                               {
-                                   "word":  "CAPILLARY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Microscopic branching blood vessel connecting arterioles and venules",
-                                   "etymology":  "Latin capillaris (hair-like)",
-                                   "exampleSentence":  "Gas exchange occurs across ultra-thin capillary walls."
-                               }
-                           ],
-        "coinsReward":  66
-    },
-    {
-        "id":  17,
-        "title":  "Gravity \u0026 Motion",
-        "category":  "Physics",
-        "quoteText":  "MASS ATTRACTS MASS ACROSS SPACE",
-        "quoteWords":  [
-                           {
-                               "word":  "MASS",
-                               "letterNumbers":  [
-                                                     7,
-                                                     1,
-                                                     11,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "ATTRACTS",
-                               "letterNumbers":  [
-                                                     1,
-                                                     12,
-                                                     12,
-                                                     10,
-                                                     1,
-                                                     3,
                                                      12,
                                                      11
-                                                 ]
-                           },
-                           {
-                               "word":  "MASS",
-                               "letterNumbers":  [
-                                                     7,
-                                                     1,
-                                                     11,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "ACROSS",
-                               "letterNumbers":  [
-                                                     1,
-                                                     3,
-                                                     10,
-                                                     8,
-                                                     11,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "SPACE",
-                               "letterNumbers":  [
-                                                     11,
-                                                     9,
-                                                     1,
-                                                     3,
-                                                     4
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c17_1",
-                          "clueText":  "Quantitative measure of inertia and matter in an object",
-                          "targetWord":  "MASS",
-                          "letterNumbers":  [
-                                                7,
-                                                1,
-                                                11,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c17_2",
-                          "clueText":  "Three-dimensional boundless continuum where bodies exist",
-                          "targetWord":  "SPACE",
-                          "letterNumbers":  [
-                                                11,
-                                                9,
-                                                1,
-                                                3,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c17_3",
-                          "clueText":  "Curved path of a celestial body moving around another",
-                          "targetWord":  "ORBIT",
-                          "letterNumbers":  [
-                                                8,
-                                                10,
-                                                2,
-                                                6,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c17_4",
-                          "clueText":  "Influence changing the velocity or direction of motion",
-                          "targetWord":  "FORCE",
-                          "letterNumbers":  [
-                                                5,
-                                                8,
-                                                10,
-                                                3,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c17_5",
-                          "clueText":  "Expanse or pulling corridor across which gravity acts",
-                          "targetWord":  "TRACT",
-                          "letterNumbers":  [
-                                                12,
-                                                10,
-                                                1,
-                                                3,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c17_6",
-                          "clueText":  "Massive luminous body anchoring planetary systems",
-                          "targetWord":  "STAR",
-                          "letterNumbers":  [
-                                                11,
-                                                12,
-                                                1,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c17_7",
-                          "clueText":  "Dense gravitational center of planets and stars",
-                          "targetWord":  "CORE",
-                          "letterNumbers":  [
-                                                3,
-                                                8,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Sir Isaac Newton formulated the inverse-square law of gravity uniting falling apples with planetary orbits.",
-                                "title":  "Universal Gravitational Law",
-                                "attribution":  "Class 9 Physics â€¢ Classical Mechanics",
-                                "keyTakeaway":  "Every particle of matter attracts every other particle proportionally to mass.",
-                                "yearOrEra":  "Newtonian Physics"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "GRAVITATION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Fundamental natural force of mutual attraction between masses",
-                                   "etymology":  "Latin gravitas (heaviness / weight)",
-                                   "exampleSentence":  "Gravitation governs tidal currents and galactic cohesion."
-                               },
-                               {
-                                   "word":  "ACCELERATION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Rate at which an object changes its operational velocity",
-                                   "etymology":  "Latin accelerare (to hasten)",
-                                   "exampleSentence":  "Earth gravity produces downward acceleration of 9.8 meters per second squared."
-                               }
-                           ],
-        "coinsReward":  67
-    },
-    {
-        "id":  18,
-        "title":  "Tropical Rainforests",
-        "category":  "Ecology",
-        "quoteText":  "DENSE FORESTS PRODUCE FRESH AIR",
-        "quoteWords":  [
-                           {
-                               "word":  "DENSE",
-                               "letterNumbers":  [
-                                                     3,
-                                                     4,
-                                                     9,
-                                                     13,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "FORESTS",
-                               "letterNumbers":  [
-                                                     5,
-                                                     10,
-                                                     12,
-                                                     4,
-                                                     13,
-                                                     14,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "PRODUCE",
-                               "letterNumbers":  [
-                                                     11,
-                                                     12,
-                                                     10,
-                                                     3,
-                                                     15,
-                                                     2,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "FRESH",
-                               "letterNumbers":  [
-                                                     5,
-                                                     12,
-                                                     4,
-                                                     13,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "AIR",
-                               "letterNumbers":  [
-                                                     1,
-                                                     7,
-                                                     12
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c18_1",
-                          "clueText":  "Dense canopy ecosystem dominated by mature trees",
-                          "targetWord":  "FOREST",
-                          "letterNumbers":  [
-                                                5,
-                                                10,
-                                                12,
-                                                4,
-                                                13,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c18_2",
-                          "clueText":  "Closely compacted together with high vegetative foliage",
-                          "targetWord":  "DENSE",
-                          "letterNumbers":  [
-                                                3,
-                                                4,
-                                                9,
-                                                13,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c18_3",
-                          "clueText":  "Clean pure invigorating and recently renewed",
-                          "targetWord":  "FRESH",
-                          "letterNumbers":  [
-                                                5,
-                                                12,
-                                                4,
-                                                13,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c18_4",
-                          "clueText":  "Invisible atmospheric mixture of oxygen and nitrogen gases",
-                          "targetWord":  "AIR",
-                          "letterNumbers":  [
-                                                1,
-                                                7,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c18_5",
-                          "clueText":  "High contiguous upper layer formed by mature treetops",
-                          "targetWord":  "CANOPY",
-                          "letterNumbers":  [
-                                                2,
-                                                1,
-                                                9,
-                                                10,
-                                                11,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c18_6",
-                          "clueText":  "Living organism synthesizing energy via photosynthesis",
-                          "targetWord":  "PLANT",
-                          "letterNumbers":  [
-                                                11,
-                                                8,
-                                                1,
-                                                9,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c18_7",
-                          "clueText":  "Seed-bearing structure formed by flowering trees",
-                          "targetWord":  "FRUIT",
-                          "letterNumbers":  [
-                                                5,
-                                                12,
-                                                15,
-                                                7,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Tropical rainforests cycle enormous volumes of atmospheric moisture, functioning as global air conditioners.",
-                                "title":  "Equatorial Rain Forest Biomes",
-                                "attribution":  "Class 8 Geography â€¢ Global Ecosystems",
-                                "keyTakeaway":  "Preserving tropical forests maintains global oxygen, rainfall, and climate equilibrium.",
-                                "yearOrEra":  "Ecological Geography"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "ECOSYSTEM",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Biological community of interacting organisms and their physical environment",
-                                   "etymology":  "Greek oikos (home) + system",
-                                   "exampleSentence":  "Rainforests represent our planet\u0027s most biologically diverse ecosystem."
-                               },
-                               {
-                                   "word":  "DEFORESTATION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Permanent clearing of forested land for commercial agriculture",
-                                   "etymology":  "Prefix de- (removal) + forestation",
-                                   "exampleSentence":  "Deforestation threatens unique wildlife species with extinction."
-                               }
-                           ],
-        "coinsReward":  68
-    },
-    {
-        "id":  19,
-        "title":  "Number Theory",
-        "category":  "Mathematics",
-        "quoteText":  "PRIME NUMBERS FORM UNIQUE PATTERNS",
-        "quoteWords":  [
-                           {
-                               "word":  "PRIME",
-                               "letterNumbers":  [
-                                                     12,
-                                                     14,
-                                                     8,
-                                                     9,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "NUMBERS",
-                               "letterNumbers":  [
-                                                     10,
-                                                     17,
-                                                     9,
-                                                     2,
-                                                     5,
-                                                     14,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "FORM",
-                               "letterNumbers":  [
-                                                     6,
-                                                     11,
-                                                     14,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "UNIQUE",
-                               "letterNumbers":  [
-                                                     17,
-                                                     10,
-                                                     8,
-                                                     13,
-                                                     17,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "PATTERNS",
-                               "letterNumbers":  [
-                                                     12,
-                                                     1,
-                                                     16,
-                                                     16,
-                                                     5,
-                                                     14,
-                                                     10,
-                                                     15
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c19_1",
-                          "clueText":  "Positive integer divisible exclusively by one and itself",
-                          "targetWord":  "PRIME",
-                          "letterNumbers":  [
-                                                12,
-                                                14,
-                                                8,
-                                                9,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c19_2",
-                          "clueText":  "Mathematical arithmetical value used in counting",
-                          "targetWord":  "NUMBER",
-                          "letterNumbers":  [
-                                                10,
-                                                17,
-                                                9,
-                                                2,
-                                                5,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c19_3",
-                          "clueText":  "Regular discernible repeating order in sequences",
-                          "targetWord":  "PATTERN",
-                          "letterNumbers":  [
-                                                12,
-                                                1,
-                                                16,
-                                                16,
-                                                5,
-                                                14,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c19_4",
-                          "clueText":  "Any numeral from zero through nine in base ten",
-                          "targetWord":  "DIGIT",
-                          "letterNumbers":  [
-                                                4,
-                                                8,
-                                                7,
-                                                8,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c19_5",
-                          "clueText":  "Distinctively singular without any duplicate match",
-                          "targetWord":  "UNIQUE",
-                          "letterNumbers":  [
-                                                17,
-                                                10,
-                                                8,
-                                                13,
-                                                17,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c19_6",
-                          "clueText":  "Integer that divides another number evenly without remainder",
-                          "targetWord":  "FACTOR",
-                          "letterNumbers":  [
-                                                6,
-                                                1,
-                                                3,
-                                                16,
-                                                11,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c19_7",
-                          "clueText":  "Total aggregate resulting from adding numbers together",
-                          "targetWord":  "SUM",
-                          "letterNumbers":  [
-                                                15,
-                                                17,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Every integer greater than one can be factored uniquely as a product of prime numbers.",
-                                "title":  "Fundamental Theorem of Arithmetic",
-                                "attribution":  "Class 9 Mathematics â€¢ Number Systems",
-                                "keyTakeaway":  "Prime numbers serve as the indivisible building blocks of all arithmetic.",
-                                "yearOrEra":  "Euclidean Number Theory"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "COMPOSITE",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Integer possessing positive divisors other than one and itself",
-                                   "etymology":  "Latin compositus (put together)",
-                                   "exampleSentence":  "Twelve is a composite number divisible by two, three, four, and six."
-                               },
-                               {
-                                   "word":  "ARITHMETIC",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Branch of mathematics involving manipulation of numbers",
-                                   "etymology":  "Greek arithmos (number)",
-                                   "exampleSentence":  "Modular arithmetic forms the core foundation of modern cybersecurity."
-                               }
-                           ],
-        "coinsReward":  69
-    },
-    {
-        "id":  20,
-        "title":  "The Printing Press",
-        "category":  "Inventions \u0026 History",
-        "quoteText":  "MOVABLE TYPE SPREAD PRINTED BOOKS",
-        "quoteWords":  [
-                           {
-                               "word":  "MOVABLE",
-                               "letterNumbers":  [
-                                                     8,
-                                                     10,
-                                                     15,
-                                                     1,
-                                                     2,
-                                                     7,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "TYPE",
-                               "letterNumbers":  [
-                                                     14,
-                                                     16,
-                                                     11,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "SPREAD",
-                               "letterNumbers":  [
-                                                     13,
-                                                     11,
-                                                     12,
-                                                     4,
-                                                     1,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "PRINTED",
-                               "letterNumbers":  [
-                                                     11,
-                                                     12,
-                                                     5,
-                                                     9,
-                                                     14,
-                                                     4,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "BOOKS",
-                               "letterNumbers":  [
-                                                     2,
-                                                     10,
-                                                     10,
-                                                     6,
-                                                     13
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c20_1",
-                          "clueText":  "To imprint ink onto paper or parchment sheets",
-                          "targetWord":  "PRINT",
-                          "letterNumbers":  [
-                                                11,
-                                                12,
-                                                5,
-                                                9,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c20_2",
-                          "clueText":  "Bound collection of printed leaves containing literature",
-                          "targetWord":  "BOOK",
-                          "letterNumbers":  [
-                                                2,
-                                                10,
-                                                10,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c20_3",
-                          "clueText":  "Cast metal blocks bearing carved relief letters",
-                          "targetWord":  "TYPE",
-                          "letterNumbers":  [
-                                                14,
-                                                16,
-                                                11,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c20_4",
-                          "clueText":  "Long printed prose narrative bound in book format",
-                          "targetWord":  "NOVEL",
-                          "letterNumbers":  [
-                                                9,
-                                                10,
-                                                15,
-                                                4,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c20_5",
-                          "clueText":  "To press ink patterns firmly onto paper",
-                          "targetWord":  "STAMP",
-                          "letterNumbers":  [
-                                                13,
-                                                14,
-                                                1,
-                                                8,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c20_6",
-                          "clueText":  "Colored liquid fluid used for writing and printing",
-                          "targetWord":  "INK",
-                          "letterNumbers":  [
-                                                5,
-                                                9,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c20_7",
-                          "clueText":  "To distribute widely across regions and populations",
-                          "targetWord":  "SPREAD",
-                          "letterNumbers":  [
-                                                13,
-                                                11,
-                                                12,
-                                                4,
-                                                1,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Johannes Gutenberg\u0027s mechanical movable type press enabled mass production of affordable educational books.",
-                                "title":  "Gutenberg\u0027s Revolution \u0026 Public Literacy",
-                                "attribution":  "Class 9 Social Studies â€¢ World History",
-                                "keyTakeaway":  "Accessible printed texts accelerated scientific discovery and global literacy.",
-                                "yearOrEra":  "Renaissance Era (1440 CE)"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "LITERACY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Ability to read, comprehend, and write fluently",
-                                   "etymology":  "Latin littera (letter)",
-                                   "exampleSentence":  "The printing press catalyzed widespread adult literacy across Europe."
-                               },
-                               {
-                                   "word":  "TYPOGRAPHY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Art and technique of arranging type to make written language legible",
-                                   "etymology":  "Greek typos (impression) + graphia (writing)",
-                                   "exampleSentence":  "Modern typography balances aesthetic elegance with clear readability."
-                               }
-                           ],
-        "coinsReward":  70
-    },
-    {
-        "id":  21,
-        "title":  "Desert Ecology",
-        "category":  "Ecology",
-        "quoteText":  "CACTUS STORES WATER IN DRY SAND",
-        "quoteWords":  [
-                           {
-                               "word":  "CACTUS",
-                               "letterNumbers":  [
-                                                     2,
-                                                     1,
-                                                     2,
-                                                     10,
-                                                     11,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "STORES",
-                               "letterNumbers":  [
-                                                     9,
-                                                     10,
-                                                     7,
-                                                     8,
-                                                     4,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "WATER",
-                               "letterNumbers":  [
-                                                     12,
-                                                     1,
-                                                     10,
-                                                     4,
-                                                     8
-                                                 ]
-                           },
-                           {
-                               "word":  "IN",
-                               "letterNumbers":  [
-                                                     5,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "DRY",
-                               "letterNumbers":  [
-                                                     3,
-                                                     8,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "SAND",
-                               "letterNumbers":  [
-                                                     9,
-                                                     1,
-                                                     6,
-                                                     3
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c21_1",
-                          "clueText":  "Fleshy desert plant with spines storing moisture",
-                          "targetWord":  "CACTUS",
-                          "letterNumbers":  [
-                                                2,
-                                                1,
-                                                2,
-                                                10,
-                                                11,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c21_2",
-                          "clueText":  "Essential liquid nutrient stored within plant stems",
-                          "targetWord":  "WATER",
-                          "letterNumbers":  [
-                                                12,
-                                                1,
-                                                10,
-                                                4,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c21_3",
-                          "clueText":  "Granular mineral grains covering arid deserts",
-                          "targetWord":  "SAND",
-                          "letterNumbers":  [
-                                                9,
-                                                1,
-                                                6,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c21_4",
-                          "clueText":  "To retain reserves for survival through droughts",
-                          "targetWord":  "STORE",
-                          "letterNumbers":  [
-                                                9,
-                                                10,
-                                                7,
-                                                8,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c21_5",
-                          "clueText":  "Lacking atmospheric moisture or rainfall",
-                          "targetWord":  "DRY",
-                          "letterNumbers":  [
-                                                3,
-                                                8,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c21_6",
-                          "clueText":  "Wind-sculpted ridge or hill of loose sand",
-                          "targetWord":  "DUNE",
-                          "letterNumbers":  [
-                                                3,
-                                                11,
-                                                6,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c21_7",
-                          "clueText":  "Rare desert precipitation awakening seeds",
-                          "targetWord":  "RAIN",
-                          "letterNumbers":  [
-                                                8,
-                                                1,
-                                                5,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Cacti evolved waxy cuticles and needles to minimize moisture evaporation.",
-                                "title":  "Xerophytic Adaptations",
-                                "attribution":  "Class 7 Science â€¢ Desert Biology",
-                                "keyTakeaway":  "Desert plants adapt to endure severe water scarcity.",
-                                "yearOrEra":  "Arid Ecology"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "XEROPHYTE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Plant adapted to survive with minimal liquid moisture",
-                                   "etymology":  "Greek xeros (dry) + phyton (plant)",
-                                   "exampleSentence":  "Cacti are quintessential xerophytes."
-                               }
-                           ],
-        "coinsReward":  71
-    },
-    {
-        "id":  22,
-        "title":  "Aviation \u0026 Flight",
-        "category":  "Aerodynamics",
-        "quoteText":  "WINGS CREATE LIFT IN AIR FLOW",
-        "quoteWords":  [
-                           {
-                               "word":  "WINGS",
-                               "letterNumbers":  [
-                                                     14,
-                                                     7,
-                                                     9,
-                                                     6,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "CREATE",
-                               "letterNumbers":  [
-                                                     2,
-                                                     11,
-                                                     4,
-                                                     1,
-                                                     13,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "LIFT",
-                               "letterNumbers":  [
-                                                     8,
-                                                     7,
-                                                     5,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "IN",
-                               "letterNumbers":  [
-                                                     7,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "AIR",
-                               "letterNumbers":  [
-                                                     1,
-                                                     7,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "FLOW",
-                               "letterNumbers":  [
-                                                     5,
-                                                     8,
-                                                     10,
-                                                     14
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c22_1",
-                          "clueText":  "Airfoil structure generating aerodynamic upward lift",
-                          "targetWord":  "WING",
-                          "letterNumbers":  [
-                                                14,
-                                                7,
-                                                9,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c22_2",
-                          "clueText":  "Upward aerodynamic force counteracting gravity",
-                          "targetWord":  "LIFT",
-                          "letterNumbers":  [
-                                                8,
-                                                7,
-                                                5,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c22_3",
-                          "clueText":  "Smooth continuous stream of air molecules over a surface",
-                          "targetWord":  "FLOW",
-                          "letterNumbers":  [
-                                                5,
-                                                8,
-                                                10,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c22_4",
-                          "clueText":  "Gas fluid exerting pressure upon aircraft wings",
-                          "targetWord":  "AIR",
-                          "letterNumbers":  [
-                                                1,
-                                                7,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c22_5",
-                          "clueText":  "To fly smoothly across distance without engine thrust",
-                          "targetWord":  "GLIDE",
-                          "letterNumbers":  [
-                                                6,
-                                                8,
-                                                7,
-                                                3,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c22_6",
-                          "clueText":  "To produce or cause an aerodynamic effect",
-                          "targetWord":  "CREATE",
-                          "letterNumbers":  [
-                                                2,
-                                                11,
-                                                4,
-                                                1,
-                                                13,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c22_7",
-                          "clueText":  "To rise aloft and maintain flight with thermals",
-                          "targetWord":  "SOAR",
-                          "letterNumbers":  [
-                                                12,
-                                                10,
-                                                1,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Air moving faster over curved upper wing camber creates lower pressure above, producing upward lift.",
-                                "title":  "Bernoulli\u0027s Principle \u0026 Aerodynamics",
-                                "attribution":  "Class 9 Physics â€¢ Fluid Dynamics",
-                                "keyTakeaway":  "Aircraft fly when upward lift exceeds downward gravitational weight.",
-                                "yearOrEra":  "Modern Aeronautics"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "AEROFOIL",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Streamlined curved surface designed to provide aerodynamic lift",
-                                   "etymology":  "Greek aer (air) + foil (leaf)",
-                                   "exampleSentence":  "Engineers test aerofoil profiles inside wind tunnels."
-                               }
-                           ],
-        "coinsReward":  72
-    },
-    {
-        "id":  23,
-        "title":  "Chemical Catalysis",
-        "category":  "Chemistry",
-        "quoteText":  "ENZYMES SPEED CHEMICAL REACTIONS",
-        "quoteWords":  [
-                           {
-                               "word":  "ENZYMES",
-                               "letterNumbers":  [
-                                                     4,
-                                                     9,
-                                                     16,
-                                                     15,
-                                                     8,
-                                                     4,
-                                                     13
                                                  ]
                            },
                            {
                                "word":  "SPEED",
                                "letterNumbers":  [
-                                                     13,
                                                      11,
+                                                     9,
                                                      4,
                                                      4,
                                                      3
                                                  ]
                            },
                            {
-                               "word":  "CHEMICAL",
+                               "word":  "UP",
                                "letterNumbers":  [
-                                                     2,
-                                                     5,
-                                                     4,
-                                                     8,
-                                                     6,
-                                                     2,
-                                                     1,
-                                                     7
+                                                     13,
+                                                     9
                                                  ]
                            },
                            {
                                "word":  "REACTIONS",
                                "letterNumbers":  [
-                                                     12,
+                                                     10,
                                                      4,
                                                      1,
                                                      2,
-                                                     14,
-                                                     6,
-                                                     10,
-                                                     9,
-                                                     13
+                                                     12,
+                                                     5,
+                                                     8,
+                                                     7,
+                                                     11
                                                  ]
                            }
                        ],
+        "category":  "Chemistry",
+        "title":  "Speeding Catalysts",
+        "vocabularyList":  [
+                               {
+                                   "word":  "SPEED",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Rate of moving or reacting quickly",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "SPEED is an important concept in Chemistry."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
         "clues":  [
                       {
-                          "id":  "c23_1",
-                          "clueText":  "Biological protein catalyst accelerating metabolic reactions",
-                          "targetWord":  "ENZYME",
                           "letterNumbers":  [
-                                                4,
+                                                11,
                                                 9,
-                                                16,
-                                                15,
-                                                8,
-                                                4
+                                                4,
+                                                4,
+                                                3
                                             ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c23_2",
-                          "clueText":  "To accelerate reaction rates without being consumed",
                           "targetWord":  "SPEED",
-                          "letterNumbers":  [
-                                                13,
-                                                11,
-                                                4,
-                                                4,
-                                                3
-                                            ],
-                          "hasDefinition":  true
+                          "clueText":  "Rapid pace or velocity of motion",
+                          "id":  "c37_1"
                       },
                       {
-                          "id":  "c23_3",
-                          "clueText":  "Chemical substance donating protons in aqueous solution",
-                          "targetWord":  "ACID",
-                          "letterNumbers":  [
-                                                1,
-                                                2,
-                                                6,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c23_4",
-                          "clueText":  "Transformation rearranging atomic chemical bonds",
-                          "targetWord":  "REACTION",
-                          "letterNumbers":  [
-                                                12,
-                                                4,
-                                                1,
-                                                2,
-                                                14,
-                                                6,
-                                                10,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c23_5",
-                          "clueText":  "Pertaining to chemical molecular substances",
-                          "targetWord":  "CHEMIC",
                           "letterNumbers":  [
                                                 2,
-                                                5,
-                                                4,
-                                                8,
-                                                6,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c23_6",
-                          "clueText":  "Microscopic living chamber where enzymes catalyze life",
-                          "targetWord":  "CELL",
-                          "letterNumbers":  [
-                                                2,
-                                                4,
-                                                7,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c23_7",
-                          "clueText":  "Ionic compound formed by acid and base neutralization",
-                          "targetWord":  "SALT",
-                          "letterNumbers":  [
-                                                13,
-                                                1,
-                                                7,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Enzymes lower the required activation energy of biochemical pathways by thousands of times.",
-                                "title":  "Biocatalysis \u0026 Protein Catalysts",
-                                "attribution":  "Class 9 Chemistry â€¢ Organic Biochemistry",
-                                "keyTakeaway":  "Without digestive enzymes, biological life could not sustain energy.",
-                                "yearOrEra":  "Biochemical Discoveries"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "CATALYST",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Substance accelerating a chemical reaction without undergoing permanent change",
-                                   "etymology":  "Greek katalyein (to dissolve)",
-                                   "exampleSentence":  "Platinum functions as an industrial catalytic agent."
-                               }
-                           ],
-        "coinsReward":  73
-    },
-    {
-        "id":  24,
-        "title":  "Glacier Movement",
-        "category":  "Geology",
-        "quoteText":  "GLACIERS CARVE DEEP ICE VALLEYS",
-        "quoteWords":  [
-                           {
-                               "word":  "GLACIERS",
-                               "letterNumbers":  [
-                                                     5,
-                                                     8,
-                                                     1,
-                                                     2,
-                                                     6,
-                                                     4,
-                                                     11,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "CARVE",
-                               "letterNumbers":  [
-                                                     2,
-                                                     1,
-                                                     11,
-                                                     13,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "DEEP",
-                               "letterNumbers":  [
-                                                     3,
-                                                     4,
-                                                     4,
-                                                     10
-                                                 ]
-                           },
-                           {
-                               "word":  "ICE",
-                               "letterNumbers":  [
-                                                     6,
-                                                     2,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "VALLEYS",
-                               "letterNumbers":  [
-                                                     13,
-                                                     1,
-                                                     8,
-                                                     8,
-                                                     4,
-                                                     14,
-                                                     12
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c24_1",
-                          "clueText":  "Massive persistent body of dense creeping glacial ice",
-                          "targetWord":  "GLACIER",
-                          "letterNumbers":  [
-                                                5,
-                                                8,
-                                                1,
-                                                2,
-                                                6,
-                                                4,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c24_2",
-                          "clueText":  "To sculpt bedrock through slow relentless friction",
-                          "targetWord":  "CARVE",
-                          "letterNumbers":  [
-                                                2,
-                                                1,
-                                                11,
-                                                13,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c24_3",
-                          "clueText":  "Elongated U-shaped trough gouged by moving glaciers",
-                          "targetWord":  "VALLEY",
-                          "letterNumbers":  [
-                                                13,
-                                                1,
-                                                8,
-                                                8,
-                                                4,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c24_4",
-                          "clueText":  "Extending far downward from surface elevations",
-                          "targetWord":  "DEEP",
-                          "letterNumbers":  [
-                                                3,
-                                                4,
-                                                4,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c24_5",
-                          "clueText":  "Compacted crystalline frozen snow under pressure",
-                          "targetWord":  "ICE",
-                          "letterNumbers":  [
-                                                6,
-                                                2,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c24_6",
-                          "clueText":  "Incline down which heavy glaciers slowly slide",
-                          "targetWord":  "SLOPE",
-                          "letterNumbers":  [
-                                                12,
-                                                8,
-                                                9,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c24_7",
-                          "clueText":  "Sharp mountain summit standing above glacial ice",
-                          "targetWord":  "PEAK",
-                          "letterNumbers":  [
-                                                10,
-                                                4,
-                                                1,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Continental ice sheets carved the Great Lakes and steep alpine fjords over thousands of years.",
-                                "title":  "Glacial Geomorphology",
-                                "attribution":  "Class 8 Geography â€¢ Physical Earth",
-                                "keyTakeaway":  "Glaciers store sixty-nine percent of Earth\u0027s freshwater supply.",
-                                "yearOrEra":  "Glacial Geology"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "MORAINE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Ridge of rock debris deposited by a retreating glacier",
-                                   "etymology":  "French moraine",
-                                   "exampleSentence":  "Terminal moraines mark the furthest advance of a glacier."
-                               }
-                           ],
-        "coinsReward":  74
-    },
-    {
-        "id":  25,
-        "title":  "Human Nervous System",
-        "category":  "Health Science",
-        "quoteText":  "NEURONS SEND SIGNALS TO BRAIN",
-        "quoteWords":  [
-                           {
-                               "word":  "NEURONS",
-                               "letterNumbers":  [
-                                                     9,
-                                                     4,
-                                                     15,
-                                                     12,
-                                                     10,
-                                                     9,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "SEND",
-                               "letterNumbers":  [
-                                                     13,
-                                                     4,
-                                                     9,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "SIGNALS",
-                               "letterNumbers":  [
-                                                     13,
-                                                     7,
-                                                     5,
-                                                     9,
-                                                     1,
-                                                     8,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "TO",
-                               "letterNumbers":  [
-                                                     14,
-                                                     10
-                                                 ]
-                           },
-                           {
-                               "word":  "BRAIN",
-                               "letterNumbers":  [
-                                                     2,
-                                                     12,
-                                                     1,
-                                                     7,
-                                                     9
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c25_1",
-                          "clueText":  "Specialized nerve cell transmitting electrical impulses",
-                          "targetWord":  "NEURON",
-                          "letterNumbers":  [
-                                                9,
-                                                4,
-                                                15,
-                                                12,
-                                                10,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c25_2",
-                          "clueText":  "Electrochemical impulse carrying sensory data",
-                          "targetWord":  "SIGNAL",
-                          "letterNumbers":  [
-                                                13,
-                                                7,
-                                                5,
-                                                9,
-                                                1,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c25_3",
-                          "clueText":  "Central organ governing thought and sensory perception",
-                          "targetWord":  "BRAIN",
-                          "letterNumbers":  [
-                                                2,
-                                                12,
-                                                1,
-                                                7,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c25_4",
-                          "clueText":  "Bundle of neurological fibers routing sensory signals",
-                          "targetWord":  "NERVE",
-                          "letterNumbers":  [
-                                                9,
-                                                4,
-                                                12,
-                                                16,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c25_5",
-                          "clueText":  "To transmit information across synaptic gaps",
-                          "targetWord":  "SEND",
-                          "letterNumbers":  [
-                                                13,
-                                                4,
-                                                9,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c25_6",
-                          "clueText":  "Mental cognition generated by cerebral neural circuits",
-                          "targetWord":  "THOUGHT",
-                          "letterNumbers":  [
-                                                14,
-                                                6,
-                                                10,
-                                                15,
-                                                5,
-                                                6,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c25_7",
-                          "clueText":  "Rapid transient electrical action potential in axons",
-                          "targetWord":  "PULSE",
-                          "letterNumbers":  [
-                                                11,
-                                                15,
-                                                8,
-                                                13,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The human brain contains roughly eighty-six billion interconnected neurons communicating via synapses.",
-                                "title":  "Neural Transmission \u0026 Synapses",
-                                "attribution":  "Class 9 Biology â€¢ Neurobiology",
-                                "keyTakeaway":  "Nerve impulses travel at speeds exceeding one hundred meters per second.",
-                                "yearOrEra":  "Modern Neuroscience"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "SYNAPSE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Microscopic junction across which nerve impulses pass",
-                                   "etymology":  "Greek synapsis (junction)",
-                                   "exampleSentence":  "Neurotransmitters diffuse across the synaptic cleft."
-                               }
-                           ],
-        "coinsReward":  75
-    },
-    {
-        "id":  26,
-        "title":  "Renewable Green Energy",
-        "category":  "Environmental Science",
-        "quoteText":  "SOLAR PANELS GENERATE CLEAN POWER",
-        "quoteWords":  [
-                           {
-                               "word":  "SOLAR",
-                               "letterNumbers":  [
-                                                     12,
-                                                     9,
-                                                     7,
-                                                     1,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "PANELS",
-                               "letterNumbers":  [
-                                                     10,
-                                                     1,
-                                                     8,
-                                                     3,
-                                                     7,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "GENERATE",
-                               "letterNumbers":  [
-                                                     4,
-                                                     3,
-                                                     8,
-                                                     3,
-                                                     11,
-                                                     1,
-                                                     13,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "CLEAN",
-                               "letterNumbers":  [
-                                                     2,
-                                                     7,
-                                                     3,
-                                                     1,
-                                                     8
-                                                 ]
-                           },
-                           {
-                               "word":  "POWER",
-                               "letterNumbers":  [
-                                                     10,
-                                                     9,
-                                                     14,
-                                                     3,
-                                                     11
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c26_1",
-                          "clueText":  "Harvesting radiant light energy directly from the Sun",
-                          "targetWord":  "SOLAR",
-                          "letterNumbers":  [
-                                                12,
-                                                9,
-                                                7,
-                                                1,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c26_2",
-                          "clueText":  "Flat assembly of photovoltaic silicon cells",
-                          "targetWord":  "PANEL",
-                          "letterNumbers":  [
-                                                10,
-                                                1,
-                                                8,
-                                                3,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c26_3",
-                          "clueText":  "Rate at which electrical energy is generated or consumed",
-                          "targetWord":  "POWER",
-                          "letterNumbers":  [
-                                                10,
-                                                9,
-                                                14,
-                                                3,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c26_4",
-                          "clueText":  "Producing zero harmful greenhouse gas emissions",
-                          "targetWord":  "CLEAN",
-                          "letterNumbers":  [
-                                                2,
-                                                7,
-                                                3,
-                                                1,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c26_5",
-                          "clueText":  "Ecologically sustainable and environmentally benign",
-                          "targetWord":  "GREEN",
-                          "letterNumbers":  [
-                                                4,
-                                                11,
-                                                3,
-                                                3,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c26_6",
-                          "clueText":  "Solar photons exciting electrons in semiconductor junctions",
-                          "targetWord":  "LIGHT",
-                          "letterNumbers":  [
-                                                7,
-                                                6,
-                                                4,
-                                                5,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c26_7",
-                          "clueText":  "Machine converting mechanical or radiant energy to electric current",
-                          "targetWord":  "GENERATOR",
-                          "letterNumbers":  [
-                                                4,
-                                                3,
-                                                8,
-                                                3,
-                                                11,
-                                                1,
-                                                13,
-                                                9,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Photovoltaic cells release electric electrons when struck by photons of sunlight.",
-                                "title":  "Photovoltaic Solar Energy",
-                                "attribution":  "Class 8 General Science â€¢ Renewable Power",
-                                "keyTakeaway":  "Solar and wind energy reduce global dependence on fossil fuels.",
-                                "yearOrEra":  "Clean Energy Transition"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "PHOTOVOLTAIC",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Generating electric current at the junction of two materials exposed to light",
-                                   "etymology":  "Greek photo (light) + volt",
-                                   "exampleSentence":  "Rooftop photovoltaic arrays generate clean household electricity."
-                               }
-                           ],
-        "coinsReward":  76
-    },
-    {
-        "id":  27,
-        "title":  "Deep Sea Trenches",
-        "category":  "Marine Geology",
-        "quoteText":  "TRENCHES REACH DEEP DARK DEPTHS",
-        "quoteWords":  [
-                           {
-                               "word":  "TRENCHES",
-                               "letterNumbers":  [
-                                                     13,
-                                                     11,
-                                                     5,
-                                                     8,
-                                                     3,
-                                                     6,
-                                                     5,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "REACH",
-                               "letterNumbers":  [
-                                                     11,
-                                                     5,
-                                                     1,
-                                                     3,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "DEEP",
-                               "letterNumbers":  [
-                                                     4,
-                                                     5,
-                                                     5,
-                                                     10
-                                                 ]
-                           },
-                           {
-                               "word":  "DARK",
-                               "letterNumbers":  [
-                                                     4,
-                                                     1,
-                                                     11,
-                                                     7
-                                                 ]
-                           },
-                           {
-                               "word":  "DEPTHS",
-                               "letterNumbers":  [
-                                                     4,
-                                                     5,
-                                                     10,
-                                                     13,
-                                                     6,
-                                                     12
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c27_1",
-                          "clueText":  "Deep steep-sided oceanic depression formed by subduction",
-                          "targetWord":  "TRENCH",
-                          "letterNumbers":  [
-                                                13,
-                                                11,
-                                                5,
-                                                8,
-                                                3,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c27_2",
-                          "clueText":  "To extend across great physical vertical distance",
-                          "targetWord":  "REACH",
-                          "letterNumbers":  [
-                                                11,
-                                                5,
-                                                1,
-                                                3,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c27_3",
-                          "clueText":  "Extending thousands of meters below sea level",
-                          "targetWord":  "DEEP",
-                          "letterNumbers":  [
-                                                4,
-                                                5,
-                                                5,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c27_4",
-                          "clueText":  "Devoid of penetrating solar sunlight photons",
-                          "targetWord":  "DARK",
-                          "letterNumbers":  [
-                                                4,
-                                                1,
-                                                11,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c27_5",
-                          "clueText":  "Measurement of downward vertical distance into the ocean",
-                          "targetWord":  "DEPTH",
-                          "letterNumbers":  [
-                                                4,
-                                                5,
-                                                10,
-                                                13,
-                                                6
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c27_6",
-                          "clueText":  "Dense oceanic basalt forming trench floors",
-                          "targetWord":  "STONE",
-                          "letterNumbers":  [
-                                                12,
-                                                13,
-                                                9,
-                                                8,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c27_7",
-                          "clueText":  "Immense bottomless oceanic abyss of perpetual night",
-                          "targetWord":  "ABYSS",
-                          "letterNumbers":  [
-                                                1,
-                                                2,
-                                                14,
-                                                12,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The Challenger Deep in the Mariana Trench descends nearly eleven thousand meters beneath sea level.",
-                                "title":  "The Mariana Trench \u0026 Hadal Zone",
-                                "attribution":  "Class 8 Geography â€¢ Oceanography",
-                                "keyTakeaway":  "Creatures in the hadal abyss endure extreme hydrostatic pressure in total darkness.",
-                                "yearOrEra":  "Deep Ocean Exploration"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "HADAL",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Relating to the deepest regions of ocean trenches below six thousand meters",
-                                   "etymology":  "Greek Hades (underworld)",
-                                   "exampleSentence":  "Bioluminescent organisms inhabit hadal ocean zones."
-                               }
-                           ],
-        "coinsReward":  77
-    },
-    {
-        "id":  28,
-        "title":  "Magnetism \u0026 Magnetic Fields",
-        "category":  "Physical Science",
-        "quoteText":  "MAGNETS PULL STEEL AND IRON",
-        "quoteWords":  [
-                           {
-                               "word":  "MAGNETS",
-                               "letterNumbers":  [
-                                                     8,
-                                                     1,
-                                                     5,
-                                                     9,
-                                                     3,
-                                                     14,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "PULL",
-                               "letterNumbers":  [
-                                                     11,
-                                                     15,
-                                                     7,
-                                                     7
-                                                 ]
-                           },
-                           {
-                               "word":  "STEEL",
-                               "letterNumbers":  [
-                                                     13,
-                                                     14,
-                                                     3,
-                                                     3,
-                                                     7
-                                                 ]
-                           },
-                           {
-                               "word":  "AND",
-                               "letterNumbers":  [
-                                                     1,
-                                                     9,
-                                                     2
-                                                 ]
-                           },
-                           {
-                               "word":  "IRON",
-                               "letterNumbers":  [
-                                                     6,
-                                                     12,
-                                                     10,
-                                                     9
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c28_1",
-                          "clueText":  "Object producing magnetic fields attracting ferrous metals",
-                          "targetWord":  "MAGNET",
-                          "letterNumbers":  [
-                                                8,
-                                                1,
-                                                5,
-                                                9,
-                                                3,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c28_2",
-                          "clueText":  "Exertion of attractive physical force drawing objects closer",
-                          "targetWord":  "PULL",
-                          "letterNumbers":  [
-                                                11,
-                                                15,
-                                                7,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c28_3",
-                          "clueText":  "Ferromagnetic alloy of iron and carbon",
-                          "targetWord":  "STEEL",
-                          "letterNumbers":  [
-                                                13,
-                                                14,
-                                                3,
-                                                3,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c28_4",
-                          "clueText":  "Common dense metallic element with magnetic properties",
-                          "targetWord":  "IRON",
-                          "letterNumbers":  [
-                                                6,
-                                                12,
-                                                10,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c28_5",
-                          "clueText":  "North or south magnetic extremity of a magnet",
-                          "targetWord":  "POLE",
-                          "letterNumbers":  [
-                                                11,
-                                                10,
-                                                7,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c28_6",
-                          "clueText":  "Granular mineral grains containing magnetic black sands",
-                          "targetWord":  "SAND",
-                          "letterNumbers":  [
-                                                13,
-                                                1,
-                                                9,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c28_7",
-                          "clueText":  "Region of invisible magnetic force surrounding poles",
-                          "targetWord":  "FIELD",
-                          "letterNumbers":  [
-                                                4,
-                                                6,
-                                                3,
-                                                7,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Convection in Earth\u0027s molten iron outer core generates our planetary magnetic field, deflecting solar wind.",
-                                "title":  "Earth\u0027s Geomagnetic Dynamo",
-                                "attribution":  "Class 8 Physics â€¢ Magnetism",
-                                "keyTakeaway":  "Opposite magnetic poles attract, while identical poles repel.",
-                                "yearOrEra":  "Geophysics"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "FERROMAGNETIC",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Substances exhibiting high magnetic susceptibility like iron and nickel",
-                                   "etymology":  "Latin ferrum (iron) + magnetic",
-                                   "exampleSentence":  "Iron filings align along invisible ferromagnetic field lines."
-                               }
-                           ],
-        "coinsReward":  78
-    },
-    {
-        "id":  29,
-        "title":  "Ancient Egyptian Pyramids",
-        "category":  "World History",
-        "quoteText":  "STONE MONUMENTS STAND FOR AGES",
-        "quoteWords":  [
-                           {
-                               "word":  "STONE",
-                               "letterNumbers":  [
-                                                     13,
-                                                     14,
-                                                     11,
-                                                     10,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "MONUMENTS",
-                               "letterNumbers":  [
-                                                     9,
-                                                     11,
-                                                     10,
-                                                     15,
-                                                     9,
-                                                     4,
-                                                     10,
-                                                     14,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "STAND",
-                               "letterNumbers":  [
-                                                     13,
-                                                     14,
-                                                     1,
-                                                     10,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "FOR",
-                               "letterNumbers":  [
-                                                     5,
-                                                     11,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "AGES",
-                               "letterNumbers":  [
-                                                     1,
-                                                     6,
-                                                     4,
-                                                     13
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c29_1",
-                          "clueText":  "Hard solid mineral rock used in monumental masonry",
-                          "targetWord":  "STONE",
-                          "letterNumbers":  [
-                                                13,
-                                                14,
-                                                11,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c29_2",
-                          "clueText":  "To remain enduringly upright against wind and time",
-                          "targetWord":  "STAND",
-                          "letterNumbers":  [
-                                                13,
-                                                14,
-                                                1,
-                                                10,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c29_3",
-                          "clueText":  "Enduring ancient architectural edifice honoring history",
-                          "targetWord":  "MONUMENT",
-                          "letterNumbers":  [
-                                                9,
-                                                11,
-                                                10,
-                                                15,
-                                                9,
-                                                4,
-                                                10,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c29_4",
-                          "clueText":  "Imposing fortified stone citadel built to protect civilization",
-                          "targetWord":  "FORT",
-                          "letterNumbers":  [
-                                                5,
-                                                11,
-                                                12,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c29_5",
-                          "clueText":  "Distinct historical epoch or millennium of civilization",
-                          "targetWord":  "AGE",
-                          "letterNumbers":  [
-                                                1,
-                                                6,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c29_6",
-                          "clueText":  "Quarried limestone blocks assembled into pyramid walls",
-                          "targetWord":  "ROCK",
-                          "letterNumbers":  [
-                                                12,
-                                                11,
-                                                2,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c29_7",
-                          "clueText":  "Gleaming pyramidion capstone placed atop royal monuments",
-                          "targetWord":  "GOLD",
-                          "letterNumbers":  [
-                                                6,
-                                                11,
-                                                8,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The Great Pyramid stood as the tallest human-made structure on Earth for over thirty-eight hundred years.",
-                                "title":  "Great Pyramid of Giza Engineering",
-                                "attribution":  "Class 9 Social Studies â€¢ Ancient Civilizations",
-                                "keyTakeaway":  "Ancient engineers utilized precise celestial alignment and inclined ramps.",
-                                "yearOrEra":  "Old Kingdom (2560 BCE)"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "MONUMENTAL",
-                                   "partOfSpeech":  "adjective",
-                                   "definition":  "Massive and of enduring historical significance",
-                                   "etymology":  "Latin monumentum (memorial)",
-                                   "exampleSentence":  "Egyptian pyramids represent monumental masonry architecture."
-                               }
-                           ],
-        "coinsReward":  79
-    },
-    {
-        "id":  30,
-        "title":  "Optical Telescopes",
-        "category":  "Astronomy",
-        "quoteText":  "TELESCOPES OBSERVE DISTANT STARS",
-        "quoteWords":  [
-                           {
-                               "word":  "TELESCOPES",
-                               "letterNumbers":  [
-                                                     14,
-                                                     5,
-                                                     7,
-                                                     5,
-                                                     13,
-                                                     3,
-                                                     10,
-                                                     11,
-                                                     5,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "OBSERVE",
-                               "letterNumbers":  [
-                                                     10,
-                                                     2,
-                                                     13,
-                                                     5,
-                                                     12,
-                                                     15,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "DISTANT",
-                               "letterNumbers":  [
-                                                     4,
-                                                     6,
-                                                     13,
-                                                     14,
-                                                     1,
-                                                     9,
-                                                     14
-                                                 ]
-                           },
-                           {
-                               "word":  "STARS",
-                               "letterNumbers":  [
-                                                     13,
-                                                     14,
-                                                     1,
-                                                     12,
-                                                     13
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c30_1",
-                          "clueText":  "Optical instrument magnifying distant celestial bodies",
-                          "targetWord":  "SCOPE",
-                          "letterNumbers":  [
-                                                13,
-                                                3,
-                                                10,
-                                                11,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c30_2",
-                          "clueText":  "Massive radiant sphere of luminous hydrogen plasma",
-                          "targetWord":  "STAR",
-                          "letterNumbers":  [
-                                                13,
-                                                14,
                                                 1,
                                                 12
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "CAT",
+                          "clueText":  "Furry pet that meows and purrs",
+                          "id":  "c37_2"
                       },
                       {
-                          "id":  "c30_3",
-                          "clueText":  "Specially polished curved glass focusing cosmic photons",
-                          "targetWord":  "LENS",
                           "letterNumbers":  [
-                                                7,
+                                                6,
                                                 5,
-                                                9,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c30_4",
-                          "clueText":  "Curved reflective surface gathering light in telescopes",
-                          "targetWord":  "MIRROR",
-                          "letterNumbers":  [
                                                 8,
-                                                6,
-                                                12,
-                                                12,
-                                                10,
-                                                12
+                                                7
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "LION",
+                          "clueText":  "Mighty wild cat known as jungle king",
+                          "id":  "c37_3"
                       },
                       {
-                          "id":  "c30_5",
-                          "clueText":  "Separated by millions of light years of space",
-                          "targetWord":  "DISTANT",
                           "letterNumbers":  [
+                                                14,
                                                 4,
-                                                6,
-                                                13,
-                                                14,
-                                                1,
-                                                9,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c30_6",
-                          "clueText":  "Path traversed by space telescopes like Hubble",
-                          "targetWord":  "ORBIT",
-                          "letterNumbers":  [
-                                                10,
-                                                12,
-                                                2,
-                                                6,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c30_7",
-                          "clueText":  "Clear observational sightline into the cosmological universe",
-                          "targetWord":  "VIEW",
-                          "letterNumbers":  [
-                                                15,
-                                                6,
-                                                5,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Newton invented the reflecting telescope using curved mirrors to eliminate chromatic aberration.",
-                                "title":  "Reflecting Telescopes \u0026 Cosmological Sight",
-                                "attribution":  "Class 9 Astronomy â€¢ Observational Astrophysics",
-                                "keyTakeaway":  "Large apertures collect more light to reveal faint ancient galaxies.",
-                                "yearOrEra":  "Space Exploration Era"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "APERTURE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Diameter of telescope primary lens or mirror gathering light",
-                                   "etymology":  "Latin apertura (opening)",
-                                   "exampleSentence":  "A larger aperture resolves crisper details on distant exoplanets."
-                               }
-                           ],
-        "coinsReward":  80
-    },
-    {
-        "id":  31,
-        "title":  "Human Skeletal System",
-        "category":  "Health Science",
-        "quoteText":  "STRONG BONES PROTECT VITAL ORGANS",
-        "quoteWords":  [
-                           {
-                               "word":  "STRONG",
-                               "letterNumbers":  [
-                                                     14,
-                                                     15,
-                                                     13,
-                                                     11,
-                                                     10,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "BONES",
-                               "letterNumbers":  [
-                                                     2,
-                                                     11,
-                                                     10,
-                                                     4,
-                                                     14
-                                                 ]
-                           },
-                           {
-                               "word":  "PROTECT",
-                               "letterNumbers":  [
-                                                     12,
-                                                     13,
-                                                     11,
-                                                     15,
-                                                     4,
-                                                     3,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "VITAL",
-                               "letterNumbers":  [
-                                                     16,
-                                                     7,
-                                                     15,
-                                                     1,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "ORGANS",
-                               "letterNumbers":  [
-                                                     11,
-                                                     13,
-                                                     5,
-                                                     1,
-                                                     10,
-                                                     14
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c31_1",
-                          "clueText":  "Rigid mineralized organ forming vertebrate skeleton",
-                          "targetWord":  "BONE",
-                          "letterNumbers":  [
-                                                2,
-                                                11,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c31_2",
-                          "clueText":  "Flexible vertebral column supporting the back",
-                          "targetWord":  "SPINE",
-                          "letterNumbers":  [
-                                                14,
-                                                12,
-                                                7,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c31_3",
-                          "clueText":  "Curved protective bone enclosing heart and lungs",
-                          "targetWord":  "RIB",
-                          "letterNumbers":  [
-                                                13,
-                                                7,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c31_4",
-                          "clueText":  "Crucial and necessary for continuing biological life",
-                          "targetWord":  "VITAL",
-                          "letterNumbers":  [
-                                                16,
-                                                7,
-                                                15,
-                                                1,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c31_5",
-                          "clueText":  "Specialized tissue structure performing bodily duties",
-                          "targetWord":  "ORGAN",
-                          "letterNumbers":  [
-                                                11,
-                                                13,
-                                                5,
                                                 1,
                                                 10
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "YEAR",
+                          "clueText":  "Period of twelve calendar months",
+                          "id":  "c37_4"
                       },
                       {
-                          "id":  "c31_6",
-                          "clueText":  "Upper front bodily cavity housing cardiac organs",
-                          "targetWord":  "CHEST",
-                          "letterNumbers":  [
-                                                3,
-                                                6,
-                                                4,
-                                                14,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c31_7",
-                          "clueText":  "Movable connection between two meeting bones",
-                          "targetWord":  "JOINT",
-                          "letterNumbers":  [
-                                                8,
-                                                11,
-                                                7,
-                                                10,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Adult human skeletons contain 206 bones continuously remodeled by osteocytes.",
-                                "title":  "Osteology \u0026 Skeletal Protection",
-                                "attribution":  "Class 9 Biology â€¢ Anatomy",
-                                "keyTakeaway":  "Bones protect internal organs and store calcium reserves.",
-                                "yearOrEra":  "Physiological Science"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "OSTEOCYTE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Bone cell responsible for maintaining mineralized tissue matrix",
-                                   "etymology":  "Greek osteon (bone) + kytos (cell)",
-                                   "exampleSentence":  "Osteocytes strengthen bone against physical mechanical stress."
-                               }
-                           ],
-        "coinsReward":  81
-    },
-    {
-        "id":  32,
-        "title":  "Volcanic Eruptions",
-        "category":  "Geology",
-        "quoteText":  "MOLTEN MAGMA ERUPTS AS RED LAVA",
-        "quoteWords":  [
-                           {
-                               "word":  "MOLTEN",
-                               "letterNumbers":  [
-                                                     8,
-                                                     10,
-                                                     7,
-                                                     14,
-                                                     5,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "MAGMA",
-                               "letterNumbers":  [
-                                                     8,
-                                                     1,
-                                                     6,
-                                                     8,
-                                                     1
-                                                 ]
-                           },
-                           {
-                               "word":  "ERUPTS",
-                               "letterNumbers":  [
-                                                     5,
-                                                     12,
-                                                     15,
-                                                     11,
-                                                     14,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "AS",
-                               "letterNumbers":  [
-                                                     1,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "RED",
-                               "letterNumbers":  [
-                                                     12,
-                                                     5,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "LAVA",
-                               "letterNumbers":  [
-                                                     7,
-                                                     1,
-                                                     16,
-                                                     1
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c32_1",
-                          "clueText":  "Molten underground rock beneath planetary crust",
-                          "targetWord":  "MAGMA",
-                          "letterNumbers":  [
-                                                8,
-                                                1,
-                                                6,
-                                                8,
-                                                1
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c32_2",
-                          "clueText":  "Liquid molten rock erupting onto surface ground",
-                          "targetWord":  "LAVA",
-                          "letterNumbers":  [
-                                                7,
-                                                1,
-                                                16,
-                                                1
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c32_3",
-                          "clueText":  "Bowl-shaped volcanic mouth or impact basin",
-                          "targetWord":  "CRATER",
-                          "letterNumbers":  [
-                                                3,
-                                                12,
-                                                1,
-                                                14,
-                                                5,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c32_4",
-                          "clueText":  "Towering column of volcanic smoke and ash",
-                          "targetWord":  "PLUME",
                           "letterNumbers":  [
                                                 11,
-                                                7,
-                                                15,
-                                                8,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c32_5",
-                          "clueText":  "Sudden violent explosion of pent-up steam and gas",
-                          "targetWord":  "BURST",
-                          "letterNumbers":  [
-                                                2,
-                                                15,
-                                                12,
-                                                13,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c32_6",
-                          "clueText":  "Volcanic hill built from accumulated tephra and lava",
-                          "targetWord":  "CONE",
-                          "letterNumbers":  [
-                                                3,
-                                                10,
-                                                9,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c32_7",
-                          "clueText":  "Fiery glowing color of hot liquid volcanic basalt",
-                          "targetWord":  "RED",
-                          "letterNumbers":  [
-                                                12,
-                                                5,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Subduction zones melt oceanic crust, building pressure that discharges magma through explosive stratovolcanoes.",
-                                "title":  "Volcanism \u0026 Subsurface Magma",
-                                "attribution":  "Class 8 Geography â€¢ Physical Earth",
-                                "keyTakeaway":  "Volcanic mineral deposits produce exceptionally fertile agricultural soil.",
-                                "yearOrEra":  "Volcanology"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "MAGMA",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Molten rock beneath the Earth\u0027s solid surface",
-                                   "etymology":  "Greek magma (thick unguent)",
-                                   "exampleSentence":  "Magma rises through subterranean fissures due to buoyant pressure."
-                               }
-                           ],
-        "coinsReward":  82
-    },
-    {
-        "id":  33,
-        "title":  "Golden Ratio \u0026 Spiral",
-        "category":  "Mathematics",
-        "quoteText":  "NATURE REPEATS THE GOLDEN SPIRAL",
-        "quoteWords":  [
-                           {
-                               "word":  "NATURE",
-                               "letterNumbers":  [
-                                                     9,
-                                                     1,
-                                                     14,
-                                                     15,
-                                                     12,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "REPEATS",
-                               "letterNumbers":  [
-                                                     12,
-                                                     4,
-                                                     11,
-                                                     4,
-                                                     1,
-                                                     14,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "THE",
-                               "letterNumbers":  [
-                                                     14,
-                                                     6,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "GOLDEN",
-                               "letterNumbers":  [
-                                                     5,
-                                                     10,
-                                                     8,
-                                                     3,
-                                                     4,
-                                                     9
-                                                 ]
-                           },
-                           {
-                               "word":  "SPIRAL",
-                               "letterNumbers":  [
-                                                     13,
-                                                     11,
-                                                     7,
-                                                     12,
-                                                     1,
-                                                     8
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c33_1",
-                          "clueText":  "Superlative proportion exemplifying geometric harmony",
-                          "targetWord":  "GOLDEN",
-                          "letterNumbers":  [
-                                                5,
-                                                10,
-                                                8,
-                                                3,
-                                                4,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c33_2",
-                          "clueText":  "Continuous curve winding around a central focal point",
-                          "targetWord":  "SPIRAL",
-                          "letterNumbers":  [
-                                                13,
-                                                11,
-                                                7,
-                                                12,
-                                                1,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c33_3",
-                          "clueText":  "Quantitative relation between two proportional amounts",
-                          "targetWord":  "RATIO",
-                          "letterNumbers":  [
-                                                12,
-                                                1,
-                                                14,
-                                                7,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c33_4",
-                          "clueText":  "Nautilus marine casing displaying logarithmic spiral",
-                          "targetWord":  "SHELL",
-                          "letterNumbers":  [
-                                                13,
-                                                6,
-                                                4,
-                                                8,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c33_5",
-                          "clueText":  "Sunflower seed heads exhibiting golden angle spacing",
-                          "targetWord":  "PLANT",
-                          "letterNumbers":  [
-                                                11,
-                                                8,
-                                                1,
-                                                9,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c33_6",
-                          "clueText":  "Graceful continuous arc traced by spiral mathematics",
-                          "targetWord":  "CURVE",
-                          "letterNumbers":  [
-                                                2,
-                                                15,
-                                                12,
-                                                16,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c33_7",
-                          "clueText":  "Distinctive geometrical configuration in organic life",
-                          "targetWord":  "SHAPE",
-                          "letterNumbers":  [
-                                                13,
-                                                6,
-                                                1,
-                                                11,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The ratio of consecutive Fibonacci numbers converges toward phi, roughly 1.618.",
-                                "title":  "The Fibonacci Sequence \u0026 Golden Ratio",
-                                "attribution":  "Class 9 Mathematics â€¢ Mathematical Aesthetics",
-                                "keyTakeaway":  "Pinecones and galaxies naturally express logarithmic spiral packing.",
-                                "yearOrEra":  "Fibonacci\u0027s Liber Abaci (1202 CE)"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "FIBONACCI",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Integer sequence where each number equals the sum of the preceding two",
-                                   "etymology":  "Named after Leonardo of Pisa (Fibonacci)",
-                                   "exampleSentence":  "Fibonacci spirals maximize solar exposure on plant leaf arrangements."
-                               }
-                           ],
-        "coinsReward":  83
-    },
-    {
-        "id":  34,
-        "title":  "Bird Migration Routes",
-        "category":  "Zoology",
-        "quoteText":  "BIRDS FLY THOUSANDS OF MILES SOUTH",
-        "quoteWords":  [
-                           {
-                               "word":  "BIRDS",
-                               "letterNumbers":  [
-                                                     2,
-                                                     9,
-                                                     16,
-                                                     4,
-                                                     17
-                                                 ]
-                           },
-                           {
-                               "word":  "FLY",
-                               "letterNumbers":  [
-                                                     6,
-                                                     11,
-                                                     21
-                                                 ]
-                           },
-                           {
-                               "word":  "THOUSANDS",
-                               "letterNumbers":  [
-                                                     18,
-                                                     8,
-                                                     14,
-                                                     19,
-                                                     17,
-                                                     1,
-                                                     13,
-                                                     4,
-                                                     17
-                                                 ]
-                           },
-                           {
-                               "word":  "OF",
-                               "letterNumbers":  [
-                                                     14,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "MILES",
-                               "letterNumbers":  [
-                                                     12,
-                                                     9,
-                                                     11,
-                                                     5,
-                                                     17
-                                                 ]
-                           },
-                           {
-                               "word":  "SOUTH",
-                               "letterNumbers":  [
-                                                     17,
-                                                     14,
-                                                     19,
-                                                     18,
-                                                     8
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c34_1",
-                          "clueText":  "Warm-blooded feathered egg-laying winged vertebrate",
-                          "targetWord":  "BIRD",
-                          "letterNumbers":  [
-                                                2,
-                                                9,
-                                                16,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c34_2",
-                          "clueText":  "Aerodynamic locomotion through atmospheric space",
-                          "targetWord":  "FLIGHT",
-                          "letterNumbers":  [
-                                                6,
-                                                11,
-                                                9,
-                                                7,
-                                                8,
-                                                18
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c34_3",
-                          "clueText":  "Direction toward the southern polar hemisphere",
-                          "targetWord":  "SOUTH",
-                          "letterNumbers":  [
-                                                17,
-                                                14,
-                                                19,
-                                                18,
-                                                8
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c34_4",
-                          "clueText":  "Unit of geographic linear distance across flight paths",
-                          "targetWord":  "MILE",
-                          "letterNumbers":  [
-                                                12,
-                                                9,
-                                                11,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c34_5",
-                          "clueText":  "Atmospheric realm traversed by migratory bird flocks",
-                          "targetWord":  "SKY",
-                          "letterNumbers":  [
-                                                17,
-                                                10,
-                                                21
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c34_6",
-                          "clueText":  "Sensory magnetic navigation guiding animal travel",
-                          "targetWord":  "COMPASS",
-                          "letterNumbers":  [
-                                                3,
-                                                14,
-                                                12,
-                                                15,
-                                                1,
-                                                17,
-                                                17
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c34_7",
-                          "clueText":  "Feathered aerodynamic limb providing migratory propulsion",
-                          "targetWord":  "WING",
-                          "letterNumbers":  [
-                                                20,
-                                                9,
                                                 13,
                                                 7
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright star in the blue sky",
+                          "id":  "c37_5"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Migrating birds utilize quantum magnetoreception in eye cryptochrome proteins to navigate by Earth\u0027s magnetic field.",
-                                "title":  "Avian Magnetoreception \u0026 Navigation",
-                                "attribution":  "Class 7 Science â€¢ Animal Biology",
-                                "keyTakeaway":  "Birds travel across continents to access abundant seasonal food supplies.",
-                                "yearOrEra":  "Behavioral Zoology"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "MAGNETORECEPTION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Biological sense allowing organisms to detect geomagnetic fields",
-                                   "etymology":  "Magnetic + reception",
-                                   "exampleSentence":  "Magnetoreception guides nocturnal songbirds across ocean flyways."
-                               }
-                           ],
-        "coinsReward":  84
+                  ]
     },
     {
-        "id":  35,
-        "title":  "Cosmic Space Probes",
-        "category":  "Astronomy",
-        "quoteText":  "PROBES EXPLORE DEEP COSMIC SPACE",
-        "quoteWords":  [
-                           {
-                               "word":  "PROBES",
-                               "letterNumbers":  [
-                                                     11,
-                                                     12,
-                                                     10,
-                                                     2,
-                                                     5,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "EXPLORE",
-                               "letterNumbers":  [
-                                                     5,
-                                                     15,
-                                                     11,
-                                                     8,
-                                                     10,
-                                                     12,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "DEEP",
-                               "letterNumbers":  [
-                                                     4,
-                                                     5,
-                                                     5,
-                                                     11
-                                                 ]
-                           },
-                           {
-                               "word":  "COSMIC",
-                               "letterNumbers":  [
-                                                     3,
-                                                     10,
-                                                     13,
-                                                     9,
-                                                     7,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "SPACE",
-                               "letterNumbers":  [
-                                                     13,
-                                                     11,
-                                                     1,
-                                                     3,
-                                                     5
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c35_1",
-                          "clueText":  "Unmanned scientific spacecraft exploring outer planets",
-                          "targetWord":  "PROBE",
-                          "letterNumbers":  [
-                                                11,
-                                                12,
-                                                10,
-                                                2,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c35_2",
-                          "clueText":  "Relating to the vast physical universe beyond Earth",
-                          "targetWord":  "COSMIC",
-                          "letterNumbers":  [
-                                                3,
-                                                10,
-                                                13,
-                                                9,
-                                                7,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c35_3",
-                          "clueText":  "Powered by radiant photovoltaic solar cell arrays",
-                          "targetWord":  "SOLAR",
-                          "letterNumbers":  [
-                                                13,
-                                                10,
-                                                8,
-                                                1,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c35_4",
-                          "clueText":  "Penetrating billions of kilometers into interstellar space",
-                          "targetWord":  "DEEP",
-                          "letterNumbers":  [
-                                                4,
-                                                5,
-                                                5,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c35_5",
-                          "clueText":  "Detection system utilizing reflected radio pulses",
-                          "targetWord":  "RADAR",
-                          "letterNumbers":  [
-                                                12,
-                                                1,
-                                                4,
-                                                1,
-                                                12
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c35_6",
-                          "clueText":  "Small icy solar body with glowing dust ion tail",
-                          "targetWord":  "COMET",
-                          "letterNumbers":  [
-                                                3,
-                                                10,
-                                                9,
-                                                5,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c35_7",
-                          "clueText":  "Enormous gravitationally bound system of stellar systems",
-                          "targetWord":  "GALAXY",
-                          "letterNumbers":  [
-                                                6,
-                                                1,
-                                                8,
-                                                1,
-                                                15,
-                                                16
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
+        "quoteText":  "FREQUENCY DETERMINES SOUND PITCH",
         "educationalFact":  {
-                                "historicalContext":  "Voyager 1 has traversed over twenty-four billion kilometers, crossing into interstellar space outside the heliosphere.",
-                                "title":  "Voyager Interstellar Mission",
-                                "attribution":  "Class 9 Physics â€¢ Space Technology",
-                                "keyTakeaway":  "Robotic probes transmit telemetry across vast cosmological distances.",
-                                "yearOrEra":  "Space Age (1977-Present)"
+                                "historicalContext":  "Frequency measures how fast sound waves vibrate; faster waves create higher notes.",
+                                "title":  "Vibration Speed",
+                                "attribution":  "Class 9 - 10+ • Acoustics",
+                                "keyTakeaway":  "Bats use high-frequency ultrasound to navigate and hunt in the dark!",
+                                "yearOrEra":  "Curriculum Unit"
                             },
-        "vocabularyList":  [
-                               {
-                                   "word":  "TELEMETRY",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Automated recording and wireless transmission of data from remote sensors",
-                                   "etymology":  "Greek tele (far off) + metron (measure)",
-                                   "exampleSentence":  "Telemetry confirmed the space probe had reached solar orbit."
-                               }
-                           ],
-        "coinsReward":  85
-    },
-    {
-        "id":  36,
-        "title":  "The Hydrological Cycle",
-        "category":  "Earth Science",
-        "quoteText":  "RAIN AND SNOW REFILL PURE RIVERS",
-        "quoteWords":  [
-                           {
-                               "word":  "RAIN",
-                               "letterNumbers":  [
-                                                     10,
-                                                     1,
-                                                     5,
-                                                     7
-                                                 ]
-                           },
-                           {
-                               "word":  "AND",
-                               "letterNumbers":  [
-                                                     1,
-                                                     7,
-                                                     2
-                                                 ]
-                           },
-                           {
-                               "word":  "SNOW",
-                               "letterNumbers":  [
-                                                     11,
-                                                     7,
-                                                     8,
-                                                     15
-                                                 ]
-                           },
-                           {
-                               "word":  "REFILL",
-                               "letterNumbers":  [
-                                                     10,
-                                                     3,
-                                                     4,
-                                                     5,
-                                                     6,
-                                                     6
-                                                 ]
-                           },
-                           {
-                               "word":  "PURE",
-                               "letterNumbers":  [
-                                                     9,
-                                                     13,
-                                                     10,
-                                                     3
-                                                 ]
-                           },
-                           {
-                               "word":  "RIVERS",
-                               "letterNumbers":  [
-                                                     10,
-                                                     5,
-                                                     14,
-                                                     3,
-                                                     10,
-                                                     11
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c36_1",
-                          "clueText":  "Freshwater channel flowing continuously seaward",
-                          "targetWord":  "RIVER",
-                          "letterNumbers":  [
-                                                10,
-                                                5,
-                                                14,
-                                                3,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c36_2",
-                          "clueText":  "Essential fluid replenishing terrestrial ecosystems",
-                          "targetWord":  "WATER",
-                          "letterNumbers":  [
-                                                15,
-                                                1,
-                                                12,
-                                                3,
-                                                10
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c36_3",
-                          "clueText":  "Frozen precipitation falling in crystalline white flakes",
-                          "targetWord":  "SNOW",
-                          "letterNumbers":  [
-                                                11,
-                                                7,
-                                                8,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c36_4",
-                          "clueText":  "Free from extraneous contaminants or pollutants",
-                          "targetWord":  "PURE",
-                          "letterNumbers":  [
-                                                9,
-                                                13,
-                                                10,
-                                                3
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c36_5",
-                          "clueText":  "Effortless steady liquid drift down river channels",
-                          "targetWord":  "FLOW",
-                          "letterNumbers":  [
-                                                4,
-                                                6,
-                                                8,
-                                                15
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c36_6",
-                          "clueText":  "Minute spherical bead of condensed liquid moisture",
-                          "targetWord":  "DROP",
-                          "letterNumbers":  [
-                                                2,
-                                                10,
-                                                8,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c36_7",
-                          "clueText":  "Atmospheric water droplets precipitating onto soil",
-                          "targetWord":  "RAIN",
-                          "letterNumbers":  [
-                                                10,
-                                                1,
-                                                5,
-                                                7
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "The same water molecules present on Earth today have cycled through clouds, glaciers, and oceans for billions of years.",
-                                "title":  "Global Hydrological Cycling",
-                                "attribution":  "Class 8 Geography â€¢ Physical Systems",
-                                "keyTakeaway":  "Solar evaporation and gravity power the eternal water cycle.",
-                                "yearOrEra":  "Hydrology"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "PRECIPITATION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Rain, snow, sleet, or hail that falls onto the ground",
-                                   "etymology":  "Latin praecipitatio (falling headlong)",
-                                   "exampleSentence":  "Mountain ranges stimulate high orographic precipitation."
-                               }
-                           ],
-        "coinsReward":  86
-    },
-    {
-        "id":  37,
-        "title":  "Ancient Constellations",
-        "category":  "Astronomy",
-        "quoteText":  "STARS SHINE BRIGHT IN NIGHT SKY",
-        "quoteWords":  [
-                           {
-                               "word":  "STARS",
-                               "letterNumbers":  [
-                                                     12,
-                                                     13,
-                                                     1,
-                                                     11,
-                                                     12
-                                                 ]
-                           },
-                           {
-                               "word":  "SHINE",
-                               "letterNumbers":  [
-                                                     12,
-                                                     6,
-                                                     7,
-                                                     10,
-                                                     4
-                                                 ]
-                           },
-                           {
-                               "word":  "BRIGHT",
-                               "letterNumbers":  [
-                                                     2,
-                                                     11,
-                                                     7,
-                                                     5,
-                                                     6,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "IN",
-                               "letterNumbers":  [
-                                                     7,
-                                                     10
-                                                 ]
-                           },
-                           {
-                               "word":  "NIGHT",
-                               "letterNumbers":  [
-                                                     10,
-                                                     7,
-                                                     5,
-                                                     6,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "SKY",
-                               "letterNumbers":  [
-                                                     12,
-                                                     8,
-                                                     14
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c37_1",
-                          "clueText":  "Luminous thermonuclear celestial sphere glowing in space",
-                          "targetWord":  "STAR",
-                          "letterNumbers":  [
-                                                12,
-                                                13,
-                                                1,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c37_2",
-                          "clueText":  "Period of solar darkness when cosmos becomes visible",
-                          "targetWord":  "NIGHT",
-                          "letterNumbers":  [
-                                                10,
-                                                7,
-                                                5,
-                                                6,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c37_3",
-                          "clueText":  "Radiating intense visible electromagnetic luminosity",
-                          "targetWord":  "BRIGHT",
-                          "letterNumbers":  [
-                                                2,
-                                                11,
-                                                7,
-                                                5,
-                                                6,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c37_4",
-                          "clueText":  "Apparent celestial dome visible from planetary surface",
-                          "targetWord":  "SKY",
-                          "letterNumbers":  [
-                                                12,
-                                                8,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c37_5",
-                          "clueText":  "To emit or reflect bright visible illumination",
-                          "targetWord":  "SHINE",
-                          "letterNumbers":  [
-                                                12,
-                                                6,
-                                                7,
-                                                10,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c37_6",
-                          "clueText":  "Concentrated ray of starlight crossing cosmic distance",
-                          "targetWord":  "BEAM",
-                          "letterNumbers":  [
-                                                2,
-                                                4,
-                                                1,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c37_7",
-                          "clueText":  "Celestial navigational map indexing star coordinates",
-                          "targetWord":  "CHART",
-                          "letterNumbers":  [
-                                                3,
-                                                6,
-                                                1,
-                                                11,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Stars fuse hydrogen atoms into helium inside extreme core temperatures, releasing radiant energy.",
-                                "title":  "Stellar Thermonuclear Fusion",
-                                "attribution":  "Class 9 Physics â€¢ Astrophysics",
-                                "keyTakeaway":  "The light reaching our eyes from distant constellations left them millennia ago.",
-                                "yearOrEra":  "Stellar Astrophysics"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "CONSTELLATION",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Recognizable grouping of stars forming an identifiable celestial pattern",
-                                   "etymology":  "Latin con- (together) + stella (star)",
-                                   "exampleSentence":  "Orion is one of the most prominent winter constellations."
-                               }
-                           ],
-        "coinsReward":  87
-    },
-    {
         "id":  38,
-        "title":  "Plant Photosynthesis",
-        "category":  "Botany",
-        "quoteText":  "GREEN LEAVES HARVEST SUN LIGHT",
+        "coinsReward":  126,
         "quoteWords":  [
                            {
-                               "word":  "GREEN",
+                               "word":  "FREQUENCY",
                                "letterNumbers":  [
                                                      5,
-                                                     11,
-                                                     3,
-                                                     3,
-                                                     9
+                                                     13,
+                                                     4,
+                                                     12,
+                                                     16,
+                                                     4,
+                                                     9,
+                                                     2,
+                                                     17
                                                  ]
                            },
                            {
-                               "word":  "LEAVES",
+                               "word":  "DETERMINES",
                                "letterNumbers":  [
+                                                     3,
+                                                     4,
+                                                     15,
+                                                     4,
+                                                     13,
                                                      8,
-                                                     3,
-                                                     1,
-                                                     15,
-                                                     3,
-                                                     12
+                                                     7,
+                                                     9,
+                                                     4,
+                                                     14
                                                  ]
                            },
                            {
-                               "word":  "HARVEST",
+                               "word":  "SOUND",
                                "letterNumbers":  [
-                                                     6,
-                                                     1,
-                                                     11,
-                                                     15,
-                                                     3,
-                                                     12,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "SUN",
-                               "letterNumbers":  [
-                                                     12,
                                                      14,
-                                                     9
+                                                     10,
+                                                     16,
+                                                     9,
+                                                     3
+                                                 ]
+                           },
+                           {
+                               "word":  "PITCH",
+                               "letterNumbers":  [
+                                                     11,
+                                                     7,
+                                                     15,
+                                                     2,
+                                                     6
+                                                 ]
+                           }
+                       ],
+        "category":  "Acoustics",
+        "title":  "Sound Pitch",
+        "vocabularyList":  [
+                               {
+                                   "word":  "PITCH",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Perceived highness or lowness of sound",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "PITCH is an important concept in Acoustics."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                10,
+                                                16,
+                                                9,
+                                                3
+                                            ],
+                          "targetWord":  "SOUND",
+                          "clueText":  "Vibrations detected by human ears",
+                          "id":  "c38_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                7,
+                                                15,
+                                                2,
+                                                6
+                                            ],
+                          "targetWord":  "PITCH",
+                          "clueText":  "How high or low a tone sounds",
+                          "id":  "c38_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                5,
+                                                7,
+                                                14,
+                                                6
+                                            ],
+                          "targetWord":  "FISH",
+                          "clueText":  "Swimmer with fins in the sea",
+                          "id":  "c38_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                16,
+                                                4,
+                                                4,
+                                                9
+                                            ],
+                          "targetWord":  "QUEEN",
+                          "clueText":  "Royal leader wearing a crown",
+                          "id":  "c38_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                17,
+                                                1,
+                                                13,
+                                                3
+                                            ],
+                          "targetWord":  "YARD",
+                          "clueText":  "Grassy lawn outside a house",
+                          "id":  "c38_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                8,
+                                                10,
+                                                10,
+                                                9
+                                            ],
+                          "targetWord":  "MOON",
+                          "clueText":  "Glowing orb that shines in the night sky",
+                          "id":  "c38_6"
+                      }
+                  ]
+    },
+    {
+        "quoteText":  "RADIO WAVES TRAVEL AT LIGHT SPEED",
+        "educationalFact":  {
+                                "historicalContext":  "Radio signals travel at 300,000 kilometers per second through outer space.",
+                                "title":  "Light-Speed Waves",
+                                "attribution":  "Class 9 - 10+ • Physics",
+                                "keyTakeaway":  "A radio message from Earth takes just over one second to reach the Moon!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
+        "id":  39,
+        "coinsReward":  128,
+        "quoteWords":  [
+                           {
+                               "word":  "RADIO",
+                               "letterNumbers":  [
+                                                     10,
+                                                     1,
+                                                     2,
+                                                     6,
+                                                     8
+                                                 ]
+                           },
+                           {
+                               "word":  "WAVES",
+                               "letterNumbers":  [
+                                                     14,
+                                                     1,
+                                                     13,
+                                                     3,
+                                                     11
+                                                 ]
+                           },
+                           {
+                               "word":  "TRAVEL",
+                               "letterNumbers":  [
+                                                     12,
+                                                     10,
+                                                     1,
+                                                     13,
+                                                     3,
+                                                     7
+                                                 ]
+                           },
+                           {
+                               "word":  "AT",
+                               "letterNumbers":  [
+                                                     1,
+                                                     12
                                                  ]
                            },
                            {
                                "word":  "LIGHT",
                                "letterNumbers":  [
-                                                     8,
                                                      7,
-                                                     5,
                                                      6,
-                                                     13
-                                                 ]
-                           }
-                       ],
-        "clues":  [
-                      {
-                          "id":  "c38_1",
-                          "clueText":  "Characteristic coloration of chlorophyll pigment",
-                          "targetWord":  "GREEN",
-                          "letterNumbers":  [
-                                                5,
-                                                11,
-                                                3,
-                                                3,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c38_2",
-                          "clueText":  "Primary photosynthetic organ of vascular flora",
-                          "targetWord":  "LEAF",
-                          "letterNumbers":  [
-                                                8,
-                                                3,
-                                                1,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c38_3",
-                          "clueText":  "Radiant energy captured to assemble carbohydrate sugars",
-                          "targetWord":  "LIGHT",
-                          "letterNumbers":  [
-                                                8,
-                                                7,
-                                                5,
-                                                6,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c38_4",
-                          "clueText":  "Central stellar furnace driving earthly photosynthesis",
-                          "targetWord":  "SUN",
-                          "letterNumbers":  [
-                                                12,
-                                                14,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c38_5",
-                          "clueText":  "Living autotroph generating internal food from photons",
-                          "targetWord":  "PLANT",
-                          "letterNumbers":  [
-                                                10,
-                                                8,
-                                                1,
-                                                9,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c38_6",
-                          "clueText":  "To gather and utilize natural solar radiation",
-                          "targetWord":  "HARVEST",
-                          "letterNumbers":  [
-                                                6,
-                                                1,
-                                                11,
-                                                15,
-                                                3,
-                                                12,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c38_7",
-                          "clueText":  "Embryonic plant ready to germinate in moist humus",
-                          "targetWord":  "SEED",
-                          "letterNumbers":  [
-                                                12,
-                                                3,
-                                                3,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Inside chloroplasts, microscopic thylakoid membranes convert photon energy into ATP and NADPH.",
-                                "title":  "Chloroplast Photosynthetic Thylakoids",
-                                "attribution":  "Class 8 Science â€¢ Plant Biology",
-                                "keyTakeaway":  "Chloroplasts originally evolved from symbiotic photosynthetic cyanobacteria.",
-                                "yearOrEra":  "Cellular Biology"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "AUTOTROPH",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Organism capable of manufacturing own food from inorganic substances",
-                                   "etymology":  "Greek autos (self) + trophe (nourishment)",
-                                   "exampleSentence":  "Green plants are the primary autotrophs in terrestrial food webs."
-                               }
-                           ],
-        "coinsReward":  88
-    },
-    {
-        "id":  39,
-        "title":  "Cryptography \u0026 Ciphers",
-        "category":  "Computer Science",
-        "quoteText":  "CIPHERS ENCRYPT SECRET DATA",
-        "quoteWords":  [
-                           {
-                               "word":  "CIPHERS",
-                               "letterNumbers":  [
-                                                     2,
-                                                     6,
-                                                     10,
-                                                     5,
                                                      4,
-                                                     11,
+                                                     5,
                                                      12
                                                  ]
                            },
                            {
-                               "word":  "ENCRYPT",
+                               "word":  "SPEED",
                                "letterNumbers":  [
-                                                     4,
-                                                     8,
-                                                     2,
                                                      11,
-                                                     14,
-                                                     10,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "SECRET",
-                               "letterNumbers":  [
-                                                     12,
-                                                     4,
-                                                     2,
-                                                     11,
-                                                     4,
-                                                     13
-                                                 ]
-                           },
-                           {
-                               "word":  "DATA",
-                               "letterNumbers":  [
+                                                     9,
                                                      3,
-                                                     1,
-                                                     13,
-                                                     1
+                                                     3,
+                                                     2
                                                  ]
                            }
                        ],
-        "clues":  [
-                      {
-                          "id":  "c39_1",
-                          "clueText":  "Mathematical algorithm converting plain text to code",
-                          "targetWord":  "CIPHER",
-                          "letterNumbers":  [
-                                                2,
-                                                6,
-                                                10,
-                                                5,
-                                                4,
-                                                11
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c39_2",
-                          "clueText":  "Concealed from unauthorized observation or access",
-                          "targetWord":  "SECRET",
-                          "letterNumbers":  [
-                                                12,
-                                                4,
-                                                2,
-                                                11,
-                                                4,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c39_3",
-                          "clueText":  "Factual numeric information processed by computer apps",
-                          "targetWord":  "DATA",
-                          "letterNumbers":  [
-                                                3,
-                                                1,
-                                                13,
-                                                1
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c39_4",
-                          "clueText":  "Cryptographic parameter unlocking encrypted plain text",
-                          "targetWord":  "KEY",
-                          "letterNumbers":  [
-                                                7,
-                                                4,
-                                                14
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c39_5",
-                          "clueText":  "System of symbols used for communication security",
-                          "targetWord":  "CODE",
-                          "letterNumbers":  [
-                                                2,
-                                                9,
-                                                3,
-                                                4
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c39_6",
-                          "clueText":  "One-way mathematical function validating message checksum",
-                          "targetWord":  "HASH",
-                          "letterNumbers":  [
-                                                5,
-                                                1,
-                                                12,
-                                                5
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c39_7",
-                          "clueText":  "To output decoded characters onto tangible medium",
-                          "targetWord":  "PRINT",
-                          "letterNumbers":  [
-                                                10,
-                                                11,
-                                                6,
-                                                8,
-                                                13
-                                            ],
-                          "hasDefinition":  true
-                      }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Diffie, Hellman, and RSA created public-key ciphers that secure modern internet transactions.",
-                                "title":  "Asymmetric Public Key Cryptography",
-                                "attribution":  "Class 9 Computer Science â€¢ Cybersecurity",
-                                "keyTakeaway":  "Modern encryption relies on the computational difficulty of factoring large primes.",
-                                "yearOrEra":  "Digital Cryptography Era"
-                            },
+        "category":  "Physics",
+        "title":  "Radio Speed",
         "vocabularyList":  [
                                {
-                                   "word":  "ENCRYPTION",
+                                   "word":  "RADIO",
                                    "partOfSpeech":  "noun",
-                                   "definition":  "Process of converting information into unreadable cipher text",
-                                   "etymology":  "Greek en- (in) + kryptos (hidden)",
-                                   "exampleSentence":  "End-to-end encryption guarantees confidential communication."
+                                   "definition":  "Electromagnetic waves carrying signals",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "RADIO is an important concept in Physics."
                                }
                            ],
-        "coinsReward":  89
+        "classLevel":  "Class 9 - 10+",
+        "clues":  [
+                      {
+                          "letterNumbers":  [
+                                                10,
+                                                1,
+                                                2,
+                                                6,
+                                                8
+                                            ],
+                          "targetWord":  "RADIO",
+                          "clueText":  "Waves carrying music and voice signals",
+                          "id":  "c39_1"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                14,
+                                                1,
+                                                13,
+                                                3
+                                            ],
+                          "targetWord":  "WAVE",
+                          "clueText":  "Energy moving through space like ripples",
+                          "id":  "c39_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                7,
+                                                6,
+                                                4,
+                                                5,
+                                                12
+                                            ],
+                          "targetWord":  "LIGHT",
+                          "clueText":  "Visible electromagnetic radiation",
+                          "id":  "c39_3"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                9,
+                                                3,
+                                                3,
+                                                2
+                                            ],
+                          "targetWord":  "SPEED",
+                          "clueText":  "How fast an object travels through space",
+                          "id":  "c39_4"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                11,
+                                                12,
+                                                1,
+                                                10
+                                            ],
+                          "targetWord":  "STAR",
+                          "clueText":  "Twinkling ball of light in space",
+                          "id":  "c39_5"
+                      }
+                  ]
     },
     {
+        "quoteText":  "BIODIVERSITY STABILIZES THE EARTH",
+        "educationalFact":  {
+                                "historicalContext":  "Having many species of plants and animals keeps forests and oceans healthy and strong.",
+                                "title":  "Variety of Life",
+                                "attribution":  "Class 9 - 10+ • Ecology",
+                                "keyTakeaway":  "Rainforests cover only 6 percent of land, yet hold half of all species!",
+                                "yearOrEra":  "Curriculum Unit"
+                            },
         "id":  40,
-        "title":  "Acoustic Harmony",
-        "category":  "Physics \u0026 Music",
-        "quoteText":  "STRING INSTRUMENTS MAKE HARMONY",
+        "coinsReward":  130,
         "quoteWords":  [
                            {
-                               "word":  "STRING",
+                               "word":  "BIODIVERSITY",
                                "letterNumbers":  [
-                                                     13,
-                                                     14,
-                                                     12,
+                                                     2,
                                                      7,
                                                      10,
-                                                     5
-                                                 ]
-                           },
-                           {
-                               "word":  "INSTRUMENTS",
-                               "letterNumbers":  [
+                                                     3,
                                                      7,
-                                                     10,
-                                                     13,
-                                                     14,
-                                                     12,
                                                      15,
-                                                     9,
                                                      4,
-                                                     10,
-                                                     14,
-                                                     13
+                                                     11,
+                                                     12,
+                                                     7,
+                                                     13,
+                                                     16
                                                  ]
                            },
                            {
-                               "word":  "MAKE",
+                               "word":  "STABILIZES",
                                "letterNumbers":  [
-                                                     9,
+                                                     12,
+                                                     13,
                                                      1,
+                                                     2,
+                                                     7,
                                                      8,
+                                                     7,
+                                                     17,
+                                                     4,
+                                                     12
+                                                 ]
+                           },
+                           {
+                               "word":  "THE",
+                               "letterNumbers":  [
+                                                     13,
+                                                     6,
                                                      4
                                                  ]
                            },
                            {
-                               "word":  "HARMONY",
+                               "word":  "EARTH",
                                "letterNumbers":  [
-                                                     6,
+                                                     4,
                                                      1,
-                                                     12,
-                                                     9,
                                                      11,
-                                                     10,
-                                                     16
+                                                     13,
+                                                     6
                                                  ]
                            }
                        ],
+        "category":  "Ecology",
+        "title":  "Rich Earth",
+        "vocabularyList":  [
+                               {
+                                   "word":  "EARTH",
+                                   "partOfSpeech":  "noun",
+                                   "definition":  "Our green living home planet",
+                                   "etymology":  "Educational vocabulary",
+                                   "exampleSentence":  "EARTH is an important concept in Ecology."
+                               }
+                           ],
+        "classLevel":  "Class 9 - 10+",
         "clues":  [
                       {
-                          "id":  "c40_1",
-                          "clueText":  "Taut wire vibrating to produce musical acoustic pitch",
-                          "targetWord":  "STRING",
                           "letterNumbers":  [
+                                                4,
+                                                1,
+                                                11,
                                                 13,
-                                                14,
-                                                12,
-                                                7,
-                                                10,
-                                                5
+                                                6
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "EARTH",
+                          "clueText":  "Living planet with land and oceans",
+                          "id":  "c40_1"
                       },
                       {
-                          "id":  "c40_2",
-                          "clueText":  "Musical sound distinguished by timbre, pitch, and duration",
-                          "targetWord":  "TONE",
                           "letterNumbers":  [
-                                                14,
+                                                2,
+                                                7,
                                                 11,
-                                                10,
+                                                3
+                                            ],
+                          "targetWord":  "BIRD",
+                          "clueText":  "Winged singer with feathers",
+                          "id":  "c40_2"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                15,
+                                                7,
+                                                9,
                                                 4
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "VINE",
+                          "clueText":  "Climbing plant on garden wall",
+                          "id":  "c40_3"
                       },
                       {
-                          "id":  "c40_3",
-                          "clueText":  "Artistic arrangement of vocal or instrumental sounds",
-                          "targetWord":  "MUSIC",
                           "letterNumbers":  [
-                                                9,
-                                                15,
-                                                13,
-                                                7,
-                                                2
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c40_4",
-                          "clueText":  "Pleasing concordant combination of musical frequencies",
-                          "targetWord":  "HARMONY",
-                          "letterNumbers":  [
-                                                6,
-                                                1,
-                                                12,
-                                                9,
-                                                11,
+                                                17,
                                                 10,
-                                                16
+                                                10
                                             ],
-                          "hasDefinition":  true
+                          "targetWord":  "ZOO",
+                          "clueText":  "Park caring for animal species",
+                          "id":  "c40_4"
                       },
                       {
-                          "id":  "c40_5",
-                          "clueText":  "Scale or tonality governing melodic progression",
-                          "targetWord":  "KEY",
+                          "letterNumbers":  [
+                                                16,
+                                                4,
+                                                1,
+                                                11
+                                            ],
+                          "targetWord":  "YEAR",
+                          "clueText":  "Twelve months of changing seasons",
+                          "id":  "c40_5"
+                      },
+                      {
+                          "letterNumbers":  [
+                                                12,
+                                                14,
+                                                9
+                                            ],
+                          "targetWord":  "SUN",
+                          "clueText":  "Bright glowing star warming our daytime sky",
+                          "id":  "c40_6"
+                      },
+                      {
                           "letterNumbers":  [
                                                 8,
                                                 4,
-                                                16
+                                                1,
+                                                5
                                             ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c40_6",
-                          "clueText":  "Percussion instrument setting rhythmic musical tempo",
-                          "targetWord":  "DRUM",
-                          "letterNumbers":  [
-                                                3,
-                                                12,
-                                                15,
-                                                9
-                                            ],
-                          "hasDefinition":  true
-                      },
-                      {
-                          "id":  "c40_7",
-                          "clueText":  "Written symbolic character representing audio frequency",
-                          "targetWord":  "NOTE",
-                          "letterNumbers":  [
-                                                10,
-                                                11,
-                                                14,
-                                                4
-                                            ],
-                          "hasDefinition":  true
+                          "targetWord":  "LEAF",
+                          "clueText":  "Green part of a plant that absorbs sunlight",
+                          "id":  "c40_7"
                       }
-                  ],
-        "educationalFact":  {
-                                "historicalContext":  "Pythagoras discovered that string frequency ratios of whole integers produce consonant musical chords.",
-                                "title":  "Pythagorean Harmonics \u0026 Standing Waves",
-                                "attribution":  "Class 8 Physics â€¢ Wave Resonance",
-                                "keyTakeaway":  "Harmonic overtones determine the rich characteristic timbre of musical instruments.",
-                                "yearOrEra":  "Classical Acoustics"
-                            },
-        "vocabularyList":  [
-                               {
-                                   "word":  "RESONANCE",
-                                   "partOfSpeech":  "noun",
-                                   "definition":  "Reinforcement of sound vibration when matching natural frequencies",
-                                   "etymology":  "Latin resonare (to resound)",
-                                   "exampleSentence":  "The wooden acoustic body creates warm acoustic resonance."
-                               }
-                           ],
-        "coinsReward":  90
+                  ]
     }
 ];

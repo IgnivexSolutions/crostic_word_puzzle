@@ -576,20 +576,41 @@ class _GameplayScreenState extends State<GameplayScreen> {
                         Column(
                           children: [
                             Text(
-                              widget.level.category,
+                              widget.level.title,
                               style: GoogleFonts.spaceGrotesk(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xFF475569),
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w800,
+                                color: const Color(0xFF0F172A),
                               ),
                             ),
-                            Text(
-                              'Level ${widget.level.id} • ${widget.level.title}',
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.w500,
-                                color: const Color(0xFF94A3B8),
-                              ),
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 1.5),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF0284C7).withOpacity(0.12),
+                                    borderRadius: BorderRadius.circular(6.0),
+                                  ),
+                                  child: Text(
+                                    widget.level.classLevel,
+                                    style: GoogleFonts.spaceGrotesk(
+                                      fontSize: 10.5,
+                                      fontWeight: FontWeight.w700,
+                                      color: const Color(0xFF0284C7),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(width: 5.0),
+                                Text(
+                                  'Level ${widget.level.id} • ${widget.level.category}',
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFF64748B),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),

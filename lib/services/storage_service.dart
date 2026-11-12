@@ -13,6 +13,7 @@ class StorageService {
   static const String _settingsSfxKey = 'crostic_setting_sfx';
   static const String _settingsHighContrastKey = 'crostic_setting_high_contrast';
   static const String _settingsDyslexicKey = 'crostic_setting_dyslexic';
+  static const String _settingsClassKey = 'crostic_setting_selected_class';
 
   SharedPreferences? _prefs;
 
@@ -76,4 +77,7 @@ class StorageService {
 
   bool getDyslexicFontSetting() => _prefs?.getBool(_settingsDyslexicKey) ?? false;
   Future<void> saveDyslexicFontSetting(bool val) async => await _prefs?.setBool(_settingsDyslexicKey, val);
+
+  String getSelectedClass() => _prefs?.getString(_settingsClassKey) ?? 'Class 1 - 3';
+  Future<void> saveSelectedClass(String val) async => await _prefs?.setString(_settingsClassKey, val);
 }
