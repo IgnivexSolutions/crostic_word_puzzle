@@ -7,10 +7,10 @@ import '../models/level_data.dart';
 final List<LevelData> allGameLevels = [
   LevelData(
     id: 1,
-    title: 'Cats at Night.',
-    category: 'Animals.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'CATS CAN SEE AT NIGHT.',
+    title: 'Cats at Night',
+    category: 'Animals',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'CATS CAN SEE AT NIGHT',
     quoteWords: [
       QuoteWord(word: 'CATS', letterNumbers: [2, 1, 10, 9]),
       QuoteWord(word: 'CAN', letterNumbers: [2, 1, 7]),
@@ -70,10 +70,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 2,
-    title: 'Warm Sunshine.',
-    category: 'Nature.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'SUN GIVES EARTH WARM LIGHT.',
+    title: 'Warm Sunshine',
+    category: 'Nature',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'SUN GIVES EARTH WARM LIGHT',
     quoteWords: [
       QuoteWord(word: 'SUN', letterNumbers: [10, 12, 8]),
       QuoteWord(word: 'GIVES', letterNumbers: [3, 5, 13, 2, 10]),
@@ -133,10 +133,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 3,
-    title: 'Sweet Honey.',
-    category: 'Insects.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'BEES MAKE SWEET HONEY.',
+    title: 'Sweet Honey',
+    category: 'Insects',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'BEES MAKE SWEET HONEY',
     quoteWords: [
       QuoteWord(word: 'BEES', letterNumbers: [2, 3, 3, 10]),
       QuoteWord(word: 'MAKE', letterNumbers: [6, 1, 5, 3]),
@@ -195,10 +195,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 4,
-    title: 'Soft Feathers.',
-    category: 'Birds.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'BIRDS HAVE WARM FEATHERS.',
+    title: 'Soft Feathers',
+    category: 'Birds',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'BIRDS HAVE WARM FEATHERS',
     quoteWords: [
       QuoteWord(word: 'BIRDS', letterNumbers: [2, 7, 9, 3, 10]),
       QuoteWord(word: 'HAVE', letterNumbers: [6, 1, 12, 4]),
@@ -257,10 +257,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 5,
-    title: 'Rain on Trees.',
-    category: 'Plants.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'RAIN HELPS BIG TREES GROW.',
+    title: 'Rain on Trees',
+    category: 'Plants',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'RAIN HELPS BIG TREES GROW',
     quoteWords: [
       QuoteWord(word: 'RAIN', letterNumbers: [11, 1, 6, 8]),
       QuoteWord(word: 'HELPS', letterNumbers: [5, 3, 7, 10, 12]),
@@ -326,10 +326,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 6,
-    title: 'Fins in Water.',
-    category: 'Ocean Life.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'FISH SWIM WITH SOFT FINS.',
+    title: 'Fins in Water',
+    category: 'Ocean Life',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'FISH SWIM WITH SOFT FINS',
     quoteWords: [
       QuoteWord(word: 'FISH', letterNumbers: [2, 5, 10, 4]),
       QuoteWord(word: 'SWIM', letterNumbers: [10, 12, 5, 6]),
@@ -389,10 +389,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 7,
-    title: 'Green Pastures.',
-    category: 'Farm Animals.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'COWS EAT GREEN FRESH GRASS.',
+    title: 'Green Pastures',
+    category: 'Farm Animals',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'COWS EAT GREEN FRESH GRASS',
     quoteWords: [
       QuoteWord(word: 'COWS', letterNumbers: [2, 8, 12, 10]),
       QuoteWord(word: 'EAT', letterNumbers: [3, 1, 11]),
@@ -458,10 +458,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 8,
-    title: 'Night Moon.',
-    category: 'Sky.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'MOON GLOWS IN NIGHT SKY.',
+    title: 'Night Moon',
+    category: 'Sky',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'MOON GLOWS IN NIGHT SKY',
     quoteWords: [
       QuoteWord(word: 'MOON', letterNumbers: [7, 9, 9, 8]),
       QuoteWord(word: 'GLOWS', letterNumbers: [2, 6, 9, 13, 11]),
@@ -521,10 +521,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 9,
-    title: 'Happy Dogs.',
-    category: 'Pets.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'DOGS WAG TAILS WHEN GLAD.',
+    title: 'Happy Dogs',
+    category: 'Pets',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'DOGS WAG TAILS WHEN GLAD',
     quoteWords: [
       QuoteWord(word: 'DOGS', letterNumbers: [2, 11, 4, 12]),
       QuoteWord(word: 'WAG', letterNumbers: [15, 1, 4]),
@@ -590,10 +590,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 10,
-    title: 'Leaping Frogs.',
-    category: 'Pond Life.',
-    classLevel: 'Class 1 - 3.',
-    quoteText: 'FROGS JUMP HIGH IN PONDS.',
+    title: 'Leaping Frogs',
+    category: 'Pond Life',
+    classLevel: 'Class 1 - 3',
+    quoteText: 'FROGS JUMP HIGH IN PONDS',
     quoteWords: [
       QuoteWord(word: 'FROGS', letterNumbers: [2, 11, 9, 3, 12]),
       QuoteWord(word: 'JUMP', letterNumbers: [6, 13, 7, 10]),
@@ -653,10 +653,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 11,
-    title: 'Blue Oceans.',
-    category: 'Earth.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'OCEANS COVER MOST OF EARTH.',
+    title: 'Blue Oceans',
+    category: 'Earth',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'OCEANS COVER MOST OF EARTH',
     quoteWords: [
       QuoteWord(word: 'OCEANS', letterNumbers: [9, 2, 3, 1, 8, 11]),
       QuoteWord(word: 'COVER', letterNumbers: [2, 9, 13, 3, 10]),
@@ -716,10 +716,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 12,
-    title: 'Pumping Heart.',
-    category: 'Human Body.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'HEART PUMPS BLOOD EVERY DAY.',
+    title: 'Pumping Heart',
+    category: 'Human Body',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'HEART PUMPS BLOOD EVERY DAY',
     quoteWords: [
       QuoteWord(word: 'HEART', letterNumbers: [5, 4, 1, 10, 12]),
       QuoteWord(word: 'PUMPS', letterNumbers: [9, 13, 7, 9, 11]),
@@ -779,10 +779,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 13,
-    title: 'Water in Clouds.',
-    category: 'Weather.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'CLOUDS ARE MADE OF WATER DROPS.',
+    title: 'Water in Clouds',
+    category: 'Weather',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'CLOUDS ARE MADE OF WATER DROPS',
     quoteWords: [
       QuoteWord(word: 'CLOUDS', letterNumbers: [2, 8, 11, 16, 3, 14]),
       QuoteWord(word: 'ARE', letterNumbers: [1, 13, 4]),
@@ -855,10 +855,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 14,
-    title: 'Desert Camels.',
-    category: 'Adaptation.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'CAMELS STORE FAT IN HUMPS.',
+    title: 'Desert Camels',
+    category: 'Adaptation',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'CAMELS STORE FAT IN HUMPS',
     quoteWords: [
       QuoteWord(word: 'CAMELS', letterNumbers: [2, 1, 9, 4, 8, 14]),
       QuoteWord(word: 'STORE', letterNumbers: [14, 15, 11, 13, 4]),
@@ -924,10 +924,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 15,
-    title: 'Earth Orbit.',
-    category: 'Space.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'EARTH MOVES AROUND THE SUN.',
+    title: 'Earth Orbit',
+    category: 'Space',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'EARTH MOVES AROUND THE SUN',
     quoteWords: [
       QuoteWord(word: 'EARTH', letterNumbers: [3, 1, 8, 10, 4]),
       QuoteWord(word: 'MOVES', letterNumbers: [5, 7, 12, 3, 9]),
@@ -987,10 +987,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 16,
-    title: 'Giant Whales.',
-    category: 'Sea Creatures.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'WHALES ARE GIANT SEA MAMMALS.',
+    title: 'Giant Whales',
+    category: 'Sea Creatures',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'WHALES ARE GIANT SEA MAMMALS',
     quoteWords: [
       QuoteWord(word: 'WHALES', letterNumbers: [12, 4, 1, 6, 2, 10]),
       QuoteWord(word: 'ARE', letterNumbers: [1, 9, 2]),
@@ -1050,10 +1050,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 17,
-    title: 'Forest Oxygen.',
-    category: 'Environment.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'TREES GIVE US PURE CLEAN AIR.',
+    title: 'Forest Oxygen',
+    category: 'Environment',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'TREES GIVE US PURE CLEAN AIR',
     quoteWords: [
       QuoteWord(word: 'TREES', letterNumbers: [11, 9, 3, 3, 10]),
       QuoteWord(word: 'GIVE', letterNumbers: [4, 5, 13, 3]),
@@ -1114,10 +1114,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 18,
-    title: 'Floating Ice.',
-    category: 'Water Science.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'ICE FLOATS ON COLD WATER.',
+    title: 'Floating Ice',
+    category: 'Water Science',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'ICE FLOATS ON COLD WATER',
     quoteWords: [
       QuoteWord(word: 'ICE', letterNumbers: [6, 2, 4]),
       QuoteWord(word: 'FLOATS', letterNumbers: [5, 7, 9, 1, 12, 11]),
@@ -1177,10 +1177,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 19,
-    title: 'Flowing Rivers.',
-    category: 'Geography.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'RIVERS FLOW INTO WIDE SEAS.',
+    title: 'Flowing Rivers',
+    category: 'Geography',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'RIVERS FLOW INTO WIDE SEAS',
     quoteWords: [
       QuoteWord(word: 'RIVERS', letterNumbers: [9, 5, 12, 3, 9, 10]),
       QuoteWord(word: 'FLOW', letterNumbers: [4, 6, 8, 13]),
@@ -1240,10 +1240,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 20,
-    title: 'Star Power.',
-    category: 'Astronomy.',
-    classLevel: 'Class 4 - 5.',
-    quoteText: 'STARS ARE GIANT BALLS OF GAS.',
+    title: 'Star Power',
+    category: 'Astronomy',
+    classLevel: 'Class 4 - 5',
+    quoteText: 'STARS ARE GIANT BALLS OF GAS',
     quoteWords: [
       QuoteWord(word: 'STARS', letterNumbers: [12, 13, 1, 11, 12]),
       QuoteWord(word: 'ARE', letterNumbers: [1, 11, 3]),
@@ -1310,10 +1310,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 21,
-    title: 'Sound in Water.',
-    category: 'Sound Waves.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'SOUND TRAVELS FASTER IN WATER.',
+    title: 'Sound in Water',
+    category: 'Sound Waves',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'SOUND TRAVELS FASTER IN WATER',
     quoteWords: [
       QuoteWord(word: 'SOUND', letterNumbers: [10, 8, 12, 7, 2]),
       QuoteWord(word: 'TRAVELS', letterNumbers: [11, 9, 1, 13, 3, 6, 10]),
@@ -1379,10 +1379,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 22,
-    title: 'Two Poles.',
-    category: 'Magnetism.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'MAGNETS ALWAYS HAVE TWO POLES.',
+    title: 'Two Poles',
+    category: 'Magnetism',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'MAGNETS ALWAYS HAVE TWO POLES',
     quoteWords: [
       QuoteWord(word: 'MAGNETS', letterNumbers: [6, 1, 3, 7, 2, 11, 10]),
       QuoteWord(word: 'ALWAYS', letterNumbers: [1, 5, 13, 1, 14, 10]),
@@ -1442,10 +1442,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 23,
-    title: 'Sparkling Carbon.',
-    category: 'Minerals.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'DIAMONDS ARE MADE OF PURE CARBON.',
+    title: 'Sparkling Carbon',
+    category: 'Minerals',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'DIAMONDS ARE MADE OF PURE CARBON',
     quoteWords: [
       QuoteWord(word: 'DIAMONDS', letterNumbers: [4, 8, 1, 9, 11, 10, 4, 14]),
       QuoteWord(word: 'ARE', letterNumbers: [1, 13, 5]),
@@ -1506,10 +1506,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 24,
-    title: 'Straight Beams.',
-    category: 'Light Physics.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'LIGHT TRAVELS IN STRAIGHT LINES.',
+    title: 'Straight Beams',
+    category: 'Light Physics',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'LIGHT TRAVELS IN STRAIGHT LINES',
     quoteWords: [
       QuoteWord(word: 'LIGHT', letterNumbers: [7, 6, 4, 5, 12]),
       QuoteWord(word: 'TRAVELS', letterNumbers: [12, 10, 1, 13, 3, 7, 11]),
@@ -1569,10 +1569,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 25,
-    title: 'Units of Life.',
-    category: 'Biology.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'CELLS ARE THE UNITS OF ALL LIFE.',
+    title: 'Units of Life',
+    category: 'Biology',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'CELLS ARE THE UNITS OF ALL LIFE',
     quoteWords: [
       QuoteWord(word: 'CELLS', letterNumbers: [2, 3, 8, 8, 12]),
       QuoteWord(word: 'ARE', letterNumbers: [1, 11, 3]),
@@ -1640,10 +1640,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 26,
-    title: 'The Ozone Shield.',
-    category: 'Atmosphere.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'OZONE LAYER SHIELDS US FROM SUN.',
+    title: 'The Ozone Shield',
+    category: 'Atmosphere',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'OZONE LAYER SHIELDS US FROM SUN',
     quoteWords: [
       QuoteWord(word: 'OZONE', letterNumbers: [10, 15, 10, 9, 3]),
       QuoteWord(word: 'LAYER', letterNumbers: [7, 1, 14, 3, 11]),
@@ -1704,10 +1704,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 27,
-    title: 'Constant Energy.',
-    category: 'Energy.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'ENERGY CANNOT BE DESTROYED.',
+    title: 'Constant Energy',
+    category: 'Energy',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'ENERGY CANNOT BE DESTROYED',
     quoteWords: [
       QuoteWord(word: 'ENERGY', letterNumbers: [5, 8, 5, 10, 6, 13]),
       QuoteWord(word: 'CANNOT', letterNumbers: [3, 1, 8, 8, 9, 12]),
@@ -1766,10 +1766,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 28,
-    title: 'Ancient Fossils.',
-    category: 'Earth History.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'FOSSILS SHOW ANCIENT HISTORY.',
+    title: 'Ancient Fossils',
+    category: 'Earth History',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'FOSSILS SHOW ANCIENT HISTORY',
     quoteWords: [
       QuoteWord(word: 'FOSSILS', letterNumbers: [5, 11, 13, 13, 7, 8, 13]),
       QuoteWord(word: 'SHOW', letterNumbers: [13, 6, 11, 15]),
@@ -1840,10 +1840,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 29,
-    title: 'Magma and Lava.',
-    category: 'Volcanoes.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'MAGMA BECOMES LAVA ON SURFACE.',
+    title: 'Magma and Lava',
+    category: 'Volcanoes',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'MAGMA BECOMES LAVA ON SURFACE',
     quoteWords: [
       QuoteWord(word: 'MAGMA', letterNumbers: [9, 1, 6, 9, 1]),
       QuoteWord(word: 'BECOMES', letterNumbers: [2, 4, 3, 11, 9, 4, 13]),
@@ -1915,10 +1915,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 30,
-    title: 'Copper Power.',
-    category: 'Circuits.',
-    classLevel: 'Class 6 - 8.',
-    quoteText: 'COPPER WIRES CONDUCT ELECTRICITY.',
+    title: 'Copper Power',
+    category: 'Circuits',
+    classLevel: 'Class 6 - 8',
+    quoteText: 'COPPER WIRES CONDUCT ELECTRICITY',
     quoteWords: [
       QuoteWord(word: 'COPPER', letterNumbers: [2, 10, 11, 11, 4, 12]),
       QuoteWord(word: 'WIRES', letterNumbers: [16, 7, 12, 4, 13]),
@@ -1983,10 +1983,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 31,
-    title: 'Cosmic Gravity.',
-    category: 'Physics.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'GRAVITY HOLDS GALAXIES TOGETHER.',
+    title: 'Cosmic Gravity',
+    category: 'Physics',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'GRAVITY HOLDS GALAXIES TOGETHER',
     quoteWords: [
       QuoteWord(word: 'GRAVITY', letterNumbers: [5, 10, 1, 13, 7, 12, 15]),
       QuoteWord(word: 'HOLDS', letterNumbers: [6, 9, 8, 2, 11]),
@@ -2051,10 +2051,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 32,
-    title: 'Prism Colors.',
-    category: 'Optics.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'WHITE LIGHT SPLITS INTO RAINBOW.',
+    title: 'Prism Colors',
+    category: 'Optics',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'WHITE LIGHT SPLITS INTO RAINBOW',
     quoteWords: [
       QuoteWord(word: 'WHITE', letterNumbers: [14, 5, 6, 13, 3]),
       QuoteWord(word: 'LIGHT', letterNumbers: [7, 6, 4, 5, 13]),
@@ -2120,10 +2120,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 33,
-    title: 'Inside Atoms.',
-    category: 'Chemistry.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'ATOMS HAVE PROTONS AND NEUTRONS.',
+    title: 'Inside Atoms',
+    category: 'Chemistry',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'ATOMS HAVE PROTONS AND NEUTRONS',
     quoteWords: [
       QuoteWord(word: 'ATOMS', letterNumbers: [1, 11, 7, 5, 10]),
       QuoteWord(word: 'HAVE', letterNumbers: [4, 1, 13, 3]),
@@ -2183,10 +2183,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 34,
-    title: 'Action Reaction.',
-    category: 'Mechanics.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'ACTION AND REACTION ARE EQUAL.',
+    title: 'Action Reaction',
+    category: 'Mechanics',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'ACTION AND REACTION ARE EQUAL',
     quoteWords: [
       QuoteWord(word: 'ACTION', letterNumbers: [1, 2, 12, 6, 9, 8]),
       QuoteWord(word: 'AND', letterNumbers: [1, 8, 3]),
@@ -2246,10 +2246,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 35,
-    title: 'Solar Energy.',
-    category: 'Biology.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'CHLOROPHYLL ABSORBS SOLAR ENERGY.',
+    title: 'Solar Energy',
+    category: 'Biology',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'CHLOROPHYLL ABSORBS SOLAR ENERGY',
     quoteWords: [
       QuoteWord(word: 'CHLOROPHYLL', letterNumbers: [3, 7, 9, 11, 13, 11, 12, 7, 16, 9, 9]),
       QuoteWord(word: 'ABSORBS', letterNumbers: [1, 2, 14, 11, 13, 2, 14]),
@@ -2320,10 +2320,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 36,
-    title: 'Plate Tectonics.',
-    category: 'Geology.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'TECTONIC PLATES SHAPE CONTINENTS.',
+    title: 'Plate Tectonics',
+    category: 'Geology',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'TECTONIC PLATES SHAPE CONTINENTS',
     quoteWords: [
       QuoteWord(word: 'TECTONIC', letterNumbers: [12, 3, 2, 12, 8, 7, 5, 2]),
       QuoteWord(word: 'PLATES', letterNumbers: [9, 6, 1, 12, 3, 11]),
@@ -2382,10 +2382,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 37,
-    title: 'Speeding Catalysts.',
-    category: 'Chemistry.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'CATALYSTS SPEED UP REACTIONS.',
+    title: 'Speeding Catalysts',
+    category: 'Chemistry',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'CATALYSTS SPEED UP REACTIONS',
     quoteWords: [
       QuoteWord(word: 'CATALYSTS', letterNumbers: [2, 1, 12, 1, 6, 14, 11, 12, 11]),
       QuoteWord(word: 'SPEED', letterNumbers: [11, 9, 4, 4, 3]),
@@ -2444,10 +2444,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 38,
-    title: 'Sound Pitch.',
-    category: 'Acoustics.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'FREQUENCY DETERMINES SOUND PITCH.',
+    title: 'Sound Pitch',
+    category: 'Acoustics',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'FREQUENCY DETERMINES SOUND PITCH',
     quoteWords: [
       QuoteWord(word: 'FREQUENCY', letterNumbers: [5, 13, 4, 12, 16, 4, 9, 2, 17]),
       QuoteWord(word: 'DETERMINES', letterNumbers: [3, 4, 15, 4, 13, 8, 7, 9, 4, 14]),
@@ -2512,10 +2512,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 39,
-    title: 'Radio Speed.',
-    category: 'Physics.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'RADIO WAVES TRAVEL AT LIGHT SPEED.',
+    title: 'Radio Speed',
+    category: 'Physics',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'RADIO WAVES TRAVEL AT LIGHT SPEED',
     quoteWords: [
       QuoteWord(word: 'RADIO', letterNumbers: [10, 1, 2, 6, 8]),
       QuoteWord(word: 'WAVES', letterNumbers: [14, 1, 13, 3, 11]),
@@ -2576,10 +2576,10 @@ final List<LevelData> allGameLevels = [
   ),
   LevelData(
     id: 40,
-    title: 'Rich Earth.',
-    category: 'Ecology.',
-    classLevel: 'Class 9 - 10+.',
-    quoteText: 'BIODIVERSITY STABILIZES THE EARTH.',
+    title: 'Rich Earth',
+    category: 'Ecology',
+    classLevel: 'Class 9 - 10+',
+    quoteText: 'BIODIVERSITY STABILIZES THE EARTH',
     quoteWords: [
       QuoteWord(word: 'BIODIVERSITY', letterNumbers: [2, 7, 10, 3, 7, 15, 4, 11, 12, 7, 13, 16]),
       QuoteWord(word: 'STABILIZES', letterNumbers: [12, 13, 1, 2, 7, 8, 7, 17, 4, 12]),
